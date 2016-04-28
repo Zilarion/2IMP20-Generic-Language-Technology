@@ -68,7 +68,7 @@ public abstract class Lexicon {
      * Tests the lexicon with a set of test cases
      */
     public abstract void test();
-    
+
     protected boolean executeTest(String string, boolean expected) {
 
     }
