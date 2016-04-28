@@ -9,15 +9,17 @@ public class LexiconQ1 extends Lexicon {
         addLexeme(idLexeme);
 
         // Add natural number lexeme
-        Lexeme natLexme = new Lexeme("NAT").add("[0]|[1-9][0-9]*");
-        addLexeme(natLexme);
+        Lexeme natLexeme = new Lexeme("NAT").add("[0]|[1-9][0-9]*");
+        addLexeme(natLexeme);
 
-        // Construct and add float lexeme
-        String unsignedInt = "[0]|([1-9][0-9]*)";
-        String signedInt = "[\\+\\-]?" + unsignedInt;
-        String unsignedReal = "(" + unsignedInt + "." + "[0-9]+" + "([eE]" + signedInt + ")?)|" +
-                              "(" + unsignedInt + "[eE]" + signedInt + ")";
-        addLexeme("FLOAT",  "(" + unsignedInt + "|" + unsignedReal + ")");
+        // Construct float Lexeme
+        Lexeme unsignedInt = new Lexeme("unsignedInt").add("[0]|[1-9][0-9]*");
+        Lexeme signedInt = new Lexeme("signedInt").add("[\\+\\-]?").add(unsignedInt);
+        Lexeme unsignedReal = new Lexeme("unsignedReal").add(unsignedInt).add("\\.[0-9]+([eE]").add(signedInt).add(")?|")
+                                .add(unsignedInt).add("[eE]").add(signedInt);
+
+        Lexeme floatLexeme = new Lexeme("FLOAT").add(unsignedInt).add("|").add(unsignedReal);
+        addLexeme(floatLexeme);
     }
 
     @Override

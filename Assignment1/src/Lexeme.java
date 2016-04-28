@@ -31,12 +31,18 @@ public class Lexeme {
 
     public String regex() {
         String result = "";
+        if (identifier != null) {
+            result += "(";
+        }
         if (regex != null) {
             result += regex;
         } else {
             for (Lexeme l : subLexemes) {
                 result += l.regex();
             }
+        }
+        if (identifier != null) {
+            result += ")";
         }
         return result;
     }
