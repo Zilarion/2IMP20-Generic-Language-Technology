@@ -4,6 +4,7 @@
 public class LexiconQ1 extends Lexicon {
     public LexiconQ1() {
         super();
+
         // Add identifier lexeme
         Lexeme idLexeme = new Lexeme("ID").add("[a-z] [a-z0-9]*");
         addLexeme(idLexeme);
