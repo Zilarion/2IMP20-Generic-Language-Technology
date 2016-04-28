@@ -22,7 +22,7 @@ public abstract class Lexicon {
      */
     public void addLexeme(Lexeme lexeme) {
         String identifier = lexeme.identifier;
-        RegExp r = new RegExp(lexeme.regex());
+        RegExp r = new RegExp(lexeme.regex(), RegExp.ALL);
         Automaton automaton =  r.toAutomaton();
         lexemesAutomata.put(identifier, automaton);
         lexemes.put(identifier, lexeme);
@@ -86,8 +86,8 @@ public abstract class Lexicon {
 
         // Construct string
         String resultString = match ? "Pass" : "! Fail";
-        String operatorString = String.format("%10s\t\t| %25s", expectedResult == null ? (char) 8709 : expectedResult, results);
-        String output = String.format("%s\t->\t%s\t@\t%8s ms\t(%s)", resultString, operatorString, delta, string);
+        String operatorString = String.format("%15s\t\t| %25s", expectedResult == null ? (char) 8709 : expectedResult, results);
+        String output = String.format("%s\t->\t%s\t@\t%8s ms\t(%s)", resultString, operatorString, delta, string.replace("\n", "\\\\n"));
 
         System.out.println(output);
     }
