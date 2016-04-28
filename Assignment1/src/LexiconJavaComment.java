@@ -14,10 +14,11 @@ public class LexiconJavaComment extends Lexicon {
 
     @Override
     public void test() {
-        System.out.println("------------------");
+        System.out.println("");
         System.out.println("Testing Lexicon Java comments with language definition:");
         System.out.println(toString());
-        System.out.println("-------START------");
+        System.out.println("");
+        printHeader();
 
         // Valid line comment tests
         executeTest("//", "LineComment");
@@ -46,5 +47,6 @@ public class LexiconJavaComment extends Lexicon {
         executeTest("this is a comment without start */", null);
         executeTest("/** this is a javadoc comment with an interrupted end *ff/", null);
         executeTest("/** this is a java comment with an interrupted end *ff/", null);
+        System.out.println("--------------------------------------------------------------------------------------------------------------------");
     }
 }

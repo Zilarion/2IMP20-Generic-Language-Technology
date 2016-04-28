@@ -86,10 +86,16 @@ public abstract class Lexicon {
 
         // Construct string
         String resultString = match ? "Pass" : "! Fail";
-        String operatorString = String.format("%15s\t\t| %25s", expectedResult == null ? (char) 8709 : expectedResult, results);
+        String operatorString = String.format("%15s\t\t| %35s", expectedResult == null ? (char) 8709 : expectedResult, results);
         String output = String.format("%s\t->\t%s\t@\t%8s ms\t(%s)", resultString, operatorString, delta, string.replace("\n", "\\\\n"));
 
         System.out.println(output);
+    }
+
+    protected void printHeader() {
+        String operatorString = String.format("%15s\t\t| %35s", "Expected result", "Results");
+        System.out.println(String.format("%s\t->\t%s\t@\t%8s ms\t(%s)", "Result", operatorString, "Delta", "Test input"));
+        System.out.println("--------------------------------------------------------------------------------------------------------------------");
     }
 
     /**
@@ -108,8 +114,13 @@ public abstract class Lexicon {
      */
     public String toString() {
         String language = "";
+        language += "----- Abstract ----- \n";
         for (String identifier : lexemes.keySet()) {
             language += String.format("%5s :== \t%5s", identifier, lexemes.get(identifier).string()) + "\n";
+        }
+        language += "------- Full ------- \n";
+        for (String identifier : lexemes.keySet()) {
+            language += String.format("%5s :== \t%5s", identifier, lexemes.get(identifier).regex()) + "\n";
         }
         return language;
     }

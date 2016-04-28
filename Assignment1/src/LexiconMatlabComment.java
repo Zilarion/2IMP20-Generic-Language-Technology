@@ -14,10 +14,11 @@ public class LexiconMatlabComment extends Lexicon {
 
     @Override
     public void test() {
-        System.out.println("------------------");
+        System.out.println("");
         System.out.println("Testing Lexicon Matlab comments with language definition:");
         System.out.println(toString());
-        System.out.println("-------START------");
+        System.out.println("");
+        printHeader();
 
         // Valid line comment tests
         executeTest("%", "LineComment");
@@ -39,5 +40,6 @@ public class LexiconMatlabComment extends Lexicon {
         executeTest("%{ this is a MATLAB comment without end", "LineComment");
         executeTest("this is a MATLAB comment without start %}", null);
         executeTest("%{ this is a MATLAB comment with an interrupted end %ff}", "LineComment");
+        System.out.println("--------------------------------------------------------------------------------------------------------------------");
     }
 }

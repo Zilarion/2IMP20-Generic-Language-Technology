@@ -1,0 +1,5 @@
+fac(n): {
+    inner(n, result):
+        if (n = 0, result, inner(n-1, n*result));
+    inner(n,1)
+}

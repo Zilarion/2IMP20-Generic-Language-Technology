@@ -11,10 +11,11 @@ public class LexiconQ2 extends Lexicon {
 
     @Override
     public void test() {
-        System.out.println("------------------");
+        System.out.println("");
         System.out.println("Testing Lexicon Q2 with language definition:");
         System.out.println(toString());
-        System.out.println("-------START------");
+        System.out.println("");
+        printHeader();
 
         // STRING tests
         executeTest("\"\"", "STRING");
@@ -31,7 +32,6 @@ public class LexiconQ2 extends Lexicon {
         executeTest("'abc'", null);
         executeTest("'abc", null);
         executeTest("abc'", null);
-
-        System.out.println("-------DONE------");
+        System.out.println("--------------------------------------------------------------------------------------------------------------------");
     }
 }

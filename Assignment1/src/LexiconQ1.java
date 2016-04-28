@@ -25,10 +25,11 @@ public class LexiconQ1 extends Lexicon {
 
     @Override
     public void test() {
-        System.out.println("------------------");
+        System.out.println("");
         System.out.println("Testing Lexicon Q1 with language definition:");
         System.out.println(toString());
-        System.out.println("-------START------");
+        System.out.println("");
+        printHeader();
 
         // ID tests
         executeTest("a aazz0220", "ID");
@@ -53,7 +54,6 @@ public class LexiconQ1 extends Lexicon {
         executeTest("04.1", null);
         executeTest("3e04", null);
         executeTest("3.14e-07", null);
-
-        System.out.println("-------DONE------");
+        System.out.println("--------------------------------------------------------------------------------------------------------------------");
     }
 }
