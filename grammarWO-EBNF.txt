@@ -1,0 +1,34 @@
+start-symbol PROGRAM
+
+context-free syntax
+PROGRAM ::= "begin" DECLS "|" PROGRAM' "end"
+PROGRAM' ::= STATEMENT ";" PROGRAM'
+PROGRAM' ::= 
+DECLS ::= "declare" DECLS'
+DECLS' ::= ID "," DECLS'
+DECLS' ::= 
+
+context-free syntax
+STATEMENT ::= ID ":=" EXP
+
+context-free syntax
+EXP ::= ID
+EXP ::= NAT
+EXP ::= EXP "+" EXP {left}
+EXP ::= EXP "*" EXP {left}
+EXP ::= "-" EXP
+EXP ::= "(" EXP ")"
+
+lexical syntax
+ID ::= [a-z][a-z0-9]*
+
+lexical syntax
+NAT ::= [0-9]+
+
+lexical syntax
+LAYOUT ::= [\ \n]*
+
+context-free priorities
+EXP ::= "-" EXP >
+EXP ::= EXP "*" EXP >
+EXP ::= EXP "+" EXP
