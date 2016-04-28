@@ -5,16 +5,9 @@ public class LexiconJavaComment extends Lexicon {
     public LexiconJavaComment() {
         super();
 
-        Lexeme lineComment = new Lexeme("LineComment").add("\\/\\/.*");
-        Lexeme endBlockComment = new Lexeme("endBlockComment").add("[\\ ]*\\*\\/");
-        Lexeme startBlockComment = new Lexeme("startBlockComment").add("[\\ ]*\\/\\*\\*?.*\\n?");
-        Lexeme blockLineComment = new Lexeme("blockLineComment").add("[\\ ]*\\*.*");
-        Lexeme blockComment = new Lexeme("BlockComment")
-                                .add(startBlockComment)
-                                .add("(").add(blockLineComment).add("\\n)*")
-                                .add("(").add(blockLineComment).add(")?").add(endBlockComment);
+        Lexeme lineComment = new Lexeme("LineComment").add("\\/\\/~#");
+        Lexeme blockComment = new Lexeme("BlockComment").add("\\/\\*+~#\\*\\/");
 
-        System.out.println(blockComment.regex());
         addLexeme(lineComment);
         addLexeme(blockComment);
     }
@@ -27,6 +20,7 @@ public class LexiconJavaComment extends Lexicon {
         System.out.println("-------START------");
 
         // Valid line comment tests
+        executeTest("//", "LineComment");
         executeTest("// this is a comment", "LineComment");
         executeTest("// this is a comment with more // in it", "LineComment");
 
@@ -50,10 +44,7 @@ public class LexiconJavaComment extends Lexicon {
         executeTest("/** this is a javadoc comment without end", null);
         executeTest("/* this is a java comment without end", null);
         executeTest("this is a comment without start */", null);
-        executeTest("/** this is a javadoc comment \n * without one \n proper middle line */", null);
-        executeTest("/* this is a java comment \n  without proper middle line */", null);
-
-        executeTest("/** this is a javadoc comment with a nested comment /** */ so this is no longer a comment :( */", null);
-        executeTest("/** this is a java comment with a nested comment /** */ so this is no longer a comment :( */", null);
+        executeTest("/** this is a javadoc comment with an interrupted end *ff/", null);
+        executeTest("/** this is a java comment with an interrupted end *ff/", null);
     }
 }
