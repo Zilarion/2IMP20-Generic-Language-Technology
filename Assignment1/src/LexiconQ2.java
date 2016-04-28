@@ -24,6 +24,13 @@ public class LexiconQ2 extends Lexicon {
         executeTest("\"a b\"", "STRING");
 
         executeTest("", null);
+        executeTest("\"", null);
+        executeTest("\"a", null);
+        executeTest("a\"", null);
+        executeTest("''", null);
+        executeTest("'abc'", null);
+        executeTest("'abc", null);
+        executeTest("abc'", null);
 
         System.out.println("-------DONE------");
     }
