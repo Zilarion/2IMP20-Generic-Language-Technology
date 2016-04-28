@@ -1,7 +1,6 @@
 import dk.brics.automaton.Automaton;
 import dk.brics.automaton.RegExp;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -9,33 +8,33 @@ import java.util.HashSet;
  * Created by ruudandriessen on 28/04/16.
  */
 public abstract class Lexicon {
-    HashMap<String, Automaton> lexemes;
-    HashMap<String, String> lexemesRegex;
+    HashMap<String, Automaton> lexemesAutomata;
+    HashMap<String, Lexeme> lexemes;
 
     public Lexicon() {
-        lexemes = new HashMap<>();
-        lexemesRegex = new HashMap();
+        lexemesAutomata = new HashMap<>();
+        lexemes = new HashMap();
     }
 
     /**
-     * Adds a new lexeme to the lexicon with a given identifier
-     * @param identifier The identifier to use for this lexeme
+     * Adds a new lexeme to the lexicon
      * @param lexeme The lexeme to use for this identifier
      */
-    public void addLexeme(String identifier, String lexeme) {
-        RegExp r = new RegExp(lexeme);
+    public void addLexeme(Lexeme lexeme) {
+        String identifier = lexeme.identifier;
+        RegExp r = new RegExp(lexeme.regex());
         Automaton automaton =  r.toAutomaton();
-        lexemes.put(identifier, automaton);
-        lexemesRegex.put(identifier, lexeme);
+        lexemesAutomata.put(identifier, automaton);
+        lexemes.put(identifier, lexeme);
     }
 
     /**
-     * Returns regex from lexeme with given identifier
+     * Returns Lexeme with given identifier
      * @param identifier The identifier to search for
-     * @return Regex string if found, null otherwise
+     * @return Lexeme if found, null otherwise
      */
-    public String getLexeme(String identifier) {
-        return lexemesRegex.get(identifier);
+    public Lexeme getLexeme(String identifier) {
+        return lexemes.get(identifier);
     }
 
     /**
@@ -45,8 +44,8 @@ public abstract class Lexicon {
      */
     public HashSet<String> classify(String string) {
         HashSet<String> results = new HashSet<>();
-        for (String identifier : lexemes.keySet()) {
-            Automaton a = lexemes.get(identifier);
+        for (String identifier : lexemesAutomata.keySet()) {
+            Automaton a = lexemesAutomata.get(identifier);
             if (a.run(string)) {
                 results.add(identifier);
             }
@@ -109,8 +108,8 @@ public abstract class Lexicon {
      */
     public String toString() {
         String language = "";
-        for (String identifier : lexemesRegex.keySet()) {
-            language += String.format("%5s :== \t%5s", identifier, lexemesRegex.get(identifier)) + "\n";
+        for (String identifier : lexemes.keySet()) {
+            language += String.format("%5s :== \t%5s", identifier, lexemes.get(identifier).string()) + "\n";
         }
         return language;
     }

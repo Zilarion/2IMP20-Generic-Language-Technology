@@ -5,10 +5,12 @@ public class LexiconQ1 extends Lexicon {
     public LexiconQ1() {
         super();
         // Add identifier lexeme
-        addLexeme("ID", "[a-z] [a-z0-9]*");
+        Lexeme idLexeme = new Lexeme("ID").add("[a-z] [a-z0-9]*");
+        addLexeme(idLexeme);
 
         // Add natural number lexeme
-        addLexeme("NAT", "[0]|[1-9][0-9]*");
+        Lexeme natLexme = new Lexeme("NAT").add("[0]|[1-9][0-9]*");
+        addLexeme(natLexme);
 
         // Construct and add float lexeme
         String unsignedInt = "[0]|([1-9][0-9]*)";
@@ -21,7 +23,7 @@ public class LexiconQ1 extends Lexicon {
     @Override
     public void test() {
         System.out.println("------------------");
-        System.out.println("Testing Lexicon Q1, language:");
+        System.out.println("Testing Lexicon Q1 with language definition:");
         System.out.println(toString());
         System.out.println("-------START------");
 
