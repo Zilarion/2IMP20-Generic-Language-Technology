@@ -3,7 +3,10 @@
  */
 public class Scanner {
     public static void main(String[] args) {
-        LexiconQ1 q1 = new LexiconQ1();
-        q1.test();
+//        LexiconQ1 q1 = new LexiconQ1();
+//        q1.test();
+
+        LexiconQ2 q2 = new LexiconQ2();
+        q2.test();
     }
 }
