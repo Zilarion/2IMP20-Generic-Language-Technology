@@ -1,0 +1,14 @@
+Pass --> Tested on Empty.pico
+Pass --> Tested on SingleDeclr.pico
+Pass --> Tested on MultiDeclr.pico
+Pass --> Tested on InvalidMultiDeclr.pico
+Pass --> Tested on InvalidSecondDeclr.pico
+Pass --> Tested on SingleStatement.pico
+Pass --> Tested on NoSemiColumn.pico
+Pass --> Tested on MultiStatement.pico
+Pass --> Tested on MultiStatementInvalidAssign.pico
+Pass --> Tested on SimplePar.pico
+Pass --> Tested on AssignToFromDeclr.pico
+Pass --> Tested on InvalidOperators.pico
+Pass --> Tested on ComplexStatements.pico
+Pass --> Tested on WhiteSpaceComplexStatements.pico

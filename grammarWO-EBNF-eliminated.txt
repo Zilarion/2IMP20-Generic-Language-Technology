@@ -1,0 +1,7 @@
+PROGRAM ::= "begin" DECLS "|" STATEMENT "end"
+DECLS ::= "declare" DECLS'
+DECLS' ::= ID "," DECLS'
+DECLS' ::= epsilon
+STATEMENT ::= STATEMENT' ";" STATEMENT
+STATEMENT ::= epsilon
+STATEMENT' ::= ID ":=" EXP

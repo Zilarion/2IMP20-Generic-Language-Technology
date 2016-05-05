@@ -1,0 +1,116 @@
+
+Testing Lexicon Q1 with language definition:
+----- Abstract -----
+  NAT :== 	[0]|[1-9][0-9]*
+FLOAT :== 	unsignedInt|unsignedReal
+   ID :== 	[a-z][a-z0-9]*
+------- Full -------
+  NAT :== 	([0]|[1-9][0-9]*)
+FLOAT :== 	(([0]|[1-9][0-9]*)|(([0]|[1-9][0-9]*)\.[0-9]+([eE]([\+\-]?([0]|[1-9][0-9]*)))?|([0]|[1-9][0-9]*)[eE]([\+\-]?([0]|[1-9][0-9]*))))
+   ID :== 	([a-z][a-z0-9]*)
+
+
+Result	->	Expected result		|                             Results	@	   Delta ms	(Test input)
+--------------------------------------------------------------------------------------------------------------------
+Pass	->	             ID		|                                [ID]	@	   57731 ms	(aaazz0220)
+Pass	->	              ∅		|                                  []	@	    7214 ms	(0xaazz0220)
+Pass	->	            NAT		|                        [NAT, FLOAT]	@	   16107 ms	(0)
+Pass	->	            NAT		|                        [NAT, FLOAT]	@	    9850 ms	(1422119923)
+Pass	->	            NAT		|                        [NAT, FLOAT]	@	    5045 ms	(922323)
+Pass	->	              ∅		|                                  []	@	    4237 ms	(023421)
+Pass	->	              ∅		|                                  []	@	    9527 ms	(xx@@$x822 92911@@)
+Pass	->	          FLOAT		|                        [NAT, FLOAT]	@	    8524 ms	(0)
+Pass	->	          FLOAT		|                        [NAT, FLOAT]	@	    4724 ms	(1)
+Pass	->	          FLOAT		|                        [NAT, FLOAT]	@	    7786 ms	(14)
+Pass	->	          FLOAT		|                             [FLOAT]	@	    6802 ms	(0.1)
+Pass	->	          FLOAT		|                             [FLOAT]	@	    6950 ms	(3e4)
+Pass	->	          FLOAT		|                             [FLOAT]	@	    6262 ms	(3.014e-7)
+Pass	->	              ∅		|                                  []	@	    5803 ms	(00)
+Pass	->	              ∅		|                                  []	@	    5166 ms	(01)
+Pass	->	              ∅		|                                  []	@	    4635 ms	(04.1)
+Pass	->	              ∅		|                                  []	@	    5864 ms	(3e04)
+Pass	->	              ∅		|                                  []	@	    6913 ms	(3.14e-07)
+--------------------------------------------------------------------------------------------------------------------
+
+Testing Lexicon Q2 with language definition:
+----- Abstract -----
+STRING :== 	\"@\"
+------- Full -------
+STRING :== 	(\"@\")
+
+
+Result	->	Expected result		|                             Results	@	   Delta ms	(Test input)
+--------------------------------------------------------------------------------------------------------------------
+Pass	->	         STRING		|                            [STRING]	@	    3470 ms	("")
+Pass	->	         STRING		|                            [STRING]	@	    3682 ms	("a")
+Pass	->	         STRING		|                            [STRING]	@	    2760 ms	("abc")
+Pass	->	         STRING		|                            [STRING]	@	    3401 ms	("a"b"c")
+Pass	->	         STRING		|                            [STRING]	@	    2950 ms	("a b")
+Pass	->	              ∅		|                                  []	@	    4043 ms	()
+Pass	->	              ∅		|                                  []	@	    2283 ms	(")
+Pass	->	              ∅		|                                  []	@	    2268 ms	("a)
+Pass	->	              ∅		|                                  []	@	    1896 ms	(a")
+Pass	->	              ∅		|                                  []	@	    1872 ms	('')
+Pass	->	              ∅		|                                  []	@	    2887 ms	('abc')
+Pass	->	              ∅		|                                  []	@	    3023 ms	('abc)
+Pass	->	              ∅		|                                  []	@	    2754 ms	(abc')
+--------------------------------------------------------------------------------------------------------------------
+
+Testing Lexicon Java comments with language definition:
+----- Abstract -----
+BlockComment :== 	\/\*+~#\*\/
+LineComment :== 	\/\/~#
+------- Full -------
+BlockComment :== 	(\/\*+~#\*\/)
+LineComment :== 	(\/\/~#)
+
+
+Result	->	Expected result		|                             Results	@	   Delta ms	(Test input)
+--------------------------------------------------------------------------------------------------------------------
+Pass	->	    LineComment		|                       [LineComment]	@	    6093 ms	(//)
+Pass	->	    LineComment		|                       [LineComment]	@	    9687 ms	(// this is a comment)
+Pass	->	    LineComment		|                       [LineComment]	@	   17104 ms	(// this is a comment with more // in it)
+Pass	->	              ∅		|                                  []	@	    5658 ms	(/ this is not a comment)
+Pass	->	              ∅		|                                  []	@	    4368 ms	(this is not a comment // even though we have two slashes in it)
+Pass	->	   BlockComment		|                      [BlockComment]	@	   25602 ms	(/** this is a javadoc comment \\n * where we have multiple lines and end normally\\n */)
+Pass	->	   BlockComment		|                      [BlockComment]	@	   20970 ms	(/* this is a java comment \\n * where we have multiple lines and end normally\\n */)
+Pass	->	   BlockComment		|                      [BlockComment]	@	   12650 ms	(/** this is a javadoc comment \\n * with one empty line \\n * \\n */)
+Pass	->	   BlockComment		|                      [BlockComment]	@	   10107 ms	(/* this is a java comment \\n * with one empty line \\n * \\n */)
+Pass	->	   BlockComment		|                      [BlockComment]	@	   11721 ms	(/** this is a javadoc comment \\n * with a sudden ending */)
+Pass	->	   BlockComment		|                      [BlockComment]	@	   11259 ms	(/* this is a java comment \\n * with a sudden ending */)
+Pass	->	   BlockComment		|                      [BlockComment]	@	    8146 ms	(/** this is a javadoc comment on one line */)
+Pass	->	   BlockComment		|                      [BlockComment]	@	    7676 ms	(/* this is a java comment on one line */)
+Pass	->	   BlockComment		|                      [BlockComment]	@	   21512 ms	(/** this is a javadoc comment with lots ** of ***** in it */)
+Pass	->	   BlockComment		|                      [BlockComment]	@	   18699 ms	(/* this is a java comment with lots ** of ***** in it */)
+Pass	->	              ∅		|                                  []	@	    8747 ms	(/** this is a javadoc comment without end)
+Pass	->	              ∅		|                                  []	@	    9330 ms	(/* this is a java comment without end)
+Pass	->	              ∅		|                                  []	@	    3146 ms	(this is a comment without start */)
+Pass	->	              ∅		|                                  []	@	    8984 ms	(/** this is a javadoc comment with an interrupted end *ff/)
+Pass	->	              ∅		|                                  []	@	    8816 ms	(/** this is a java comment with an interrupted end *ff/)
+--------------------------------------------------------------------------------------------------------------------
+
+Testing Lexicon Matlab comments with language definition:
+----- Abstract -----
+BlockComment :== 	\%\{+~#\%\}
+LineComment :== 	 \%~#
+------- Full -------
+BlockComment :== 	(\%\{+~#\%\})
+LineComment :== 	(\%~#)
+
+
+Result	->	Expected result		|                             Results	@	   Delta ms	(Test input)
+--------------------------------------------------------------------------------------------------------------------
+Pass	->	    LineComment		|                       [LineComment]	@	    6530 ms	(%)
+Pass	->	    LineComment		|                       [LineComment]	@	   10457 ms	(% this is a comment)
+Pass	->	    LineComment		|                       [LineComment]	@	   21429 ms	(% this is a comment with more % in it)
+Pass	->	              ∅		|                                  []	@	    4103 ms	(// this is not a comment)
+Pass	->	              ∅		|                                  []	@	    4297 ms	(this is not a comment % even though we have a percentage sign in it in it)
+Pass	->	   BlockComment		|         [BlockComment, LineComment]	@	   41302 ms	(%{ this is a MATLAB comment \\n where we have multiple lines and end normally\\n %})
+Pass	->	   BlockComment		|         [BlockComment, LineComment]	@	   33997 ms	(%{ this is a MATLAB comment \\n with one empty line \\n \\n %})
+Pass	->	   BlockComment		|         [BlockComment, LineComment]	@	   31458 ms	(%{ this is a MATLAB comment \\n with a sudden ending %})
+Pass	->	   BlockComment		|         [BlockComment, LineComment]	@	   26045 ms	(%{ this is a MATLAB comment block on one line %})
+Pass	->	   BlockComment		|         [BlockComment, LineComment]	@	   29670 ms	(%{ this is a MATLAB comment with lots of %%%% in it %})
+Pass	->	    LineComment		|                       [LineComment]	@	   25529 ms	(%{ this is a MATLAB comment without end)
+Pass	->	              ∅		|                                  []	@	    6878 ms	(this is a MATLAB comment without start %})
+Pass	->	    LineComment		|                       [LineComment]	@	   29396 ms	(%{ this is a MATLAB comment with an interrupted end %ff})
+--------------------------------------------------------------------------------------------------------------------

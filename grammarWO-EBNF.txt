@@ -1,12 +1,8 @@
 start-symbol PROGRAM
 
 context-free syntax
-PROGRAM ::= "begin" DECLS "|" PROGRAM' "end"
-PROGRAM' ::= STATEMENT ";" PROGRAM'
-PROGRAM' ::= 
-DECLS ::= "declare" DECLS'
-DECLS' ::= ID "," DECLS'
-DECLS' ::= 
+PROGRAM ::= "begin" DECLS "|" (STATEMENT ";")* "end"
+DECLS ::= "declare" (ID ",")*
 
 context-free syntax
 STATEMENT ::= ID ":=" EXP

@@ -1,0 +1,5 @@
+begin
+declare x0, x1, |
+x0 := 5;
+x1 := 6;
+end

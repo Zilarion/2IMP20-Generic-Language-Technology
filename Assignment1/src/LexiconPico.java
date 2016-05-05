@@ -10,9 +10,6 @@ public class LexiconPico extends Lexicon {
         // Add NAT lexeme
         Lexeme NATLexeme = new Lexeme("NAT").add("[0]|[1-9][0-9]*");
         addLexeme(NATLexeme);
-        // Add LAYOUT lexeme
-        Lexeme LAYOUTLexeme = new Lexeme("LAYOUT").add("[\\ \\n]+");
-        addLexeme(LAYOUTLexeme);
         // Add BEGIN lexeme
         Lexeme BEGINLexeme = new Lexeme("BEGIN").add("begin");
         addLexeme(BEGINLexeme);
