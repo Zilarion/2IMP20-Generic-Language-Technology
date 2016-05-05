@@ -6,7 +6,7 @@ public class LexiconQ1 extends Lexicon {
         super();
 
         // Add identifier lexeme
-        Lexeme idLexeme = new Lexeme("ID").add("[a-z] [a-z0-9]*");
+        Lexeme idLexeme = new Lexeme("ID").add("[a-z][a-z0-9]*");
         addLexeme(idLexeme);
 
         // Add natural number lexeme
@@ -32,8 +32,8 @@ public class LexiconQ1 extends Lexicon {
         printHeader();
 
         // ID tests
-        executeTest("a aazz0220", "ID");
-        executeTest("ax aazz0220", null);
+        executeTest("aaazz0220", "ID");
+        executeTest("0xaazz0220", null);
 
         // NAT tests
         executeTest("0", "NAT");
