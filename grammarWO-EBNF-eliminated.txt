@@ -12,10 +12,11 @@ LEXP ::= "(" EXP ")"
 LEXP ::= "-" EXP
 
 EXP ::= LEXP PEXP
+EXP ::= LEXP MEXP
+
 PEXP ::= "+" EXP PEXP 
 PEXP ::= epsilon
 
-EXP ::= LEXP MEXP
 MEXP ::= "*" EXP MEXP
 MEXP ::= epsilon
 
