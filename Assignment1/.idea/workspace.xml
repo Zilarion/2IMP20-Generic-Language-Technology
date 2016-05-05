@@ -23,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PicoTests.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PicoTests.java">
+      <file leaf-file-name="RegexText.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RegexText.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+            <state relative-caret-position="45">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PicoRec.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PicoRec.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,7 +81,6 @@
         <option value="$PROJECT_DIR$/input/test14.txt" />
         <option value="$PROJECT_DIR$/src/PicoRecursive.java" />
         <option value="$PROJECT_DIR$/input/test1.txt" />
-        <option value="$PROJECT_DIR$/src/PicoRec.java" />
         <option value="$PROJECT_DIR$/input/test2.pico" />
         <option value="$PROJECT_DIR$/input/test4.pico" />
         <option value="$PROJECT_DIR$/input/test6.pico" />
@@ -82,9 +91,11 @@
         <option value="$PROJECT_DIR$/input/WhiteSpaceComplexStatements.pico" />
         <option value="$PROJECT_DIR$/input/AssignToFromDeclr.pico" />
         <option value="$PROJECT_DIR$/input/SimplePar.pico" />
-        <option value="$PROJECT_DIR$/src/PicoTests.java" />
         <option value="$PROJECT_DIR$/ResultsPico" />
         <option value="$PROJECT_DIR$/ResultsLexicon" />
+        <option value="$PROJECT_DIR$/src/PicoTests.java" />
+        <option value="$PROJECT_DIR$/src/PicoRec.java" />
+        <option value="$PROJECT_DIR$/src/RegexText.java" />
       </list>
     </option>
   </component>
@@ -192,10 +203,10 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.LexiconTests">
-    <configuration default="false" name="LexiconTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration default="false" name="RegexText" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="LexiconTests" />
+      <option name="MAIN_CLASS_NAME" value="RegexText" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -211,6 +222,21 @@
     <configuration default="false" name="PicoTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="PicoTests" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Assignment1" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="PicoRec" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="PicoRec" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -631,14 +657,16 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.LexiconTests" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.RegexText" />
       <item index="1" class="java.lang.String" itemvalue="Application.PicoTests" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PicoRec" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.LexiconTests" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PicoTests" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.RegexText" />
+        <item index="1" class="java.lang.String" itemvalue="Application.PicoRec" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PicoTests" />
       </list>
     </recent_temporary>
   </component>
@@ -658,12 +686,12 @@
       <workItem from="1461830842503" duration="5918000" />
       <workItem from="1461848404632" duration="4508000" />
       <workItem from="1462432758104" duration="298000" />
-      <workItem from="1462433088914" duration="13303000" />
+      <workItem from="1462433088914" duration="13704000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24027000" />
+    <option name="totallyTimeSpent" value="24428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1880" y="-86" width="1880" height="1057" extended-state="0" />
@@ -678,7 +706,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.50285715" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26923078" sideWeight="0.49714285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26923078" sideWeight="0.49714285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -714,7 +742,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/PicoRec.java</url>
-          <line>214</line>
+          <line>250</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
@@ -731,7 +759,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/LexiconTests.java">
+    <entry file="file://$PROJECT_DIR$/src/RegexText.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
@@ -747,7 +775,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LexiconTests.java">
+    <entry file="file://$PROJECT_DIR$/src/RegexText.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
@@ -763,7 +791,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LexiconTests.java">
+    <entry file="file://$PROJECT_DIR$/src/RegexText.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -875,14 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="118" column="15" selection-start-line="118" selection-start-column="15" selection-end-line="118" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LexiconTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -999,16 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PicoRec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="131" column="21" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../grammarWO-EBNF.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1115,11 +1125,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PicoTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PicoRec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RegexText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

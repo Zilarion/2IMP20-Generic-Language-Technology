@@ -1,0 +1,36 @@
+Description of the resulting LL(1) grammar after transformation to remove EBNF constructs.
+
+- We removed the so-called EBNF constructs of the DECLS and STATEMENT definitions, by rewriting the existing definiations and adding the DECLS'
+	and STATEMENT' definitions that could be recursed in a LL(1) grammar.
+- We have also rewritten the EXP definitions and removed the left recursion from the EXP definitions, by adding new distinct definitions
+	for the leaf/terminal-expressions (LEXP), the plus-operator (PEXP) and the multiplication-operator (MEXP).
+- The priority definitions have been taken care of inside the parser.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+PROGRAM ::= "begin" DECLS "|" STATEMENT "end"
+DECLS ::= "declare" DECLS'
+DECLS' ::= ID "," DECLS'
+DECLS' ::= epsilon
+STATEMENT ::= STATEMENT' ";" STATEMENT
+STATEMENT :: = epsilon
+STATEMENT' ::= ID ":=" EXP
+
+LEXP ::= ID 
+LEXP ::= NAT 
+LEXP ::= "(" EXP ")" 
+LEXP ::= "-" EXP
+
+EXP ::= LEXP PEXP
+EXP ::= LEXP MEXP
+
+PEXP ::= "+" EXP PEXP 
+PEXP ::= epsilon
+
+MEXP ::= "*" EXP MEXP
+MEXP ::= epsilon
+
+ID ::= [a-z][a-z0-9]*
+
+NAT ::= [0] | [1-9][0-9]*
+
+LAYOUT ::= [\ \n]*

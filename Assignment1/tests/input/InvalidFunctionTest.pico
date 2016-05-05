@@ -1,0 +1,4 @@
+f(y): {
+    result:x;
+    x:=y;
+    result

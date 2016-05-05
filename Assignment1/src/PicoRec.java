@@ -1,7 +1,4 @@
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.util.HashSet;
@@ -21,6 +18,45 @@ public class PicoRec {
     int next;
     boolean skip_read;
     LexiconPico lexicon;
+
+    public static void main(String[] args) {
+        // Check simple valid input
+        test("./input/Empty.pico", true);
+        test("./input/SingleDeclr.pico", true);
+        test("./input/SingleStatement.pico", true);
+
+        // Check complex valid input
+        test("./input/MultiDeclr.pico", true);
+        test("./input/MultiStatement.pico", true);
+        test("./input/SimplePar.pico", true);
+        test("./input/AssignToFromDeclr.pico", true);
+        test("./input/ComplexStatements.pico", true);
+        test("./input/WhiteSpaceComplexStatements.pico", true);
+
+        // Check for invalid input
+        test("./input/InvalidMultiDeclr.pico", false);
+        test("./input/InvalidSecondDeclr.pico", false);
+        test("./input/NoSemiColumn.pico", false);
+        test("./input/MultiStatementInvalidAssign.pico", false);
+        test("./input/InvalidOperators.pico", false);
+    }
+
+    public static void test(String file, boolean expected) {
+        File f = new File(file);
+        PicoRec parser = null;
+        try {
+            parser = new PicoRec(new FileInputStream(f));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        boolean pass = false;
+        try {
+            pass = parser.run();
+        } catch (ParseException e) {
+        }
+        System.out.println((pass == expected ? "Pass" : "Fail") + " --> Tested on " + f.getName());
+    }
+
 
     public PicoRec(InputStream in) {
         reader = new InputStreamReader(in, Charset.defaultCharset());
