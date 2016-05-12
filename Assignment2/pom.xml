@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>Assignment2</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>de.jflex</groupId>
+                <artifactId>jflex-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>src/main/java</outputDirectory>
+                            <lexDefinitions>
+                                <lexDefinition>src/main/jflex</lexDefinition>
+                                <lexDefinition>src/main/lex/preprocessor.jflex</lexDefinition>
+                                <lexDefinition>/pub/postprocessor.jflex</lexDefinition>
+                            </lexDefinitions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.beaver</groupId>
+            <artifactId>beaver-rt</artifactId>
+            <version>0.9.11</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.beaver</groupId>
+            <artifactId>beaver-cc</artifactId>
+            <version>0.9.11</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.beaver</groupId>
+            <artifactId>beaver-ant</artifactId>
+            <version>0.9.11</version>
+        </dependency>
+        <dependency>
+            <groupId>de.jflex</groupId>
+            <artifactId>jflex-maven-plugin</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+    </dependencies>
+</project>
