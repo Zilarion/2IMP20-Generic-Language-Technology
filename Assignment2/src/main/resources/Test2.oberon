@@ -1,0 +1,23 @@
+ DEFINITION OSS; (*Oberon Subset Scanner*)
+     IMPORT Texts;
+     CONST IdLen = 16;
+         (*symbols*) null = 0;
+         times = 1; div = 3; mod = 4; and = 5; plus = 6; minus = 7; or = 8;
+         eql = 9; neq = 10; lss = 11; geq = 12; leq = 13; gtr = 14;
+         period = 18; comma = 19; colon = 20; rparen = 22; rbrak = 23;
+         of = 25; then = 26; do = 27;
+         lparen = 29; lbrak = 30; not = 32; becomes = 33; number = 34; ident = 37;
+         semicolon = 38; end = 40; else = 41; elsif = 42;
+         if = 44; while = 46;
+         array = 54; record = 55;
+         const = 57; type = 58; var = 59; procedure = 60; begin = 61; module = 63; eof = 64;
+
+     TYPE Ident = ARRAY IdLen OF CHAR;
+
+     VAR val: LONGINT;
+         id: Ident;
+         error: BOOLEAN;
+     PROCEDURE Mark(msg: ARRAY OF CHAR);
+     PROCEDURE Get(VAR sym: INTEGER);
+     PROCEDURE Init(T: Texts.Text; pos: LONGINT);
+END OSS.
