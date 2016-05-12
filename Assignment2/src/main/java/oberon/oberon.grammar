@@ -1,4 +1,4 @@
-%package "oberon-0";
+%package "oberon";
 %class "OberonParser";
 
 %terminals LETTER, DIGIT;

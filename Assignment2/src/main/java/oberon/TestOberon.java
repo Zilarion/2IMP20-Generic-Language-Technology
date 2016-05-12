@@ -10,9 +10,8 @@ import java.io.*;
 public class TestOberon {
 
     public static void main(String[] args) {
-//        test("Test1.oberon", true);
-
-//        test("Test1Fail.oberon", false);
+        test("Test1.oberon", true);
+        test("Test2.oberon", true);
     }
 
     public static void test(String name, boolean expected) {
