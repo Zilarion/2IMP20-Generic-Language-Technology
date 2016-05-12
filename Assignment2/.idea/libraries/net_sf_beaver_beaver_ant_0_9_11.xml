@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="net.sf.beaver:beaver-ant:0.9.11" type="repository">
+    <properties maven-id="net.sf.beaver:beaver-ant:0.9.11" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sf/beaver/beaver-ant/0.9.11/beaver-ant-0.9.11.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/ant/ant/1.7.1/ant-1.7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/ant/ant-launcher/1.7.1/ant-launcher-1.7.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sf/beaver/beaver-ant/0.9.11/beaver-ant-0.9.11-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sf/beaver/beaver-ant/0.9.11/beaver-ant-0.9.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

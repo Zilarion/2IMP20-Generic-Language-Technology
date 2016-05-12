@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="net.sf.beaver:beaver-rt:0.9.11" type="repository">
+    <properties maven-id="net.sf.beaver:beaver-rt:0.9.11" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sf/beaver/beaver-rt/0.9.11/beaver-rt-0.9.11.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sf/beaver/beaver-rt/0.9.11/beaver-rt-0.9.11-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sf/beaver/beaver-rt/0.9.11/beaver-rt-0.9.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
