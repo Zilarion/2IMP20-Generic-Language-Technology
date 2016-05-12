@@ -1,0 +1,15 @@
+MODULE Sample;
+    PROCEDURE factor;
+        BEGIN
+            IF sym < lparen THEN Mark(ident);
+        END;
+    END factor;
+    PROCEDURE StatSequence;
+        BEGIN
+            IF sym = lparen THEN
+            Get(sym); expression;
+            WHILE sym = comma DO Get(sym); expression END ;
+            IF sym = rparen THEN Get(sym) ELSE Mark(temp) END
+        END
+    END StatSequence;
+END Sample.

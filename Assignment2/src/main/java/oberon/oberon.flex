@@ -3,7 +3,7 @@ package oberon;
 import beaver.Symbol;
 import beaver.Scanner;
 
-import pico.OberonParser.Terminals;
+import oberon.OberonParser.Terminals;
 
 %%
 
@@ -38,8 +38,8 @@ import pico.OberonParser.Terminals;
 WhiteSpace = [\ \t\n\r]*
 
 /* identifiers */
-Letter = [a-zA-Z];
-Digit = [0-9];
+Identifier = [a-zA-Z][a-zA-Z0-9]*
+Integer = [0-9]+
 
 %%
 
@@ -47,7 +47,10 @@ Digit = [0-9];
     /* keywords */
     "END"                           { return token(Terminals.END); }
     "ELSE"                          { return token(Terminals.ELSE); }
-    "ELSEIF"                        { return token(Terminals.ELSEIF); }
+    "DO"                            { return token(Terminals.DO); }
+    "ELSIF"                         { return token(Terminals.ELSIF); }
+    "THEN"                          { return token(Terminals.THEN); }
+    "OF"                            { return token(Terminals.OF); }
     "IF"                            { return token(Terminals.IF); }
     "WHILE"                         { return token(Terminals.WHILE); }
     "ARRAY"                         { return token(Terminals.ARRAY); }
@@ -55,14 +58,9 @@ Digit = [0-9];
     "CONST"                         { return token(Terminals.CONST); }
     "TYPE"                          { return token(Terminals.TYPE); }
     "VAR"                           { return token(Terminals.VAR); }
-    "PROCEDURE"                     { return token(Terminals.PROCEDURE); }
+    "PROCEDURE"                     { return token(Terminals.PROC); }
     "BEGIN"                         { return token(Terminals.BEGIN); }
     "MODULE"                        { return token(Terminals.MODULE); }
-
-
-    /* boolean literals */
-    "true"                          { return token(Terminals.BOOLEAN_LITERAL, new Boolean(true)); }
-    "false"                         { return token(Terminals.BOOLEAN_LITERAL, new Boolean(false)); }
 
     /* seperators */
     "("                             { return token(Terminals.LPAREN); }
@@ -95,8 +93,8 @@ Digit = [0-9];
     {WhiteSpace}                    { /* ignore */ }
 
     /* Components */
-    {Letter}                        { return token(Terminals.LETTER, yytext()); }
-    {Digit}                         { return token(Terminals.DIGIT, yytext()); }
+    {Identifier}                        { return token(Terminals.IDENT, yytext()); }
+    {Integer}                         { return token(Terminals.INT, yytext()); }
 
 }
 

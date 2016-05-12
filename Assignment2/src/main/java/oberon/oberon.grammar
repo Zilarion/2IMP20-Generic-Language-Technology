@@ -1,35 +1,26 @@
 %package "oberon";
 %class "OberonParser";
 
-%terminals LETTER, DIGIT;
+%terminals IDENT, INT;
 %terminals MULT, DIV, MOD, AND, PLUS, MIN, OR;
 %terminals EQ, HASHTAG, LT, LEQ, GT, GEQ, DOT, COMMA, COLON, RPAREN, RBRACK;
 %terminals OF, THEN, DO, LPAREN, LBRACK, COMP, ASSIGN, SEMICOLON;
 %terminals END, ELSE, ELSIF, IF, WHILE;
-%terminals ARRAY, RECORD, CONST, TYPE, VAR, PROCEDURE, BEGIN, MODULE;
+%terminals ARRAY, RECORD, CONST, TYPE, VAR, PROC, BEGIN, MODULE;
 
 %goal module;
 
 
-ident
-    = LETTER LETTER*
-    | LETTER DIGIT*
-    ;
-
-integer = DIGIT+;
-
 selector = selectorP*;
 
 selectorP
-    = DOT ident
+    = DOT IDENT
     | LBRACK expression RBRACK
     ;
 
-number = integer;
-
 factor
-    = ident selector
-    | number
+    = IDENT selector
+    | INT
     | LPAREN expression RPAREN
     | COMP factor
     ;
@@ -44,8 +35,8 @@ termP
     ;
 
 plusmin
-    = +
-    | -
+    = PLUS
+    | MIN
     ;
 
 simpleexp = plusmin? term simpleexpP*;
@@ -67,7 +58,7 @@ expressionP
     | GEQ simpleexp
     ;
 
-assignment = ident selector ASSIGN expression;
+assignment = IDENT selector ASSIGN expression;
 
 actualpar = LPAREN actualparP? RPAREN;
 
@@ -75,7 +66,7 @@ actualparP = expression actualparPP*;
 
 actualparPP = COMMA expression;
 
-proccall = ident selector actualpar?;
+proccall = IDENT selector actualpar?;
 
 ifstatement = IF expression THEN statementseq elsifstatement* elsestatement? END;
 
@@ -98,27 +89,27 @@ statementseq = statement statementseqP*;
 
 statementseqP = SEMICOLON statement;
 
-identlist = ident identlistP*;
+IDENTlist = IDENT IDENTlistP*;
 
-identlistP = COMMA ident;
+IDENTlistP = COMMA IDENT;
 
 arraytype = ARRAY expression OF type;
 
 fieldlist = fieldlistP?;
 
-fieldlistP = identlist COLON type;
+fieldlistP = IDENTlist COLON type;
 
 recordtype = RECORD fieldlist recordtypeP* END;
 
 recordtypeP = SEMICOLON fieldlist;
 
 type
-    = ident
+    = IDENT
     | arraytype
     | recordtype
     ;
 
-fpsection = VAR? identlist COLON type;
+fpsection = VAR? IDENTlist COLON type;
 
 formalpar = LPAREN formalparP? RPAREN;
 
@@ -126,33 +117,28 @@ formalparP = fpsection formalparPP*;
 
 formalparPP = SEMICOLON fpsection;
 
-prochead = PROCEDURE ident formalpar?;
-
-procbody = declarations procbodyP? END ident;
+procbody = declarations procbodyP? END IDENT;
 
 procbodyP = BEGIN statementseq;
 
-procdecl = prochead SEMICOLON procbody;
+procdecl = PROC IDENT formalpar? SEMICOLON procbody;
 
-declarations =  declarationsM?
-                declarationsT?
-                declarationsV?
-                declarationsP*;
+declarations = declarationsM? declarationsT? declarationsV? declarationsP*;
 
 declarationsM = CONST declarationsMP*;
 
-declarationsMP = ident EQ expression SEMICOLON;
+declarationsMP = IDENT EQ expression SEMICOLON;
 
 declarationsT = TYPE declarationsTP*;
 
-declarationsTP = ident EQ TYPE SEMICOLON;
+declarationsTP = IDENT EQ type SEMICOLON;
 
 declarationsV = VAR declarationsVP*;
 
-declarationsVP = identlist COLON TYPE SEMICOLON;
+declarationsVP = IDENTlist COLON type SEMICOLON;
 
-declarationsP = PROCDECL SEMICOLON;
+declarationsP = procdecl SEMICOLON;
 
-module = MODULE ident SEMICOLON declarations moduleP? END ident DOT;
+module = MODULE IDENT SEMICOLON declarations moduleP? END IDENT DOT;
 
 moduleP = BEGIN statementseq;
