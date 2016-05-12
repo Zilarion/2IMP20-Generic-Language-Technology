@@ -37,11 +37,9 @@ import pico.OberonParser.Terminals;
 /* layout */
 WhiteSpace = [\ \t\n\r]*
 
-/* comments */
-Comment = "//" ~[\n\r]* [\n\r]
-
 /* identifiers */
-Identifier = [a-zA-Z][a-zA-Z0-9]*
+Letter = [a-zA-Z];
+Digit = [0-9];
 
 %%
 
@@ -93,15 +91,12 @@ Identifier = [a-zA-Z][a-zA-Z0-9]*
     "~"                            { return token(Terminals.COMP); }
     ":="                           { return token(Terminals.ASSIGN); }
 
-
-    /* comments */
-    {Comment}               { /* ignore */ }
-
     /* whitespace */
     {WhiteSpace}            { /* ignore */ }
 
-    /* identifiers */
-    {Identifier}            { return token(Terminals.ID, yytext()); }
+    /* Components */
+    {Letter}            { return token(Terminals.LETTER, yytext()); }
+    {Digit}            { return token(Terminals.DIGIT, yytext()); }
 
 }
 

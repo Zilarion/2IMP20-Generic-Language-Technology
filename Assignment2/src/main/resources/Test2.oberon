@@ -1,4 +1,4 @@
- DEFINITION OSS; (*Oberon Subset Scanner*)
+ DEFINITION OSS;
      IMPORT Texts;
      CONST IdLen = 16;
          (*symbols*) null = 0;
