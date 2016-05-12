@@ -4,7 +4,7 @@
 %terminals LETTER, DIGIT;
 %terminals MULT, DIV, MOD, AND, PLUS, MIN, OR;
 %terminals EQ, HASHTAG, LT, LEQ, GT, GEQ, DOT, COMMA, COLON, RPAREN, RBRACK;
-%terminals OF, THEN, DO, LPAREN, LBRACK, TILDE, ASSIGN, SEMICOLON;
+%terminals OF, THEN, DO, LPAREN, LBRACK, COMP, ASSIGN, SEMICOLON;
 %terminals END, ELSE, ELSIF, IF, WHILE;
 %terminals ARRAY, RECORD, CONST, TYPE, VAR, PROCEDURE, BEGIN, MODULE;
 
@@ -12,20 +12,17 @@
 
 
 ident
-    = LETTER
-    | LETTER LETTER
-    | LETTER DIGIT
+    = LETTER LETTER*
+    | LETTER DIGIT*
     ;
 
-integer
-    = DIGIT
-    | DIGIT DIGIT
-    ;
+integer = DIGIT+;
 
-selector =
-    ( DOT ident
+selector = selectorP*;
+
+selectorP
+    = DOT ident
     | LBRACK expression RBRACK
-    )*
     ;
 
 number = integer;
@@ -34,26 +31,51 @@ factor
     = ident selector
     | number
     | LPAREN expression RPAREN
-    | TILDE factor
+    | COMP factor
     ;
 
-term
-    = factor    ( MULT factor
-                | DIV factor
-                | MOD factor
-                | AND factor
-                )*
+term = factor termP*;
+
+termP
+    = MULT factor
+    | DIV factor
+    | MOD factor
+    | AND factor
     ;
 
-simpleexp = ( PLUS | MIN )? term ((PLUS | MIN | OR) term)*;
+plusmin
+    = +
+    | -
+    ;
 
-expression = simpleexp ((EQ | HASHTAG | LT | LEQ | GT | GEQ) simpleexp)?;
+simpleexp = plusmin? term simpleexpP*;
+
+simpleexpP
+    = PLUS term
+    | MIN term
+    | OR term
+    ;
+
+expression = simpleexp expressionP?;
+
+expressionP
+    = EQ simpleexp
+    | HASHTAG simpleexp
+    | LT simpleexp
+    | LEQ simpleexp
+    | GT simpleexp
+    | GEQ simpleexp
+    ;
 
 assignment = ident selector ASSIGN expression;
 
-actualpar = LPAREN (expression (COMMA expression)*)? RPAREN;
+actualpar = LPAREN actualparP? RPAREN;
 
-proccall = ident selector (actualpar)?;
+actualparP = expression actualparPP*;
+
+actualparPP = COMMA expression;
+
+proccall = ident selector actualpar?;
 
 ifstatement = IF expression THEN statementseq elsifstatement* elsestatement? END;
 
@@ -63,17 +85,32 @@ elsestatement = ELSE statementseq;
 
 whilestatement = WHILE expression DO statementseq END;
 
-statement = (assignment | proccall | ifstatement | whilestatement)?;
+statement = statementP?;
 
-statementseq = statement (SEMICOLON statement)*;
+statementP
+    = assignment
+    | proccall
+    | ifstatement
+    | whilestatement
+    ;
 
-identlist = ident (COMMA ident)*;
+statementseq = statement statementseqP*;
+
+statementseqP = SEMICOLON statement;
+
+identlist = ident identlistP*;
+
+identlistP = COMMA ident;
 
 arraytype = ARRAY expression OF type;
 
-fieldlist = (identlist COLON type)?;
+fieldlist = fieldlistP?;
 
-recordtype = RECORD fieldlist (SEMICOLON fieldlist)* END;
+fieldlistP = identlist COLON type;
+
+recordtype = RECORD fieldlist recordtypeP* END;
+
+recordtypeP = SEMICOLON fieldlist;
 
 type
     = ident
@@ -81,19 +118,41 @@ type
     | recordtype
     ;
 
-fpsection = (VAR)? identlist COLON TYPE;
+fpsection = VAR? identlist COLON type;
 
-formalpar = LPAREN (fpsection (SEMICOLON fpsection)*)? RPAREN;
+formalpar = LPAREN formalparP? RPAREN;
 
-prochead = PROCEDURE ident (formalpar)?;
+formalparP = fpsection formalparPP*;
 
-procbody = declarations (BEGIN statementseq)? END ident;
+formalparPP = SEMICOLON fpsection;
+
+prochead = PROCEDURE ident formalpar?;
+
+procbody = declarations procbodyP? END ident;
+
+procbodyP = BEGIN statementseq;
 
 procdecl = prochead SEMICOLON procbody;
 
-declarations =  (CONST (ident EQ expression SEMICOLON)*)?
-                (TYPE (ident EQ TYPE SEMICOLON)*)?
-                (VAR (identlist COLON TYPE SEMICOLON)*)?
-                (PROCDECL SEMICOLON)*;
+declarations =  declarationsM?
+                declarationsT?
+                declarationsV?
+                declarationsP*;
 
-module = MODULE ident SEMICOLON declarations (BEGIN statementseq)? END ident DOT;
+declarationsM = CONST declarationsMP*;
+
+declarationsMP = ident EQ expression SEMICOLON;
+
+declarationsT = TYPE declarationsTP*;
+
+declarationsTP = ident EQ TYPE SEMICOLON;
+
+declarationsV = VAR declarationsVP*;
+
+declarationsVP = identlist COLON TYPE SEMICOLON;
+
+declarationsP = PROCDECL SEMICOLON;
+
+module = MODULE ident SEMICOLON declarations moduleP? END ident DOT;
+
+moduleP = BEGIN statementseq;
