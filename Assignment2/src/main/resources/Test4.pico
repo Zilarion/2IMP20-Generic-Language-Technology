@@ -1,0 +1,12 @@
+{
+	class A extends B {
+		boolean a;
+		a = true;
+		class AA {
+			boolean aa;
+		}
+	}
+	class B extends A {
+
+	}
+}

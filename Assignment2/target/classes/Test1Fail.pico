@@ -1,0 +1,8 @@
+{
+	class X
+        boolean a;
+		a = true;
+		class AA {
+			boolean aa;
+		}
+}

@@ -1,0 +1,7 @@
+class A {
+    boolean a;
+    a = true;
+    class AA {
+        boolean aa;
+    }
+}

@@ -1,0 +1,9 @@
+{
+	class {
+            boolean a;
+		a =             true;
+		                        class AA {
+			boolean aa;
+		}
+                }
+}
