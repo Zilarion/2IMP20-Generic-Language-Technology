@@ -13,6 +13,7 @@ public class TestOberon {
         test("Test1.oberon", true);
         test("Test2.oberon", true);
         test("Test3.oberon", true);
+        test("Test4.oberon", false);
     }
 
     public static void test(String name, boolean expected) {
