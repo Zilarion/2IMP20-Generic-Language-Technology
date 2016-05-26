@@ -394,6 +394,29 @@ public class PlatoonItemProviderAdapterFactory extends PlatoonAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link platoon.World} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected WorldItemProvider worldItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link platoon.World}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWorldAdapter() {
+		if (worldItemProvider == null) {
+			worldItemProvider = new WorldItemProvider(this);
+		}
+
+		return worldItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -506,6 +529,7 @@ public class PlatoonItemProviderAdapterFactory extends PlatoonAdapterFactory imp
 		if (rightItemProvider != null) rightItemProvider.dispose();
 		if (headwayConstraintItemProvider != null) headwayConstraintItemProvider.dispose();
 		if (constraintItemProvider != null) constraintItemProvider.dispose();
+		if (worldItemProvider != null) worldItemProvider.dispose();
 	}
 
 }

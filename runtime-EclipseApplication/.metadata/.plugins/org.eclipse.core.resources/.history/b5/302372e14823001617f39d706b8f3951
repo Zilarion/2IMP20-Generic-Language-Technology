@@ -1,0 +1,8 @@
+platoon:
+	LV Lego0 
+route R1:
+	forward(10)
+	turn Left
+
+constraints:
+	20 <= headway <= 30

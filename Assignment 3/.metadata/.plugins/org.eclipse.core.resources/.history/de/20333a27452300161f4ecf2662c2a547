@@ -1,0 +1,46 @@
+#
+
+pluginName = Platoon Edit Support
+providerName = www.example.org
+
+_UI_CreateChild_text = {0}
+_UI_CreateChild_text2 = {1} {0}
+_UI_CreateChild_text3 = {1}
+_UI_CreateChild_tooltip = Create New {0} Under {1} Feature
+_UI_CreateChild_description = Create a new child of type {0} for the {1} feature of the selected {2}.
+_UI_CreateSibling_description = Create a new sibling of type {0} for the selected {2}, under the {1} feature of their parent.
+
+_UI_PropertyDescriptor_description = The {0} of the {1}
+
+_UI_Platoon_type = Platoon
+_UI_Route_type = Route
+_UI_Constraints_type = Constraints
+_UI_Vehicle_type = Vehicle
+_UI_FollowVehicle_type = Follow Vehicle
+_UI_LeadingVehicle_type = Leading Vehicle
+_UI_Command_type = Command
+_UI_ForwardCommand_type = Forward Command
+_UI_TurnCommand_type = Turn Command
+_UI_Direction_type = Direction
+_UI_Left_type = Left
+_UI_Right_type = Right
+_UI_HeadwayConstraint_type = Headway Constraint
+_UI_Constraint_type = Constraint
+_UI_Unknown_type = Object
+
+_UI_Unknown_datatype= Value
+
+_UI_Platoon_LV_feature = LV
+_UI_Platoon_FV_feature = FV
+_UI_Route_commands_feature = Commands
+_UI_Route_id_feature = Id
+_UI_Constraints_constraints_feature = Constraints
+_UI_Vehicle_id_feature = Id
+_UI_FollowVehicle_FrontRunner_feature = Front Runner
+_UI_LeadingVehicle_Route_feature = Route
+_UI_ForwardCommand_distance_feature = Distance
+_UI_TurnCommand_direction_feature = Direction
+_UI_HeadwayConstraint_min_feature = Min
+_UI_HeadwayConstraint_max_feature = Max
+_UI_Unknown_feature = Unspecified
+

@@ -1,0 +1,12 @@
+World 
+{
+	platoon {
+		LV Lego0
+	}
+	route R0 {
+		commands 
+	}
+	constraints {
+		
+	}
+}

@@ -576,6 +576,62 @@ public interface PlatoonPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link platoon.impl.WorldImpl <em>World</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see platoon.impl.WorldImpl
+	 * @see platoon.impl.PlatoonPackageImpl#getWorld()
+	 * @generated
+	 */
+	int WORLD = 14;
+
+	/**
+	 * The feature id for the '<em><b>Platoon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD__PLATOON = 0;
+
+	/**
+	 * The feature id for the '<em><b>Route</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD__ROUTE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Constraint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD__CONSTRAINT = 2;
+
+	/**
+	 * The number of structural features of the '<em>World</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>World</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORLD_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link platoon.Platoon <em>Platoon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -848,6 +904,49 @@ public interface PlatoonPackage extends EPackage {
 	EClass getConstraint();
 
 	/**
+	 * Returns the meta object for class '{@link platoon.World <em>World</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>World</em>'.
+	 * @see platoon.World
+	 * @generated
+	 */
+	EClass getWorld();
+
+	/**
+	 * Returns the meta object for the reference '{@link platoon.World#getPlatoon <em>Platoon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Platoon</em>'.
+	 * @see platoon.World#getPlatoon()
+	 * @see #getWorld()
+	 * @generated
+	 */
+	EReference getWorld_Platoon();
+
+	/**
+	 * Returns the meta object for the reference '{@link platoon.World#getRoute <em>Route</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Route</em>'.
+	 * @see platoon.World#getRoute()
+	 * @see #getWorld()
+	 * @generated
+	 */
+	EReference getWorld_Route();
+
+	/**
+	 * Returns the meta object for the reference '{@link platoon.World#getConstraint <em>Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Constraint</em>'.
+	 * @see platoon.World#getConstraint()
+	 * @see #getWorld()
+	 * @generated
+	 */
+	EReference getWorld_Constraint();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1105,6 +1204,40 @@ public interface PlatoonPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONSTRAINT = eINSTANCE.getConstraint();
+
+		/**
+		 * The meta object literal for the '{@link platoon.impl.WorldImpl <em>World</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see platoon.impl.WorldImpl
+		 * @see platoon.impl.PlatoonPackageImpl#getWorld()
+		 * @generated
+		 */
+		EClass WORLD = eINSTANCE.getWorld();
+
+		/**
+		 * The meta object literal for the '<em><b>Platoon</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORLD__PLATOON = eINSTANCE.getWorld_Platoon();
+
+		/**
+		 * The meta object literal for the '<em><b>Route</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORLD__ROUTE = eINSTANCE.getWorld_Route();
+
+		/**
+		 * The meta object literal for the '<em><b>Constraint</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORLD__CONSTRAINT = eINSTANCE.getWorld_Constraint();
 
 	}
 

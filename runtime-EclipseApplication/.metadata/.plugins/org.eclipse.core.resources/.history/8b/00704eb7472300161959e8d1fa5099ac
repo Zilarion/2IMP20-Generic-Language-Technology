@@ -1,0 +1,14 @@
+World 
+{
+	platoon
+	platoon=Platoon
+	{
+	}
+	route R0 
+	{
+		commands (Command)
+	}
+	constraints {
+		
+	}
+}

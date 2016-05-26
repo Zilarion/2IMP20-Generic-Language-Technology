@@ -1,0 +1,14 @@
+World 
+{
+	platoon 
+	{
+		LV LV=Fdafsd
+	}
+	route R0 
+	{
+		commands (Command)
+	}
+	constraints {
+		
+	}
+}

@@ -70,6 +70,7 @@ public class PlatoonFactoryImpl extends EFactoryImpl implements PlatoonFactory {
 			case PlatoonPackage.RIGHT: return createRight();
 			case PlatoonPackage.HEADWAY_CONSTRAINT: return createHeadwayConstraint();
 			case PlatoonPackage.CONSTRAINT: return createConstraint();
+			case PlatoonPackage.WORLD: return createWorld();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -213,6 +214,16 @@ public class PlatoonFactoryImpl extends EFactoryImpl implements PlatoonFactory {
 	public Constraint createConstraint() {
 		ConstraintImpl constraint = new ConstraintImpl();
 		return constraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public World createWorld() {
+		WorldImpl world = new WorldImpl();
+		return world;
 	}
 
 	/**

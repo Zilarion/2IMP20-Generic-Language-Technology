@@ -236,3 +236,22 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2016-05-26 15:00:26.016
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-05-26 15:26:33.877 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_72
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -keyring /Users/ruudandriessen/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -keyring /Users/ruudandriessen/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-05-26 15:26:35.919
+!MESSAGE Unable to acquire PluginConverter service during generation for: /Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse/dropins/plugins.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-05-26 15:26:35.939
+!MESSAGE Unable to acquire PluginConverter service during generation for: /Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse/dropins/plugins/plugins.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-05-26 15:26:35.953
+!MESSAGE Unable to acquire PluginConverter service during generation for: /Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse/dropins/plugins/plugins.
+
+!ENTRY org.eclipse.core.net 1 0 2016-05-26 15:26:41.630
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

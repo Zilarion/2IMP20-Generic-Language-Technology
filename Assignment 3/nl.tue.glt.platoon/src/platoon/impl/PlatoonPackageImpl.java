@@ -25,6 +25,7 @@ import platoon.Right;
 import platoon.Route;
 import platoon.TurnCommand;
 import platoon.Vehicle;
+import platoon.World;
 
 /**
  * <!-- begin-user-doc -->
@@ -130,6 +131,13 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * @generated
 	 */
 	private EClass constraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass worldEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -431,6 +439,42 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getWorld() {
+		return worldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorld_Platoon() {
+		return (EReference)worldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorld_Route() {
+		return (EReference)worldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorld_Constraint() {
+		return (EReference)worldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PlatoonFactory getPlatoonFactory() {
 		return (PlatoonFactory)getEFactoryInstance();
 	}
@@ -493,6 +537,11 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 		createEAttribute(headwayConstraintEClass, HEADWAY_CONSTRAINT__MAX);
 
 		constraintEClass = createEClass(CONSTRAINT);
+
+		worldEClass = createEClass(WORLD);
+		createEReference(worldEClass, WORLD__PLATOON);
+		createEReference(worldEClass, WORLD__ROUTE);
+		createEReference(worldEClass, WORLD__CONSTRAINT);
 	}
 
 	/**
@@ -571,6 +620,11 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 		initEAttribute(getHeadwayConstraint_Max(), ecorePackage.getEInt(), "max", null, 1, 1, HeadwayConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(worldEClass, World.class, "World", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWorld_Platoon(), this.getPlatoon(), null, "platoon", null, 1, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorld_Route(), this.getRoute(), null, "route", null, 1, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorld_Constraint(), this.getConstraints(), null, "constraint", null, 0, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
