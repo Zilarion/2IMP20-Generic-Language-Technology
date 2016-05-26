@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="pde_compiler_errorwarnings_block">
+		<item value="true" key="0"/>
+		<item value="false" key="1"/>
+		<item value="false" key="2"/>
+		<item value="false" key="3"/>
+		<item value="false" key="4"/>
+	</section>
+	<section name="PluginExportWizard">
+		<item value="/Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse" key="destination0"/>
+		<item value="/Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse" key="destination1"/>
+		<item value="" key="keypass"/>
+		<item value="/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3" key="destination2"/>
+		<item value="Generate source bundles" key="exportSourceFormat"/>
+		<item value="false" key="signJAR"/>
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="false" key="exportSource"/>
+		<item value="true" key="allowBinaryCycles"/>
+		<item value="" key="password"/>
+		<item value="201605261407" key="qualifierName"/>
+		<item value="false" key="useWorkspaceCompiledClasses"/>
+		<item value="1" key="exportType"/>
+		<item value="false" key="qualifier"/>
+		<item value="" key="alias"/>
+		<item value="" key="keystore"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+</section>

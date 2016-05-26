@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="platoon">
+  <eClassifiers xsi:type="ecore:EClass" name="Platoon">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="LV" lowerBound="1" eType="#//LeadingVehicle"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FV" eType="#//FollowVehicle"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Route">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commands" lowerBound="1"
+        upperBound="-1" eType="#//Command"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraints"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Vehicle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="" iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FollowVehicle" eSuperTypes="#//Vehicle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="front runner" lowerBound="1"
+        eType="#//Vehicle"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LeadingVehicle" eSuperTypes="#//Vehicle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Route" lowerBound="1" eType="#//Route"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ForwardCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TurnCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+</ecore:EPackage>

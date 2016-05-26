@@ -1,0 +1,4 @@
+Pass -> Test1.oberon / expected: true / actual: true
+Pass -> Test2.oberon / expected: true / actual: true
+Pass -> Test3.oberon / expected: true / actual: true
+Pass -> Test4.oberon / expected: false / actual: false

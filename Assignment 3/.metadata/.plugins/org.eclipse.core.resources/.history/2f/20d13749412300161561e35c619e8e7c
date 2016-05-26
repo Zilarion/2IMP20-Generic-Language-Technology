@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/nl.tue.glt.platoon/src" modelPluginID="nl.tue.glt.platoon"
+    modelName="Platoon" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>platoon.ecore</foreignModel>
+  <genPackages prefix="Platoon" disposableProviderFactory="true" ecorePackage="platoon.ecore#/">
+    <genClasses ecoreClass="platoon.ecore#//Platoon">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platoon.ecore#//Platoon/LV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platoon.ecore#//Platoon/FV"/>
+    </genClasses>
+    <genClasses ecoreClass="platoon.ecore#//Route">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platoon.ecore#//Route/commands"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platoon.ecore#//Route/id"/>
+    </genClasses>
+    <genClasses ecoreClass="platoon.ecore#//Constraints">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platoon.ecore#//Constraints/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="platoon.ecore#//Vehicle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platoon.ecore#//Vehicle/id"/>
+    </genClasses>
+    <genClasses ecoreClass="platoon.ecore#//FollowVehicle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platoon.ecore#//FollowVehicle/front%20runner"/>
+    </genClasses>
+    <genClasses ecoreClass="platoon.ecore#//LeadingVehicle">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platoon.ecore#//LeadingVehicle/Route"/>
+    </genClasses>
+    <genClasses ecoreClass="platoon.ecore#//Command"/>
+    <genClasses ecoreClass="platoon.ecore#//ForwardCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platoon.ecore#//ForwardCommand/distance"/>
+    </genClasses>
+    <genClasses ecoreClass="platoon.ecore#//TurnCommand">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platoon.ecore#//TurnCommand/direction"/>
+    </genClasses>
+    <genClasses ecoreClass="platoon.ecore#//Direction"/>
+    <genClasses ecoreClass="platoon.ecore#//Left"/>
+    <genClasses ecoreClass="platoon.ecore#//Right"/>
+    <genClasses ecoreClass="platoon.ecore#//HeadwayConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platoon.ecore#//HeadwayConstraint/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platoon.ecore#//HeadwayConstraint/max"/>
+    </genClasses>
+    <genClasses ecoreClass="platoon.ecore#//Constraint"/>
+  </genPackages>
+</genmodel:GenModel>

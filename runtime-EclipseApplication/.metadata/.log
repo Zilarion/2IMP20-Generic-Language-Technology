@@ -1,0 +1,19 @@
+!SESSION 2016-05-26 15:03:40.553 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_72
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3/../runtime-EclipseApplication -dev file:/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.core.net 1 0 2016-05-26 15:03:49.009
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.oomph.setup.ui 2 0 2016-05-26 15:03:54.200
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:378)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$4(SetupUIPlugin.java:349)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:246)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

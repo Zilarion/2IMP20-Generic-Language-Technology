@@ -1,0 +1,9 @@
+Pass -> Test1.pico / expected: true / actual: true
+Pass -> Test2.pico / expected: true / actual: true
+Pass -> Test3.pico / expected: true / actual: true
+Pass -> Test4.pico / expected: true / actual: true
+Pass -> Test1Fail.pico / expected: false / actual: false
+Pass -> Test2Fail.pico / expected: false / actual: false
+Pass -> Test3Fail.pico / expected: false / actual: false
+Pass -> Test4Fail.pico / expected: false / actual: false
+Pass -> Test5Fail.pico / expected: false / actual: false
