@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: nl.tue.glt.xtext.boundingbox.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: nl.tue.glt.xtext.boundingbox.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: nl.tue.glt.xtext.boundingbox,
+ nl.tue.glt.boundingbox,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: nl.tue.glt.xtext.ide.contentassist.antlr.internal,
+ nl.tue.glt.xtext.ide.contentassist.antlr
+
