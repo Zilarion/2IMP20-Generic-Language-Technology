@@ -21,29 +21,29 @@ package platoon;
  */
 public interface TurnCommand extends Command {
 	/**
-	 * Returns the value of the '<em><b>Direction</b></em>' reference.
+	 * Returns the value of the '<em><b>Direction</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Direction</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Direction</em>' reference.
-	 * @see #setDirection(Direction)
+	 * @return the value of the '<em>Direction</em>' attribute.
+	 * @see #setDirection(String)
 	 * @see platoon.PlatoonPackage#getTurnCommand_Direction()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	Direction getDirection();
+	String getDirection();
 
 	/**
-	 * Sets the value of the '{@link platoon.TurnCommand#getDirection <em>Direction</em>}' reference.
+	 * Sets the value of the '{@link platoon.TurnCommand#getDirection <em>Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Direction</em>' reference.
+	 * @param value the new value of the '<em>Direction</em>' attribute.
 	 * @see #getDirection()
 	 * @generated
 	 */
-	void setDirection(Direction value);
+	void setDirection(String value);
 
 } // TurnCommand

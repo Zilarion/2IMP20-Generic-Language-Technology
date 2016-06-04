@@ -59,8 +59,8 @@ public class LeadingVehicleItemProvider extends VehicleItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LeadingVehicle_Route_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LeadingVehicle_Route_feature", "_UI_LeadingVehicle_type"),
+				 getString("_UI_LeadingVehicle_route_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LeadingVehicle_route_feature", "_UI_LeadingVehicle_type"),
 				 PlatoonPackage.Literals.LEADING_VEHICLE__ROUTE,
 				 true,
 				 false,

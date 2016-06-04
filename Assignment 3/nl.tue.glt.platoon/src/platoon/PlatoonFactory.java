@@ -40,24 +40,6 @@ public interface PlatoonFactory extends EFactory {
 	Route createRoute();
 
 	/**
-	 * Returns a new object of class '<em>Constraints</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constraints</em>'.
-	 * @generated
-	 */
-	Constraints createConstraints();
-
-	/**
-	 * Returns a new object of class '<em>Vehicle</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Vehicle</em>'.
-	 * @generated
-	 */
-	Vehicle createVehicle();
-
-	/**
 	 * Returns a new object of class '<em>Follow Vehicle</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,33 +85,6 @@ public interface PlatoonFactory extends EFactory {
 	TurnCommand createTurnCommand();
 
 	/**
-	 * Returns a new object of class '<em>Direction</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Direction</em>'.
-	 * @generated
-	 */
-	Direction createDirection();
-
-	/**
-	 * Returns a new object of class '<em>Left</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Left</em>'.
-	 * @generated
-	 */
-	Left createLeft();
-
-	/**
-	 * Returns a new object of class '<em>Right</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Right</em>'.
-	 * @generated
-	 */
-	Right createRight();
-
-	/**
 	 * Returns a new object of class '<em>Headway Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -155,6 +110,15 @@ public interface PlatoonFactory extends EFactory {
 	 * @generated
 	 */
 	World createWorld();
+
+	/**
+	 * Returns a new object of class '<em>Constraints</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Constraints</em>'.
+	 * @generated
+	 */
+	Constraints createConstraints();
 
 	/**
 	 * Returns the package supported by this factory.

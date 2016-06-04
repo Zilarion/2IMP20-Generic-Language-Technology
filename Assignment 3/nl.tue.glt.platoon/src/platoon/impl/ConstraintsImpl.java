@@ -4,14 +4,16 @@ package platoon.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import platoon.Constraint;
 import platoon.Constraints;
 import platoon.PlatoonPackage;
@@ -31,7 +33,7 @@ import platoon.PlatoonPackage;
  */
 public class ConstraintsImpl extends MinimalEObjectImpl.Container implements Constraints {
 	/**
-	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' reference list.
+	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConstraints()
@@ -66,9 +68,23 @@ public class ConstraintsImpl extends MinimalEObjectImpl.Container implements Con
 	 */
 	public EList<Constraint> getConstraints() {
 		if (constraints == null) {
-			constraints = new EObjectResolvingEList<Constraint>(Constraint.class, this, PlatoonPackage.CONSTRAINTS__CONSTRAINTS);
+			constraints = new EObjectContainmentEList<Constraint>(Constraint.class, this, PlatoonPackage.CONSTRAINTS__CONSTRAINTS);
 		}
 		return constraints;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PlatoonPackage.CONSTRAINTS__CONSTRAINTS:
+				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

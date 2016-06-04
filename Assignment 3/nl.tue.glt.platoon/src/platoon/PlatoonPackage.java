@@ -76,7 +76,7 @@ public interface PlatoonPackage extends EPackage {
 	int PLATOON__LV = 0;
 
 	/**
-	 * The feature id for the '<em><b>FV</b></em>' containment reference.
+	 * The feature id for the '<em><b>FV</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -113,7 +113,7 @@ public interface PlatoonPackage extends EPackage {
 	int ROUTE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Commands</b></em>' reference list.
+	 * The feature id for the '<em><b>Commands</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -149,43 +149,6 @@ public interface PlatoonPackage extends EPackage {
 	int ROUTE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link platoon.impl.ConstraintsImpl <em>Constraints</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see platoon.impl.ConstraintsImpl
-	 * @see platoon.impl.PlatoonPackageImpl#getConstraints()
-	 * @generated
-	 */
-	int CONSTRAINTS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Constraints</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINTS__CONSTRAINTS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Constraints</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINTS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Constraints</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINTS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link platoon.impl.VehicleImpl <em>Vehicle</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -193,7 +156,7 @@ public interface PlatoonPackage extends EPackage {
 	 * @see platoon.impl.PlatoonPackageImpl#getVehicle()
 	 * @generated
 	 */
-	int VEHICLE = 3;
+	int VEHICLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -230,7 +193,7 @@ public interface PlatoonPackage extends EPackage {
 	 * @see platoon.impl.PlatoonPackageImpl#getFollowVehicle()
 	 * @generated
 	 */
-	int FOLLOW_VEHICLE = 4;
+	int FOLLOW_VEHICLE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -242,13 +205,13 @@ public interface PlatoonPackage extends EPackage {
 	int FOLLOW_VEHICLE__ID = VEHICLE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Front Runner</b></em>' reference.
+	 * The feature id for the '<em><b>Follows</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOLLOW_VEHICLE__FRONT_RUNNER = VEHICLE_FEATURE_COUNT + 0;
+	int FOLLOW_VEHICLE__FOLLOWS = VEHICLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Follow Vehicle</em>' class.
@@ -276,7 +239,7 @@ public interface PlatoonPackage extends EPackage {
 	 * @see platoon.impl.PlatoonPackageImpl#getLeadingVehicle()
 	 * @generated
 	 */
-	int LEADING_VEHICLE = 5;
+	int LEADING_VEHICLE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -322,7 +285,7 @@ public interface PlatoonPackage extends EPackage {
 	 * @see platoon.impl.PlatoonPackageImpl#getCommand()
 	 * @generated
 	 */
-	int COMMAND = 6;
+	int COMMAND = 5;
 
 	/**
 	 * The number of structural features of the '<em>Command</em>' class.
@@ -350,7 +313,7 @@ public interface PlatoonPackage extends EPackage {
 	 * @see platoon.impl.PlatoonPackageImpl#getForwardCommand()
 	 * @generated
 	 */
-	int FORWARD_COMMAND = 7;
+	int FORWARD_COMMAND = 6;
 
 	/**
 	 * The feature id for the '<em><b>Distance</b></em>' attribute.
@@ -387,10 +350,10 @@ public interface PlatoonPackage extends EPackage {
 	 * @see platoon.impl.PlatoonPackageImpl#getTurnCommand()
 	 * @generated
 	 */
-	int TURN_COMMAND = 8;
+	int TURN_COMMAND = 7;
 
 	/**
-	 * The feature id for the '<em><b>Direction</b></em>' reference.
+	 * The feature id for the '<em><b>Direction</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -417,90 +380,6 @@ public interface PlatoonPackage extends EPackage {
 	int TURN_COMMAND_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link platoon.impl.DirectionImpl <em>Direction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see platoon.impl.DirectionImpl
-	 * @see platoon.impl.PlatoonPackageImpl#getDirection()
-	 * @generated
-	 */
-	int DIRECTION = 9;
-
-	/**
-	 * The number of structural features of the '<em>Direction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIRECTION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Direction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIRECTION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link platoon.impl.LeftImpl <em>Left</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see platoon.impl.LeftImpl
-	 * @see platoon.impl.PlatoonPackageImpl#getLeft()
-	 * @generated
-	 */
-	int LEFT = 10;
-
-	/**
-	 * The number of structural features of the '<em>Left</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEFT_FEATURE_COUNT = DIRECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Left</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEFT_OPERATION_COUNT = DIRECTION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link platoon.impl.RightImpl <em>Right</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see platoon.impl.RightImpl
-	 * @see platoon.impl.PlatoonPackageImpl#getRight()
-	 * @generated
-	 */
-	int RIGHT = 11;
-
-	/**
-	 * The number of structural features of the '<em>Right</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RIGHT_FEATURE_COUNT = DIRECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Right</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RIGHT_OPERATION_COUNT = DIRECTION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link platoon.impl.ConstraintImpl <em>Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -508,7 +387,7 @@ public interface PlatoonPackage extends EPackage {
 	 * @see platoon.impl.PlatoonPackageImpl#getConstraint()
 	 * @generated
 	 */
-	int CONSTRAINT = 13;
+	int CONSTRAINT = 9;
 
 	/**
 	 * The number of structural features of the '<em>Constraint</em>' class.
@@ -536,7 +415,7 @@ public interface PlatoonPackage extends EPackage {
 	 * @see platoon.impl.PlatoonPackageImpl#getHeadwayConstraint()
 	 * @generated
 	 */
-	int HEADWAY_CONSTRAINT = 12;
+	int HEADWAY_CONSTRAINT = 8;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' attribute.
@@ -583,10 +462,10 @@ public interface PlatoonPackage extends EPackage {
 	 * @see platoon.impl.PlatoonPackageImpl#getWorld()
 	 * @generated
 	 */
-	int WORLD = 14;
+	int WORLD = 10;
 
 	/**
-	 * The feature id for the '<em><b>Platoon</b></em>' reference.
+	 * The feature id for the '<em><b>Platoon</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -595,7 +474,7 @@ public interface PlatoonPackage extends EPackage {
 	int WORLD__PLATOON = 0;
 
 	/**
-	 * The feature id for the '<em><b>Route</b></em>' reference.
+	 * The feature id for the '<em><b>Route</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -604,13 +483,13 @@ public interface PlatoonPackage extends EPackage {
 	int WORLD__ROUTE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Constraint</b></em>' reference.
+	 * The feature id for the '<em><b>Constraints</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORLD__CONSTRAINT = 2;
+	int WORLD__CONSTRAINTS = 2;
 
 	/**
 	 * The number of structural features of the '<em>World</em>' class.
@@ -629,6 +508,44 @@ public interface PlatoonPackage extends EPackage {
 	 * @ordered
 	 */
 	int WORLD_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link platoon.impl.ConstraintsImpl <em>Constraints</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see platoon.impl.ConstraintsImpl
+	 * @see platoon.impl.PlatoonPackageImpl#getConstraints()
+	 * @generated
+	 */
+	int CONSTRAINTS = 11;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINTS__CONSTRAINTS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Constraints</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINTS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Constraints</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINTS_OPERATION_COUNT = 0;
 
 
 	/**
@@ -653,10 +570,10 @@ public interface PlatoonPackage extends EPackage {
 	EReference getPlatoon_LV();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link platoon.Platoon#getFV <em>FV</em>}'.
+	 * Returns the meta object for the containment reference list '{@link platoon.Platoon#getFV <em>FV</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>FV</em>'.
+	 * @return the meta object for the containment reference list '<em>FV</em>'.
 	 * @see platoon.Platoon#getFV()
 	 * @see #getPlatoon()
 	 * @generated
@@ -674,10 +591,10 @@ public interface PlatoonPackage extends EPackage {
 	EClass getRoute();
 
 	/**
-	 * Returns the meta object for the reference list '{@link platoon.Route#getCommands <em>Commands</em>}'.
+	 * Returns the meta object for the containment reference list '{@link platoon.Route#getCommands <em>Commands</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Commands</em>'.
+	 * @return the meta object for the containment reference list '<em>Commands</em>'.
 	 * @see platoon.Route#getCommands()
 	 * @see #getRoute()
 	 * @generated
@@ -694,27 +611,6 @@ public interface PlatoonPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoute_Id();
-
-	/**
-	 * Returns the meta object for class '{@link platoon.Constraints <em>Constraints</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Constraints</em>'.
-	 * @see platoon.Constraints
-	 * @generated
-	 */
-	EClass getConstraints();
-
-	/**
-	 * Returns the meta object for the reference list '{@link platoon.Constraints#getConstraints <em>Constraints</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Constraints</em>'.
-	 * @see platoon.Constraints#getConstraints()
-	 * @see #getConstraints()
-	 * @generated
-	 */
-	EReference getConstraints_Constraints();
 
 	/**
 	 * Returns the meta object for class '{@link platoon.Vehicle <em>Vehicle</em>}'.
@@ -748,15 +644,15 @@ public interface PlatoonPackage extends EPackage {
 	EClass getFollowVehicle();
 
 	/**
-	 * Returns the meta object for the reference '{@link platoon.FollowVehicle#getFrontRunner <em>Front Runner</em>}'.
+	 * Returns the meta object for the reference '{@link platoon.FollowVehicle#getFollows <em>Follows</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Front Runner</em>'.
-	 * @see platoon.FollowVehicle#getFrontRunner()
+	 * @return the meta object for the reference '<em>Follows</em>'.
+	 * @see platoon.FollowVehicle#getFollows()
 	 * @see #getFollowVehicle()
 	 * @generated
 	 */
-	EReference getFollowVehicle_FrontRunner();
+	EReference getFollowVehicle_Follows();
 
 	/**
 	 * Returns the meta object for class '{@link platoon.LeadingVehicle <em>Leading Vehicle</em>}'.
@@ -821,45 +717,15 @@ public interface PlatoonPackage extends EPackage {
 	EClass getTurnCommand();
 
 	/**
-	 * Returns the meta object for the reference '{@link platoon.TurnCommand#getDirection <em>Direction</em>}'.
+	 * Returns the meta object for the attribute '{@link platoon.TurnCommand#getDirection <em>Direction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Direction</em>'.
+	 * @return the meta object for the attribute '<em>Direction</em>'.
 	 * @see platoon.TurnCommand#getDirection()
 	 * @see #getTurnCommand()
 	 * @generated
 	 */
-	EReference getTurnCommand_Direction();
-
-	/**
-	 * Returns the meta object for class '{@link platoon.Direction <em>Direction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Direction</em>'.
-	 * @see platoon.Direction
-	 * @generated
-	 */
-	EClass getDirection();
-
-	/**
-	 * Returns the meta object for class '{@link platoon.Left <em>Left</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Left</em>'.
-	 * @see platoon.Left
-	 * @generated
-	 */
-	EClass getLeft();
-
-	/**
-	 * Returns the meta object for class '{@link platoon.Right <em>Right</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Right</em>'.
-	 * @see platoon.Right
-	 * @generated
-	 */
-	EClass getRight();
+	EAttribute getTurnCommand_Direction();
 
 	/**
 	 * Returns the meta object for class '{@link platoon.HeadwayConstraint <em>Headway Constraint</em>}'.
@@ -914,10 +780,10 @@ public interface PlatoonPackage extends EPackage {
 	EClass getWorld();
 
 	/**
-	 * Returns the meta object for the reference '{@link platoon.World#getPlatoon <em>Platoon</em>}'.
+	 * Returns the meta object for the containment reference '{@link platoon.World#getPlatoon <em>Platoon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Platoon</em>'.
+	 * @return the meta object for the containment reference '<em>Platoon</em>'.
 	 * @see platoon.World#getPlatoon()
 	 * @see #getWorld()
 	 * @generated
@@ -925,10 +791,10 @@ public interface PlatoonPackage extends EPackage {
 	EReference getWorld_Platoon();
 
 	/**
-	 * Returns the meta object for the reference '{@link platoon.World#getRoute <em>Route</em>}'.
+	 * Returns the meta object for the containment reference '{@link platoon.World#getRoute <em>Route</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Route</em>'.
+	 * @return the meta object for the containment reference '<em>Route</em>'.
 	 * @see platoon.World#getRoute()
 	 * @see #getWorld()
 	 * @generated
@@ -936,15 +802,36 @@ public interface PlatoonPackage extends EPackage {
 	EReference getWorld_Route();
 
 	/**
-	 * Returns the meta object for the reference '{@link platoon.World#getConstraint <em>Constraint</em>}'.
+	 * Returns the meta object for the containment reference '{@link platoon.World#getConstraints <em>Constraints</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Constraint</em>'.
-	 * @see platoon.World#getConstraint()
+	 * @return the meta object for the containment reference '<em>Constraints</em>'.
+	 * @see platoon.World#getConstraints()
 	 * @see #getWorld()
 	 * @generated
 	 */
-	EReference getWorld_Constraint();
+	EReference getWorld_Constraints();
+
+	/**
+	 * Returns the meta object for class '{@link platoon.Constraints <em>Constraints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Constraints</em>'.
+	 * @see platoon.Constraints
+	 * @generated
+	 */
+	EClass getConstraints();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link platoon.Constraints#getConstraints <em>Constraints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Constraints</em>'.
+	 * @see platoon.Constraints#getConstraints()
+	 * @see #getConstraints()
+	 * @generated
+	 */
+	EReference getConstraints_Constraints();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -988,7 +875,7 @@ public interface PlatoonPackage extends EPackage {
 		EReference PLATOON__LV = eINSTANCE.getPlatoon_LV();
 
 		/**
-		 * The meta object literal for the '<em><b>FV</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>FV</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1006,7 +893,7 @@ public interface PlatoonPackage extends EPackage {
 		EClass ROUTE = eINSTANCE.getRoute();
 
 		/**
-		 * The meta object literal for the '<em><b>Commands</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Commands</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1020,24 +907,6 @@ public interface PlatoonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROUTE__ID = eINSTANCE.getRoute_Id();
-
-		/**
-		 * The meta object literal for the '{@link platoon.impl.ConstraintsImpl <em>Constraints</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see platoon.impl.ConstraintsImpl
-		 * @see platoon.impl.PlatoonPackageImpl#getConstraints()
-		 * @generated
-		 */
-		EClass CONSTRAINTS = eINSTANCE.getConstraints();
-
-		/**
-		 * The meta object literal for the '<em><b>Constraints</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONSTRAINTS__CONSTRAINTS = eINSTANCE.getConstraints_Constraints();
 
 		/**
 		 * The meta object literal for the '{@link platoon.impl.VehicleImpl <em>Vehicle</em>}' class.
@@ -1068,12 +937,12 @@ public interface PlatoonPackage extends EPackage {
 		EClass FOLLOW_VEHICLE = eINSTANCE.getFollowVehicle();
 
 		/**
-		 * The meta object literal for the '<em><b>Front Runner</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Follows</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FOLLOW_VEHICLE__FRONT_RUNNER = eINSTANCE.getFollowVehicle_FrontRunner();
+		EReference FOLLOW_VEHICLE__FOLLOWS = eINSTANCE.getFollowVehicle_Follows();
 
 		/**
 		 * The meta object literal for the '{@link platoon.impl.LeadingVehicleImpl <em>Leading Vehicle</em>}' class.
@@ -1132,42 +1001,12 @@ public interface PlatoonPackage extends EPackage {
 		EClass TURN_COMMAND = eINSTANCE.getTurnCommand();
 
 		/**
-		 * The meta object literal for the '<em><b>Direction</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TURN_COMMAND__DIRECTION = eINSTANCE.getTurnCommand_Direction();
-
-		/**
-		 * The meta object literal for the '{@link platoon.impl.DirectionImpl <em>Direction</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see platoon.impl.DirectionImpl
-		 * @see platoon.impl.PlatoonPackageImpl#getDirection()
-		 * @generated
-		 */
-		EClass DIRECTION = eINSTANCE.getDirection();
-
-		/**
-		 * The meta object literal for the '{@link platoon.impl.LeftImpl <em>Left</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see platoon.impl.LeftImpl
-		 * @see platoon.impl.PlatoonPackageImpl#getLeft()
-		 * @generated
-		 */
-		EClass LEFT = eINSTANCE.getLeft();
-
-		/**
-		 * The meta object literal for the '{@link platoon.impl.RightImpl <em>Right</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see platoon.impl.RightImpl
-		 * @see platoon.impl.PlatoonPackageImpl#getRight()
-		 * @generated
-		 */
-		EClass RIGHT = eINSTANCE.getRight();
+		EAttribute TURN_COMMAND__DIRECTION = eINSTANCE.getTurnCommand_Direction();
 
 		/**
 		 * The meta object literal for the '{@link platoon.impl.HeadwayConstraintImpl <em>Headway Constraint</em>}' class.
@@ -1216,7 +1055,7 @@ public interface PlatoonPackage extends EPackage {
 		EClass WORLD = eINSTANCE.getWorld();
 
 		/**
-		 * The meta object literal for the '<em><b>Platoon</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Platoon</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1224,7 +1063,7 @@ public interface PlatoonPackage extends EPackage {
 		EReference WORLD__PLATOON = eINSTANCE.getWorld_Platoon();
 
 		/**
-		 * The meta object literal for the '<em><b>Route</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Route</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1232,12 +1071,30 @@ public interface PlatoonPackage extends EPackage {
 		EReference WORLD__ROUTE = eINSTANCE.getWorld_Route();
 
 		/**
-		 * The meta object literal for the '<em><b>Constraint</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Constraints</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WORLD__CONSTRAINT = eINSTANCE.getWorld_Constraint();
+		EReference WORLD__CONSTRAINTS = eINSTANCE.getWorld_Constraints();
+
+		/**
+		 * The meta object literal for the '{@link platoon.impl.ConstraintsImpl <em>Constraints</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see platoon.impl.ConstraintsImpl
+		 * @see platoon.impl.PlatoonPackageImpl#getConstraints()
+		 * @generated
+		 */
+		EClass CONSTRAINTS = eINSTANCE.getConstraints();
+
+		/**
+		 * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTRAINTS__CONSTRAINTS = eINSTANCE.getConstraints_Constraints();
 
 	}
 

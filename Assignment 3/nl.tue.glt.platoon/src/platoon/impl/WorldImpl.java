@@ -4,12 +4,12 @@ package platoon.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import platoon.Constraints;
 import platoon.Platoon;
 import platoon.PlatoonPackage;
@@ -26,14 +26,14 @@ import platoon.World;
  * <ul>
  *   <li>{@link platoon.impl.WorldImpl#getPlatoon <em>Platoon</em>}</li>
  *   <li>{@link platoon.impl.WorldImpl#getRoute <em>Route</em>}</li>
- *   <li>{@link platoon.impl.WorldImpl#getConstraint <em>Constraint</em>}</li>
+ *   <li>{@link platoon.impl.WorldImpl#getConstraints <em>Constraints</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	/**
-	 * The cached value of the '{@link #getPlatoon() <em>Platoon</em>}' reference.
+	 * The cached value of the '{@link #getPlatoon() <em>Platoon</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPlatoon()
@@ -43,7 +43,7 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	protected Platoon platoon;
 
 	/**
-	 * The cached value of the '{@link #getRoute() <em>Route</em>}' reference.
+	 * The cached value of the '{@link #getRoute() <em>Route</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoute()
@@ -53,14 +53,14 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	protected Route route;
 
 	/**
-	 * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' reference.
+	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConstraint()
+	 * @see #getConstraints()
 	 * @generated
 	 * @ordered
 	 */
-	protected Constraints constraint;
+	protected Constraints constraints;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,14 +87,6 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	 * @generated
 	 */
 	public Platoon getPlatoon() {
-		if (platoon != null && platoon.eIsProxy()) {
-			InternalEObject oldPlatoon = (InternalEObject)platoon;
-			platoon = (Platoon)eResolveProxy(oldPlatoon);
-			if (platoon != oldPlatoon) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PlatoonPackage.WORLD__PLATOON, oldPlatoon, platoon));
-			}
-		}
 		return platoon;
 	}
 
@@ -103,8 +95,14 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Platoon basicGetPlatoon() {
-		return platoon;
+	public NotificationChain basicSetPlatoon(Platoon newPlatoon, NotificationChain msgs) {
+		Platoon oldPlatoon = platoon;
+		platoon = newPlatoon;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PlatoonPackage.WORLD__PLATOON, oldPlatoon, newPlatoon);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -113,10 +111,17 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	 * @generated
 	 */
 	public void setPlatoon(Platoon newPlatoon) {
-		Platoon oldPlatoon = platoon;
-		platoon = newPlatoon;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.WORLD__PLATOON, oldPlatoon, platoon));
+		if (newPlatoon != platoon) {
+			NotificationChain msgs = null;
+			if (platoon != null)
+				msgs = ((InternalEObject)platoon).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PlatoonPackage.WORLD__PLATOON, null, msgs);
+			if (newPlatoon != null)
+				msgs = ((InternalEObject)newPlatoon).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PlatoonPackage.WORLD__PLATOON, null, msgs);
+			msgs = basicSetPlatoon(newPlatoon, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.WORLD__PLATOON, newPlatoon, newPlatoon));
 	}
 
 	/**
@@ -125,14 +130,6 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	 * @generated
 	 */
 	public Route getRoute() {
-		if (route != null && route.eIsProxy()) {
-			InternalEObject oldRoute = (InternalEObject)route;
-			route = (Route)eResolveProxy(oldRoute);
-			if (route != oldRoute) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PlatoonPackage.WORLD__ROUTE, oldRoute, route));
-			}
-		}
 		return route;
 	}
 
@@ -141,8 +138,14 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Route basicGetRoute() {
-		return route;
+	public NotificationChain basicSetRoute(Route newRoute, NotificationChain msgs) {
+		Route oldRoute = route;
+		route = newRoute;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PlatoonPackage.WORLD__ROUTE, oldRoute, newRoute);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -151,27 +154,17 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	 * @generated
 	 */
 	public void setRoute(Route newRoute) {
-		Route oldRoute = route;
-		route = newRoute;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.WORLD__ROUTE, oldRoute, route));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Constraints getConstraint() {
-		if (constraint != null && constraint.eIsProxy()) {
-			InternalEObject oldConstraint = (InternalEObject)constraint;
-			constraint = (Constraints)eResolveProxy(oldConstraint);
-			if (constraint != oldConstraint) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PlatoonPackage.WORLD__CONSTRAINT, oldConstraint, constraint));
-			}
+		if (newRoute != route) {
+			NotificationChain msgs = null;
+			if (route != null)
+				msgs = ((InternalEObject)route).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PlatoonPackage.WORLD__ROUTE, null, msgs);
+			if (newRoute != null)
+				msgs = ((InternalEObject)newRoute).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PlatoonPackage.WORLD__ROUTE, null, msgs);
+			msgs = basicSetRoute(newRoute, msgs);
+			if (msgs != null) msgs.dispatch();
 		}
-		return constraint;
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.WORLD__ROUTE, newRoute, newRoute));
 	}
 
 	/**
@@ -179,8 +172,8 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Constraints basicGetConstraint() {
-		return constraint;
+	public Constraints getConstraints() {
+		return constraints;
 	}
 
 	/**
@@ -188,11 +181,51 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConstraint(Constraints newConstraint) {
-		Constraints oldConstraint = constraint;
-		constraint = newConstraint;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.WORLD__CONSTRAINT, oldConstraint, constraint));
+	public NotificationChain basicSetConstraints(Constraints newConstraints, NotificationChain msgs) {
+		Constraints oldConstraints = constraints;
+		constraints = newConstraints;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PlatoonPackage.WORLD__CONSTRAINTS, oldConstraints, newConstraints);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConstraints(Constraints newConstraints) {
+		if (newConstraints != constraints) {
+			NotificationChain msgs = null;
+			if (constraints != null)
+				msgs = ((InternalEObject)constraints).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PlatoonPackage.WORLD__CONSTRAINTS, null, msgs);
+			if (newConstraints != null)
+				msgs = ((InternalEObject)newConstraints).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PlatoonPackage.WORLD__CONSTRAINTS, null, msgs);
+			msgs = basicSetConstraints(newConstraints, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.WORLD__CONSTRAINTS, newConstraints, newConstraints));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PlatoonPackage.WORLD__PLATOON:
+				return basicSetPlatoon(null, msgs);
+			case PlatoonPackage.WORLD__ROUTE:
+				return basicSetRoute(null, msgs);
+			case PlatoonPackage.WORLD__CONSTRAINTS:
+				return basicSetConstraints(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -204,14 +237,11 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PlatoonPackage.WORLD__PLATOON:
-				if (resolve) return getPlatoon();
-				return basicGetPlatoon();
+				return getPlatoon();
 			case PlatoonPackage.WORLD__ROUTE:
-				if (resolve) return getRoute();
-				return basicGetRoute();
-			case PlatoonPackage.WORLD__CONSTRAINT:
-				if (resolve) return getConstraint();
-				return basicGetConstraint();
+				return getRoute();
+			case PlatoonPackage.WORLD__CONSTRAINTS:
+				return getConstraints();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -221,6 +251,7 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -230,8 +261,8 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 			case PlatoonPackage.WORLD__ROUTE:
 				setRoute((Route)newValue);
 				return;
-			case PlatoonPackage.WORLD__CONSTRAINT:
-				setConstraint((Constraints)newValue);
+			case PlatoonPackage.WORLD__CONSTRAINTS:
+				setConstraints((Constraints)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -251,8 +282,8 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 			case PlatoonPackage.WORLD__ROUTE:
 				setRoute((Route)null);
 				return;
-			case PlatoonPackage.WORLD__CONSTRAINT:
-				setConstraint((Constraints)null);
+			case PlatoonPackage.WORLD__CONSTRAINTS:
+				setConstraints((Constraints)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -270,8 +301,8 @@ public class WorldImpl extends MinimalEObjectImpl.Container implements World {
 				return platoon != null;
 			case PlatoonPackage.WORLD__ROUTE:
 				return route != null;
-			case PlatoonPackage.WORLD__CONSTRAINT:
-				return constraint != null;
+			case PlatoonPackage.WORLD__CONSTRAINTS:
+				return constraints != null;
 		}
 		return super.eIsSet(featureID);
 	}

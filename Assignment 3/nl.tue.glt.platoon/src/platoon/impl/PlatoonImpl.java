@@ -2,15 +2,19 @@
  */
 package platoon.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import platoon.FollowVehicle;
 import platoon.LeadingVehicle;
 import platoon.Platoon;
@@ -42,14 +46,14 @@ public class PlatoonImpl extends MinimalEObjectImpl.Container implements Platoon
 	protected LeadingVehicle lv;
 
 	/**
-	 * The cached value of the '{@link #getFV() <em>FV</em>}' containment reference.
+	 * The cached value of the '{@link #getFV() <em>FV</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFV()
 	 * @generated
 	 * @ordered
 	 */
-	protected FollowVehicle fv;
+	protected EList<FollowVehicle> fv;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,42 +122,11 @@ public class PlatoonImpl extends MinimalEObjectImpl.Container implements Platoon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FollowVehicle getFV() {
+	public EList<FollowVehicle> getFV() {
+		if (fv == null) {
+			fv = new EObjectContainmentEList<FollowVehicle>(FollowVehicle.class, this, PlatoonPackage.PLATOON__FV);
+		}
 		return fv;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetFV(FollowVehicle newFV, NotificationChain msgs) {
-		FollowVehicle oldFV = fv;
-		fv = newFV;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PlatoonPackage.PLATOON__FV, oldFV, newFV);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFV(FollowVehicle newFV) {
-		if (newFV != fv) {
-			NotificationChain msgs = null;
-			if (fv != null)
-				msgs = ((InternalEObject)fv).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PlatoonPackage.PLATOON__FV, null, msgs);
-			if (newFV != null)
-				msgs = ((InternalEObject)newFV).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PlatoonPackage.PLATOON__FV, null, msgs);
-			msgs = basicSetFV(newFV, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.PLATOON__FV, newFV, newFV));
 	}
 
 	/**
@@ -167,7 +140,7 @@ public class PlatoonImpl extends MinimalEObjectImpl.Container implements Platoon
 			case PlatoonPackage.PLATOON__LV:
 				return basicSetLV(null, msgs);
 			case PlatoonPackage.PLATOON__FV:
-				return basicSetFV(null, msgs);
+				return ((InternalEList<?>)getFV()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -193,6 +166,7 @@ public class PlatoonImpl extends MinimalEObjectImpl.Container implements Platoon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -200,7 +174,8 @@ public class PlatoonImpl extends MinimalEObjectImpl.Container implements Platoon
 				setLV((LeadingVehicle)newValue);
 				return;
 			case PlatoonPackage.PLATOON__FV:
-				setFV((FollowVehicle)newValue);
+				getFV().clear();
+				getFV().addAll((Collection<? extends FollowVehicle>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -218,7 +193,7 @@ public class PlatoonImpl extends MinimalEObjectImpl.Container implements Platoon
 				setLV((LeadingVehicle)null);
 				return;
 			case PlatoonPackage.PLATOON__FV:
-				setFV((FollowVehicle)null);
+				getFV().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -235,7 +210,7 @@ public class PlatoonImpl extends MinimalEObjectImpl.Container implements Platoon
 			case PlatoonPackage.PLATOON__LV:
 				return lv != null;
 			case PlatoonPackage.PLATOON__FV:
-				return fv != null;
+				return fv != null && !fv.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

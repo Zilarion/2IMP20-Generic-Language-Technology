@@ -15,21 +15,15 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
-import platoon.Command;
-import platoon.Constraint;
 import platoon.Constraints;
-import platoon.Direction;
 import platoon.FollowVehicle;
 import platoon.ForwardCommand;
 import platoon.HeadwayConstraint;
 import platoon.LeadingVehicle;
-import platoon.Left;
 import platoon.Platoon;
 import platoon.PlatoonPackage;
-import platoon.Right;
 import platoon.Route;
 import platoon.TurnCommand;
-import platoon.Vehicle;
 import platoon.World;
 
 @SuppressWarnings("all")
@@ -46,17 +40,8 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == PlatoonPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case PlatoonPackage.COMMAND:
-				sequence_Command_Impl(context, (Command) semanticObject); 
-				return; 
-			case PlatoonPackage.CONSTRAINT:
-				sequence_Constraint_Impl(context, (Constraint) semanticObject); 
-				return; 
 			case PlatoonPackage.CONSTRAINTS:
 				sequence_Constraints(context, (Constraints) semanticObject); 
-				return; 
-			case PlatoonPackage.DIRECTION:
-				sequence_Direction_Impl(context, (Direction) semanticObject); 
 				return; 
 			case PlatoonPackage.FOLLOW_VEHICLE:
 				sequence_FollowVehicle(context, (FollowVehicle) semanticObject); 
@@ -70,23 +55,14 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case PlatoonPackage.LEADING_VEHICLE:
 				sequence_LeadingVehicle(context, (LeadingVehicle) semanticObject); 
 				return; 
-			case PlatoonPackage.LEFT:
-				sequence_Left(context, (Left) semanticObject); 
-				return; 
 			case PlatoonPackage.PLATOON:
 				sequence_Platoon(context, (Platoon) semanticObject); 
-				return; 
-			case PlatoonPackage.RIGHT:
-				sequence_Right(context, (Right) semanticObject); 
 				return; 
 			case PlatoonPackage.ROUTE:
 				sequence_Route(context, (Route) semanticObject); 
 				return; 
 			case PlatoonPackage.TURN_COMMAND:
 				sequence_TurnCommand(context, (TurnCommand) semanticObject); 
-				return; 
-			case PlatoonPackage.VEHICLE:
-				sequence_Vehicle_Impl(context, (Vehicle) semanticObject); 
 				return; 
 			case PlatoonPackage.WORLD:
 				sequence_World(context, (World) semanticObject); 
@@ -98,51 +74,12 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
-	 *     Command returns Command
-	 *     Command_Impl returns Command
-	 *
-	 * Constraint:
-	 *     {Command}
-	 */
-	protected void sequence_Command_Impl(ISerializationContext context, Command semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Constraint returns Constraint
-	 *     Constraint_Impl returns Constraint
-	 *
-	 * Constraint:
-	 *     {Constraint}
-	 */
-	protected void sequence_Constraint_Impl(ISerializationContext context, Constraint semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Constraints returns Constraints
 	 *
 	 * Constraint:
-	 *     (constraints+=[Constraint|EString] constraints+=[Constraint|EString]*)
+	 *     (constraints+=Constraint constraints+=Constraint*)
 	 */
 	protected void sequence_Constraints(ISerializationContext context, Constraints semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Direction returns Direction
-	 *     Direction_Impl returns Direction
-	 *
-	 * Constraint:
-	 *     {Direction}
-	 */
-	protected void sequence_Direction_Impl(ISerializationContext context, Direction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -153,18 +90,18 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     FollowVehicle returns FollowVehicle
 	 *
 	 * Constraint:
-	 *     (id=EString FrontRunner=[Vehicle|EString])
+	 *     (id=EString follows=[Vehicle|EString])
 	 */
 	protected void sequence_FollowVehicle(ISerializationContext context, FollowVehicle semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.VEHICLE__ID) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.VEHICLE__ID));
-			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.FOLLOW_VEHICLE__FRONT_RUNNER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.FOLLOW_VEHICLE__FRONT_RUNNER));
+			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.FOLLOW_VEHICLE__FOLLOWS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.FOLLOW_VEHICLE__FOLLOWS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_1_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getFollowVehicleAccess().getFrontRunnerVehicleEStringParserRuleCall_4_0_1(), semanticObject.getFrontRunner());
+		feeder.accept(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getFollowVehicleAccess().getFollowsVehicleEStringParserRuleCall_5_0_1(), semanticObject.getFollows());
 		feeder.finish();
 	}
 	
@@ -175,7 +112,7 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     ForwardCommand returns ForwardCommand
 	 *
 	 * Constraint:
-	 *     distance=EInt
+	 *     distance=INT
 	 */
 	protected void sequence_ForwardCommand(ISerializationContext context, ForwardCommand semanticObject) {
 		if (errorAcceptor != null) {
@@ -183,7 +120,7 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.FORWARD_COMMAND__DISTANCE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getForwardCommandAccess().getDistanceEIntParserRuleCall_1_0(), semanticObject.getDistance());
+		feeder.accept(grammarAccess.getForwardCommandAccess().getDistanceINTTerminalRuleCall_3_0(), semanticObject.getDistance());
 		feeder.finish();
 	}
 	
@@ -194,7 +131,7 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     HeadwayConstraint returns HeadwayConstraint
 	 *
 	 * Constraint:
-	 *     (min=EInt max=EInt)
+	 *     (min=INT max=INT)
 	 */
 	protected void sequence_HeadwayConstraint(ISerializationContext context, HeadwayConstraint semanticObject) {
 		if (errorAcceptor != null) {
@@ -204,8 +141,8 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.HEADWAY_CONSTRAINT__MAX));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getHeadwayConstraintAccess().getMinEIntParserRuleCall_0_0(), semanticObject.getMin());
-		feeder.accept(grammarAccess.getHeadwayConstraintAccess().getMaxEIntParserRuleCall_4_0(), semanticObject.getMax());
+		feeder.accept(grammarAccess.getHeadwayConstraintAccess().getMinINTTerminalRuleCall_1_0(), semanticObject.getMin());
+		feeder.accept(grammarAccess.getHeadwayConstraintAccess().getMaxINTTerminalRuleCall_5_0(), semanticObject.getMax());
 		feeder.finish();
 	}
 	
@@ -216,7 +153,7 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     LeadingVehicle returns LeadingVehicle
 	 *
 	 * Constraint:
-	 *     (id=EString Route=[Route|EString])
+	 *     (id=EString route=[Route|EString])
 	 */
 	protected void sequence_LeadingVehicle(ISerializationContext context, LeadingVehicle semanticObject) {
 		if (errorAcceptor != null) {
@@ -226,22 +163,9 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.LEADING_VEHICLE__ROUTE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_1_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getLeadingVehicleAccess().getRouteRouteEStringParserRuleCall_3_0_1(), semanticObject.getRoute());
+		feeder.accept(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getLeadingVehicleAccess().getRouteRouteEStringParserRuleCall_4_0_1(), semanticObject.getRoute());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Direction returns Left
-	 *     Left returns Left
-	 *
-	 * Constraint:
-	 *     {Left}
-	 */
-	protected void sequence_Left(ISerializationContext context, Left semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -250,22 +174,9 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Platoon returns Platoon
 	 *
 	 * Constraint:
-	 *     (LV=LeadingVehicle FV=FollowVehicle?)
+	 *     (LV=LeadingVehicle FV+=FollowVehicle?)
 	 */
 	protected void sequence_Platoon(ISerializationContext context, Platoon semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Direction returns Right
-	 *     Right returns Right
-	 *
-	 * Constraint:
-	 *     {Right}
-	 */
-	protected void sequence_Right(ISerializationContext context, Right semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -275,7 +186,7 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Route returns Route
 	 *
 	 * Constraint:
-	 *     (id=EString commands+=[Command|EString] commands+=[Command|EString]*)
+	 *     (id=EString commands+=Command commands+=Command*)
 	 */
 	protected void sequence_Route(ISerializationContext context, Route semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -288,7 +199,7 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     TurnCommand returns TurnCommand
 	 *
 	 * Constraint:
-	 *     direction=[Direction|EString]
+	 *     direction=Direction
 	 */
 	protected void sequence_TurnCommand(ISerializationContext context, TurnCommand semanticObject) {
 		if (errorAcceptor != null) {
@@ -296,26 +207,7 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.TURN_COMMAND__DIRECTION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTurnCommandAccess().getDirectionDirectionEStringParserRuleCall_2_0_1(), semanticObject.getDirection());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Vehicle returns Vehicle
-	 *     Vehicle_Impl returns Vehicle
-	 *
-	 * Constraint:
-	 *     id=EString
-	 */
-	protected void sequence_Vehicle_Impl(ISerializationContext context, Vehicle semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.VEHICLE__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.VEHICLE__ID));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVehicle_ImplAccess().getIdEStringParserRuleCall_1_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getTurnCommandAccess().getDirectionDirectionParserRuleCall_2_0(), semanticObject.getDirection());
 		feeder.finish();
 	}
 	
@@ -325,7 +217,7 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     World returns World
 	 *
 	 * Constraint:
-	 *     (platoon=[Platoon|ID] route=[Route|ID] constraint=[Constraints|ID])
+	 *     (platoon=Platoon route=Route constraints=Constraints)
 	 */
 	protected void sequence_World(ISerializationContext context, World semanticObject) {
 		if (errorAcceptor != null) {
@@ -333,13 +225,13 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.WORLD__PLATOON));
 			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.WORLD__ROUTE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.WORLD__ROUTE));
-			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.WORLD__CONSTRAINT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.WORLD__CONSTRAINT));
+			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.WORLD__CONSTRAINTS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.WORLD__CONSTRAINTS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getWorldAccess().getPlatoonPlatoonIDTerminalRuleCall_0_0_1(), semanticObject.getPlatoon());
-		feeder.accept(grammarAccess.getWorldAccess().getRouteRouteIDTerminalRuleCall_1_0_1(), semanticObject.getRoute());
-		feeder.accept(grammarAccess.getWorldAccess().getConstraintConstraintsIDTerminalRuleCall_2_0_1(), semanticObject.getConstraint());
+		feeder.accept(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_0_0(), semanticObject.getPlatoon());
+		feeder.accept(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_1_0(), semanticObject.getRoute());
+		feeder.accept(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_2_0(), semanticObject.getConstraints());
 		feeder.finish();
 	}
 	

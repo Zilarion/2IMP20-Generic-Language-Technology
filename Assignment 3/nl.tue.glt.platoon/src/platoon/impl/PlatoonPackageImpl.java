@@ -12,16 +12,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import platoon.Command;
 import platoon.Constraint;
 import platoon.Constraints;
-import platoon.Direction;
 import platoon.FollowVehicle;
 import platoon.ForwardCommand;
 import platoon.HeadwayConstraint;
 import platoon.LeadingVehicle;
-import platoon.Left;
 import platoon.Platoon;
 import platoon.PlatoonFactory;
 import platoon.PlatoonPackage;
-import platoon.Right;
 import platoon.Route;
 import platoon.TurnCommand;
 import platoon.Vehicle;
@@ -47,13 +44,6 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * @generated
 	 */
 	private EClass routeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass constraintsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,27 +92,6 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass directionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass leftEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass rightEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass headwayConstraintEClass = null;
 
 	/**
@@ -138,6 +107,13 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * @generated
 	 */
 	private EClass worldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass constraintsEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -259,24 +235,6 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConstraints() {
-		return constraintsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstraints_Constraints() {
-		return (EReference)constraintsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getVehicle() {
 		return vehicleEClass;
 	}
@@ -304,7 +262,7 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFollowVehicle_FrontRunner() {
+	public EReference getFollowVehicle_Follows() {
 		return (EReference)followVehicleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -367,35 +325,8 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTurnCommand_Direction() {
-		return (EReference)turnCommandEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDirection() {
-		return directionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getLeft() {
-		return leftEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRight() {
-		return rightEClass;
+	public EAttribute getTurnCommand_Direction() {
+		return (EAttribute)turnCommandEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -466,8 +397,26 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWorld_Constraint() {
+	public EReference getWorld_Constraints() {
 		return (EReference)worldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConstraints() {
+		return constraintsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstraints_Constraints() {
+		return (EReference)constraintsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -506,14 +455,11 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 		createEReference(routeEClass, ROUTE__COMMANDS);
 		createEAttribute(routeEClass, ROUTE__ID);
 
-		constraintsEClass = createEClass(CONSTRAINTS);
-		createEReference(constraintsEClass, CONSTRAINTS__CONSTRAINTS);
-
 		vehicleEClass = createEClass(VEHICLE);
 		createEAttribute(vehicleEClass, VEHICLE__ID);
 
 		followVehicleEClass = createEClass(FOLLOW_VEHICLE);
-		createEReference(followVehicleEClass, FOLLOW_VEHICLE__FRONT_RUNNER);
+		createEReference(followVehicleEClass, FOLLOW_VEHICLE__FOLLOWS);
 
 		leadingVehicleEClass = createEClass(LEADING_VEHICLE);
 		createEReference(leadingVehicleEClass, LEADING_VEHICLE__ROUTE);
@@ -524,13 +470,7 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 		createEAttribute(forwardCommandEClass, FORWARD_COMMAND__DISTANCE);
 
 		turnCommandEClass = createEClass(TURN_COMMAND);
-		createEReference(turnCommandEClass, TURN_COMMAND__DIRECTION);
-
-		directionEClass = createEClass(DIRECTION);
-
-		leftEClass = createEClass(LEFT);
-
-		rightEClass = createEClass(RIGHT);
+		createEAttribute(turnCommandEClass, TURN_COMMAND__DIRECTION);
 
 		headwayConstraintEClass = createEClass(HEADWAY_CONSTRAINT);
 		createEAttribute(headwayConstraintEClass, HEADWAY_CONSTRAINT__MIN);
@@ -541,7 +481,10 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 		worldEClass = createEClass(WORLD);
 		createEReference(worldEClass, WORLD__PLATOON);
 		createEReference(worldEClass, WORLD__ROUTE);
-		createEReference(worldEClass, WORLD__CONSTRAINT);
+		createEReference(worldEClass, WORLD__CONSTRAINTS);
+
+		constraintsEClass = createEClass(CONSTRAINTS);
+		createEReference(constraintsEClass, CONSTRAINTS__CONSTRAINTS);
 	}
 
 	/**
@@ -576,30 +519,25 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 		leadingVehicleEClass.getESuperTypes().add(this.getVehicle());
 		forwardCommandEClass.getESuperTypes().add(this.getCommand());
 		turnCommandEClass.getESuperTypes().add(this.getCommand());
-		leftEClass.getESuperTypes().add(this.getDirection());
-		rightEClass.getESuperTypes().add(this.getDirection());
 		headwayConstraintEClass.getESuperTypes().add(this.getConstraint());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(platoonEClass, Platoon.class, "Platoon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlatoon_LV(), this.getLeadingVehicle(), null, "LV", null, 1, 1, Platoon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPlatoon_FV(), this.getFollowVehicle(), null, "FV", null, 0, 1, Platoon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlatoon_FV(), this.getFollowVehicle(), null, "FV", null, 0, -1, Platoon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(routeEClass, Route.class, "Route", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRoute_Commands(), this.getCommand(), null, "commands", null, 1, -1, Route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoute_Id(), ecorePackage.getEString(), "id", null, 0, 1, Route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRoute_Commands(), this.getCommand(), null, "commands", null, 1, -1, Route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoute_Id(), ecorePackage.getEString(), "id", "", 1, 1, Route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(constraintsEClass, Constraints.class, "Constraints", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstraints_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Constraints.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vehicleEClass, Vehicle.class, "Vehicle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(vehicleEClass, Vehicle.class, "Vehicle", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVehicle_Id(), ecorePackage.getEString(), "id", "", 1, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(followVehicleEClass, FollowVehicle.class, "FollowVehicle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFollowVehicle_FrontRunner(), this.getVehicle(), null, "FrontRunner", null, 1, 1, FollowVehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFollowVehicle_Follows(), this.getVehicle(), null, "follows", null, 1, 1, FollowVehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(leadingVehicleEClass, LeadingVehicle.class, "LeadingVehicle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLeadingVehicle_Route(), this.getRoute(), null, "Route", null, 1, 1, LeadingVehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLeadingVehicle_Route(), this.getRoute(), null, "route", null, 1, 1, LeadingVehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -607,13 +545,7 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 		initEAttribute(getForwardCommand_Distance(), ecorePackage.getEInt(), "distance", null, 1, 1, ForwardCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(turnCommandEClass, TurnCommand.class, "TurnCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTurnCommand_Direction(), this.getDirection(), null, "direction", null, 0, 1, TurnCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(directionEClass, Direction.class, "Direction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(leftEClass, Left.class, "Left", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(rightEClass, Right.class, "Right", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTurnCommand_Direction(), ecorePackage.getEString(), "direction", null, 1, 1, TurnCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(headwayConstraintEClass, HeadwayConstraint.class, "HeadwayConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHeadwayConstraint_Min(), ecorePackage.getEInt(), "min", null, 1, 1, HeadwayConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -622,9 +554,12 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(worldEClass, World.class, "World", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWorld_Platoon(), this.getPlatoon(), null, "platoon", null, 1, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorld_Route(), this.getRoute(), null, "route", null, 1, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorld_Constraint(), this.getConstraints(), null, "constraint", null, 0, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorld_Platoon(), this.getPlatoon(), null, "platoon", null, 1, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorld_Route(), this.getRoute(), null, "route", null, 1, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorld_Constraints(), this.getConstraints(), null, "constraints", null, 0, 1, World.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(constraintsEClass, Constraints.class, "Constraints", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConstraints_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Constraints.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

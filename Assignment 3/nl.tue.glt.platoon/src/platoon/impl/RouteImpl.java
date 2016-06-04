@@ -6,15 +6,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import platoon.Command;
 import platoon.PlatoonPackage;
 import platoon.Route;
@@ -35,7 +37,7 @@ import platoon.Route;
  */
 public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 	/**
-	 * The cached value of the '{@link #getCommands() <em>Commands</em>}' reference list.
+	 * The cached value of the '{@link #getCommands() <em>Commands</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCommands()
@@ -52,7 +54,7 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String ID_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -90,7 +92,7 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 	 */
 	public EList<Command> getCommands() {
 		if (commands == null) {
-			commands = new EObjectResolvingEList<Command>(Command.class, this, PlatoonPackage.ROUTE__COMMANDS);
+			commands = new EObjectContainmentEList<Command>(Command.class, this, PlatoonPackage.ROUTE__COMMANDS);
 		}
 		return commands;
 	}
@@ -114,6 +116,20 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 		id = newId;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.ROUTE__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PlatoonPackage.ROUTE__COMMANDS:
+				return ((InternalEList<?>)getCommands()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

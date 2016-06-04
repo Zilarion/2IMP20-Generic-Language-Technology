@@ -21,22 +21,21 @@ import platoon.Vehicle;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link platoon.impl.FollowVehicleImpl#getFrontRunner <em>Front Runner</em>}</li>
+ *   <li>{@link platoon.impl.FollowVehicleImpl#getFollows <em>Follows</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class FollowVehicleImpl extends VehicleImpl implements FollowVehicle {
 	/**
-	 * The cached value of the '{@link #getFrontRunner() <em>Front Runner</em>}' reference.
+	 * The cached value of the '{@link #getFollows() <em>Follows</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFrontRunner()
+	 * @see #getFollows()
 	 * @generated
 	 * @ordered
 	 */
-	protected Vehicle frontRunner;
-
+	protected Vehicle follows;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,16 +60,16 @@ public class FollowVehicleImpl extends VehicleImpl implements FollowVehicle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Vehicle getFrontRunner() {
-		if (frontRunner != null && frontRunner.eIsProxy()) {
-			InternalEObject oldFrontRunner = (InternalEObject)frontRunner;
-			frontRunner = (Vehicle)eResolveProxy(oldFrontRunner);
-			if (frontRunner != oldFrontRunner) {
+	public Vehicle getFollows() {
+		if (follows != null && follows.eIsProxy()) {
+			InternalEObject oldFollows = (InternalEObject)follows;
+			follows = (Vehicle)eResolveProxy(oldFollows);
+			if (follows != oldFollows) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PlatoonPackage.FOLLOW_VEHICLE__FRONT_RUNNER, oldFrontRunner, frontRunner));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PlatoonPackage.FOLLOW_VEHICLE__FOLLOWS, oldFollows, follows));
 			}
 		}
-		return frontRunner;
+		return follows;
 	}
 
 	/**
@@ -78,8 +77,8 @@ public class FollowVehicleImpl extends VehicleImpl implements FollowVehicle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Vehicle basicGetFrontRunner() {
-		return frontRunner;
+	public Vehicle basicGetFollows() {
+		return follows;
 	}
 
 	/**
@@ -87,11 +86,11 @@ public class FollowVehicleImpl extends VehicleImpl implements FollowVehicle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrontRunner(Vehicle newFrontRunner) {
-		Vehicle oldFrontRunner = frontRunner;
-		frontRunner = newFrontRunner;
+	public void setFollows(Vehicle newFollows) {
+		Vehicle oldFollows = follows;
+		follows = newFollows;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.FOLLOW_VEHICLE__FRONT_RUNNER, oldFrontRunner, frontRunner));
+			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.FOLLOW_VEHICLE__FOLLOWS, oldFollows, follows));
 	}
 
 	/**
@@ -102,9 +101,9 @@ public class FollowVehicleImpl extends VehicleImpl implements FollowVehicle {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PlatoonPackage.FOLLOW_VEHICLE__FRONT_RUNNER:
-				if (resolve) return getFrontRunner();
-				return basicGetFrontRunner();
+			case PlatoonPackage.FOLLOW_VEHICLE__FOLLOWS:
+				if (resolve) return getFollows();
+				return basicGetFollows();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,8 +116,8 @@ public class FollowVehicleImpl extends VehicleImpl implements FollowVehicle {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PlatoonPackage.FOLLOW_VEHICLE__FRONT_RUNNER:
-				setFrontRunner((Vehicle)newValue);
+			case PlatoonPackage.FOLLOW_VEHICLE__FOLLOWS:
+				setFollows((Vehicle)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,8 +131,8 @@ public class FollowVehicleImpl extends VehicleImpl implements FollowVehicle {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PlatoonPackage.FOLLOW_VEHICLE__FRONT_RUNNER:
-				setFrontRunner((Vehicle)null);
+			case PlatoonPackage.FOLLOW_VEHICLE__FOLLOWS:
+				setFollows((Vehicle)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,8 +146,8 @@ public class FollowVehicleImpl extends VehicleImpl implements FollowVehicle {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PlatoonPackage.FOLLOW_VEHICLE__FRONT_RUNNER:
-				return frontRunner != null;
+			case PlatoonPackage.FOLLOW_VEHICLE__FOLLOWS:
+				return follows != null;
 		}
 		return super.eIsSet(featureID);
 	}

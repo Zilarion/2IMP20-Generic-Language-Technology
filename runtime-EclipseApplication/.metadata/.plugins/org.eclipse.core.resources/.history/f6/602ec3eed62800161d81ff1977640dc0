@@ -1,0 +1,9 @@
+platoon 
+	LV "v1" route "r0"
+	
+route route
+
+     turn Left
+	
+constraints
+	20 <= headway <= 30

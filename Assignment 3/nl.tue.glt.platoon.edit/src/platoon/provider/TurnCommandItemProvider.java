@@ -12,7 +12,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import platoon.PlatoonPackage;
+import platoon.TurnCommand;
 
 /**
  * This is the item provider adapter for a {@link platoon.TurnCommand} object.
@@ -64,7 +66,7 @@ public class TurnCommandItemProvider extends CommandItemProvider {
 				 true,
 				 false,
 				 true,
-				 null,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -88,7 +90,10 @@ public class TurnCommandItemProvider extends CommandItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_TurnCommand_type");
+		String label = ((TurnCommand)object).getDirection();
+		return label == null || label.length() == 0 ?
+			getString("_UI_TurnCommand_type") :
+			getString("_UI_TurnCommand_type") + " " + label;
 	}
 	
 

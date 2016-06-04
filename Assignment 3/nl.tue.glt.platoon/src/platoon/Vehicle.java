@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see platoon.PlatoonPackage#getVehicle()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Vehicle extends EObject {

@@ -118,52 +118,6 @@ public class PlatoonItemProviderAdapterFactory extends PlatoonAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link platoon.Constraints} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConstraintsItemProvider constraintsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link platoon.Constraints}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createConstraintsAdapter() {
-		if (constraintsItemProvider == null) {
-			constraintsItemProvider = new ConstraintsItemProvider(this);
-		}
-
-		return constraintsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link platoon.Vehicle} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VehicleItemProvider vehicleItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link platoon.Vehicle}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVehicleAdapter() {
-		if (vehicleItemProvider == null) {
-			vehicleItemProvider = new VehicleItemProvider(this);
-		}
-
-		return vehicleItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link platoon.FollowVehicle} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -279,75 +233,6 @@ public class PlatoonItemProviderAdapterFactory extends PlatoonAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link platoon.Direction} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DirectionItemProvider directionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link platoon.Direction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDirectionAdapter() {
-		if (directionItemProvider == null) {
-			directionItemProvider = new DirectionItemProvider(this);
-		}
-
-		return directionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link platoon.Left} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LeftItemProvider leftItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link platoon.Left}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLeftAdapter() {
-		if (leftItemProvider == null) {
-			leftItemProvider = new LeftItemProvider(this);
-		}
-
-		return leftItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link platoon.Right} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RightItemProvider rightItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link platoon.Right}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRightAdapter() {
-		if (rightItemProvider == null) {
-			rightItemProvider = new RightItemProvider(this);
-		}
-
-		return rightItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link platoon.HeadwayConstraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -414,6 +299,29 @@ public class PlatoonItemProviderAdapterFactory extends PlatoonAdapterFactory imp
 		}
 
 		return worldItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link platoon.Constraints} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConstraintsItemProvider constraintsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link platoon.Constraints}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConstraintsAdapter() {
+		if (constraintsItemProvider == null) {
+			constraintsItemProvider = new ConstraintsItemProvider(this);
+		}
+
+		return constraintsItemProvider;
 	}
 
 	/**
@@ -517,19 +425,15 @@ public class PlatoonItemProviderAdapterFactory extends PlatoonAdapterFactory imp
 	public void dispose() {
 		if (platoonItemProvider != null) platoonItemProvider.dispose();
 		if (routeItemProvider != null) routeItemProvider.dispose();
-		if (constraintsItemProvider != null) constraintsItemProvider.dispose();
-		if (vehicleItemProvider != null) vehicleItemProvider.dispose();
 		if (followVehicleItemProvider != null) followVehicleItemProvider.dispose();
 		if (leadingVehicleItemProvider != null) leadingVehicleItemProvider.dispose();
 		if (commandItemProvider != null) commandItemProvider.dispose();
 		if (forwardCommandItemProvider != null) forwardCommandItemProvider.dispose();
 		if (turnCommandItemProvider != null) turnCommandItemProvider.dispose();
-		if (directionItemProvider != null) directionItemProvider.dispose();
-		if (leftItemProvider != null) leftItemProvider.dispose();
-		if (rightItemProvider != null) rightItemProvider.dispose();
 		if (headwayConstraintItemProvider != null) headwayConstraintItemProvider.dispose();
 		if (constraintItemProvider != null) constraintItemProvider.dispose();
 		if (worldItemProvider != null) worldItemProvider.dispose();
+		if (constraintsItemProvider != null) constraintsItemProvider.dispose();
 	}
 
 }

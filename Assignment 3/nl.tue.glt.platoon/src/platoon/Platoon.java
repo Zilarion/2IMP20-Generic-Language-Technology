@@ -2,6 +2,7 @@
  */
 package platoon;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -49,29 +50,19 @@ public interface Platoon extends EObject {
 	void setLV(LeadingVehicle value);
 
 	/**
-	 * Returns the value of the '<em><b>FV</b></em>' containment reference.
+	 * Returns the value of the '<em><b>FV</b></em>' containment reference list.
+	 * The list contents are of type {@link platoon.FollowVehicle}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>FV</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>FV</em>' containment reference.
-	 * @see #setFV(FollowVehicle)
+	 * @return the value of the '<em>FV</em>' containment reference list.
 	 * @see platoon.PlatoonPackage#getPlatoon_FV()
 	 * @model containment="true"
 	 * @generated
 	 */
-	FollowVehicle getFV();
-
-	/**
-	 * Sets the value of the '{@link platoon.Platoon#getFV <em>FV</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>FV</em>' containment reference.
-	 * @see #getFV()
-	 * @generated
-	 */
-	void setFV(FollowVehicle value);
+	EList<FollowVehicle> getFV();
 
 } // Platoon

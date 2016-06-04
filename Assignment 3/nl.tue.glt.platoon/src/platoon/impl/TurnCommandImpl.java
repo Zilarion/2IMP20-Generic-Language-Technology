@@ -5,11 +5,7 @@ package platoon.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import platoon.Direction;
 import platoon.PlatoonPackage;
 import platoon.TurnCommand;
 
@@ -28,14 +24,23 @@ import platoon.TurnCommand;
  */
 public class TurnCommandImpl extends CommandImpl implements TurnCommand {
 	/**
-	 * The cached value of the '{@link #getDirection() <em>Direction</em>}' reference.
+	 * The default value of the '{@link #getDirection() <em>Direction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDirection()
 	 * @generated
 	 * @ordered
 	 */
-	protected Direction direction;
+	protected static final String DIRECTION_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getDirection() <em>Direction</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDirection()
+	 * @generated
+	 * @ordered
+	 */
+	protected String direction = DIRECTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,15 +66,7 @@ public class TurnCommandImpl extends CommandImpl implements TurnCommand {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Direction getDirection() {
-		if (direction != null && direction.eIsProxy()) {
-			InternalEObject oldDirection = (InternalEObject)direction;
-			direction = (Direction)eResolveProxy(oldDirection);
-			if (direction != oldDirection) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PlatoonPackage.TURN_COMMAND__DIRECTION, oldDirection, direction));
-			}
-		}
+	public String getDirection() {
 		return direction;
 	}
 
@@ -78,17 +75,8 @@ public class TurnCommandImpl extends CommandImpl implements TurnCommand {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Direction basicGetDirection() {
-		return direction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDirection(Direction newDirection) {
-		Direction oldDirection = direction;
+	public void setDirection(String newDirection) {
+		String oldDirection = direction;
 		direction = newDirection;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.TURN_COMMAND__DIRECTION, oldDirection, direction));
@@ -103,8 +91,7 @@ public class TurnCommandImpl extends CommandImpl implements TurnCommand {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case PlatoonPackage.TURN_COMMAND__DIRECTION:
-				if (resolve) return getDirection();
-				return basicGetDirection();
+				return getDirection();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,7 +105,7 @@ public class TurnCommandImpl extends CommandImpl implements TurnCommand {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PlatoonPackage.TURN_COMMAND__DIRECTION:
-				setDirection((Direction)newValue);
+				setDirection((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,7 +120,7 @@ public class TurnCommandImpl extends CommandImpl implements TurnCommand {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PlatoonPackage.TURN_COMMAND__DIRECTION:
-				setDirection((Direction)null);
+				setDirection(DIRECTION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -148,9 +135,25 @@ public class TurnCommandImpl extends CommandImpl implements TurnCommand {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case PlatoonPackage.TURN_COMMAND__DIRECTION:
-				return direction != null;
+				return DIRECTION_EDEFAULT == null ? direction != null : !DIRECTION_EDEFAULT.equals(direction);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (direction: ");
+		result.append(direction);
+		result.append(')');
+		return result.toString();
 	}
 
 } //TurnCommandImpl

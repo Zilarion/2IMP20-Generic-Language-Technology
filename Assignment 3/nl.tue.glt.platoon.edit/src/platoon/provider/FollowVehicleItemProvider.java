@@ -43,25 +43,25 @@ public class FollowVehicleItemProvider extends VehicleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addFrontRunnerPropertyDescriptor(object);
+			addFollowsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Front Runner feature.
+	 * This adds a property descriptor for the Follows feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFrontRunnerPropertyDescriptor(Object object) {
+	protected void addFollowsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FollowVehicle_FrontRunner_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FollowVehicle_FrontRunner_feature", "_UI_FollowVehicle_type"),
-				 PlatoonPackage.Literals.FOLLOW_VEHICLE__FRONT_RUNNER,
+				 getString("_UI_FollowVehicle_follows_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FollowVehicle_follows_feature", "_UI_FollowVehicle_type"),
+				 PlatoonPackage.Literals.FOLLOW_VEHICLE__FOLLOWS,
 				 true,
 				 false,
 				 true,

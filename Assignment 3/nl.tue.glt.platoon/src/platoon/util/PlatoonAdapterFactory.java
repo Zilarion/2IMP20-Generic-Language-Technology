@@ -76,10 +76,6 @@ public class PlatoonAdapterFactory extends AdapterFactoryImpl {
 				return createRouteAdapter();
 			}
 			@Override
-			public Adapter caseConstraints(Constraints object) {
-				return createConstraintsAdapter();
-			}
-			@Override
 			public Adapter caseVehicle(Vehicle object) {
 				return createVehicleAdapter();
 			}
@@ -104,18 +100,6 @@ public class PlatoonAdapterFactory extends AdapterFactoryImpl {
 				return createTurnCommandAdapter();
 			}
 			@Override
-			public Adapter caseDirection(Direction object) {
-				return createDirectionAdapter();
-			}
-			@Override
-			public Adapter caseLeft(Left object) {
-				return createLeftAdapter();
-			}
-			@Override
-			public Adapter caseRight(Right object) {
-				return createRightAdapter();
-			}
-			@Override
 			public Adapter caseHeadwayConstraint(HeadwayConstraint object) {
 				return createHeadwayConstraintAdapter();
 			}
@@ -126,6 +110,10 @@ public class PlatoonAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseWorld(World object) {
 				return createWorldAdapter();
+			}
+			@Override
+			public Adapter caseConstraints(Constraints object) {
+				return createConstraintsAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -172,20 +160,6 @@ public class PlatoonAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRouteAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link platoon.Constraints <em>Constraints</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see platoon.Constraints
-	 * @generated
-	 */
-	public Adapter createConstraintsAdapter() {
 		return null;
 	}
 
@@ -274,48 +248,6 @@ public class PlatoonAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link platoon.Direction <em>Direction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see platoon.Direction
-	 * @generated
-	 */
-	public Adapter createDirectionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link platoon.Left <em>Left</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see platoon.Left
-	 * @generated
-	 */
-	public Adapter createLeftAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link platoon.Right <em>Right</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see platoon.Right
-	 * @generated
-	 */
-	public Adapter createRightAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link platoon.HeadwayConstraint <em>Headway Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -354,6 +286,20 @@ public class PlatoonAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createWorldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link platoon.Constraints <em>Constraints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see platoon.Constraints
+	 * @generated
+	 */
+	public Adapter createConstraintsAdapter() {
 		return null;
 	}
 

@@ -79,42 +79,337 @@ ruleWorld returns [EObject current=null]
 		(
 			(
 				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getWorldRule());
-					}
+					newCompositeNode(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_0_0());
 				}
-				otherlv_0=RULE_ID
+				lv_platoon_0_0=rulePlatoon
 				{
-					newLeafNode(otherlv_0, grammarAccess.getWorldAccess().getPlatoonPlatoonCrossReference_0_0());
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getWorldRule());
+					}
+					set(
+						$current,
+						"platoon",
+						lv_platoon_0_0,
+						"nl.tue.glt.xtext.Platoon.Platoon");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
 			(
 				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getWorldRule());
-					}
+					newCompositeNode(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_1_0());
 				}
-				otherlv_1=RULE_ID
+				lv_route_1_0=ruleRoute
 				{
-					newLeafNode(otherlv_1, grammarAccess.getWorldAccess().getRouteRouteCrossReference_1_0());
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getWorldRule());
+					}
+					set(
+						$current,
+						"route",
+						lv_route_1_0,
+						"nl.tue.glt.xtext.Platoon.Route");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
 			(
 				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getWorldRule());
-					}
+					newCompositeNode(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_2_0());
 				}
-				otherlv_2=RULE_ID
+				lv_constraints_2_0=ruleConstraints
 				{
-					newLeafNode(otherlv_2, grammarAccess.getWorldAccess().getConstraintConstraintsCrossReference_2_0());
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getWorldRule());
+					}
+					set(
+						$current,
+						"constraints",
+						lv_constraints_2_0,
+						"nl.tue.glt.xtext.Platoon.Constraints");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
+	)
+;
+
+// Entry rule entryRuleCommand
+entryRuleCommand returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getCommandRule()); }
+	iv_ruleCommand=ruleCommand
+	{ $current=$iv_ruleCommand.current; }
+	EOF;
+
+// Rule Command
+ruleCommand returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getCommandAccess().getForwardCommandParserRuleCall_0());
+		}
+		this_ForwardCommand_0=ruleForwardCommand
+		{
+			$current = $this_ForwardCommand_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getCommandAccess().getTurnCommandParserRuleCall_1());
+		}
+		this_TurnCommand_1=ruleTurnCommand
+		{
+			$current = $this_TurnCommand_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleConstraint
+entryRuleConstraint returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getConstraintRule()); }
+	iv_ruleConstraint=ruleConstraint
+	{ $current=$iv_ruleConstraint.current; }
+	EOF;
+
+// Rule Constraint
+ruleConstraint returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	{
+		newCompositeNode(grammarAccess.getConstraintAccess().getHeadwayConstraintParserRuleCall());
+	}
+	this_HeadwayConstraint_0=ruleHeadwayConstraint
+	{
+		$current = $this_HeadwayConstraint_0.current;
+		afterParserOrEnumRuleCall();
+	}
+;
+
+// Entry rule entryRulePlatoon
+entryRulePlatoon returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getPlatoonRule()); }
+	iv_rulePlatoon=rulePlatoon
+	{ $current=$iv_rulePlatoon.current; }
+	EOF;
+
+// Rule Platoon
+rulePlatoon returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getPlatoonAccess().getPlatoonAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='platoon'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getPlatoonAccess().getPlatoonKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_2_0());
+				}
+				lv_LV_2_0=ruleLeadingVehicle
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getPlatoonRule());
+					}
+					set(
+						$current,
+						"LV",
+						lv_LV_2_0,
+						"nl.tue.glt.xtext.Platoon.LeadingVehicle");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_3_0());
+				}
+				lv_FV_3_0=ruleFollowVehicle
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getPlatoonRule());
+					}
+					add(
+						$current,
+						"FV",
+						lv_FV_3_0,
+						"nl.tue.glt.xtext.Platoon.FollowVehicle");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleRoute
+entryRuleRoute returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRouteRule()); }
+	iv_ruleRoute=ruleRoute
+	{ $current=$iv_ruleRoute.current; }
+	EOF;
+
+// Rule Route
+ruleRoute returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getRouteAccess().getRouteAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='route'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getRouteAccess().getRouteKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getRouteAccess().getIdEStringParserRuleCall_2_0());
+				}
+				lv_id_2_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getRouteRule());
+					}
+					set(
+						$current,
+						"id",
+						lv_id_2_0,
+						"nl.tue.glt.xtext.Platoon.EString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_3_0());
+				}
+				lv_commands_3_0=ruleCommand
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getRouteRule());
+					}
+					add(
+						$current,
+						"commands",
+						lv_commands_3_0,
+						"nl.tue.glt.xtext.Platoon.Command");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_4_0());
+				}
+				lv_commands_4_0=ruleCommand
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getRouteRule());
+					}
+					add(
+						$current,
+						"commands",
+						lv_commands_4_0,
+						"nl.tue.glt.xtext.Platoon.Command");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+	)
+;
+
+// Entry rule entryRuleConstraints
+entryRuleConstraints returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getConstraintsRule()); }
+	iv_ruleConstraints=ruleConstraints
+	{ $current=$iv_ruleConstraints.current; }
+	EOF;
+
+// Rule Constraints
+ruleConstraints returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='constraints'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getConstraintsAccess().getConstraintsKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_1_0());
+				}
+				lv_constraints_1_0=ruleConstraint
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getConstraintsRule());
+					}
+					add(
+						$current,
+						"constraints",
+						lv_constraints_1_0,
+						"nl.tue.glt.xtext.Platoon.Constraint");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_2_0());
+				}
+				lv_constraints_2_0=ruleConstraint
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getConstraintsRule());
+					}
+					add(
+						$current,
+						"constraints",
+						lv_constraints_2_0,
+						"nl.tue.glt.xtext.Platoon.Constraint");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
 	)
 ;
 
@@ -134,16 +429,23 @@ ruleLeadingVehicle returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='LV'
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getLeadingVehicleAccess().getLeadingVehicleAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='LV'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getLeadingVehicleAccess().getLVKeyword_0());
+			newLeafNode(otherlv_1, grammarAccess.getLeadingVehicleAccess().getLVKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_2_0());
 				}
-				lv_id_1_0=ruleEString
+				lv_id_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getLeadingVehicleRule());
@@ -151,15 +453,15 @@ ruleLeadingVehicle returns [EObject current=null]
 					set(
 						$current,
 						"id",
-						lv_id_1_0,
+						lv_id_2_0,
 						"nl.tue.glt.xtext.Platoon.EString");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_2='route'
+		otherlv_3='route'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getLeadingVehicleAccess().getRouteKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getLeadingVehicleAccess().getRouteKeyword_3());
 		}
 		(
 			(
@@ -169,7 +471,7 @@ ruleLeadingVehicle returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getRouteRouteCrossReference_3_0());
+					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getRouteRouteCrossReference_4_0());
 				}
 				ruleEString
 				{
@@ -196,16 +498,23 @@ ruleFollowVehicle returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='FV'
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getFollowVehicleAccess().getFollowVehicleAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='FV'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getFollowVehicleAccess().getFVKeyword_0());
+			newLeafNode(otherlv_1, grammarAccess.getFollowVehicleAccess().getFVKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_2_0());
 				}
-				lv_id_1_0=ruleEString
+				lv_id_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFollowVehicleRule());
@@ -213,19 +522,19 @@ ruleFollowVehicle returns [EObject current=null]
 					set(
 						$current,
 						"id",
-						lv_id_1_0,
+						lv_id_2_0,
 						"nl.tue.glt.xtext.Platoon.EString");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_2='front'
+		otherlv_3='front'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getFollowVehicleAccess().getFrontKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getFollowVehicleAccess().getFrontKeyword_3());
 		}
-		otherlv_3='runner'
+		otherlv_4='runner'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getFollowVehicleAccess().getRunnerKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getFollowVehicleAccess().getRunnerKeyword_4());
 		}
 		(
 			(
@@ -235,7 +544,7 @@ ruleFollowVehicle returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getFollowVehicleAccess().getFrontRunnerVehicleCrossReference_4_0());
+					newCompositeNode(grammarAccess.getFollowVehicleAccess().getFollowsVehicleCrossReference_5_0());
 				}
 				ruleEString
 				{
@@ -280,75 +589,6 @@ ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 	)
 ;
 
-// Entry rule entryRuleVehicle_Impl
-entryRuleVehicle_Impl returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVehicle_ImplRule()); }
-	iv_ruleVehicle_Impl=ruleVehicle_Impl
-	{ $current=$iv_ruleVehicle_Impl.current; }
-	EOF;
-
-// Rule Vehicle_Impl
-ruleVehicle_Impl returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getVehicle_ImplAccess().getVehicleAction_0(),
-					$current);
-			}
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVehicle_ImplAccess().getIdEStringParserRuleCall_1_0());
-				}
-				lv_id_1_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVehicle_ImplRule());
-					}
-					set(
-						$current,
-						"id",
-						lv_id_1_0,
-						"nl.tue.glt.xtext.Platoon.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Entry rule entryRuleCommand_Impl
-entryRuleCommand_Impl returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getCommand_ImplRule()); }
-	iv_ruleCommand_Impl=ruleCommand_Impl
-	{ $current=$iv_ruleCommand_Impl.current; }
-	EOF;
-
-// Rule Command_Impl
-ruleCommand_Impl returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		{
-			$current = forceCreateModelElement(
-				grammarAccess.getCommand_ImplAccess().getCommandAction(),
-				$current);
-		}
-	)
-;
-
 // Entry rule entryRuleForwardCommand
 entryRuleForwardCommand returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getForwardCommandRule()); }
@@ -365,32 +605,42 @@ ruleForwardCommand returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='forward('
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getForwardCommandAccess().getForwardCommandAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='forward'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getForwardCommandAccess().getForwardKeyword_0());
+			newLeafNode(otherlv_1, grammarAccess.getForwardCommandAccess().getForwardKeyword_1());
+		}
+		otherlv_2='('
+		{
+			newLeafNode(otherlv_2, grammarAccess.getForwardCommandAccess().getLeftParenthesisKeyword_2());
 		}
 		(
 			(
+				lv_distance_3_0=RULE_INT
 				{
-					newCompositeNode(grammarAccess.getForwardCommandAccess().getDistanceEIntParserRuleCall_1_0());
+					newLeafNode(lv_distance_3_0, grammarAccess.getForwardCommandAccess().getDistanceINTTerminalRuleCall_3_0());
 				}
-				lv_distance_1_0=ruleEInt
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getForwardCommandRule());
+						$current = createModelElement(grammarAccess.getForwardCommandRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"distance",
-						lv_distance_1_0,
-						"nl.tue.glt.xtext.Platoon.EInt");
-					afterParserOrEnumRuleCall();
+						lv_distance_3_0,
+						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
-		otherlv_2=')'
+		otherlv_4=')'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getForwardCommandAccess().getRightParenthesisKeyword_2());
+			newLeafNode(otherlv_4, grammarAccess.getForwardCommandAccess().getRightParenthesisKeyword_4());
 		}
 	)
 ;
@@ -425,15 +675,18 @@ ruleTurnCommand returns [EObject current=null]
 		(
 			(
 				{
+					newCompositeNode(grammarAccess.getTurnCommandAccess().getDirectionDirectionParserRuleCall_2_0());
+				}
+				lv_direction_2_0=ruleDirection
+				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getTurnCommandRule());
+						$current = createModelElementForParent(grammarAccess.getTurnCommandRule());
 					}
-				}
-				{
-					newCompositeNode(grammarAccess.getTurnCommandAccess().getDirectionDirectionCrossReference_2_0());
-				}
-				ruleEString
-				{
+					set(
+						$current,
+						"direction",
+						lv_direction_2_0,
+						"nl.tue.glt.xtext.Platoon.Direction");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -441,15 +694,15 @@ ruleTurnCommand returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleEInt
-entryRuleEInt returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getEIntRule()); }
-	iv_ruleEInt=ruleEInt
-	{ $current=$iv_ruleEInt.current.getText(); }
+// Entry rule entryRuleDirection
+entryRuleDirection returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getDirectionRule()); }
+	iv_ruleDirection=ruleDirection
+	{ $current=$iv_ruleDirection.current.getText(); }
 	EOF;
 
-// Rule EInt
-ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+// Rule Direction
+ruleDirection returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @init {
 	enterRule();
 }
@@ -457,127 +710,16 @@ ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 	leaveRule();
 }:
 	(
-		(
-			kw='-'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0());
-			}
-		)?
-		this_INT_1=RULE_INT
+		kw='Left'
 		{
-			$current.merge(this_INT_1);
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getDirectionAccess().getLeftKeyword_0());
 		}
+		    |
+		kw='Right'
 		{
-			newLeafNode(this_INT_1, grammarAccess.getEIntAccess().getINTTerminalRuleCall_1());
-		}
-	)
-;
-
-// Entry rule entryRuleDirection_Impl
-entryRuleDirection_Impl returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDirection_ImplRule()); }
-	iv_ruleDirection_Impl=ruleDirection_Impl
-	{ $current=$iv_ruleDirection_Impl.current; }
-	EOF;
-
-// Rule Direction_Impl
-ruleDirection_Impl returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		{
-			$current = forceCreateModelElement(
-				grammarAccess.getDirection_ImplAccess().getDirectionAction(),
-				$current);
-		}
-	)
-;
-
-// Entry rule entryRuleLeft
-entryRuleLeft returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getLeftRule()); }
-	iv_ruleLeft=ruleLeft
-	{ $current=$iv_ruleLeft.current; }
-	EOF;
-
-// Rule Left
-ruleLeft returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getLeftAccess().getLeftAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='Left'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getLeftAccess().getLeftKeyword_1());
-		}
-	)
-;
-
-// Entry rule entryRuleRight
-entryRuleRight returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getRightRule()); }
-	iv_ruleRight=ruleRight
-	{ $current=$iv_ruleRight.current; }
-	EOF;
-
-// Rule Right
-ruleRight returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getRightAccess().getRightAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='Right'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getRightAccess().getRightKeyword_1());
-		}
-	)
-;
-
-// Entry rule entryRuleConstraint_Impl
-entryRuleConstraint_Impl returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getConstraint_ImplRule()); }
-	iv_ruleConstraint_Impl=ruleConstraint_Impl
-	{ $current=$iv_ruleConstraint_Impl.current; }
-	EOF;
-
-// Rule Constraint_Impl
-ruleConstraint_Impl returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		{
-			$current = forceCreateModelElement(
-				grammarAccess.getConstraint_ImplAccess().getConstraintAction(),
-				$current);
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getDirectionAccess().getRightKeyword_1());
 		}
 	)
 ;
@@ -599,52 +741,57 @@ ruleHeadwayConstraint returns [EObject current=null]
 }:
 	(
 		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getHeadwayConstraintAccess().getHeadwayConstraintAction_0(),
+					$current);
+			}
+		)
+		(
 			(
+				lv_min_1_0=RULE_INT
 				{
-					newCompositeNode(grammarAccess.getHeadwayConstraintAccess().getMinEIntParserRuleCall_0_0());
+					newLeafNode(lv_min_1_0, grammarAccess.getHeadwayConstraintAccess().getMinINTTerminalRuleCall_1_0());
 				}
-				lv_min_0_0=ruleEInt
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getHeadwayConstraintRule());
+						$current = createModelElement(grammarAccess.getHeadwayConstraintRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"min",
-						lv_min_0_0,
-						"nl.tue.glt.xtext.Platoon.EInt");
-					afterParserOrEnumRuleCall();
+						lv_min_1_0,
+						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
-		otherlv_1='<='
+		otherlv_2='<='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_1());
+			newLeafNode(otherlv_2, grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_2());
 		}
-		otherlv_2='headway'
+		otherlv_3='headway'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getHeadwayConstraintAccess().getHeadwayKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getHeadwayConstraintAccess().getHeadwayKeyword_3());
 		}
-		otherlv_3='<='
+		otherlv_4='<='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_4());
 		}
 		(
 			(
+				lv_max_5_0=RULE_INT
 				{
-					newCompositeNode(grammarAccess.getHeadwayConstraintAccess().getMaxEIntParserRuleCall_4_0());
+					newLeafNode(lv_max_5_0, grammarAccess.getHeadwayConstraintAccess().getMaxINTTerminalRuleCall_5_0());
 				}
-				lv_max_4_0=ruleEInt
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getHeadwayConstraintRule());
+						$current = createModelElement(grammarAccess.getHeadwayConstraintRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"max",
-						lv_max_4_0,
-						"nl.tue.glt.xtext.Platoon.EInt");
-					afterParserOrEnumRuleCall();
+						lv_max_5_0,
+						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)

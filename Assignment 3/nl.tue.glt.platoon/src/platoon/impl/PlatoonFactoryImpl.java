@@ -58,19 +58,15 @@ public class PlatoonFactoryImpl extends EFactoryImpl implements PlatoonFactory {
 		switch (eClass.getClassifierID()) {
 			case PlatoonPackage.PLATOON: return createPlatoon();
 			case PlatoonPackage.ROUTE: return createRoute();
-			case PlatoonPackage.CONSTRAINTS: return createConstraints();
-			case PlatoonPackage.VEHICLE: return createVehicle();
 			case PlatoonPackage.FOLLOW_VEHICLE: return createFollowVehicle();
 			case PlatoonPackage.LEADING_VEHICLE: return createLeadingVehicle();
 			case PlatoonPackage.COMMAND: return createCommand();
 			case PlatoonPackage.FORWARD_COMMAND: return createForwardCommand();
 			case PlatoonPackage.TURN_COMMAND: return createTurnCommand();
-			case PlatoonPackage.DIRECTION: return createDirection();
-			case PlatoonPackage.LEFT: return createLeft();
-			case PlatoonPackage.RIGHT: return createRight();
 			case PlatoonPackage.HEADWAY_CONSTRAINT: return createHeadwayConstraint();
 			case PlatoonPackage.CONSTRAINT: return createConstraint();
 			case PlatoonPackage.WORLD: return createWorld();
+			case PlatoonPackage.CONSTRAINTS: return createConstraints();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -94,26 +90,6 @@ public class PlatoonFactoryImpl extends EFactoryImpl implements PlatoonFactory {
 	public Route createRoute() {
 		RouteImpl route = new RouteImpl();
 		return route;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Constraints createConstraints() {
-		ConstraintsImpl constraints = new ConstraintsImpl();
-		return constraints;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Vehicle createVehicle() {
-		VehicleImpl vehicle = new VehicleImpl();
-		return vehicle;
 	}
 
 	/**
@@ -171,36 +147,6 @@ public class PlatoonFactoryImpl extends EFactoryImpl implements PlatoonFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Direction createDirection() {
-		DirectionImpl direction = new DirectionImpl();
-		return direction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Left createLeft() {
-		LeftImpl left = new LeftImpl();
-		return left;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Right createRight() {
-		RightImpl right = new RightImpl();
-		return right;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public HeadwayConstraint createHeadwayConstraint() {
 		HeadwayConstraintImpl headwayConstraint = new HeadwayConstraintImpl();
 		return headwayConstraint;
@@ -224,6 +170,16 @@ public class PlatoonFactoryImpl extends EFactoryImpl implements PlatoonFactory {
 	public World createWorld() {
 		WorldImpl world = new WorldImpl();
 		return world;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Constraints createConstraints() {
+		ConstraintsImpl constraints = new ConstraintsImpl();
+		return constraints;
 	}
 
 	/**

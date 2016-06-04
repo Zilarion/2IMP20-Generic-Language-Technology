@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;nl.tue.glt.platoon.tests&apos;&#x0A;- Original project: &apos;nl.tue.glt.platoon.tests&apos;&#x0A;- Original elements:&#x0A;     platoon.tests.DirectionTest.java&#x0A;     platoon.tests.LeftTest.java&#x0A;     platoon.tests.RightTest.java" description="Delete elements" element1="/src&lt;platoon.tests{RightTest.java" element2="/src&lt;platoon.tests{DirectionTest.java" element3="/src&lt;platoon.tests{LeftTest.java" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1464276064477" subPackages="false" version="1.0"/>
+</session>

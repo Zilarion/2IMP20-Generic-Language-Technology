@@ -1,0 +1,11 @@
+	
+route "r0"
+     turn Left
+     
+     platoon 
+	LV "v1" route "r0"
+	FV "v2" front runner "v1"
+
+	
+constraints
+	20 <= headway <= 30

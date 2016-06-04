@@ -11,7 +11,7 @@
       <package
             uri="boundingbox"
             class="boundingbox.BoundingboxPackage"
-            genModel="BoundingBox.genmodel"/>
+            genModel="model/BoundingBox.genmodel"/>
    </extension>
 
 </plugin>

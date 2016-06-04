@@ -21,9 +21,9 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPlatoonParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'LV'", "'route'", "'FV'", "'front'", "'runner'", "'forward('", "')'", "'turn'", "'-'", "'Left'", "'Right'", "'<='", "'headway'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'platoon'", "'route'", "'constraints'", "'LV'", "'FV'", "'front'", "'runner'", "'forward'", "'('", "')'", "'turn'", "'Left'", "'Right'", "'<='", "'headway'"
     };
-    public static final int RULE_STRING=5;
+    public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -35,13 +35,15 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_INT=6;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
     public static final int T__20=20;
     public static final int T__21=21;
 
@@ -121,38 +123,51 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWorld"
-    // InternalPlatoon.g:71:1: ruleWorld returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ) ;
+    // InternalPlatoon.g:71:1: ruleWorld returns [EObject current=null] : ( ( (lv_platoon_0_0= rulePlatoon ) ) ( (lv_route_1_0= ruleRoute ) ) ( (lv_constraints_2_0= ruleConstraints ) ) ) ;
     public final EObject ruleWorld() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token otherlv_1=null;
-        Token otherlv_2=null;
+        EObject lv_platoon_0_0 = null;
+
+        EObject lv_route_1_0 = null;
+
+        EObject lv_constraints_2_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalPlatoon.g:77:2: ( ( ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ) )
-            // InternalPlatoon.g:78:2: ( ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) )
+            // InternalPlatoon.g:77:2: ( ( ( (lv_platoon_0_0= rulePlatoon ) ) ( (lv_route_1_0= ruleRoute ) ) ( (lv_constraints_2_0= ruleConstraints ) ) ) )
+            // InternalPlatoon.g:78:2: ( ( (lv_platoon_0_0= rulePlatoon ) ) ( (lv_route_1_0= ruleRoute ) ) ( (lv_constraints_2_0= ruleConstraints ) ) )
             {
-            // InternalPlatoon.g:78:2: ( ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) )
-            // InternalPlatoon.g:79:3: ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) )
+            // InternalPlatoon.g:78:2: ( ( (lv_platoon_0_0= rulePlatoon ) ) ( (lv_route_1_0= ruleRoute ) ) ( (lv_constraints_2_0= ruleConstraints ) ) )
+            // InternalPlatoon.g:79:3: ( (lv_platoon_0_0= rulePlatoon ) ) ( (lv_route_1_0= ruleRoute ) ) ( (lv_constraints_2_0= ruleConstraints ) )
             {
-            // InternalPlatoon.g:79:3: ( (otherlv_0= RULE_ID ) )
-            // InternalPlatoon.g:80:4: (otherlv_0= RULE_ID )
+            // InternalPlatoon.g:79:3: ( (lv_platoon_0_0= rulePlatoon ) )
+            // InternalPlatoon.g:80:4: (lv_platoon_0_0= rulePlatoon )
             {
-            // InternalPlatoon.g:80:4: (otherlv_0= RULE_ID )
-            // InternalPlatoon.g:81:5: otherlv_0= RULE_ID
+            // InternalPlatoon.g:80:4: (lv_platoon_0_0= rulePlatoon )
+            // InternalPlatoon.g:81:5: lv_platoon_0_0= rulePlatoon
             {
+
+            					newCompositeNode(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_0_0());
+            				
+            pushFollow(FOLLOW_3);
+            lv_platoon_0_0=rulePlatoon();
+
+            state._fsp--;
+
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getWorldRule());
+            						current = createModelElementForParent(grammarAccess.getWorldRule());
             					}
-            				
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_3); 
-
-            					newLeafNode(otherlv_0, grammarAccess.getWorldAccess().getPlatoonPlatoonCrossReference_0_0());
+            					set(
+            						current,
+            						"platoon",
+            						lv_platoon_0_0,
+            						"nl.tue.glt.xtext.Platoon.Platoon");
+            					afterParserOrEnumRuleCall();
             				
 
             }
@@ -160,20 +175,30 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPlatoon.g:92:3: ( (otherlv_1= RULE_ID ) )
-            // InternalPlatoon.g:93:4: (otherlv_1= RULE_ID )
+            // InternalPlatoon.g:98:3: ( (lv_route_1_0= ruleRoute ) )
+            // InternalPlatoon.g:99:4: (lv_route_1_0= ruleRoute )
             {
-            // InternalPlatoon.g:93:4: (otherlv_1= RULE_ID )
-            // InternalPlatoon.g:94:5: otherlv_1= RULE_ID
+            // InternalPlatoon.g:99:4: (lv_route_1_0= ruleRoute )
+            // InternalPlatoon.g:100:5: lv_route_1_0= ruleRoute
             {
+
+            					newCompositeNode(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_1_0());
+            				
+            pushFollow(FOLLOW_4);
+            lv_route_1_0=ruleRoute();
+
+            state._fsp--;
+
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getWorldRule());
+            						current = createModelElementForParent(grammarAccess.getWorldRule());
             					}
-            				
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_3); 
-
-            					newLeafNode(otherlv_1, grammarAccess.getWorldAccess().getRouteRouteCrossReference_1_0());
+            					set(
+            						current,
+            						"route",
+            						lv_route_1_0,
+            						"nl.tue.glt.xtext.Platoon.Route");
+            					afterParserOrEnumRuleCall();
             				
 
             }
@@ -181,20 +206,30 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPlatoon.g:105:3: ( (otherlv_2= RULE_ID ) )
-            // InternalPlatoon.g:106:4: (otherlv_2= RULE_ID )
+            // InternalPlatoon.g:117:3: ( (lv_constraints_2_0= ruleConstraints ) )
+            // InternalPlatoon.g:118:4: (lv_constraints_2_0= ruleConstraints )
             {
-            // InternalPlatoon.g:106:4: (otherlv_2= RULE_ID )
-            // InternalPlatoon.g:107:5: otherlv_2= RULE_ID
+            // InternalPlatoon.g:118:4: (lv_constraints_2_0= ruleConstraints )
+            // InternalPlatoon.g:119:5: lv_constraints_2_0= ruleConstraints
             {
+
+            					newCompositeNode(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_2_0());
+            				
+            pushFollow(FOLLOW_2);
+            lv_constraints_2_0=ruleConstraints();
+
+            state._fsp--;
+
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getWorldRule());
+            						current = createModelElementForParent(grammarAccess.getWorldRule());
             					}
-            				
-            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_2); 
-
-            					newLeafNode(otherlv_2, grammarAccess.getWorldAccess().getConstraintConstraintsCrossReference_2_0());
+            					set(
+            						current,
+            						"constraints",
+            						lv_constraints_2_0,
+            						"nl.tue.glt.xtext.Platoon.Constraints");
+            					afterParserOrEnumRuleCall();
             				
 
             }
@@ -224,8 +259,755 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleWorld"
 
 
+    // $ANTLR start "entryRuleCommand"
+    // InternalPlatoon.g:140:1: entryRuleCommand returns [EObject current=null] : iv_ruleCommand= ruleCommand EOF ;
+    public final EObject entryRuleCommand() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleCommand = null;
+
+
+        try {
+            // InternalPlatoon.g:140:48: (iv_ruleCommand= ruleCommand EOF )
+            // InternalPlatoon.g:141:2: iv_ruleCommand= ruleCommand EOF
+            {
+             newCompositeNode(grammarAccess.getCommandRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleCommand=ruleCommand();
+
+            state._fsp--;
+
+             current =iv_ruleCommand; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleCommand"
+
+
+    // $ANTLR start "ruleCommand"
+    // InternalPlatoon.g:147:1: ruleCommand returns [EObject current=null] : (this_ForwardCommand_0= ruleForwardCommand | this_TurnCommand_1= ruleTurnCommand ) ;
+    public final EObject ruleCommand() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_ForwardCommand_0 = null;
+
+        EObject this_TurnCommand_1 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalPlatoon.g:153:2: ( (this_ForwardCommand_0= ruleForwardCommand | this_TurnCommand_1= ruleTurnCommand ) )
+            // InternalPlatoon.g:154:2: (this_ForwardCommand_0= ruleForwardCommand | this_TurnCommand_1= ruleTurnCommand )
+            {
+            // InternalPlatoon.g:154:2: (this_ForwardCommand_0= ruleForwardCommand | this_TurnCommand_1= ruleTurnCommand )
+            int alt1=2;
+            int LA1_0 = input.LA(1);
+
+            if ( (LA1_0==18) ) {
+                alt1=1;
+            }
+            else if ( (LA1_0==21) ) {
+                alt1=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 1, 0, input);
+
+                throw nvae;
+            }
+            switch (alt1) {
+                case 1 :
+                    // InternalPlatoon.g:155:3: this_ForwardCommand_0= ruleForwardCommand
+                    {
+
+                    			newCompositeNode(grammarAccess.getCommandAccess().getForwardCommandParserRuleCall_0());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_ForwardCommand_0=ruleForwardCommand();
+
+                    state._fsp--;
+
+
+                    			current = this_ForwardCommand_0;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+                case 2 :
+                    // InternalPlatoon.g:164:3: this_TurnCommand_1= ruleTurnCommand
+                    {
+
+                    			newCompositeNode(grammarAccess.getCommandAccess().getTurnCommandParserRuleCall_1());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_TurnCommand_1=ruleTurnCommand();
+
+                    state._fsp--;
+
+
+                    			current = this_TurnCommand_1;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleCommand"
+
+
+    // $ANTLR start "entryRuleConstraint"
+    // InternalPlatoon.g:176:1: entryRuleConstraint returns [EObject current=null] : iv_ruleConstraint= ruleConstraint EOF ;
+    public final EObject entryRuleConstraint() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleConstraint = null;
+
+
+        try {
+            // InternalPlatoon.g:176:51: (iv_ruleConstraint= ruleConstraint EOF )
+            // InternalPlatoon.g:177:2: iv_ruleConstraint= ruleConstraint EOF
+            {
+             newCompositeNode(grammarAccess.getConstraintRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleConstraint=ruleConstraint();
+
+            state._fsp--;
+
+             current =iv_ruleConstraint; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleConstraint"
+
+
+    // $ANTLR start "ruleConstraint"
+    // InternalPlatoon.g:183:1: ruleConstraint returns [EObject current=null] : this_HeadwayConstraint_0= ruleHeadwayConstraint ;
+    public final EObject ruleConstraint() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_HeadwayConstraint_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalPlatoon.g:189:2: (this_HeadwayConstraint_0= ruleHeadwayConstraint )
+            // InternalPlatoon.g:190:2: this_HeadwayConstraint_0= ruleHeadwayConstraint
+            {
+
+            		newCompositeNode(grammarAccess.getConstraintAccess().getHeadwayConstraintParserRuleCall());
+            	
+            pushFollow(FOLLOW_2);
+            this_HeadwayConstraint_0=ruleHeadwayConstraint();
+
+            state._fsp--;
+
+
+            		current = this_HeadwayConstraint_0;
+            		afterParserOrEnumRuleCall();
+            	
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleConstraint"
+
+
+    // $ANTLR start "entryRulePlatoon"
+    // InternalPlatoon.g:201:1: entryRulePlatoon returns [EObject current=null] : iv_rulePlatoon= rulePlatoon EOF ;
+    public final EObject entryRulePlatoon() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_rulePlatoon = null;
+
+
+        try {
+            // InternalPlatoon.g:201:48: (iv_rulePlatoon= rulePlatoon EOF )
+            // InternalPlatoon.g:202:2: iv_rulePlatoon= rulePlatoon EOF
+            {
+             newCompositeNode(grammarAccess.getPlatoonRule()); 
+            pushFollow(FOLLOW_1);
+            iv_rulePlatoon=rulePlatoon();
+
+            state._fsp--;
+
+             current =iv_rulePlatoon; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRulePlatoon"
+
+
+    // $ANTLR start "rulePlatoon"
+    // InternalPlatoon.g:208:1: rulePlatoon returns [EObject current=null] : ( () otherlv_1= 'platoon' ( (lv_LV_2_0= ruleLeadingVehicle ) ) ( (lv_FV_3_0= ruleFollowVehicle ) )? ) ;
+    public final EObject rulePlatoon() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_1=null;
+        EObject lv_LV_2_0 = null;
+
+        EObject lv_FV_3_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalPlatoon.g:214:2: ( ( () otherlv_1= 'platoon' ( (lv_LV_2_0= ruleLeadingVehicle ) ) ( (lv_FV_3_0= ruleFollowVehicle ) )? ) )
+            // InternalPlatoon.g:215:2: ( () otherlv_1= 'platoon' ( (lv_LV_2_0= ruleLeadingVehicle ) ) ( (lv_FV_3_0= ruleFollowVehicle ) )? )
+            {
+            // InternalPlatoon.g:215:2: ( () otherlv_1= 'platoon' ( (lv_LV_2_0= ruleLeadingVehicle ) ) ( (lv_FV_3_0= ruleFollowVehicle ) )? )
+            // InternalPlatoon.g:216:3: () otherlv_1= 'platoon' ( (lv_LV_2_0= ruleLeadingVehicle ) ) ( (lv_FV_3_0= ruleFollowVehicle ) )?
+            {
+            // InternalPlatoon.g:216:3: ()
+            // InternalPlatoon.g:217:4: 
+            {
+
+            				current = forceCreateModelElement(
+            					grammarAccess.getPlatoonAccess().getPlatoonAction_0(),
+            					current);
+            			
+
+            }
+
+            otherlv_1=(Token)match(input,11,FOLLOW_5); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getPlatoonAccess().getPlatoonKeyword_1());
+            		
+            // InternalPlatoon.g:227:3: ( (lv_LV_2_0= ruleLeadingVehicle ) )
+            // InternalPlatoon.g:228:4: (lv_LV_2_0= ruleLeadingVehicle )
+            {
+            // InternalPlatoon.g:228:4: (lv_LV_2_0= ruleLeadingVehicle )
+            // InternalPlatoon.g:229:5: lv_LV_2_0= ruleLeadingVehicle
+            {
+
+            					newCompositeNode(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_2_0());
+            				
+            pushFollow(FOLLOW_6);
+            lv_LV_2_0=ruleLeadingVehicle();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getPlatoonRule());
+            					}
+            					set(
+            						current,
+            						"LV",
+            						lv_LV_2_0,
+            						"nl.tue.glt.xtext.Platoon.LeadingVehicle");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            // InternalPlatoon.g:246:3: ( (lv_FV_3_0= ruleFollowVehicle ) )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
+
+            if ( (LA2_0==15) ) {
+                alt2=1;
+            }
+            switch (alt2) {
+                case 1 :
+                    // InternalPlatoon.g:247:4: (lv_FV_3_0= ruleFollowVehicle )
+                    {
+                    // InternalPlatoon.g:247:4: (lv_FV_3_0= ruleFollowVehicle )
+                    // InternalPlatoon.g:248:5: lv_FV_3_0= ruleFollowVehicle
+                    {
+
+                    					newCompositeNode(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_3_0());
+                    				
+                    pushFollow(FOLLOW_2);
+                    lv_FV_3_0=ruleFollowVehicle();
+
+                    state._fsp--;
+
+
+                    					if (current==null) {
+                    						current = createModelElementForParent(grammarAccess.getPlatoonRule());
+                    					}
+                    					add(
+                    						current,
+                    						"FV",
+                    						lv_FV_3_0,
+                    						"nl.tue.glt.xtext.Platoon.FollowVehicle");
+                    					afterParserOrEnumRuleCall();
+                    				
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "rulePlatoon"
+
+
+    // $ANTLR start "entryRuleRoute"
+    // InternalPlatoon.g:269:1: entryRuleRoute returns [EObject current=null] : iv_ruleRoute= ruleRoute EOF ;
+    public final EObject entryRuleRoute() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleRoute = null;
+
+
+        try {
+            // InternalPlatoon.g:269:46: (iv_ruleRoute= ruleRoute EOF )
+            // InternalPlatoon.g:270:2: iv_ruleRoute= ruleRoute EOF
+            {
+             newCompositeNode(grammarAccess.getRouteRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleRoute=ruleRoute();
+
+            state._fsp--;
+
+             current =iv_ruleRoute; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleRoute"
+
+
+    // $ANTLR start "ruleRoute"
+    // InternalPlatoon.g:276:1: ruleRoute returns [EObject current=null] : ( () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) ( (lv_commands_3_0= ruleCommand ) ) ( (lv_commands_4_0= ruleCommand ) )* ) ;
+    public final EObject ruleRoute() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_1=null;
+        AntlrDatatypeRuleToken lv_id_2_0 = null;
+
+        EObject lv_commands_3_0 = null;
+
+        EObject lv_commands_4_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalPlatoon.g:282:2: ( ( () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) ( (lv_commands_3_0= ruleCommand ) ) ( (lv_commands_4_0= ruleCommand ) )* ) )
+            // InternalPlatoon.g:283:2: ( () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) ( (lv_commands_3_0= ruleCommand ) ) ( (lv_commands_4_0= ruleCommand ) )* )
+            {
+            // InternalPlatoon.g:283:2: ( () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) ( (lv_commands_3_0= ruleCommand ) ) ( (lv_commands_4_0= ruleCommand ) )* )
+            // InternalPlatoon.g:284:3: () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) ( (lv_commands_3_0= ruleCommand ) ) ( (lv_commands_4_0= ruleCommand ) )*
+            {
+            // InternalPlatoon.g:284:3: ()
+            // InternalPlatoon.g:285:4: 
+            {
+
+            				current = forceCreateModelElement(
+            					grammarAccess.getRouteAccess().getRouteAction_0(),
+            					current);
+            			
+
+            }
+
+            otherlv_1=(Token)match(input,12,FOLLOW_7); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getRouteAccess().getRouteKeyword_1());
+            		
+            // InternalPlatoon.g:295:3: ( (lv_id_2_0= ruleEString ) )
+            // InternalPlatoon.g:296:4: (lv_id_2_0= ruleEString )
+            {
+            // InternalPlatoon.g:296:4: (lv_id_2_0= ruleEString )
+            // InternalPlatoon.g:297:5: lv_id_2_0= ruleEString
+            {
+
+            					newCompositeNode(grammarAccess.getRouteAccess().getIdEStringParserRuleCall_2_0());
+            				
+            pushFollow(FOLLOW_8);
+            lv_id_2_0=ruleEString();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getRouteRule());
+            					}
+            					set(
+            						current,
+            						"id",
+            						lv_id_2_0,
+            						"nl.tue.glt.xtext.Platoon.EString");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            // InternalPlatoon.g:314:3: ( (lv_commands_3_0= ruleCommand ) )
+            // InternalPlatoon.g:315:4: (lv_commands_3_0= ruleCommand )
+            {
+            // InternalPlatoon.g:315:4: (lv_commands_3_0= ruleCommand )
+            // InternalPlatoon.g:316:5: lv_commands_3_0= ruleCommand
+            {
+
+            					newCompositeNode(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_3_0());
+            				
+            pushFollow(FOLLOW_9);
+            lv_commands_3_0=ruleCommand();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getRouteRule());
+            					}
+            					add(
+            						current,
+            						"commands",
+            						lv_commands_3_0,
+            						"nl.tue.glt.xtext.Platoon.Command");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            // InternalPlatoon.g:333:3: ( (lv_commands_4_0= ruleCommand ) )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( (LA3_0==18||LA3_0==21) ) {
+                    alt3=1;
+                }
+
+
+                switch (alt3) {
+            	case 1 :
+            	    // InternalPlatoon.g:334:4: (lv_commands_4_0= ruleCommand )
+            	    {
+            	    // InternalPlatoon.g:334:4: (lv_commands_4_0= ruleCommand )
+            	    // InternalPlatoon.g:335:5: lv_commands_4_0= ruleCommand
+            	    {
+
+            	    					newCompositeNode(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_4_0());
+            	    				
+            	    pushFollow(FOLLOW_9);
+            	    lv_commands_4_0=ruleCommand();
+
+            	    state._fsp--;
+
+
+            	    					if (current==null) {
+            	    						current = createModelElementForParent(grammarAccess.getRouteRule());
+            	    					}
+            	    					add(
+            	    						current,
+            	    						"commands",
+            	    						lv_commands_4_0,
+            	    						"nl.tue.glt.xtext.Platoon.Command");
+            	    					afterParserOrEnumRuleCall();
+            	    				
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop3;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleRoute"
+
+
+    // $ANTLR start "entryRuleConstraints"
+    // InternalPlatoon.g:356:1: entryRuleConstraints returns [EObject current=null] : iv_ruleConstraints= ruleConstraints EOF ;
+    public final EObject entryRuleConstraints() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleConstraints = null;
+
+
+        try {
+            // InternalPlatoon.g:356:52: (iv_ruleConstraints= ruleConstraints EOF )
+            // InternalPlatoon.g:357:2: iv_ruleConstraints= ruleConstraints EOF
+            {
+             newCompositeNode(grammarAccess.getConstraintsRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleConstraints=ruleConstraints();
+
+            state._fsp--;
+
+             current =iv_ruleConstraints; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleConstraints"
+
+
+    // $ANTLR start "ruleConstraints"
+    // InternalPlatoon.g:363:1: ruleConstraints returns [EObject current=null] : (otherlv_0= 'constraints' ( (lv_constraints_1_0= ruleConstraint ) ) ( (lv_constraints_2_0= ruleConstraint ) )* ) ;
+    public final EObject ruleConstraints() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        EObject lv_constraints_1_0 = null;
+
+        EObject lv_constraints_2_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalPlatoon.g:369:2: ( (otherlv_0= 'constraints' ( (lv_constraints_1_0= ruleConstraint ) ) ( (lv_constraints_2_0= ruleConstraint ) )* ) )
+            // InternalPlatoon.g:370:2: (otherlv_0= 'constraints' ( (lv_constraints_1_0= ruleConstraint ) ) ( (lv_constraints_2_0= ruleConstraint ) )* )
+            {
+            // InternalPlatoon.g:370:2: (otherlv_0= 'constraints' ( (lv_constraints_1_0= ruleConstraint ) ) ( (lv_constraints_2_0= ruleConstraint ) )* )
+            // InternalPlatoon.g:371:3: otherlv_0= 'constraints' ( (lv_constraints_1_0= ruleConstraint ) ) ( (lv_constraints_2_0= ruleConstraint ) )*
+            {
+            otherlv_0=(Token)match(input,13,FOLLOW_10); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getConstraintsAccess().getConstraintsKeyword_0());
+            		
+            // InternalPlatoon.g:375:3: ( (lv_constraints_1_0= ruleConstraint ) )
+            // InternalPlatoon.g:376:4: (lv_constraints_1_0= ruleConstraint )
+            {
+            // InternalPlatoon.g:376:4: (lv_constraints_1_0= ruleConstraint )
+            // InternalPlatoon.g:377:5: lv_constraints_1_0= ruleConstraint
+            {
+
+            					newCompositeNode(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_1_0());
+            				
+            pushFollow(FOLLOW_11);
+            lv_constraints_1_0=ruleConstraint();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getConstraintsRule());
+            					}
+            					add(
+            						current,
+            						"constraints",
+            						lv_constraints_1_0,
+            						"nl.tue.glt.xtext.Platoon.Constraint");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            // InternalPlatoon.g:394:3: ( (lv_constraints_2_0= ruleConstraint ) )*
+            loop4:
+            do {
+                int alt4=2;
+                int LA4_0 = input.LA(1);
+
+                if ( (LA4_0==RULE_INT) ) {
+                    alt4=1;
+                }
+
+
+                switch (alt4) {
+            	case 1 :
+            	    // InternalPlatoon.g:395:4: (lv_constraints_2_0= ruleConstraint )
+            	    {
+            	    // InternalPlatoon.g:395:4: (lv_constraints_2_0= ruleConstraint )
+            	    // InternalPlatoon.g:396:5: lv_constraints_2_0= ruleConstraint
+            	    {
+
+            	    					newCompositeNode(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_2_0());
+            	    				
+            	    pushFollow(FOLLOW_11);
+            	    lv_constraints_2_0=ruleConstraint();
+
+            	    state._fsp--;
+
+
+            	    					if (current==null) {
+            	    						current = createModelElementForParent(grammarAccess.getConstraintsRule());
+            	    					}
+            	    					add(
+            	    						current,
+            	    						"constraints",
+            	    						lv_constraints_2_0,
+            	    						"nl.tue.glt.xtext.Platoon.Constraint");
+            	    					afterParserOrEnumRuleCall();
+            	    				
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop4;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleConstraints"
+
+
     // $ANTLR start "entryRuleLeadingVehicle"
-    // InternalPlatoon.g:122:1: entryRuleLeadingVehicle returns [EObject current=null] : iv_ruleLeadingVehicle= ruleLeadingVehicle EOF ;
+    // InternalPlatoon.g:417:1: entryRuleLeadingVehicle returns [EObject current=null] : iv_ruleLeadingVehicle= ruleLeadingVehicle EOF ;
     public final EObject entryRuleLeadingVehicle() throws RecognitionException {
         EObject current = null;
 
@@ -233,8 +1015,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPlatoon.g:122:55: (iv_ruleLeadingVehicle= ruleLeadingVehicle EOF )
-            // InternalPlatoon.g:123:2: iv_ruleLeadingVehicle= ruleLeadingVehicle EOF
+            // InternalPlatoon.g:417:55: (iv_ruleLeadingVehicle= ruleLeadingVehicle EOF )
+            // InternalPlatoon.g:418:2: iv_ruleLeadingVehicle= ruleLeadingVehicle EOF
             {
              newCompositeNode(grammarAccess.getLeadingVehicleRule()); 
             pushFollow(FOLLOW_1);
@@ -261,40 +1043,51 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLeadingVehicle"
-    // InternalPlatoon.g:129:1: ruleLeadingVehicle returns [EObject current=null] : (otherlv_0= 'LV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'route' ( ( ruleEString ) ) ) ;
+    // InternalPlatoon.g:424:1: ruleLeadingVehicle returns [EObject current=null] : ( () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) ) ;
     public final EObject ruleLeadingVehicle() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token otherlv_2=null;
-        AntlrDatatypeRuleToken lv_id_1_0 = null;
+        Token otherlv_1=null;
+        Token otherlv_3=null;
+        AntlrDatatypeRuleToken lv_id_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalPlatoon.g:135:2: ( (otherlv_0= 'LV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'route' ( ( ruleEString ) ) ) )
-            // InternalPlatoon.g:136:2: (otherlv_0= 'LV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'route' ( ( ruleEString ) ) )
+            // InternalPlatoon.g:430:2: ( ( () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) ) )
+            // InternalPlatoon.g:431:2: ( () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) )
             {
-            // InternalPlatoon.g:136:2: (otherlv_0= 'LV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'route' ( ( ruleEString ) ) )
-            // InternalPlatoon.g:137:3: otherlv_0= 'LV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'route' ( ( ruleEString ) )
+            // InternalPlatoon.g:431:2: ( () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) )
+            // InternalPlatoon.g:432:3: () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) )
             {
-            otherlv_0=(Token)match(input,11,FOLLOW_4); 
+            // InternalPlatoon.g:432:3: ()
+            // InternalPlatoon.g:433:4: 
+            {
 
-            			newLeafNode(otherlv_0, grammarAccess.getLeadingVehicleAccess().getLVKeyword_0());
+            				current = forceCreateModelElement(
+            					grammarAccess.getLeadingVehicleAccess().getLeadingVehicleAction_0(),
+            					current);
+            			
+
+            }
+
+            otherlv_1=(Token)match(input,14,FOLLOW_7); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getLeadingVehicleAccess().getLVKeyword_1());
             		
-            // InternalPlatoon.g:141:3: ( (lv_id_1_0= ruleEString ) )
-            // InternalPlatoon.g:142:4: (lv_id_1_0= ruleEString )
+            // InternalPlatoon.g:443:3: ( (lv_id_2_0= ruleEString ) )
+            // InternalPlatoon.g:444:4: (lv_id_2_0= ruleEString )
             {
-            // InternalPlatoon.g:142:4: (lv_id_1_0= ruleEString )
-            // InternalPlatoon.g:143:5: lv_id_1_0= ruleEString
+            // InternalPlatoon.g:444:4: (lv_id_2_0= ruleEString )
+            // InternalPlatoon.g:445:5: lv_id_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_5);
-            lv_id_1_0=ruleEString();
+            pushFollow(FOLLOW_3);
+            lv_id_2_0=ruleEString();
 
             state._fsp--;
 
@@ -305,7 +1098,7 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"id",
-            						lv_id_1_0,
+            						lv_id_2_0,
             						"nl.tue.glt.xtext.Platoon.EString");
             					afterParserOrEnumRuleCall();
             				
@@ -315,15 +1108,15 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_4); 
+            otherlv_3=(Token)match(input,12,FOLLOW_7); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getLeadingVehicleAccess().getRouteKeyword_2());
+            			newLeafNode(otherlv_3, grammarAccess.getLeadingVehicleAccess().getRouteKeyword_3());
             		
-            // InternalPlatoon.g:164:3: ( ( ruleEString ) )
-            // InternalPlatoon.g:165:4: ( ruleEString )
+            // InternalPlatoon.g:466:3: ( ( ruleEString ) )
+            // InternalPlatoon.g:467:4: ( ruleEString )
             {
-            // InternalPlatoon.g:165:4: ( ruleEString )
-            // InternalPlatoon.g:166:5: ruleEString
+            // InternalPlatoon.g:467:4: ( ruleEString )
+            // InternalPlatoon.g:468:5: ruleEString
             {
 
             					if (current==null) {
@@ -331,7 +1124,7 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
             					}
             				
 
-            					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getRouteRouteCrossReference_3_0());
+            					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getRouteRouteCrossReference_4_0());
             				
             pushFollow(FOLLOW_2);
             ruleEString();
@@ -370,7 +1163,7 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFollowVehicle"
-    // InternalPlatoon.g:184:1: entryRuleFollowVehicle returns [EObject current=null] : iv_ruleFollowVehicle= ruleFollowVehicle EOF ;
+    // InternalPlatoon.g:486:1: entryRuleFollowVehicle returns [EObject current=null] : iv_ruleFollowVehicle= ruleFollowVehicle EOF ;
     public final EObject entryRuleFollowVehicle() throws RecognitionException {
         EObject current = null;
 
@@ -378,8 +1171,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPlatoon.g:184:54: (iv_ruleFollowVehicle= ruleFollowVehicle EOF )
-            // InternalPlatoon.g:185:2: iv_ruleFollowVehicle= ruleFollowVehicle EOF
+            // InternalPlatoon.g:486:54: (iv_ruleFollowVehicle= ruleFollowVehicle EOF )
+            // InternalPlatoon.g:487:2: iv_ruleFollowVehicle= ruleFollowVehicle EOF
             {
              newCompositeNode(grammarAccess.getFollowVehicleRule()); 
             pushFollow(FOLLOW_1);
@@ -406,41 +1199,52 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFollowVehicle"
-    // InternalPlatoon.g:191:1: ruleFollowVehicle returns [EObject current=null] : (otherlv_0= 'FV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'front' otherlv_3= 'runner' ( ( ruleEString ) ) ) ;
+    // InternalPlatoon.g:493:1: ruleFollowVehicle returns [EObject current=null] : ( () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) ) ;
     public final EObject ruleFollowVehicle() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token otherlv_2=null;
+        Token otherlv_1=null;
         Token otherlv_3=null;
-        AntlrDatatypeRuleToken lv_id_1_0 = null;
+        Token otherlv_4=null;
+        AntlrDatatypeRuleToken lv_id_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalPlatoon.g:197:2: ( (otherlv_0= 'FV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'front' otherlv_3= 'runner' ( ( ruleEString ) ) ) )
-            // InternalPlatoon.g:198:2: (otherlv_0= 'FV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'front' otherlv_3= 'runner' ( ( ruleEString ) ) )
+            // InternalPlatoon.g:499:2: ( ( () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) ) )
+            // InternalPlatoon.g:500:2: ( () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) )
             {
-            // InternalPlatoon.g:198:2: (otherlv_0= 'FV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'front' otherlv_3= 'runner' ( ( ruleEString ) ) )
-            // InternalPlatoon.g:199:3: otherlv_0= 'FV' ( (lv_id_1_0= ruleEString ) ) otherlv_2= 'front' otherlv_3= 'runner' ( ( ruleEString ) )
+            // InternalPlatoon.g:500:2: ( () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) )
+            // InternalPlatoon.g:501:3: () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) )
             {
-            otherlv_0=(Token)match(input,13,FOLLOW_4); 
+            // InternalPlatoon.g:501:3: ()
+            // InternalPlatoon.g:502:4: 
+            {
 
-            			newLeafNode(otherlv_0, grammarAccess.getFollowVehicleAccess().getFVKeyword_0());
+            				current = forceCreateModelElement(
+            					grammarAccess.getFollowVehicleAccess().getFollowVehicleAction_0(),
+            					current);
+            			
+
+            }
+
+            otherlv_1=(Token)match(input,15,FOLLOW_7); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getFollowVehicleAccess().getFVKeyword_1());
             		
-            // InternalPlatoon.g:203:3: ( (lv_id_1_0= ruleEString ) )
-            // InternalPlatoon.g:204:4: (lv_id_1_0= ruleEString )
+            // InternalPlatoon.g:512:3: ( (lv_id_2_0= ruleEString ) )
+            // InternalPlatoon.g:513:4: (lv_id_2_0= ruleEString )
             {
-            // InternalPlatoon.g:204:4: (lv_id_1_0= ruleEString )
-            // InternalPlatoon.g:205:5: lv_id_1_0= ruleEString
+            // InternalPlatoon.g:513:4: (lv_id_2_0= ruleEString )
+            // InternalPlatoon.g:514:5: lv_id_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_6);
-            lv_id_1_0=ruleEString();
+            pushFollow(FOLLOW_12);
+            lv_id_2_0=ruleEString();
 
             state._fsp--;
 
@@ -451,7 +1255,7 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"id",
-            						lv_id_1_0,
+            						lv_id_2_0,
             						"nl.tue.glt.xtext.Platoon.EString");
             					afterParserOrEnumRuleCall();
             				
@@ -461,19 +1265,19 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,14,FOLLOW_7); 
+            otherlv_3=(Token)match(input,16,FOLLOW_13); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getFollowVehicleAccess().getFrontKeyword_2());
+            			newLeafNode(otherlv_3, grammarAccess.getFollowVehicleAccess().getFrontKeyword_3());
             		
-            otherlv_3=(Token)match(input,15,FOLLOW_4); 
+            otherlv_4=(Token)match(input,17,FOLLOW_7); 
 
-            			newLeafNode(otherlv_3, grammarAccess.getFollowVehicleAccess().getRunnerKeyword_3());
+            			newLeafNode(otherlv_4, grammarAccess.getFollowVehicleAccess().getRunnerKeyword_4());
             		
-            // InternalPlatoon.g:230:3: ( ( ruleEString ) )
-            // InternalPlatoon.g:231:4: ( ruleEString )
+            // InternalPlatoon.g:539:3: ( ( ruleEString ) )
+            // InternalPlatoon.g:540:4: ( ruleEString )
             {
-            // InternalPlatoon.g:231:4: ( ruleEString )
-            // InternalPlatoon.g:232:5: ruleEString
+            // InternalPlatoon.g:540:4: ( ruleEString )
+            // InternalPlatoon.g:541:5: ruleEString
             {
 
             					if (current==null) {
@@ -481,7 +1285,7 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
             					}
             				
 
-            					newCompositeNode(grammarAccess.getFollowVehicleAccess().getFrontRunnerVehicleCrossReference_4_0());
+            					newCompositeNode(grammarAccess.getFollowVehicleAccess().getFollowsVehicleCrossReference_5_0());
             				
             pushFollow(FOLLOW_2);
             ruleEString();
@@ -520,7 +1324,7 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEString"
-    // InternalPlatoon.g:250:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // InternalPlatoon.g:559:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -528,8 +1332,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPlatoon.g:250:47: (iv_ruleEString= ruleEString EOF )
-            // InternalPlatoon.g:251:2: iv_ruleEString= ruleEString EOF
+            // InternalPlatoon.g:559:47: (iv_ruleEString= ruleEString EOF )
+            // InternalPlatoon.g:560:2: iv_ruleEString= ruleEString EOF
             {
              newCompositeNode(grammarAccess.getEStringRule()); 
             pushFollow(FOLLOW_1);
@@ -556,7 +1360,7 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // InternalPlatoon.g:257:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // InternalPlatoon.g:566:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -567,28 +1371,28 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPlatoon.g:263:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // InternalPlatoon.g:264:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalPlatoon.g:572:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // InternalPlatoon.g:573:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // InternalPlatoon.g:264:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
-            int alt1=2;
-            int LA1_0 = input.LA(1);
+            // InternalPlatoon.g:573:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA1_0==RULE_STRING) ) {
-                alt1=1;
+            if ( (LA5_0==RULE_STRING) ) {
+                alt5=1;
             }
-            else if ( (LA1_0==RULE_ID) ) {
-                alt1=2;
+            else if ( (LA5_0==RULE_ID) ) {
+                alt5=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 1, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt1) {
+            switch (alt5) {
                 case 1 :
-                    // InternalPlatoon.g:265:3: this_STRING_0= RULE_STRING
+                    // InternalPlatoon.g:574:3: this_STRING_0= RULE_STRING
                     {
                     this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -601,7 +1405,7 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPlatoon.g:273:3: this_ID_1= RULE_ID
+                    // InternalPlatoon.g:582:3: this_ID_1= RULE_ID
                     {
                     this_ID_1=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -635,199 +1439,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleEString"
 
 
-    // $ANTLR start "entryRuleVehicle_Impl"
-    // InternalPlatoon.g:284:1: entryRuleVehicle_Impl returns [EObject current=null] : iv_ruleVehicle_Impl= ruleVehicle_Impl EOF ;
-    public final EObject entryRuleVehicle_Impl() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleVehicle_Impl = null;
-
-
-        try {
-            // InternalPlatoon.g:284:53: (iv_ruleVehicle_Impl= ruleVehicle_Impl EOF )
-            // InternalPlatoon.g:285:2: iv_ruleVehicle_Impl= ruleVehicle_Impl EOF
-            {
-             newCompositeNode(grammarAccess.getVehicle_ImplRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleVehicle_Impl=ruleVehicle_Impl();
-
-            state._fsp--;
-
-             current =iv_ruleVehicle_Impl; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleVehicle_Impl"
-
-
-    // $ANTLR start "ruleVehicle_Impl"
-    // InternalPlatoon.g:291:1: ruleVehicle_Impl returns [EObject current=null] : ( () ( (lv_id_1_0= ruleEString ) ) ) ;
-    public final EObject ruleVehicle_Impl() throws RecognitionException {
-        EObject current = null;
-
-        AntlrDatatypeRuleToken lv_id_1_0 = null;
-
-
-
-        	enterRule();
-
-        try {
-            // InternalPlatoon.g:297:2: ( ( () ( (lv_id_1_0= ruleEString ) ) ) )
-            // InternalPlatoon.g:298:2: ( () ( (lv_id_1_0= ruleEString ) ) )
-            {
-            // InternalPlatoon.g:298:2: ( () ( (lv_id_1_0= ruleEString ) ) )
-            // InternalPlatoon.g:299:3: () ( (lv_id_1_0= ruleEString ) )
-            {
-            // InternalPlatoon.g:299:3: ()
-            // InternalPlatoon.g:300:4: 
-            {
-
-            				current = forceCreateModelElement(
-            					grammarAccess.getVehicle_ImplAccess().getVehicleAction_0(),
-            					current);
-            			
-
-            }
-
-            // InternalPlatoon.g:306:3: ( (lv_id_1_0= ruleEString ) )
-            // InternalPlatoon.g:307:4: (lv_id_1_0= ruleEString )
-            {
-            // InternalPlatoon.g:307:4: (lv_id_1_0= ruleEString )
-            // InternalPlatoon.g:308:5: lv_id_1_0= ruleEString
-            {
-
-            					newCompositeNode(grammarAccess.getVehicle_ImplAccess().getIdEStringParserRuleCall_1_0());
-            				
-            pushFollow(FOLLOW_2);
-            lv_id_1_0=ruleEString();
-
-            state._fsp--;
-
-
-            					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getVehicle_ImplRule());
-            					}
-            					set(
-            						current,
-            						"id",
-            						lv_id_1_0,
-            						"nl.tue.glt.xtext.Platoon.EString");
-            					afterParserOrEnumRuleCall();
-            				
-
-            }
-
-
-            }
-
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleVehicle_Impl"
-
-
-    // $ANTLR start "entryRuleCommand_Impl"
-    // InternalPlatoon.g:329:1: entryRuleCommand_Impl returns [EObject current=null] : iv_ruleCommand_Impl= ruleCommand_Impl EOF ;
-    public final EObject entryRuleCommand_Impl() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleCommand_Impl = null;
-
-
-        try {
-            // InternalPlatoon.g:329:53: (iv_ruleCommand_Impl= ruleCommand_Impl EOF )
-            // InternalPlatoon.g:330:2: iv_ruleCommand_Impl= ruleCommand_Impl EOF
-            {
-             newCompositeNode(grammarAccess.getCommand_ImplRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleCommand_Impl=ruleCommand_Impl();
-
-            state._fsp--;
-
-             current =iv_ruleCommand_Impl; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleCommand_Impl"
-
-
-    // $ANTLR start "ruleCommand_Impl"
-    // InternalPlatoon.g:336:1: ruleCommand_Impl returns [EObject current=null] : () ;
-    public final EObject ruleCommand_Impl() throws RecognitionException {
-        EObject current = null;
-
-
-        	enterRule();
-
-        try {
-            // InternalPlatoon.g:342:2: ( () )
-            // InternalPlatoon.g:343:2: ()
-            {
-            // InternalPlatoon.g:343:2: ()
-            // InternalPlatoon.g:344:3: 
-            {
-
-            			current = forceCreateModelElement(
-            				grammarAccess.getCommand_ImplAccess().getCommandAction(),
-            				current);
-            		
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleCommand_Impl"
-
-
     // $ANTLR start "entryRuleForwardCommand"
-    // InternalPlatoon.g:353:1: entryRuleForwardCommand returns [EObject current=null] : iv_ruleForwardCommand= ruleForwardCommand EOF ;
+    // InternalPlatoon.g:593:1: entryRuleForwardCommand returns [EObject current=null] : iv_ruleForwardCommand= ruleForwardCommand EOF ;
     public final EObject entryRuleForwardCommand() throws RecognitionException {
         EObject current = null;
 
@@ -835,8 +1448,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPlatoon.g:353:55: (iv_ruleForwardCommand= ruleForwardCommand EOF )
-            // InternalPlatoon.g:354:2: iv_ruleForwardCommand= ruleForwardCommand EOF
+            // InternalPlatoon.g:593:55: (iv_ruleForwardCommand= ruleForwardCommand EOF )
+            // InternalPlatoon.g:594:2: iv_ruleForwardCommand= ruleForwardCommand EOF
             {
              newCompositeNode(grammarAccess.getForwardCommandRule()); 
             pushFollow(FOLLOW_1);
@@ -863,53 +1476,63 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleForwardCommand"
-    // InternalPlatoon.g:360:1: ruleForwardCommand returns [EObject current=null] : (otherlv_0= 'forward(' ( (lv_distance_1_0= ruleEInt ) ) otherlv_2= ')' ) ;
+    // InternalPlatoon.g:600:1: ruleForwardCommand returns [EObject current=null] : ( () otherlv_1= 'forward' otherlv_2= '(' ( (lv_distance_3_0= RULE_INT ) ) otherlv_4= ')' ) ;
     public final EObject ruleForwardCommand() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
+        Token otherlv_1=null;
         Token otherlv_2=null;
-        AntlrDatatypeRuleToken lv_distance_1_0 = null;
-
+        Token lv_distance_3_0=null;
+        Token otherlv_4=null;
 
 
         	enterRule();
 
         try {
-            // InternalPlatoon.g:366:2: ( (otherlv_0= 'forward(' ( (lv_distance_1_0= ruleEInt ) ) otherlv_2= ')' ) )
-            // InternalPlatoon.g:367:2: (otherlv_0= 'forward(' ( (lv_distance_1_0= ruleEInt ) ) otherlv_2= ')' )
+            // InternalPlatoon.g:606:2: ( ( () otherlv_1= 'forward' otherlv_2= '(' ( (lv_distance_3_0= RULE_INT ) ) otherlv_4= ')' ) )
+            // InternalPlatoon.g:607:2: ( () otherlv_1= 'forward' otherlv_2= '(' ( (lv_distance_3_0= RULE_INT ) ) otherlv_4= ')' )
             {
-            // InternalPlatoon.g:367:2: (otherlv_0= 'forward(' ( (lv_distance_1_0= ruleEInt ) ) otherlv_2= ')' )
-            // InternalPlatoon.g:368:3: otherlv_0= 'forward(' ( (lv_distance_1_0= ruleEInt ) ) otherlv_2= ')'
+            // InternalPlatoon.g:607:2: ( () otherlv_1= 'forward' otherlv_2= '(' ( (lv_distance_3_0= RULE_INT ) ) otherlv_4= ')' )
+            // InternalPlatoon.g:608:3: () otherlv_1= 'forward' otherlv_2= '(' ( (lv_distance_3_0= RULE_INT ) ) otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,16,FOLLOW_8); 
+            // InternalPlatoon.g:608:3: ()
+            // InternalPlatoon.g:609:4: 
+            {
 
-            			newLeafNode(otherlv_0, grammarAccess.getForwardCommandAccess().getForwardKeyword_0());
+            				current = forceCreateModelElement(
+            					grammarAccess.getForwardCommandAccess().getForwardCommandAction_0(),
+            					current);
+            			
+
+            }
+
+            otherlv_1=(Token)match(input,18,FOLLOW_14); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getForwardCommandAccess().getForwardKeyword_1());
             		
-            // InternalPlatoon.g:372:3: ( (lv_distance_1_0= ruleEInt ) )
-            // InternalPlatoon.g:373:4: (lv_distance_1_0= ruleEInt )
-            {
-            // InternalPlatoon.g:373:4: (lv_distance_1_0= ruleEInt )
-            // InternalPlatoon.g:374:5: lv_distance_1_0= ruleEInt
-            {
+            otherlv_2=(Token)match(input,19,FOLLOW_10); 
 
-            					newCompositeNode(grammarAccess.getForwardCommandAccess().getDistanceEIntParserRuleCall_1_0());
+            			newLeafNode(otherlv_2, grammarAccess.getForwardCommandAccess().getLeftParenthesisKeyword_2());
+            		
+            // InternalPlatoon.g:623:3: ( (lv_distance_3_0= RULE_INT ) )
+            // InternalPlatoon.g:624:4: (lv_distance_3_0= RULE_INT )
+            {
+            // InternalPlatoon.g:624:4: (lv_distance_3_0= RULE_INT )
+            // InternalPlatoon.g:625:5: lv_distance_3_0= RULE_INT
+            {
+            lv_distance_3_0=(Token)match(input,RULE_INT,FOLLOW_15); 
+
+            					newLeafNode(lv_distance_3_0, grammarAccess.getForwardCommandAccess().getDistanceINTTerminalRuleCall_3_0());
             				
-            pushFollow(FOLLOW_9);
-            lv_distance_1_0=ruleEInt();
-
-            state._fsp--;
-
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getForwardCommandRule());
+            						current = createModelElement(grammarAccess.getForwardCommandRule());
             					}
-            					set(
+            					setWithLastConsumed(
             						current,
             						"distance",
-            						lv_distance_1_0,
-            						"nl.tue.glt.xtext.Platoon.EInt");
-            					afterParserOrEnumRuleCall();
+            						lv_distance_3_0,
+            						"org.eclipse.xtext.common.Terminals.INT");
             				
 
             }
@@ -917,9 +1540,9 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,17,FOLLOW_2); 
+            otherlv_4=(Token)match(input,20,FOLLOW_2); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getForwardCommandAccess().getRightParenthesisKeyword_2());
+            			newLeafNode(otherlv_4, grammarAccess.getForwardCommandAccess().getRightParenthesisKeyword_4());
             		
 
             }
@@ -944,7 +1567,7 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTurnCommand"
-    // InternalPlatoon.g:399:1: entryRuleTurnCommand returns [EObject current=null] : iv_ruleTurnCommand= ruleTurnCommand EOF ;
+    // InternalPlatoon.g:649:1: entryRuleTurnCommand returns [EObject current=null] : iv_ruleTurnCommand= ruleTurnCommand EOF ;
     public final EObject entryRuleTurnCommand() throws RecognitionException {
         EObject current = null;
 
@@ -952,8 +1575,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPlatoon.g:399:52: (iv_ruleTurnCommand= ruleTurnCommand EOF )
-            // InternalPlatoon.g:400:2: iv_ruleTurnCommand= ruleTurnCommand EOF
+            // InternalPlatoon.g:649:52: (iv_ruleTurnCommand= ruleTurnCommand EOF )
+            // InternalPlatoon.g:650:2: iv_ruleTurnCommand= ruleTurnCommand EOF
             {
              newCompositeNode(grammarAccess.getTurnCommandRule()); 
             pushFollow(FOLLOW_1);
@@ -980,24 +1603,26 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTurnCommand"
-    // InternalPlatoon.g:406:1: ruleTurnCommand returns [EObject current=null] : ( () otherlv_1= 'turn' ( ( ruleEString ) ) ) ;
+    // InternalPlatoon.g:656:1: ruleTurnCommand returns [EObject current=null] : ( () otherlv_1= 'turn' ( (lv_direction_2_0= ruleDirection ) ) ) ;
     public final EObject ruleTurnCommand() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
+        AntlrDatatypeRuleToken lv_direction_2_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalPlatoon.g:412:2: ( ( () otherlv_1= 'turn' ( ( ruleEString ) ) ) )
-            // InternalPlatoon.g:413:2: ( () otherlv_1= 'turn' ( ( ruleEString ) ) )
+            // InternalPlatoon.g:662:2: ( ( () otherlv_1= 'turn' ( (lv_direction_2_0= ruleDirection ) ) ) )
+            // InternalPlatoon.g:663:2: ( () otherlv_1= 'turn' ( (lv_direction_2_0= ruleDirection ) ) )
             {
-            // InternalPlatoon.g:413:2: ( () otherlv_1= 'turn' ( ( ruleEString ) ) )
-            // InternalPlatoon.g:414:3: () otherlv_1= 'turn' ( ( ruleEString ) )
+            // InternalPlatoon.g:663:2: ( () otherlv_1= 'turn' ( (lv_direction_2_0= ruleDirection ) ) )
+            // InternalPlatoon.g:664:3: () otherlv_1= 'turn' ( (lv_direction_2_0= ruleDirection ) )
             {
-            // InternalPlatoon.g:414:3: ()
-            // InternalPlatoon.g:415:4: 
+            // InternalPlatoon.g:664:3: ()
+            // InternalPlatoon.g:665:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1007,30 +1632,33 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,18,FOLLOW_4); 
+            otherlv_1=(Token)match(input,21,FOLLOW_16); 
 
             			newLeafNode(otherlv_1, grammarAccess.getTurnCommandAccess().getTurnKeyword_1());
             		
-            // InternalPlatoon.g:425:3: ( ( ruleEString ) )
-            // InternalPlatoon.g:426:4: ( ruleEString )
+            // InternalPlatoon.g:675:3: ( (lv_direction_2_0= ruleDirection ) )
+            // InternalPlatoon.g:676:4: (lv_direction_2_0= ruleDirection )
             {
-            // InternalPlatoon.g:426:4: ( ruleEString )
-            // InternalPlatoon.g:427:5: ruleEString
+            // InternalPlatoon.g:676:4: (lv_direction_2_0= ruleDirection )
+            // InternalPlatoon.g:677:5: lv_direction_2_0= ruleDirection
             {
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getTurnCommandRule());
-            					}
-            				
-
-            					newCompositeNode(grammarAccess.getTurnCommandAccess().getDirectionDirectionCrossReference_2_0());
+            					newCompositeNode(grammarAccess.getTurnCommandAccess().getDirectionDirectionParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_2);
-            ruleEString();
+            lv_direction_2_0=ruleDirection();
 
             state._fsp--;
 
 
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getTurnCommandRule());
+            					}
+            					set(
+            						current,
+            						"direction",
+            						lv_direction_2_0,
+            						"nl.tue.glt.xtext.Platoon.Direction");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1061,25 +1689,25 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleTurnCommand"
 
 
-    // $ANTLR start "entryRuleEInt"
-    // InternalPlatoon.g:445:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
-    public final String entryRuleEInt() throws RecognitionException {
+    // $ANTLR start "entryRuleDirection"
+    // InternalPlatoon.g:698:1: entryRuleDirection returns [String current=null] : iv_ruleDirection= ruleDirection EOF ;
+    public final String entryRuleDirection() throws RecognitionException {
         String current = null;
 
-        AntlrDatatypeRuleToken iv_ruleEInt = null;
+        AntlrDatatypeRuleToken iv_ruleDirection = null;
 
 
         try {
-            // InternalPlatoon.g:445:44: (iv_ruleEInt= ruleEInt EOF )
-            // InternalPlatoon.g:446:2: iv_ruleEInt= ruleEInt EOF
+            // InternalPlatoon.g:698:49: (iv_ruleDirection= ruleDirection EOF )
+            // InternalPlatoon.g:699:2: iv_ruleDirection= ruleDirection EOF
             {
-             newCompositeNode(grammarAccess.getEIntRule()); 
+             newCompositeNode(grammarAccess.getDirectionRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleEInt=ruleEInt();
+            iv_ruleDirection=ruleDirection();
 
             state._fsp--;
 
-             current =iv_ruleEInt.getText(); 
+             current =iv_ruleDirection.getText(); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1094,59 +1722,65 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleEInt"
+    // $ANTLR end "entryRuleDirection"
 
 
-    // $ANTLR start "ruleEInt"
-    // InternalPlatoon.g:452:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
-    public final AntlrDatatypeRuleToken ruleEInt() throws RecognitionException {
+    // $ANTLR start "ruleDirection"
+    // InternalPlatoon.g:705:1: ruleDirection returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'Left' | kw= 'Right' ) ;
+    public final AntlrDatatypeRuleToken ruleDirection() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token kw=null;
-        Token this_INT_1=null;
 
 
         	enterRule();
 
         try {
-            // InternalPlatoon.g:458:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
-            // InternalPlatoon.g:459:2: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // InternalPlatoon.g:711:2: ( (kw= 'Left' | kw= 'Right' ) )
+            // InternalPlatoon.g:712:2: (kw= 'Left' | kw= 'Right' )
             {
-            // InternalPlatoon.g:459:2: ( (kw= '-' )? this_INT_1= RULE_INT )
-            // InternalPlatoon.g:460:3: (kw= '-' )? this_INT_1= RULE_INT
-            {
-            // InternalPlatoon.g:460:3: (kw= '-' )?
-            int alt2=2;
-            int LA2_0 = input.LA(1);
+            // InternalPlatoon.g:712:2: (kw= 'Left' | kw= 'Right' )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA2_0==19) ) {
-                alt2=1;
+            if ( (LA6_0==22) ) {
+                alt6=1;
             }
-            switch (alt2) {
-                case 1 :
-                    // InternalPlatoon.g:461:4: kw= '-'
-                    {
-                    kw=(Token)match(input,19,FOLLOW_10); 
+            else if ( (LA6_0==23) ) {
+                alt6=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 6, 0, input);
 
-                    				current.merge(kw);
-                    				newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0());
-                    			
+                throw nvae;
+            }
+            switch (alt6) {
+                case 1 :
+                    // InternalPlatoon.g:713:3: kw= 'Left'
+                    {
+                    kw=(Token)match(input,22,FOLLOW_2); 
+
+                    			current.merge(kw);
+                    			newLeafNode(kw, grammarAccess.getDirectionAccess().getLeftKeyword_0());
+                    		
+
+                    }
+                    break;
+                case 2 :
+                    // InternalPlatoon.g:719:3: kw= 'Right'
+                    {
+                    kw=(Token)match(input,23,FOLLOW_2); 
+
+                    			current.merge(kw);
+                    			newLeafNode(kw, grammarAccess.getDirectionAccess().getRightKeyword_1());
+                    		
 
                     }
                     break;
 
             }
 
-            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_2); 
-
-            			current.merge(this_INT_1);
-            		
-
-            			newLeafNode(this_INT_1, grammarAccess.getEIntAccess().getINTTerminalRuleCall_1());
-            		
-
-            }
-
 
             }
 
@@ -1163,337 +1797,11 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleEInt"
-
-
-    // $ANTLR start "entryRuleDirection_Impl"
-    // InternalPlatoon.g:478:1: entryRuleDirection_Impl returns [EObject current=null] : iv_ruleDirection_Impl= ruleDirection_Impl EOF ;
-    public final EObject entryRuleDirection_Impl() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleDirection_Impl = null;
-
-
-        try {
-            // InternalPlatoon.g:478:55: (iv_ruleDirection_Impl= ruleDirection_Impl EOF )
-            // InternalPlatoon.g:479:2: iv_ruleDirection_Impl= ruleDirection_Impl EOF
-            {
-             newCompositeNode(grammarAccess.getDirection_ImplRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleDirection_Impl=ruleDirection_Impl();
-
-            state._fsp--;
-
-             current =iv_ruleDirection_Impl; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleDirection_Impl"
-
-
-    // $ANTLR start "ruleDirection_Impl"
-    // InternalPlatoon.g:485:1: ruleDirection_Impl returns [EObject current=null] : () ;
-    public final EObject ruleDirection_Impl() throws RecognitionException {
-        EObject current = null;
-
-
-        	enterRule();
-
-        try {
-            // InternalPlatoon.g:491:2: ( () )
-            // InternalPlatoon.g:492:2: ()
-            {
-            // InternalPlatoon.g:492:2: ()
-            // InternalPlatoon.g:493:3: 
-            {
-
-            			current = forceCreateModelElement(
-            				grammarAccess.getDirection_ImplAccess().getDirectionAction(),
-            				current);
-            		
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleDirection_Impl"
-
-
-    // $ANTLR start "entryRuleLeft"
-    // InternalPlatoon.g:502:1: entryRuleLeft returns [EObject current=null] : iv_ruleLeft= ruleLeft EOF ;
-    public final EObject entryRuleLeft() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleLeft = null;
-
-
-        try {
-            // InternalPlatoon.g:502:45: (iv_ruleLeft= ruleLeft EOF )
-            // InternalPlatoon.g:503:2: iv_ruleLeft= ruleLeft EOF
-            {
-             newCompositeNode(grammarAccess.getLeftRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleLeft=ruleLeft();
-
-            state._fsp--;
-
-             current =iv_ruleLeft; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleLeft"
-
-
-    // $ANTLR start "ruleLeft"
-    // InternalPlatoon.g:509:1: ruleLeft returns [EObject current=null] : ( () otherlv_1= 'Left' ) ;
-    public final EObject ruleLeft() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_1=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalPlatoon.g:515:2: ( ( () otherlv_1= 'Left' ) )
-            // InternalPlatoon.g:516:2: ( () otherlv_1= 'Left' )
-            {
-            // InternalPlatoon.g:516:2: ( () otherlv_1= 'Left' )
-            // InternalPlatoon.g:517:3: () otherlv_1= 'Left'
-            {
-            // InternalPlatoon.g:517:3: ()
-            // InternalPlatoon.g:518:4: 
-            {
-
-            				current = forceCreateModelElement(
-            					grammarAccess.getLeftAccess().getLeftAction_0(),
-            					current);
-            			
-
-            }
-
-            otherlv_1=(Token)match(input,20,FOLLOW_2); 
-
-            			newLeafNode(otherlv_1, grammarAccess.getLeftAccess().getLeftKeyword_1());
-            		
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleLeft"
-
-
-    // $ANTLR start "entryRuleRight"
-    // InternalPlatoon.g:532:1: entryRuleRight returns [EObject current=null] : iv_ruleRight= ruleRight EOF ;
-    public final EObject entryRuleRight() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleRight = null;
-
-
-        try {
-            // InternalPlatoon.g:532:46: (iv_ruleRight= ruleRight EOF )
-            // InternalPlatoon.g:533:2: iv_ruleRight= ruleRight EOF
-            {
-             newCompositeNode(grammarAccess.getRightRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleRight=ruleRight();
-
-            state._fsp--;
-
-             current =iv_ruleRight; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleRight"
-
-
-    // $ANTLR start "ruleRight"
-    // InternalPlatoon.g:539:1: ruleRight returns [EObject current=null] : ( () otherlv_1= 'Right' ) ;
-    public final EObject ruleRight() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_1=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalPlatoon.g:545:2: ( ( () otherlv_1= 'Right' ) )
-            // InternalPlatoon.g:546:2: ( () otherlv_1= 'Right' )
-            {
-            // InternalPlatoon.g:546:2: ( () otherlv_1= 'Right' )
-            // InternalPlatoon.g:547:3: () otherlv_1= 'Right'
-            {
-            // InternalPlatoon.g:547:3: ()
-            // InternalPlatoon.g:548:4: 
-            {
-
-            				current = forceCreateModelElement(
-            					grammarAccess.getRightAccess().getRightAction_0(),
-            					current);
-            			
-
-            }
-
-            otherlv_1=(Token)match(input,21,FOLLOW_2); 
-
-            			newLeafNode(otherlv_1, grammarAccess.getRightAccess().getRightKeyword_1());
-            		
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleRight"
-
-
-    // $ANTLR start "entryRuleConstraint_Impl"
-    // InternalPlatoon.g:562:1: entryRuleConstraint_Impl returns [EObject current=null] : iv_ruleConstraint_Impl= ruleConstraint_Impl EOF ;
-    public final EObject entryRuleConstraint_Impl() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleConstraint_Impl = null;
-
-
-        try {
-            // InternalPlatoon.g:562:56: (iv_ruleConstraint_Impl= ruleConstraint_Impl EOF )
-            // InternalPlatoon.g:563:2: iv_ruleConstraint_Impl= ruleConstraint_Impl EOF
-            {
-             newCompositeNode(grammarAccess.getConstraint_ImplRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleConstraint_Impl=ruleConstraint_Impl();
-
-            state._fsp--;
-
-             current =iv_ruleConstraint_Impl; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleConstraint_Impl"
-
-
-    // $ANTLR start "ruleConstraint_Impl"
-    // InternalPlatoon.g:569:1: ruleConstraint_Impl returns [EObject current=null] : () ;
-    public final EObject ruleConstraint_Impl() throws RecognitionException {
-        EObject current = null;
-
-
-        	enterRule();
-
-        try {
-            // InternalPlatoon.g:575:2: ( () )
-            // InternalPlatoon.g:576:2: ()
-            {
-            // InternalPlatoon.g:576:2: ()
-            // InternalPlatoon.g:577:3: 
-            {
-
-            			current = forceCreateModelElement(
-            				grammarAccess.getConstraint_ImplAccess().getConstraintAction(),
-            				current);
-            		
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleConstraint_Impl"
+    // $ANTLR end "ruleDirection"
 
 
     // $ANTLR start "entryRuleHeadwayConstraint"
-    // InternalPlatoon.g:586:1: entryRuleHeadwayConstraint returns [EObject current=null] : iv_ruleHeadwayConstraint= ruleHeadwayConstraint EOF ;
+    // InternalPlatoon.g:728:1: entryRuleHeadwayConstraint returns [EObject current=null] : iv_ruleHeadwayConstraint= ruleHeadwayConstraint EOF ;
     public final EObject entryRuleHeadwayConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -1501,8 +1809,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPlatoon.g:586:58: (iv_ruleHeadwayConstraint= ruleHeadwayConstraint EOF )
-            // InternalPlatoon.g:587:2: iv_ruleHeadwayConstraint= ruleHeadwayConstraint EOF
+            // InternalPlatoon.g:728:58: (iv_ruleHeadwayConstraint= ruleHeadwayConstraint EOF )
+            // InternalPlatoon.g:729:2: iv_ruleHeadwayConstraint= ruleHeadwayConstraint EOF
             {
              newCompositeNode(grammarAccess.getHeadwayConstraintRule()); 
             pushFollow(FOLLOW_1);
@@ -1529,52 +1837,56 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHeadwayConstraint"
-    // InternalPlatoon.g:593:1: ruleHeadwayConstraint returns [EObject current=null] : ( ( (lv_min_0_0= ruleEInt ) ) otherlv_1= '<=' otherlv_2= 'headway' otherlv_3= '<=' ( (lv_max_4_0= ruleEInt ) ) ) ;
+    // InternalPlatoon.g:735:1: ruleHeadwayConstraint returns [EObject current=null] : ( () ( (lv_min_1_0= RULE_INT ) ) otherlv_2= '<=' otherlv_3= 'headway' otherlv_4= '<=' ( (lv_max_5_0= RULE_INT ) ) ) ;
     public final EObject ruleHeadwayConstraint() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
+        Token lv_min_1_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
-        AntlrDatatypeRuleToken lv_min_0_0 = null;
-
-        AntlrDatatypeRuleToken lv_max_4_0 = null;
-
+        Token otherlv_4=null;
+        Token lv_max_5_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalPlatoon.g:599:2: ( ( ( (lv_min_0_0= ruleEInt ) ) otherlv_1= '<=' otherlv_2= 'headway' otherlv_3= '<=' ( (lv_max_4_0= ruleEInt ) ) ) )
-            // InternalPlatoon.g:600:2: ( ( (lv_min_0_0= ruleEInt ) ) otherlv_1= '<=' otherlv_2= 'headway' otherlv_3= '<=' ( (lv_max_4_0= ruleEInt ) ) )
+            // InternalPlatoon.g:741:2: ( ( () ( (lv_min_1_0= RULE_INT ) ) otherlv_2= '<=' otherlv_3= 'headway' otherlv_4= '<=' ( (lv_max_5_0= RULE_INT ) ) ) )
+            // InternalPlatoon.g:742:2: ( () ( (lv_min_1_0= RULE_INT ) ) otherlv_2= '<=' otherlv_3= 'headway' otherlv_4= '<=' ( (lv_max_5_0= RULE_INT ) ) )
             {
-            // InternalPlatoon.g:600:2: ( ( (lv_min_0_0= ruleEInt ) ) otherlv_1= '<=' otherlv_2= 'headway' otherlv_3= '<=' ( (lv_max_4_0= ruleEInt ) ) )
-            // InternalPlatoon.g:601:3: ( (lv_min_0_0= ruleEInt ) ) otherlv_1= '<=' otherlv_2= 'headway' otherlv_3= '<=' ( (lv_max_4_0= ruleEInt ) )
+            // InternalPlatoon.g:742:2: ( () ( (lv_min_1_0= RULE_INT ) ) otherlv_2= '<=' otherlv_3= 'headway' otherlv_4= '<=' ( (lv_max_5_0= RULE_INT ) ) )
+            // InternalPlatoon.g:743:3: () ( (lv_min_1_0= RULE_INT ) ) otherlv_2= '<=' otherlv_3= 'headway' otherlv_4= '<=' ( (lv_max_5_0= RULE_INT ) )
             {
-            // InternalPlatoon.g:601:3: ( (lv_min_0_0= ruleEInt ) )
-            // InternalPlatoon.g:602:4: (lv_min_0_0= ruleEInt )
-            {
-            // InternalPlatoon.g:602:4: (lv_min_0_0= ruleEInt )
-            // InternalPlatoon.g:603:5: lv_min_0_0= ruleEInt
+            // InternalPlatoon.g:743:3: ()
+            // InternalPlatoon.g:744:4: 
             {
 
-            					newCompositeNode(grammarAccess.getHeadwayConstraintAccess().getMinEIntParserRuleCall_0_0());
+            				current = forceCreateModelElement(
+            					grammarAccess.getHeadwayConstraintAccess().getHeadwayConstraintAction_0(),
+            					current);
+            			
+
+            }
+
+            // InternalPlatoon.g:750:3: ( (lv_min_1_0= RULE_INT ) )
+            // InternalPlatoon.g:751:4: (lv_min_1_0= RULE_INT )
+            {
+            // InternalPlatoon.g:751:4: (lv_min_1_0= RULE_INT )
+            // InternalPlatoon.g:752:5: lv_min_1_0= RULE_INT
+            {
+            lv_min_1_0=(Token)match(input,RULE_INT,FOLLOW_17); 
+
+            					newLeafNode(lv_min_1_0, grammarAccess.getHeadwayConstraintAccess().getMinINTTerminalRuleCall_1_0());
             				
-            pushFollow(FOLLOW_11);
-            lv_min_0_0=ruleEInt();
-
-            state._fsp--;
-
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getHeadwayConstraintRule());
+            						current = createModelElement(grammarAccess.getHeadwayConstraintRule());
             					}
-            					set(
+            					setWithLastConsumed(
             						current,
             						"min",
-            						lv_min_0_0,
-            						"nl.tue.glt.xtext.Platoon.EInt");
-            					afterParserOrEnumRuleCall();
+            						lv_min_1_0,
+            						"org.eclipse.xtext.common.Terminals.INT");
             				
 
             }
@@ -1582,42 +1894,37 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,22,FOLLOW_12); 
+            otherlv_2=(Token)match(input,24,FOLLOW_18); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_1());
+            			newLeafNode(otherlv_2, grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_2());
             		
-            otherlv_2=(Token)match(input,23,FOLLOW_11); 
+            otherlv_3=(Token)match(input,25,FOLLOW_17); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getHeadwayConstraintAccess().getHeadwayKeyword_2());
+            			newLeafNode(otherlv_3, grammarAccess.getHeadwayConstraintAccess().getHeadwayKeyword_3());
             		
-            otherlv_3=(Token)match(input,22,FOLLOW_8); 
+            otherlv_4=(Token)match(input,24,FOLLOW_10); 
 
-            			newLeafNode(otherlv_3, grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_3());
+            			newLeafNode(otherlv_4, grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_4());
             		
-            // InternalPlatoon.g:632:3: ( (lv_max_4_0= ruleEInt ) )
-            // InternalPlatoon.g:633:4: (lv_max_4_0= ruleEInt )
+            // InternalPlatoon.g:780:3: ( (lv_max_5_0= RULE_INT ) )
+            // InternalPlatoon.g:781:4: (lv_max_5_0= RULE_INT )
             {
-            // InternalPlatoon.g:633:4: (lv_max_4_0= ruleEInt )
-            // InternalPlatoon.g:634:5: lv_max_4_0= ruleEInt
+            // InternalPlatoon.g:781:4: (lv_max_5_0= RULE_INT )
+            // InternalPlatoon.g:782:5: lv_max_5_0= RULE_INT
             {
+            lv_max_5_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-            					newCompositeNode(grammarAccess.getHeadwayConstraintAccess().getMaxEIntParserRuleCall_4_0());
+            					newLeafNode(lv_max_5_0, grammarAccess.getHeadwayConstraintAccess().getMaxINTTerminalRuleCall_5_0());
             				
-            pushFollow(FOLLOW_2);
-            lv_max_4_0=ruleEInt();
-
-            state._fsp--;
-
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getHeadwayConstraintRule());
+            						current = createModelElement(grammarAccess.getHeadwayConstraintRule());
             					}
-            					set(
+            					setWithLastConsumed(
             						current,
             						"max",
-            						lv_max_4_0,
-            						"nl.tue.glt.xtext.Platoon.EInt");
-            					afterParserOrEnumRuleCall();
+            						lv_max_5_0,
+            						"org.eclipse.xtext.common.Terminals.INT");
             				
 
             }
@@ -1653,15 +1960,21 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000080040L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000240000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000240002L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000002000000L});
 
 }

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;BoundingBox.ecore, BoundingBox.genmodel&apos; to &apos;model&apos;" description="Move 2 resources to &apos;model&apos;" destination="model" element1="BoundingBox.ecore" element2="BoundingBox.genmodel" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1464872370424" updateReferences="true"/>
+</session>

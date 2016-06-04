@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Route extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Commands</b></em>' reference list.
+	 * Returns the value of the '<em><b>Commands</b></em>' containment reference list.
 	 * The list contents are of type {@link platoon.Command}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -33,15 +33,16 @@ public interface Route extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Commands</em>' reference list.
+	 * @return the value of the '<em>Commands</em>' containment reference list.
 	 * @see platoon.PlatoonPackage#getRoute_Commands()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Command> getCommands();
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
@@ -51,7 +52,7 @@ public interface Route extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see platoon.PlatoonPackage#getRoute_Id()
-	 * @model id="true"
+	 * @model default="" id="true" required="true"
 	 * @generated
 	 */
 	String getId();

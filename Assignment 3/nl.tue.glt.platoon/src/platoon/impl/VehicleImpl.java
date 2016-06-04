@@ -25,7 +25,7 @@ import platoon.Vehicle;
  *
  * @generated
  */
-public class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle {
+public abstract class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
