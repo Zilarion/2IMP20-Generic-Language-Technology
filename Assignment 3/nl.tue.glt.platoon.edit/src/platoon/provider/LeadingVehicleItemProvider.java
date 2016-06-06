@@ -89,7 +89,7 @@ public class LeadingVehicleItemProvider extends VehicleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LeadingVehicle)object).getId();
+		String label = ((LeadingVehicle)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_LeadingVehicle_type") :
 			getString("_UI_LeadingVehicle_type") + " " + label;

@@ -60,25 +60,25 @@ public class VehicleItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIdPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Id feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIdPropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Vehicle_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Vehicle_id_feature", "_UI_Vehicle_type"),
-				 PlatoonPackage.Literals.VEHICLE__ID,
+				 getString("_UI_Vehicle_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Vehicle_name_feature", "_UI_Vehicle_type"),
+				 PlatoonPackage.Literals.VEHICLE__NAME,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class VehicleItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Vehicle)object).getId();
+		String label = ((Vehicle)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Vehicle_type") :
 			getString("_UI_Vehicle_type") + " " + label;
@@ -125,7 +125,7 @@ public class VehicleItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Vehicle.class)) {
-			case PlatoonPackage.VEHICLE__ID:
+			case PlatoonPackage.VEHICLE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

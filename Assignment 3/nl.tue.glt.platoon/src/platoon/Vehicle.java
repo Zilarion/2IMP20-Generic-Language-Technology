@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link platoon.Vehicle#getId <em>Id</em>}</li>
+ *   <li>{@link platoon.Vehicle#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see platoon.PlatoonPackage#getVehicle()
@@ -22,30 +22,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Vehicle extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see platoon.PlatoonPackage#getVehicle_Id()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see platoon.PlatoonPackage#getVehicle_Name()
 	 * @model default="" id="true" required="true"
 	 * @generated
 	 */
-	String getId();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link platoon.Vehicle#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link platoon.Vehicle#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setId(String value);
+	void setName(String value);
 
 } // Vehicle

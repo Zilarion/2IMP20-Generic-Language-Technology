@@ -306,17 +306,17 @@ ruleRoute returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRouteAccess().getIdEStringParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getRouteAccess().getNameEStringParserRuleCall_2_0());
 				}
-				lv_id_2_0=ruleEString
+				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRouteRule());
 					}
 					set(
 						$current,
-						"id",
-						lv_id_2_0,
+						"name",
+						lv_name_2_0,
 						"nl.tue.glt.xtext.Platoon.EString");
 					afterParserOrEnumRuleCall();
 				}
@@ -462,17 +462,17 @@ ruleLeadingVehicle returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getNameEStringParserRuleCall_2_0());
 				}
-				lv_id_2_0=ruleEString
+				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getLeadingVehicleRule());
 					}
 					set(
 						$current,
-						"id",
-						lv_id_2_0,
+						"name",
+						lv_name_2_0,
 						"nl.tue.glt.xtext.Platoon.EString");
 					afterParserOrEnumRuleCall();
 				}
@@ -531,17 +531,17 @@ ruleFollowVehicle returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getFollowVehicleAccess().getNameEStringParserRuleCall_2_0());
 				}
-				lv_id_2_0=ruleEString
+				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFollowVehicleRule());
 					}
 					set(
 						$current,
-						"id",
-						lv_id_2_0,
+						"name",
+						lv_name_2_0,
 						"nl.tue.glt.xtext.Platoon.EString");
 					afterParserOrEnumRuleCall();
 				}

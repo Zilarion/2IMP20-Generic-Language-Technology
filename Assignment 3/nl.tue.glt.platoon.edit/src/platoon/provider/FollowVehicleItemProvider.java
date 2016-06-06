@@ -89,7 +89,7 @@ public class FollowVehicleItemProvider extends VehicleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FollowVehicle)object).getId();
+		String label = ((FollowVehicle)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_FollowVehicle_type") :
 			getString("_UI_FollowVehicle_type") + " " + label;

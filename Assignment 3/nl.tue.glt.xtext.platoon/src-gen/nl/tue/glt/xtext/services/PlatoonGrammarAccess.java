@@ -161,8 +161,8 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cRouteAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cRouteKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdEStringParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cCommandsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cCommandsCommandParserRuleCall_4_0 = (RuleCall)cCommandsAssignment_4.eContents().get(0);
@@ -171,11 +171,11 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Route:
 		//	{Route}
-		//	'route' id=EString ':'
+		//	'route' name=EString ':'
 		//	commands+=Command commands+=Command*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Route} 'route' id=EString ':' commands+=Command commands+=Command*
+		//{Route} 'route' name=EString ':' commands+=Command commands+=Command*
 		public Group getGroup() { return cGroup; }
 		
 		//{Route}
@@ -184,11 +184,11 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		//'route'
 		public Keyword getRouteKeyword_1() { return cRouteKeyword_1; }
 		
-		//id=EString
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
+		//name=EString
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
-		public RuleCall getIdEStringParserRuleCall_2_0() { return cIdEStringParserRuleCall_2_0; }
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
 		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
@@ -246,8 +246,8 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cLeadingVehicleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLVKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdEStringParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cRouteKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cRouteAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final CrossReference cRouteRouteCrossReference_4_0 = (CrossReference)cRouteAssignment_4.eContents().get(0);
@@ -255,10 +255,10 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//LeadingVehicle:
 		//	{LeadingVehicle}
-		//	'LV' id=EString 'route' route=[Route|EString];
+		//	'LV' name=EString 'route' route=[Route|EString];
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{LeadingVehicle} 'LV' id=EString 'route' route=[Route|EString]
+		//{LeadingVehicle} 'LV' name=EString 'route' route=[Route|EString]
 		public Group getGroup() { return cGroup; }
 		
 		//{LeadingVehicle}
@@ -267,11 +267,11 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		//'LV'
 		public Keyword getLVKeyword_1() { return cLVKeyword_1; }
 		
-		//id=EString
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
+		//name=EString
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
-		public RuleCall getIdEStringParserRuleCall_2_0() { return cIdEStringParserRuleCall_2_0; }
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
 		//'route'
 		public Keyword getRouteKeyword_3() { return cRouteKeyword_3; }
@@ -290,8 +290,8 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cFollowVehicleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cFVKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdEStringParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cFrontKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cRunnerKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cFollowsAssignment_5 = (Assignment)cGroup.eContents().get(5);
@@ -300,10 +300,10 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//FollowVehicle:
 		//	{FollowVehicle}
-		//	'FV' id=EString 'front' 'runner' follows=[Vehicle|EString];
+		//	'FV' name=EString 'front' 'runner' follows=[Vehicle|EString];
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{FollowVehicle} 'FV' id=EString 'front' 'runner' follows=[Vehicle|EString]
+		//{FollowVehicle} 'FV' name=EString 'front' 'runner' follows=[Vehicle|EString]
 		public Group getGroup() { return cGroup; }
 		
 		//{FollowVehicle}
@@ -312,11 +312,11 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		//'FV'
 		public Keyword getFVKeyword_1() { return cFVKeyword_1; }
 		
-		//id=EString
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
+		//name=EString
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
-		public RuleCall getIdEStringParserRuleCall_2_0() { return cIdEStringParserRuleCall_2_0; }
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
 		//'front'
 		public Keyword getFrontKeyword_3() { return cFrontKeyword_3; }
@@ -605,7 +605,7 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Route:
 	//	{Route}
-	//	'route' id=EString ':'
+	//	'route' name=EString ':'
 	//	commands+=Command commands+=Command*;
 	public RouteElements getRouteAccess() {
 		return pRoute;
@@ -628,7 +628,7 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//LeadingVehicle:
 	//	{LeadingVehicle}
-	//	'LV' id=EString 'route' route=[Route|EString];
+	//	'LV' name=EString 'route' route=[Route|EString];
 	public LeadingVehicleElements getLeadingVehicleAccess() {
 		return pLeadingVehicle;
 	}
@@ -639,7 +639,7 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//FollowVehicle:
 	//	{FollowVehicle}
-	//	'FV' id=EString 'front' 'runner' follows=[Vehicle|EString];
+	//	'FV' name=EString 'front' 'runner' follows=[Vehicle|EString];
 	public FollowVehicleElements getFollowVehicleAccess() {
 		return pFollowVehicle;
 	}

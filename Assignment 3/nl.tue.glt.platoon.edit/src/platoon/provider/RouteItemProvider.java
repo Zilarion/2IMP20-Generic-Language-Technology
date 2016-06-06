@@ -61,7 +61,7 @@ public class RouteItemProvider
 			super.getPropertyDescriptors(object);
 
 			addCommandsPropertyDescriptor(object);
-			addIdPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,19 +89,19 @@ public class RouteItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Id feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIdPropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Route_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Route_id_feature", "_UI_Route_type"),
-				 PlatoonPackage.Literals.ROUTE__ID,
+				 getString("_UI_Route_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Route_name_feature", "_UI_Route_type"),
+				 PlatoonPackage.Literals.ROUTE__NAME,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class RouteItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Route)object).getId();
+		String label = ((Route)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Route_type") :
 			getString("_UI_Route_type") + " " + label;
@@ -148,7 +148,7 @@ public class RouteItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Route.class)) {
-			case PlatoonPackage.ROUTE__ID:
+			case PlatoonPackage.ROUTE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

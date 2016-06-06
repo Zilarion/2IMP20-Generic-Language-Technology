@@ -122,13 +122,13 @@ public interface PlatoonPackage extends EPackage {
 	int ROUTE__COMMANDS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROUTE__ID = 1;
+	int ROUTE__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Route</em>' class.
@@ -159,13 +159,13 @@ public interface PlatoonPackage extends EPackage {
 	int VEHICLE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VEHICLE__ID = 0;
+	int VEHICLE__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>Vehicle</em>' class.
@@ -196,13 +196,13 @@ public interface PlatoonPackage extends EPackage {
 	int FOLLOW_VEHICLE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOLLOW_VEHICLE__ID = VEHICLE__ID;
+	int FOLLOW_VEHICLE__NAME = VEHICLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Follows</b></em>' reference.
@@ -242,13 +242,13 @@ public interface PlatoonPackage extends EPackage {
 	int LEADING_VEHICLE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEADING_VEHICLE__ID = VEHICLE__ID;
+	int LEADING_VEHICLE__NAME = VEHICLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Route</b></em>' reference.
@@ -602,15 +602,15 @@ public interface PlatoonPackage extends EPackage {
 	EReference getRoute_Commands();
 
 	/**
-	 * Returns the meta object for the attribute '{@link platoon.Route#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link platoon.Route#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see platoon.Route#getId()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see platoon.Route#getName()
 	 * @see #getRoute()
 	 * @generated
 	 */
-	EAttribute getRoute_Id();
+	EAttribute getRoute_Name();
 
 	/**
 	 * Returns the meta object for class '{@link platoon.Vehicle <em>Vehicle</em>}'.
@@ -623,15 +623,15 @@ public interface PlatoonPackage extends EPackage {
 	EClass getVehicle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link platoon.Vehicle#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link platoon.Vehicle#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see platoon.Vehicle#getId()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see platoon.Vehicle#getName()
 	 * @see #getVehicle()
 	 * @generated
 	 */
-	EAttribute getVehicle_Id();
+	EAttribute getVehicle_Name();
 
 	/**
 	 * Returns the meta object for class '{@link platoon.FollowVehicle <em>Follow Vehicle</em>}'.
@@ -901,12 +901,12 @@ public interface PlatoonPackage extends EPackage {
 		EReference ROUTE__COMMANDS = eINSTANCE.getRoute_Commands();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROUTE__ID = eINSTANCE.getRoute_Id();
+		EAttribute ROUTE__NAME = eINSTANCE.getRoute_Name();
 
 		/**
 		 * The meta object literal for the '{@link platoon.impl.VehicleImpl <em>Vehicle</em>}' class.
@@ -919,12 +919,12 @@ public interface PlatoonPackage extends EPackage {
 		EClass VEHICLE = eINSTANCE.getVehicle();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VEHICLE__ID = eINSTANCE.getVehicle_Id();
+		EAttribute VEHICLE__NAME = eINSTANCE.getVehicle_Name();
 
 		/**
 		 * The meta object literal for the '{@link platoon.impl.FollowVehicleImpl <em>Follow Vehicle</em>}' class.

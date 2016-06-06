@@ -690,13 +690,13 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRoute"
-    // InternalPlatoon.g:287:1: ruleRoute returns [EObject current=null] : ( () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )* ) ;
+    // InternalPlatoon.g:287:1: ruleRoute returns [EObject current=null] : ( () otherlv_1= 'route' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )* ) ;
     public final EObject ruleRoute() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
-        AntlrDatatypeRuleToken lv_id_2_0 = null;
+        AntlrDatatypeRuleToken lv_name_2_0 = null;
 
         EObject lv_commands_4_0 = null;
 
@@ -707,11 +707,11 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPlatoon.g:293:2: ( ( () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )* ) )
-            // InternalPlatoon.g:294:2: ( () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )* )
+            // InternalPlatoon.g:293:2: ( ( () otherlv_1= 'route' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )* ) )
+            // InternalPlatoon.g:294:2: ( () otherlv_1= 'route' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )* )
             {
-            // InternalPlatoon.g:294:2: ( () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )* )
-            // InternalPlatoon.g:295:3: () otherlv_1= 'route' ( (lv_id_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )*
+            // InternalPlatoon.g:294:2: ( () otherlv_1= 'route' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )* )
+            // InternalPlatoon.g:295:3: () otherlv_1= 'route' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ':' ( (lv_commands_4_0= ruleCommand ) ) ( (lv_commands_5_0= ruleCommand ) )*
             {
             // InternalPlatoon.g:295:3: ()
             // InternalPlatoon.g:296:4: 
@@ -728,17 +728,17 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getRouteAccess().getRouteKeyword_1());
             		
-            // InternalPlatoon.g:306:3: ( (lv_id_2_0= ruleEString ) )
-            // InternalPlatoon.g:307:4: (lv_id_2_0= ruleEString )
+            // InternalPlatoon.g:306:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalPlatoon.g:307:4: (lv_name_2_0= ruleEString )
             {
-            // InternalPlatoon.g:307:4: (lv_id_2_0= ruleEString )
-            // InternalPlatoon.g:308:5: lv_id_2_0= ruleEString
+            // InternalPlatoon.g:307:4: (lv_name_2_0= ruleEString )
+            // InternalPlatoon.g:308:5: lv_name_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getRouteAccess().getIdEStringParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getRouteAccess().getNameEStringParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_5);
-            lv_id_2_0=ruleEString();
+            lv_name_2_0=ruleEString();
 
             state._fsp--;
 
@@ -748,8 +748,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"id",
-            						lv_id_2_0,
+            						"name",
+            						lv_name_2_0,
             						"nl.tue.glt.xtext.Platoon.EString");
             					afterParserOrEnumRuleCall();
             				
@@ -1070,24 +1070,24 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLeadingVehicle"
-    // InternalPlatoon.g:443:1: ruleLeadingVehicle returns [EObject current=null] : ( () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) ) ;
+    // InternalPlatoon.g:443:1: ruleLeadingVehicle returns [EObject current=null] : ( () otherlv_1= 'LV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) ) ;
     public final EObject ruleLeadingVehicle() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
-        AntlrDatatypeRuleToken lv_id_2_0 = null;
+        AntlrDatatypeRuleToken lv_name_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalPlatoon.g:449:2: ( ( () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) ) )
-            // InternalPlatoon.g:450:2: ( () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) )
+            // InternalPlatoon.g:449:2: ( ( () otherlv_1= 'LV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) ) )
+            // InternalPlatoon.g:450:2: ( () otherlv_1= 'LV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) )
             {
-            // InternalPlatoon.g:450:2: ( () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) )
-            // InternalPlatoon.g:451:3: () otherlv_1= 'LV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) )
+            // InternalPlatoon.g:450:2: ( () otherlv_1= 'LV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) ) )
+            // InternalPlatoon.g:451:3: () otherlv_1= 'LV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'route' ( ( ruleEString ) )
             {
             // InternalPlatoon.g:451:3: ()
             // InternalPlatoon.g:452:4: 
@@ -1104,17 +1104,17 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getLeadingVehicleAccess().getLVKeyword_1());
             		
-            // InternalPlatoon.g:462:3: ( (lv_id_2_0= ruleEString ) )
-            // InternalPlatoon.g:463:4: (lv_id_2_0= ruleEString )
+            // InternalPlatoon.g:462:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalPlatoon.g:463:4: (lv_name_2_0= ruleEString )
             {
-            // InternalPlatoon.g:463:4: (lv_id_2_0= ruleEString )
-            // InternalPlatoon.g:464:5: lv_id_2_0= ruleEString
+            // InternalPlatoon.g:463:4: (lv_name_2_0= ruleEString )
+            // InternalPlatoon.g:464:5: lv_name_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getLeadingVehicleAccess().getNameEStringParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_3);
-            lv_id_2_0=ruleEString();
+            lv_name_2_0=ruleEString();
 
             state._fsp--;
 
@@ -1124,8 +1124,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"id",
-            						lv_id_2_0,
+            						"name",
+            						lv_name_2_0,
             						"nl.tue.glt.xtext.Platoon.EString");
             					afterParserOrEnumRuleCall();
             				
@@ -1226,25 +1226,25 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFollowVehicle"
-    // InternalPlatoon.g:512:1: ruleFollowVehicle returns [EObject current=null] : ( () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) ) ;
+    // InternalPlatoon.g:512:1: ruleFollowVehicle returns [EObject current=null] : ( () otherlv_1= 'FV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) ) ;
     public final EObject ruleFollowVehicle() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
         Token otherlv_4=null;
-        AntlrDatatypeRuleToken lv_id_2_0 = null;
+        AntlrDatatypeRuleToken lv_name_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalPlatoon.g:518:2: ( ( () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) ) )
-            // InternalPlatoon.g:519:2: ( () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) )
+            // InternalPlatoon.g:518:2: ( ( () otherlv_1= 'FV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) ) )
+            // InternalPlatoon.g:519:2: ( () otherlv_1= 'FV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) )
             {
-            // InternalPlatoon.g:519:2: ( () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) )
-            // InternalPlatoon.g:520:3: () otherlv_1= 'FV' ( (lv_id_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) )
+            // InternalPlatoon.g:519:2: ( () otherlv_1= 'FV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) ) )
+            // InternalPlatoon.g:520:3: () otherlv_1= 'FV' ( (lv_name_2_0= ruleEString ) ) otherlv_3= 'front' otherlv_4= 'runner' ( ( ruleEString ) )
             {
             // InternalPlatoon.g:520:3: ()
             // InternalPlatoon.g:521:4: 
@@ -1261,17 +1261,17 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFollowVehicleAccess().getFVKeyword_1());
             		
-            // InternalPlatoon.g:531:3: ( (lv_id_2_0= ruleEString ) )
-            // InternalPlatoon.g:532:4: (lv_id_2_0= ruleEString )
+            // InternalPlatoon.g:531:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalPlatoon.g:532:4: (lv_name_2_0= ruleEString )
             {
-            // InternalPlatoon.g:532:4: (lv_id_2_0= ruleEString )
-            // InternalPlatoon.g:533:5: lv_id_2_0= ruleEString
+            // InternalPlatoon.g:532:4: (lv_name_2_0= ruleEString )
+            // InternalPlatoon.g:533:5: lv_name_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getFollowVehicleAccess().getNameEStringParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_13);
-            lv_id_2_0=ruleEString();
+            lv_name_2_0=ruleEString();
 
             state._fsp--;
 
@@ -1281,8 +1281,8 @@ public class InternalPlatoonParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"id",
-            						lv_id_2_0,
+            						"name",
+            						lv_name_2_0,
             						"nl.tue.glt.xtext.Platoon.EString");
             					afterParserOrEnumRuleCall();
             				

@@ -20,31 +20,31 @@ import platoon.Vehicle;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link platoon.impl.VehicleImpl#getId <em>Id</em>}</li>
+ *   <li>{@link platoon.impl.VehicleImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class VehicleImpl extends MinimalEObjectImpl.Container implements Vehicle {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = "";
+	protected static final String NAME_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String id = ID_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public abstract class VehicleImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -79,11 +79,11 @@ public abstract class VehicleImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.VEHICLE__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.VEHICLE__NAME, oldName, name));
 	}
 
 	/**
@@ -94,8 +94,8 @@ public abstract class VehicleImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PlatoonPackage.VEHICLE__ID:
-				return getId();
+			case PlatoonPackage.VEHICLE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +108,8 @@ public abstract class VehicleImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PlatoonPackage.VEHICLE__ID:
-				setId((String)newValue);
+			case PlatoonPackage.VEHICLE__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +123,8 @@ public abstract class VehicleImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PlatoonPackage.VEHICLE__ID:
-				setId(ID_EDEFAULT);
+			case PlatoonPackage.VEHICLE__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +138,8 @@ public abstract class VehicleImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PlatoonPackage.VEHICLE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case PlatoonPackage.VEHICLE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -154,8 +154,8 @@ public abstract class VehicleImpl extends MinimalEObjectImpl.Container implement
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -30,7 +30,7 @@ import platoon.Route;
  * </p>
  * <ul>
  *   <li>{@link platoon.impl.RouteImpl#getCommands <em>Commands</em>}</li>
- *   <li>{@link platoon.impl.RouteImpl#getId <em>Id</em>}</li>
+ *   <li>{@link platoon.impl.RouteImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,24 +47,24 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 	protected EList<Command> commands;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = "";
+	protected static final String NAME_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String id = ID_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,8 +102,8 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -111,11 +111,11 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.ROUTE__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, PlatoonPackage.ROUTE__NAME, oldName, name));
 	}
 
 	/**
@@ -142,8 +142,8 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 		switch (featureID) {
 			case PlatoonPackage.ROUTE__COMMANDS:
 				return getCommands();
-			case PlatoonPackage.ROUTE__ID:
-				return getId();
+			case PlatoonPackage.ROUTE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,8 +161,8 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 				getCommands().clear();
 				getCommands().addAll((Collection<? extends Command>)newValue);
 				return;
-			case PlatoonPackage.ROUTE__ID:
-				setId((String)newValue);
+			case PlatoonPackage.ROUTE__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,8 +179,8 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 			case PlatoonPackage.ROUTE__COMMANDS:
 				getCommands().clear();
 				return;
-			case PlatoonPackage.ROUTE__ID:
-				setId(ID_EDEFAULT);
+			case PlatoonPackage.ROUTE__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -196,8 +196,8 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 		switch (featureID) {
 			case PlatoonPackage.ROUTE__COMMANDS:
 				return commands != null && !commands.isEmpty();
-			case PlatoonPackage.ROUTE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case PlatoonPackage.ROUTE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -212,8 +212,8 @@ public class RouteImpl extends MinimalEObjectImpl.Container implements Route {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

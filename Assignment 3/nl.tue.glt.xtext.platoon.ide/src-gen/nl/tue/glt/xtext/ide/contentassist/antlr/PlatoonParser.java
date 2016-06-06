@@ -53,14 +53,14 @@ public class PlatoonParser extends AbstractContentAssistParser {
 					put(grammarAccess.getWorldAccess().getConstraintsAssignment_3(), "rule__World__ConstraintsAssignment_3");
 					put(grammarAccess.getPlatoonAccess().getLVAssignment_3(), "rule__Platoon__LVAssignment_3");
 					put(grammarAccess.getPlatoonAccess().getFVAssignment_4(), "rule__Platoon__FVAssignment_4");
-					put(grammarAccess.getRouteAccess().getIdAssignment_2(), "rule__Route__IdAssignment_2");
+					put(grammarAccess.getRouteAccess().getNameAssignment_2(), "rule__Route__NameAssignment_2");
 					put(grammarAccess.getRouteAccess().getCommandsAssignment_4(), "rule__Route__CommandsAssignment_4");
 					put(grammarAccess.getRouteAccess().getCommandsAssignment_5(), "rule__Route__CommandsAssignment_5");
 					put(grammarAccess.getConstraintsAccess().getConstraintsAssignment_2(), "rule__Constraints__ConstraintsAssignment_2");
 					put(grammarAccess.getConstraintsAccess().getConstraintsAssignment_3(), "rule__Constraints__ConstraintsAssignment_3");
-					put(grammarAccess.getLeadingVehicleAccess().getIdAssignment_2(), "rule__LeadingVehicle__IdAssignment_2");
+					put(grammarAccess.getLeadingVehicleAccess().getNameAssignment_2(), "rule__LeadingVehicle__NameAssignment_2");
 					put(grammarAccess.getLeadingVehicleAccess().getRouteAssignment_4(), "rule__LeadingVehicle__RouteAssignment_4");
-					put(grammarAccess.getFollowVehicleAccess().getIdAssignment_2(), "rule__FollowVehicle__IdAssignment_2");
+					put(grammarAccess.getFollowVehicleAccess().getNameAssignment_2(), "rule__FollowVehicle__NameAssignment_2");
 					put(grammarAccess.getFollowVehicleAccess().getFollowsAssignment_5(), "rule__FollowVehicle__FollowsAssignment_5");
 					put(grammarAccess.getForwardCommandAccess().getDistanceAssignment_3(), "rule__ForwardCommand__DistanceAssignment_3");
 					put(grammarAccess.getTurnCommandAccess().getDirectionAssignment_2(), "rule__TurnCommand__DirectionAssignment_2");

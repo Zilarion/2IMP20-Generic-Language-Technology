@@ -90,17 +90,17 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     FollowVehicle returns FollowVehicle
 	 *
 	 * Constraint:
-	 *     (id=EString follows=[Vehicle|EString])
+	 *     (name=EString follows=[Vehicle|EString])
 	 */
 	protected void sequence_FollowVehicle(ISerializationContext context, FollowVehicle semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.VEHICLE__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.VEHICLE__ID));
+			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.VEHICLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.VEHICLE__NAME));
 			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.FOLLOW_VEHICLE__FOLLOWS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.FOLLOW_VEHICLE__FOLLOWS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getFollowVehicleAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getFollowVehicleAccess().getFollowsVehicleEStringParserRuleCall_5_0_1(), semanticObject.getFollows());
 		feeder.finish();
 	}
@@ -153,17 +153,17 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     LeadingVehicle returns LeadingVehicle
 	 *
 	 * Constraint:
-	 *     (id=EString route=[Route|EString])
+	 *     (name=EString route=[Route|EString])
 	 */
 	protected void sequence_LeadingVehicle(ISerializationContext context, LeadingVehicle semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.VEHICLE__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.VEHICLE__ID));
+			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.VEHICLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.VEHICLE__NAME));
 			if (transientValues.isValueTransient(semanticObject, PlatoonPackage.Literals.LEADING_VEHICLE__ROUTE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.LEADING_VEHICLE__ROUTE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getLeadingVehicleAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getLeadingVehicleAccess().getRouteRouteEStringParserRuleCall_4_0_1(), semanticObject.getRoute());
 		feeder.finish();
 	}
@@ -186,7 +186,7 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Route returns Route
 	 *
 	 * Constraint:
-	 *     (id=EString commands+=Command commands+=Command*)
+	 *     (name=EString commands+=Command commands+=Command*)
 	 */
 	protected void sequence_Route(ISerializationContext context, Route semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

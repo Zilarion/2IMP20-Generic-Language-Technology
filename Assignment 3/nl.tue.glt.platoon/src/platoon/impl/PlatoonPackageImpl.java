@@ -226,7 +226,7 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoute_Id() {
+	public EAttribute getRoute_Name() {
 		return (EAttribute)routeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -244,7 +244,7 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVehicle_Id() {
+	public EAttribute getVehicle_Name() {
 		return (EAttribute)vehicleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -453,10 +453,10 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 
 		routeEClass = createEClass(ROUTE);
 		createEReference(routeEClass, ROUTE__COMMANDS);
-		createEAttribute(routeEClass, ROUTE__ID);
+		createEAttribute(routeEClass, ROUTE__NAME);
 
 		vehicleEClass = createEClass(VEHICLE);
-		createEAttribute(vehicleEClass, VEHICLE__ID);
+		createEAttribute(vehicleEClass, VEHICLE__NAME);
 
 		followVehicleEClass = createEClass(FOLLOW_VEHICLE);
 		createEReference(followVehicleEClass, FOLLOW_VEHICLE__FOLLOWS);
@@ -528,10 +528,10 @@ public class PlatoonPackageImpl extends EPackageImpl implements PlatoonPackage {
 
 		initEClass(routeEClass, Route.class, "Route", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoute_Commands(), this.getCommand(), null, "commands", null, 1, -1, Route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoute_Id(), ecorePackage.getEString(), "id", "", 1, 1, Route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoute_Name(), ecorePackage.getEString(), "name", "", 1, 1, Route.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vehicleEClass, Vehicle.class, "Vehicle", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVehicle_Id(), ecorePackage.getEString(), "id", "", 1, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVehicle_Name(), ecorePackage.getEString(), "name", "", 1, 1, Vehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(followVehicleEClass, FollowVehicle.class, "FollowVehicle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFollowVehicle_Follows(), this.getVehicle(), null, "follows", null, 1, 1, FollowVehicle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
