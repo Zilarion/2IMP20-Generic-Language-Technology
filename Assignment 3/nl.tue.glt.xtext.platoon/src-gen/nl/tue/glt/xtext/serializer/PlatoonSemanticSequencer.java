@@ -229,9 +229,9 @@ public class PlatoonSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PlatoonPackage.Literals.WORLD__CONSTRAINTS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_0_0(), semanticObject.getPlatoon());
-		feeder.accept(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_1_0(), semanticObject.getRoute());
-		feeder.accept(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_2_0(), semanticObject.getConstraints());
+		feeder.accept(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_1_0(), semanticObject.getPlatoon());
+		feeder.accept(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_2_0(), semanticObject.getRoute());
+		feeder.accept(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_3_0(), semanticObject.getConstraints());
 		feeder.finish();
 	}
 	

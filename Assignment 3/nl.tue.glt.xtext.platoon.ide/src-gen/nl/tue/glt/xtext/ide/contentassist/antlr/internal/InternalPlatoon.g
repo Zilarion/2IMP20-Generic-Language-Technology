@@ -455,9 +455,9 @@ rule__World__Group__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getWorldAccess().getPlatoonAssignment_0()); }
-	(rule__World__PlatoonAssignment_0)
-	{ after(grammarAccess.getWorldAccess().getPlatoonAssignment_0()); }
+	{ before(grammarAccess.getWorldAccess().getWorldAction_0()); }
+	()
+	{ after(grammarAccess.getWorldAccess().getWorldAction_0()); }
 )
 ;
 finally {
@@ -482,9 +482,9 @@ rule__World__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getWorldAccess().getRouteAssignment_1()); }
-	(rule__World__RouteAssignment_1)
-	{ after(grammarAccess.getWorldAccess().getRouteAssignment_1()); }
+	{ before(grammarAccess.getWorldAccess().getPlatoonAssignment_1()); }
+	(rule__World__PlatoonAssignment_1)
+	{ after(grammarAccess.getWorldAccess().getPlatoonAssignment_1()); }
 )
 ;
 finally {
@@ -497,6 +497,7 @@ rule__World__Group__2
 	}
 :
 	rule__World__Group__2__Impl
+	rule__World__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -508,9 +509,35 @@ rule__World__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getWorldAccess().getConstraintsAssignment_2()); }
-	(rule__World__ConstraintsAssignment_2)
-	{ after(grammarAccess.getWorldAccess().getConstraintsAssignment_2()); }
+	{ before(grammarAccess.getWorldAccess().getRouteAssignment_2()); }
+	(rule__World__RouteAssignment_2)
+	{ after(grammarAccess.getWorldAccess().getRouteAssignment_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__World__Group__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__World__Group__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__World__Group__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getWorldAccess().getConstraintsAssignment_3()); }
+	(rule__World__ConstraintsAssignment_3)
+	{ after(grammarAccess.getWorldAccess().getConstraintsAssignment_3()); }
 )
 ;
 finally {
@@ -590,9 +617,9 @@ rule__Platoon__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getPlatoonAccess().getLVAssignment_2()); }
-	(rule__Platoon__LVAssignment_2)
-	{ after(grammarAccess.getPlatoonAccess().getLVAssignment_2()); }
+	{ before(grammarAccess.getPlatoonAccess().getColonKeyword_2()); }
+	':'
+	{ after(grammarAccess.getPlatoonAccess().getColonKeyword_2()); }
 )
 ;
 finally {
@@ -605,6 +632,7 @@ rule__Platoon__Group__3
 	}
 :
 	rule__Platoon__Group__3__Impl
+	rule__Platoon__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -616,9 +644,35 @@ rule__Platoon__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getPlatoonAccess().getFVAssignment_3()); }
-	(rule__Platoon__FVAssignment_3)?
-	{ after(grammarAccess.getPlatoonAccess().getFVAssignment_3()); }
+	{ before(grammarAccess.getPlatoonAccess().getLVAssignment_3()); }
+	(rule__Platoon__LVAssignment_3)
+	{ after(grammarAccess.getPlatoonAccess().getLVAssignment_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Platoon__Group__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Platoon__Group__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Platoon__Group__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getPlatoonAccess().getFVAssignment_4()); }
+	(rule__Platoon__FVAssignment_4)?
+	{ after(grammarAccess.getPlatoonAccess().getFVAssignment_4()); }
 )
 ;
 finally {
@@ -725,9 +779,9 @@ rule__Route__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getRouteAccess().getCommandsAssignment_3()); }
-	(rule__Route__CommandsAssignment_3)
-	{ after(grammarAccess.getRouteAccess().getCommandsAssignment_3()); }
+	{ before(grammarAccess.getRouteAccess().getColonKeyword_3()); }
+	':'
+	{ after(grammarAccess.getRouteAccess().getColonKeyword_3()); }
 )
 ;
 finally {
@@ -740,6 +794,7 @@ rule__Route__Group__4
 	}
 :
 	rule__Route__Group__4__Impl
+	rule__Route__Group__5
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -752,8 +807,34 @@ rule__Route__Group__4__Impl
 :
 (
 	{ before(grammarAccess.getRouteAccess().getCommandsAssignment_4()); }
-	(rule__Route__CommandsAssignment_4)*
+	(rule__Route__CommandsAssignment_4)
 	{ after(grammarAccess.getRouteAccess().getCommandsAssignment_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Route__Group__5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Route__Group__5__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Route__Group__5__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getRouteAccess().getCommandsAssignment_5()); }
+	(rule__Route__CommandsAssignment_5)*
+	{ after(grammarAccess.getRouteAccess().getCommandsAssignment_5()); }
 )
 ;
 finally {
@@ -806,9 +887,9 @@ rule__Constraints__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getConstraintsAccess().getConstraintsAssignment_1()); }
-	(rule__Constraints__ConstraintsAssignment_1)
-	{ after(grammarAccess.getConstraintsAccess().getConstraintsAssignment_1()); }
+	{ before(grammarAccess.getConstraintsAccess().getColonKeyword_1()); }
+	':'
+	{ after(grammarAccess.getConstraintsAccess().getColonKeyword_1()); }
 )
 ;
 finally {
@@ -821,6 +902,7 @@ rule__Constraints__Group__2
 	}
 :
 	rule__Constraints__Group__2__Impl
+	rule__Constraints__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -833,8 +915,34 @@ rule__Constraints__Group__2__Impl
 :
 (
 	{ before(grammarAccess.getConstraintsAccess().getConstraintsAssignment_2()); }
-	(rule__Constraints__ConstraintsAssignment_2)*
+	(rule__Constraints__ConstraintsAssignment_2)
 	{ after(grammarAccess.getConstraintsAccess().getConstraintsAssignment_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Constraints__Group__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Constraints__Group__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Constraints__Group__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getConstraintsAccess().getConstraintsAssignment_3()); }
+	(rule__Constraints__ConstraintsAssignment_3)*
+	{ after(grammarAccess.getConstraintsAccess().getConstraintsAssignment_3()); }
 )
 ;
 finally {
@@ -1517,75 +1625,75 @@ finally {
 }
 
 
-rule__World__PlatoonAssignment_0
+rule__World__PlatoonAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_0_0()); }
+		{ before(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_1_0()); }
 		rulePlatoon
-		{ after(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_0_0()); }
+		{ after(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__World__RouteAssignment_1
+rule__World__RouteAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_1_0()); }
+		{ before(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_2_0()); }
 		ruleRoute
-		{ after(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_1_0()); }
+		{ after(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__World__ConstraintsAssignment_2
+rule__World__ConstraintsAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_2_0()); }
+		{ before(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_3_0()); }
 		ruleConstraints
-		{ after(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_2_0()); }
+		{ after(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Platoon__LVAssignment_2
+rule__Platoon__LVAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_2_0()); }
+		{ before(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_3_0()); }
 		ruleLeadingVehicle
-		{ after(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_2_0()); }
+		{ after(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Platoon__FVAssignment_3
+rule__Platoon__FVAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_3_0()); }
+		{ before(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_4_0()); }
 		ruleFollowVehicle
-		{ after(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_3_0()); }
+		{ after(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -1607,21 +1715,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Route__CommandsAssignment_3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_3_0()); }
-		ruleCommand
-		{ after(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_3_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__Route__CommandsAssignment_4
 	@init {
 		int stackSize = keepStackSize();
@@ -1637,15 +1730,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Constraints__ConstraintsAssignment_1
+rule__Route__CommandsAssignment_5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_1_0()); }
-		ruleConstraint
-		{ after(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_1_0()); }
+		{ before(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_5_0()); }
+		ruleCommand
+		{ after(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_5_0()); }
 	)
 ;
 finally {
@@ -1661,6 +1754,21 @@ rule__Constraints__ConstraintsAssignment_2
 		{ before(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_2_0()); }
 		ruleConstraint
 		{ after(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Constraints__ConstraintsAssignment_3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_3_0()); }
+		ruleConstraint
+		{ after(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_3_0()); }
 	)
 ;
 finally {

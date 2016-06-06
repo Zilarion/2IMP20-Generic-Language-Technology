@@ -27,39 +27,43 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 	public class WorldElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "nl.tue.glt.xtext.Platoon.World");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cPlatoonAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cPlatoonPlatoonParserRuleCall_0_0 = (RuleCall)cPlatoonAssignment_0.eContents().get(0);
-		private final Assignment cRouteAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cRouteRouteParserRuleCall_1_0 = (RuleCall)cRouteAssignment_1.eContents().get(0);
-		private final Assignment cConstraintsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cConstraintsConstraintsParserRuleCall_2_0 = (RuleCall)cConstraintsAssignment_2.eContents().get(0);
+		private final Action cWorldAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cPlatoonAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cPlatoonPlatoonParserRuleCall_1_0 = (RuleCall)cPlatoonAssignment_1.eContents().get(0);
+		private final Assignment cRouteAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cRouteRouteParserRuleCall_2_0 = (RuleCall)cRouteAssignment_2.eContents().get(0);
+		private final Assignment cConstraintsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cConstraintsConstraintsParserRuleCall_3_0 = (RuleCall)cConstraintsAssignment_3.eContents().get(0);
 		
 		//World:
-		//	platoon=Platoon
+		//	{World} platoon=Platoon
 		//	route=Route
 		//	constraints=Constraints;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//platoon=Platoon route=Route constraints=Constraints
+		//{World} platoon=Platoon route=Route constraints=Constraints
 		public Group getGroup() { return cGroup; }
 		
+		//{World}
+		public Action getWorldAction_0() { return cWorldAction_0; }
+		
 		//platoon=Platoon
-		public Assignment getPlatoonAssignment_0() { return cPlatoonAssignment_0; }
+		public Assignment getPlatoonAssignment_1() { return cPlatoonAssignment_1; }
 		
 		//Platoon
-		public RuleCall getPlatoonPlatoonParserRuleCall_0_0() { return cPlatoonPlatoonParserRuleCall_0_0; }
+		public RuleCall getPlatoonPlatoonParserRuleCall_1_0() { return cPlatoonPlatoonParserRuleCall_1_0; }
 		
 		//route=Route
-		public Assignment getRouteAssignment_1() { return cRouteAssignment_1; }
+		public Assignment getRouteAssignment_2() { return cRouteAssignment_2; }
 		
 		//Route
-		public RuleCall getRouteRouteParserRuleCall_1_0() { return cRouteRouteParserRuleCall_1_0; }
+		public RuleCall getRouteRouteParserRuleCall_2_0() { return cRouteRouteParserRuleCall_2_0; }
 		
 		//constraints=Constraints
-		public Assignment getConstraintsAssignment_2() { return cConstraintsAssignment_2; }
+		public Assignment getConstraintsAssignment_3() { return cConstraintsAssignment_3; }
 		
 		//Constraints
-		public RuleCall getConstraintsConstraintsParserRuleCall_2_0() { return cConstraintsConstraintsParserRuleCall_2_0; }
+		public RuleCall getConstraintsConstraintsParserRuleCall_3_0() { return cConstraintsConstraintsParserRuleCall_3_0; }
 	}
 	public class CommandElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "nl.tue.glt.xtext.Platoon.Command");
@@ -115,19 +119,20 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cPlatoonAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cPlatoonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cLVAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cLVLeadingVehicleParserRuleCall_2_0 = (RuleCall)cLVAssignment_2.eContents().get(0);
-		private final Assignment cFVAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cFVFollowVehicleParserRuleCall_3_0 = (RuleCall)cFVAssignment_3.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cLVAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLVLeadingVehicleParserRuleCall_3_0 = (RuleCall)cLVAssignment_3.eContents().get(0);
+		private final Assignment cFVAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cFVFollowVehicleParserRuleCall_4_0 = (RuleCall)cFVAssignment_4.eContents().get(0);
 		
 		//Platoon:
 		//	{Platoon}
-		//	'platoon'
+		//	'platoon' ':'
 		//	LV=LeadingVehicle
 		//	FV+=FollowVehicle?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Platoon} 'platoon' LV=LeadingVehicle FV+=FollowVehicle?
+		//{Platoon} 'platoon' ':' LV=LeadingVehicle FV+=FollowVehicle?
 		public Group getGroup() { return cGroup; }
 		
 		//{Platoon}
@@ -136,17 +141,20 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		//'platoon'
 		public Keyword getPlatoonKeyword_1() { return cPlatoonKeyword_1; }
 		
+		//':'
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
+		
 		//LV=LeadingVehicle
-		public Assignment getLVAssignment_2() { return cLVAssignment_2; }
+		public Assignment getLVAssignment_3() { return cLVAssignment_3; }
 		
 		//LeadingVehicle
-		public RuleCall getLVLeadingVehicleParserRuleCall_2_0() { return cLVLeadingVehicleParserRuleCall_2_0; }
+		public RuleCall getLVLeadingVehicleParserRuleCall_3_0() { return cLVLeadingVehicleParserRuleCall_3_0; }
 		
 		//FV+=FollowVehicle?
-		public Assignment getFVAssignment_3() { return cFVAssignment_3; }
+		public Assignment getFVAssignment_4() { return cFVAssignment_4; }
 		
 		//FollowVehicle
-		public RuleCall getFVFollowVehicleParserRuleCall_3_0() { return cFVFollowVehicleParserRuleCall_3_0; }
+		public RuleCall getFVFollowVehicleParserRuleCall_4_0() { return cFVFollowVehicleParserRuleCall_4_0; }
 	}
 	public class RouteElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "nl.tue.glt.xtext.Platoon.Route");
@@ -155,18 +163,19 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRouteKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cIdEStringParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Assignment cCommandsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cCommandsCommandParserRuleCall_3_0 = (RuleCall)cCommandsAssignment_3.eContents().get(0);
+		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cCommandsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cCommandsCommandParserRuleCall_4_0 = (RuleCall)cCommandsAssignment_4.eContents().get(0);
+		private final Assignment cCommandsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cCommandsCommandParserRuleCall_5_0 = (RuleCall)cCommandsAssignment_5.eContents().get(0);
 		
 		//Route:
 		//	{Route}
-		//	'route' id=EString
+		//	'route' id=EString ':'
 		//	commands+=Command commands+=Command*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Route} 'route' id=EString commands+=Command commands+=Command*
+		//{Route} 'route' id=EString ':' commands+=Command commands+=Command*
 		public Group getGroup() { return cGroup; }
 		
 		//{Route}
@@ -181,49 +190,56 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getIdEStringParserRuleCall_2_0() { return cIdEStringParserRuleCall_2_0; }
 		
+		//':'
+		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
+		
 		//commands+=Command
-		public Assignment getCommandsAssignment_3() { return cCommandsAssignment_3; }
-		
-		//Command
-		public RuleCall getCommandsCommandParserRuleCall_3_0() { return cCommandsCommandParserRuleCall_3_0; }
-		
-		//commands+=Command*
 		public Assignment getCommandsAssignment_4() { return cCommandsAssignment_4; }
 		
 		//Command
 		public RuleCall getCommandsCommandParserRuleCall_4_0() { return cCommandsCommandParserRuleCall_4_0; }
+		
+		//commands+=Command*
+		public Assignment getCommandsAssignment_5() { return cCommandsAssignment_5; }
+		
+		//Command
+		public RuleCall getCommandsCommandParserRuleCall_5_0() { return cCommandsCommandParserRuleCall_5_0; }
 	}
 	public class ConstraintsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "nl.tue.glt.xtext.Platoon.Constraints");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cConstraintsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cConstraintsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cConstraintsConstraintParserRuleCall_1_0 = (RuleCall)cConstraintsAssignment_1.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cConstraintsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cConstraintsConstraintParserRuleCall_2_0 = (RuleCall)cConstraintsAssignment_2.eContents().get(0);
+		private final Assignment cConstraintsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cConstraintsConstraintParserRuleCall_3_0 = (RuleCall)cConstraintsAssignment_3.eContents().get(0);
 		
 		//Constraints:
-		//	'constraints'
+		//	'constraints' ':'
 		//	constraints+=Constraint constraints+=Constraint*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'constraints' constraints+=Constraint constraints+=Constraint*
+		//'constraints' ':' constraints+=Constraint constraints+=Constraint*
 		public Group getGroup() { return cGroup; }
 		
 		//'constraints'
 		public Keyword getConstraintsKeyword_0() { return cConstraintsKeyword_0; }
 		
+		//':'
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
 		//constraints+=Constraint
-		public Assignment getConstraintsAssignment_1() { return cConstraintsAssignment_1; }
-		
-		//Constraint
-		public RuleCall getConstraintsConstraintParserRuleCall_1_0() { return cConstraintsConstraintParserRuleCall_1_0; }
-		
-		//constraints+=Constraint*
 		public Assignment getConstraintsAssignment_2() { return cConstraintsAssignment_2; }
 		
 		//Constraint
 		public RuleCall getConstraintsConstraintParserRuleCall_2_0() { return cConstraintsConstraintParserRuleCall_2_0; }
+		
+		//constraints+=Constraint*
+		public Assignment getConstraintsAssignment_3() { return cConstraintsAssignment_3; }
+		
+		//Constraint
+		public RuleCall getConstraintsConstraintParserRuleCall_3_0() { return cConstraintsConstraintParserRuleCall_3_0; }
 	}
 	public class LeadingVehicleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "nl.tue.glt.xtext.Platoon.LeadingVehicle");
@@ -533,7 +549,7 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//World:
-	//	platoon=Platoon
+	//	{World} platoon=Platoon
 	//	route=Route
 	//	constraints=Constraints;
 	public WorldElements getWorldAccess() {
@@ -576,7 +592,7 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Platoon:
 	//	{Platoon}
-	//	'platoon'
+	//	'platoon' ':'
 	//	LV=LeadingVehicle
 	//	FV+=FollowVehicle?;
 	public PlatoonElements getPlatoonAccess() {
@@ -589,7 +605,7 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Route:
 	//	{Route}
-	//	'route' id=EString
+	//	'route' id=EString ':'
 	//	commands+=Command commands+=Command*;
 	public RouteElements getRouteAccess() {
 		return pRoute;
@@ -600,7 +616,7 @@ public class PlatoonGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Constraints:
-	//	'constraints'
+	//	'constraints' ':'
 	//	constraints+=Constraint constraints+=Constraint*;
 	public ConstraintsElements getConstraintsAccess() {
 		return pConstraints;

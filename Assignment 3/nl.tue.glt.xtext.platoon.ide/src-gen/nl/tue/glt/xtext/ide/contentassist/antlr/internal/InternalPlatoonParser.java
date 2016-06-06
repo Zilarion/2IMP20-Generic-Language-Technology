@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Left'", "'Right'", "'platoon'", "'route'", "'constraints'", "'LV'", "'FV'", "'front'", "'runner'", "'forward'", "'('", "')'", "'turn'", "'<='", "'headway'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Left'", "'Right'", "'platoon'", "':'", "'route'", "'constraints'", "'LV'", "'FV'", "'front'", "'runner'", "'forward'", "'('", "')'", "'turn'", "'<='", "'headway'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -39,6 +39,7 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     public static final int RULE_ID=5;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
+    public static final int T__26=26;
     public static final int RULE_INT=6;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
@@ -1089,10 +1090,10 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==20) ) {
+            if ( (LA1_0==21) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==23) ) {
+            else if ( (LA1_0==24) ) {
                 alt1=2;
             }
             else {
@@ -1338,41 +1339,31 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__World__Group__0__Impl"
-    // InternalPlatoon.g:452:1: rule__World__Group__0__Impl : ( ( rule__World__PlatoonAssignment_0 ) ) ;
+    // InternalPlatoon.g:452:1: rule__World__Group__0__Impl : ( () ) ;
     public final void rule__World__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:456:1: ( ( ( rule__World__PlatoonAssignment_0 ) ) )
-            // InternalPlatoon.g:457:1: ( ( rule__World__PlatoonAssignment_0 ) )
+            // InternalPlatoon.g:456:1: ( ( () ) )
+            // InternalPlatoon.g:457:1: ( () )
             {
-            // InternalPlatoon.g:457:1: ( ( rule__World__PlatoonAssignment_0 ) )
-            // InternalPlatoon.g:458:2: ( rule__World__PlatoonAssignment_0 )
+            // InternalPlatoon.g:457:1: ( () )
+            // InternalPlatoon.g:458:2: ()
             {
-             before(grammarAccess.getWorldAccess().getPlatoonAssignment_0()); 
-            // InternalPlatoon.g:459:2: ( rule__World__PlatoonAssignment_0 )
-            // InternalPlatoon.g:459:3: rule__World__PlatoonAssignment_0
+             before(grammarAccess.getWorldAccess().getWorldAction_0()); 
+            // InternalPlatoon.g:459:2: ()
+            // InternalPlatoon.g:459:3: 
             {
-            pushFollow(FOLLOW_2);
-            rule__World__PlatoonAssignment_0();
-
-            state._fsp--;
-
-
             }
 
-             after(grammarAccess.getWorldAccess().getPlatoonAssignment_0()); 
+             after(grammarAccess.getWorldAccess().getWorldAction_0()); 
 
             }
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
         }
         finally {
 
@@ -1423,31 +1414,31 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__World__Group__1__Impl"
-    // InternalPlatoon.g:479:1: rule__World__Group__1__Impl : ( ( rule__World__RouteAssignment_1 ) ) ;
+    // InternalPlatoon.g:479:1: rule__World__Group__1__Impl : ( ( rule__World__PlatoonAssignment_1 ) ) ;
     public final void rule__World__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:483:1: ( ( ( rule__World__RouteAssignment_1 ) ) )
-            // InternalPlatoon.g:484:1: ( ( rule__World__RouteAssignment_1 ) )
+            // InternalPlatoon.g:483:1: ( ( ( rule__World__PlatoonAssignment_1 ) ) )
+            // InternalPlatoon.g:484:1: ( ( rule__World__PlatoonAssignment_1 ) )
             {
-            // InternalPlatoon.g:484:1: ( ( rule__World__RouteAssignment_1 ) )
-            // InternalPlatoon.g:485:2: ( rule__World__RouteAssignment_1 )
+            // InternalPlatoon.g:484:1: ( ( rule__World__PlatoonAssignment_1 ) )
+            // InternalPlatoon.g:485:2: ( rule__World__PlatoonAssignment_1 )
             {
-             before(grammarAccess.getWorldAccess().getRouteAssignment_1()); 
-            // InternalPlatoon.g:486:2: ( rule__World__RouteAssignment_1 )
-            // InternalPlatoon.g:486:3: rule__World__RouteAssignment_1
+             before(grammarAccess.getWorldAccess().getPlatoonAssignment_1()); 
+            // InternalPlatoon.g:486:2: ( rule__World__PlatoonAssignment_1 )
+            // InternalPlatoon.g:486:3: rule__World__PlatoonAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__World__RouteAssignment_1();
+            rule__World__PlatoonAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getWorldAccess().getRouteAssignment_1()); 
+             after(grammarAccess.getWorldAccess().getPlatoonAssignment_1()); 
 
             }
 
@@ -1470,17 +1461,22 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__World__Group__2"
-    // InternalPlatoon.g:494:1: rule__World__Group__2 : rule__World__Group__2__Impl ;
+    // InternalPlatoon.g:494:1: rule__World__Group__2 : rule__World__Group__2__Impl rule__World__Group__3 ;
     public final void rule__World__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:498:1: ( rule__World__Group__2__Impl )
-            // InternalPlatoon.g:499:2: rule__World__Group__2__Impl
+            // InternalPlatoon.g:498:1: ( rule__World__Group__2__Impl rule__World__Group__3 )
+            // InternalPlatoon.g:499:2: rule__World__Group__2__Impl rule__World__Group__3
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_5);
             rule__World__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__World__Group__3();
 
             state._fsp--;
 
@@ -1503,31 +1499,31 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__World__Group__2__Impl"
-    // InternalPlatoon.g:505:1: rule__World__Group__2__Impl : ( ( rule__World__ConstraintsAssignment_2 ) ) ;
+    // InternalPlatoon.g:506:1: rule__World__Group__2__Impl : ( ( rule__World__RouteAssignment_2 ) ) ;
     public final void rule__World__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:509:1: ( ( ( rule__World__ConstraintsAssignment_2 ) ) )
-            // InternalPlatoon.g:510:1: ( ( rule__World__ConstraintsAssignment_2 ) )
+            // InternalPlatoon.g:510:1: ( ( ( rule__World__RouteAssignment_2 ) ) )
+            // InternalPlatoon.g:511:1: ( ( rule__World__RouteAssignment_2 ) )
             {
-            // InternalPlatoon.g:510:1: ( ( rule__World__ConstraintsAssignment_2 ) )
-            // InternalPlatoon.g:511:2: ( rule__World__ConstraintsAssignment_2 )
+            // InternalPlatoon.g:511:1: ( ( rule__World__RouteAssignment_2 ) )
+            // InternalPlatoon.g:512:2: ( rule__World__RouteAssignment_2 )
             {
-             before(grammarAccess.getWorldAccess().getConstraintsAssignment_2()); 
-            // InternalPlatoon.g:512:2: ( rule__World__ConstraintsAssignment_2 )
-            // InternalPlatoon.g:512:3: rule__World__ConstraintsAssignment_2
+             before(grammarAccess.getWorldAccess().getRouteAssignment_2()); 
+            // InternalPlatoon.g:513:2: ( rule__World__RouteAssignment_2 )
+            // InternalPlatoon.g:513:3: rule__World__RouteAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__World__ConstraintsAssignment_2();
+            rule__World__RouteAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getWorldAccess().getConstraintsAssignment_2()); 
+             after(grammarAccess.getWorldAccess().getRouteAssignment_2()); 
 
             }
 
@@ -1549,17 +1545,97 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__World__Group__2__Impl"
 
 
+    // $ANTLR start "rule__World__Group__3"
+    // InternalPlatoon.g:521:1: rule__World__Group__3 : rule__World__Group__3__Impl ;
+    public final void rule__World__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPlatoon.g:525:1: ( rule__World__Group__3__Impl )
+            // InternalPlatoon.g:526:2: rule__World__Group__3__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__World__Group__3__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__World__Group__3"
+
+
+    // $ANTLR start "rule__World__Group__3__Impl"
+    // InternalPlatoon.g:532:1: rule__World__Group__3__Impl : ( ( rule__World__ConstraintsAssignment_3 ) ) ;
+    public final void rule__World__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPlatoon.g:536:1: ( ( ( rule__World__ConstraintsAssignment_3 ) ) )
+            // InternalPlatoon.g:537:1: ( ( rule__World__ConstraintsAssignment_3 ) )
+            {
+            // InternalPlatoon.g:537:1: ( ( rule__World__ConstraintsAssignment_3 ) )
+            // InternalPlatoon.g:538:2: ( rule__World__ConstraintsAssignment_3 )
+            {
+             before(grammarAccess.getWorldAccess().getConstraintsAssignment_3()); 
+            // InternalPlatoon.g:539:2: ( rule__World__ConstraintsAssignment_3 )
+            // InternalPlatoon.g:539:3: rule__World__ConstraintsAssignment_3
+            {
+            pushFollow(FOLLOW_2);
+            rule__World__ConstraintsAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getWorldAccess().getConstraintsAssignment_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__World__Group__3__Impl"
+
+
     // $ANTLR start "rule__Platoon__Group__0"
-    // InternalPlatoon.g:521:1: rule__Platoon__Group__0 : rule__Platoon__Group__0__Impl rule__Platoon__Group__1 ;
+    // InternalPlatoon.g:548:1: rule__Platoon__Group__0 : rule__Platoon__Group__0__Impl rule__Platoon__Group__1 ;
     public final void rule__Platoon__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:525:1: ( rule__Platoon__Group__0__Impl rule__Platoon__Group__1 )
-            // InternalPlatoon.g:526:2: rule__Platoon__Group__0__Impl rule__Platoon__Group__1
+            // InternalPlatoon.g:552:1: ( rule__Platoon__Group__0__Impl rule__Platoon__Group__1 )
+            // InternalPlatoon.g:553:2: rule__Platoon__Group__0__Impl rule__Platoon__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_3);
             rule__Platoon__Group__0__Impl();
 
             state._fsp--;
@@ -1588,21 +1664,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Platoon__Group__0__Impl"
-    // InternalPlatoon.g:533:1: rule__Platoon__Group__0__Impl : ( () ) ;
+    // InternalPlatoon.g:560:1: rule__Platoon__Group__0__Impl : ( () ) ;
     public final void rule__Platoon__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:537:1: ( ( () ) )
-            // InternalPlatoon.g:538:1: ( () )
+            // InternalPlatoon.g:564:1: ( ( () ) )
+            // InternalPlatoon.g:565:1: ( () )
             {
-            // InternalPlatoon.g:538:1: ( () )
-            // InternalPlatoon.g:539:2: ()
+            // InternalPlatoon.g:565:1: ( () )
+            // InternalPlatoon.g:566:2: ()
             {
              before(grammarAccess.getPlatoonAccess().getPlatoonAction_0()); 
-            // InternalPlatoon.g:540:2: ()
-            // InternalPlatoon.g:540:3: 
+            // InternalPlatoon.g:567:2: ()
+            // InternalPlatoon.g:567:3: 
             {
             }
 
@@ -1625,14 +1701,14 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Platoon__Group__1"
-    // InternalPlatoon.g:548:1: rule__Platoon__Group__1 : rule__Platoon__Group__1__Impl rule__Platoon__Group__2 ;
+    // InternalPlatoon.g:575:1: rule__Platoon__Group__1 : rule__Platoon__Group__1__Impl rule__Platoon__Group__2 ;
     public final void rule__Platoon__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:552:1: ( rule__Platoon__Group__1__Impl rule__Platoon__Group__2 )
-            // InternalPlatoon.g:553:2: rule__Platoon__Group__1__Impl rule__Platoon__Group__2
+            // InternalPlatoon.g:579:1: ( rule__Platoon__Group__1__Impl rule__Platoon__Group__2 )
+            // InternalPlatoon.g:580:2: rule__Platoon__Group__1__Impl rule__Platoon__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Platoon__Group__1__Impl();
@@ -1663,17 +1739,17 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Platoon__Group__1__Impl"
-    // InternalPlatoon.g:560:1: rule__Platoon__Group__1__Impl : ( 'platoon' ) ;
+    // InternalPlatoon.g:587:1: rule__Platoon__Group__1__Impl : ( 'platoon' ) ;
     public final void rule__Platoon__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:564:1: ( ( 'platoon' ) )
-            // InternalPlatoon.g:565:1: ( 'platoon' )
+            // InternalPlatoon.g:591:1: ( ( 'platoon' ) )
+            // InternalPlatoon.g:592:1: ( 'platoon' )
             {
-            // InternalPlatoon.g:565:1: ( 'platoon' )
-            // InternalPlatoon.g:566:2: 'platoon'
+            // InternalPlatoon.g:592:1: ( 'platoon' )
+            // InternalPlatoon.g:593:2: 'platoon'
             {
              before(grammarAccess.getPlatoonAccess().getPlatoonKeyword_1()); 
             match(input,13,FOLLOW_2); 
@@ -1700,14 +1776,14 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Platoon__Group__2"
-    // InternalPlatoon.g:575:1: rule__Platoon__Group__2 : rule__Platoon__Group__2__Impl rule__Platoon__Group__3 ;
+    // InternalPlatoon.g:602:1: rule__Platoon__Group__2 : rule__Platoon__Group__2__Impl rule__Platoon__Group__3 ;
     public final void rule__Platoon__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:579:1: ( rule__Platoon__Group__2__Impl rule__Platoon__Group__3 )
-            // InternalPlatoon.g:580:2: rule__Platoon__Group__2__Impl rule__Platoon__Group__3
+            // InternalPlatoon.g:606:1: ( rule__Platoon__Group__2__Impl rule__Platoon__Group__3 )
+            // InternalPlatoon.g:607:2: rule__Platoon__Group__2__Impl rule__Platoon__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__Platoon__Group__2__Impl();
@@ -1738,31 +1814,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Platoon__Group__2__Impl"
-    // InternalPlatoon.g:587:1: rule__Platoon__Group__2__Impl : ( ( rule__Platoon__LVAssignment_2 ) ) ;
+    // InternalPlatoon.g:614:1: rule__Platoon__Group__2__Impl : ( ':' ) ;
     public final void rule__Platoon__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:591:1: ( ( ( rule__Platoon__LVAssignment_2 ) ) )
-            // InternalPlatoon.g:592:1: ( ( rule__Platoon__LVAssignment_2 ) )
+            // InternalPlatoon.g:618:1: ( ( ':' ) )
+            // InternalPlatoon.g:619:1: ( ':' )
             {
-            // InternalPlatoon.g:592:1: ( ( rule__Platoon__LVAssignment_2 ) )
-            // InternalPlatoon.g:593:2: ( rule__Platoon__LVAssignment_2 )
+            // InternalPlatoon.g:619:1: ( ':' )
+            // InternalPlatoon.g:620:2: ':'
             {
-             before(grammarAccess.getPlatoonAccess().getLVAssignment_2()); 
-            // InternalPlatoon.g:594:2: ( rule__Platoon__LVAssignment_2 )
-            // InternalPlatoon.g:594:3: rule__Platoon__LVAssignment_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Platoon__LVAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getPlatoonAccess().getLVAssignment_2()); 
+             before(grammarAccess.getPlatoonAccess().getColonKeyword_2()); 
+            match(input,14,FOLLOW_2); 
+             after(grammarAccess.getPlatoonAccess().getColonKeyword_2()); 
 
             }
 
@@ -1785,17 +1851,22 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Platoon__Group__3"
-    // InternalPlatoon.g:602:1: rule__Platoon__Group__3 : rule__Platoon__Group__3__Impl ;
+    // InternalPlatoon.g:629:1: rule__Platoon__Group__3 : rule__Platoon__Group__3__Impl rule__Platoon__Group__4 ;
     public final void rule__Platoon__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:606:1: ( rule__Platoon__Group__3__Impl )
-            // InternalPlatoon.g:607:2: rule__Platoon__Group__3__Impl
+            // InternalPlatoon.g:633:1: ( rule__Platoon__Group__3__Impl rule__Platoon__Group__4 )
+            // InternalPlatoon.g:634:2: rule__Platoon__Group__3__Impl rule__Platoon__Group__4
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_8);
             rule__Platoon__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Platoon__Group__4();
 
             state._fsp--;
 
@@ -1818,42 +1889,31 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Platoon__Group__3__Impl"
-    // InternalPlatoon.g:613:1: rule__Platoon__Group__3__Impl : ( ( rule__Platoon__FVAssignment_3 )? ) ;
+    // InternalPlatoon.g:641:1: rule__Platoon__Group__3__Impl : ( ( rule__Platoon__LVAssignment_3 ) ) ;
     public final void rule__Platoon__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:617:1: ( ( ( rule__Platoon__FVAssignment_3 )? ) )
-            // InternalPlatoon.g:618:1: ( ( rule__Platoon__FVAssignment_3 )? )
+            // InternalPlatoon.g:645:1: ( ( ( rule__Platoon__LVAssignment_3 ) ) )
+            // InternalPlatoon.g:646:1: ( ( rule__Platoon__LVAssignment_3 ) )
             {
-            // InternalPlatoon.g:618:1: ( ( rule__Platoon__FVAssignment_3 )? )
-            // InternalPlatoon.g:619:2: ( rule__Platoon__FVAssignment_3 )?
+            // InternalPlatoon.g:646:1: ( ( rule__Platoon__LVAssignment_3 ) )
+            // InternalPlatoon.g:647:2: ( rule__Platoon__LVAssignment_3 )
             {
-             before(grammarAccess.getPlatoonAccess().getFVAssignment_3()); 
-            // InternalPlatoon.g:620:2: ( rule__Platoon__FVAssignment_3 )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+             before(grammarAccess.getPlatoonAccess().getLVAssignment_3()); 
+            // InternalPlatoon.g:648:2: ( rule__Platoon__LVAssignment_3 )
+            // InternalPlatoon.g:648:3: rule__Platoon__LVAssignment_3
+            {
+            pushFollow(FOLLOW_2);
+            rule__Platoon__LVAssignment_3();
 
-            if ( (LA4_0==17) ) {
-                alt4=1;
-            }
-            switch (alt4) {
-                case 1 :
-                    // InternalPlatoon.g:620:3: rule__Platoon__FVAssignment_3
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Platoon__FVAssignment_3();
+            state._fsp--;
 
-                    state._fsp--;
-
-
-                    }
-                    break;
 
             }
 
-             after(grammarAccess.getPlatoonAccess().getFVAssignment_3()); 
+             after(grammarAccess.getPlatoonAccess().getLVAssignment_3()); 
 
             }
 
@@ -1875,17 +1935,108 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Platoon__Group__3__Impl"
 
 
+    // $ANTLR start "rule__Platoon__Group__4"
+    // InternalPlatoon.g:656:1: rule__Platoon__Group__4 : rule__Platoon__Group__4__Impl ;
+    public final void rule__Platoon__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPlatoon.g:660:1: ( rule__Platoon__Group__4__Impl )
+            // InternalPlatoon.g:661:2: rule__Platoon__Group__4__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Platoon__Group__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Platoon__Group__4"
+
+
+    // $ANTLR start "rule__Platoon__Group__4__Impl"
+    // InternalPlatoon.g:667:1: rule__Platoon__Group__4__Impl : ( ( rule__Platoon__FVAssignment_4 )? ) ;
+    public final void rule__Platoon__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPlatoon.g:671:1: ( ( ( rule__Platoon__FVAssignment_4 )? ) )
+            // InternalPlatoon.g:672:1: ( ( rule__Platoon__FVAssignment_4 )? )
+            {
+            // InternalPlatoon.g:672:1: ( ( rule__Platoon__FVAssignment_4 )? )
+            // InternalPlatoon.g:673:2: ( rule__Platoon__FVAssignment_4 )?
+            {
+             before(grammarAccess.getPlatoonAccess().getFVAssignment_4()); 
+            // InternalPlatoon.g:674:2: ( rule__Platoon__FVAssignment_4 )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0==18) ) {
+                alt4=1;
+            }
+            switch (alt4) {
+                case 1 :
+                    // InternalPlatoon.g:674:3: rule__Platoon__FVAssignment_4
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Platoon__FVAssignment_4();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getPlatoonAccess().getFVAssignment_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Platoon__Group__4__Impl"
+
+
     // $ANTLR start "rule__Route__Group__0"
-    // InternalPlatoon.g:629:1: rule__Route__Group__0 : rule__Route__Group__0__Impl rule__Route__Group__1 ;
+    // InternalPlatoon.g:683:1: rule__Route__Group__0 : rule__Route__Group__0__Impl rule__Route__Group__1 ;
     public final void rule__Route__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:633:1: ( rule__Route__Group__0__Impl rule__Route__Group__1 )
-            // InternalPlatoon.g:634:2: rule__Route__Group__0__Impl rule__Route__Group__1
+            // InternalPlatoon.g:687:1: ( rule__Route__Group__0__Impl rule__Route__Group__1 )
+            // InternalPlatoon.g:688:2: rule__Route__Group__0__Impl rule__Route__Group__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_4);
             rule__Route__Group__0__Impl();
 
             state._fsp--;
@@ -1914,21 +2065,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Route__Group__0__Impl"
-    // InternalPlatoon.g:641:1: rule__Route__Group__0__Impl : ( () ) ;
+    // InternalPlatoon.g:695:1: rule__Route__Group__0__Impl : ( () ) ;
     public final void rule__Route__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:645:1: ( ( () ) )
-            // InternalPlatoon.g:646:1: ( () )
+            // InternalPlatoon.g:699:1: ( ( () ) )
+            // InternalPlatoon.g:700:1: ( () )
             {
-            // InternalPlatoon.g:646:1: ( () )
-            // InternalPlatoon.g:647:2: ()
+            // InternalPlatoon.g:700:1: ( () )
+            // InternalPlatoon.g:701:2: ()
             {
              before(grammarAccess.getRouteAccess().getRouteAction_0()); 
-            // InternalPlatoon.g:648:2: ()
-            // InternalPlatoon.g:648:3: 
+            // InternalPlatoon.g:702:2: ()
+            // InternalPlatoon.g:702:3: 
             {
             }
 
@@ -1951,16 +2102,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Route__Group__1"
-    // InternalPlatoon.g:656:1: rule__Route__Group__1 : rule__Route__Group__1__Impl rule__Route__Group__2 ;
+    // InternalPlatoon.g:710:1: rule__Route__Group__1 : rule__Route__Group__1__Impl rule__Route__Group__2 ;
     public final void rule__Route__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:660:1: ( rule__Route__Group__1__Impl rule__Route__Group__2 )
-            // InternalPlatoon.g:661:2: rule__Route__Group__1__Impl rule__Route__Group__2
+            // InternalPlatoon.g:714:1: ( rule__Route__Group__1__Impl rule__Route__Group__2 )
+            // InternalPlatoon.g:715:2: rule__Route__Group__1__Impl rule__Route__Group__2
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__Route__Group__1__Impl();
 
             state._fsp--;
@@ -1989,20 +2140,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Route__Group__1__Impl"
-    // InternalPlatoon.g:668:1: rule__Route__Group__1__Impl : ( 'route' ) ;
+    // InternalPlatoon.g:722:1: rule__Route__Group__1__Impl : ( 'route' ) ;
     public final void rule__Route__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:672:1: ( ( 'route' ) )
-            // InternalPlatoon.g:673:1: ( 'route' )
+            // InternalPlatoon.g:726:1: ( ( 'route' ) )
+            // InternalPlatoon.g:727:1: ( 'route' )
             {
-            // InternalPlatoon.g:673:1: ( 'route' )
-            // InternalPlatoon.g:674:2: 'route'
+            // InternalPlatoon.g:727:1: ( 'route' )
+            // InternalPlatoon.g:728:2: 'route'
             {
              before(grammarAccess.getRouteAccess().getRouteKeyword_1()); 
-            match(input,14,FOLLOW_2); 
+            match(input,15,FOLLOW_2); 
              after(grammarAccess.getRouteAccess().getRouteKeyword_1()); 
 
             }
@@ -2026,16 +2177,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Route__Group__2"
-    // InternalPlatoon.g:683:1: rule__Route__Group__2 : rule__Route__Group__2__Impl rule__Route__Group__3 ;
+    // InternalPlatoon.g:737:1: rule__Route__Group__2 : rule__Route__Group__2__Impl rule__Route__Group__3 ;
     public final void rule__Route__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:687:1: ( rule__Route__Group__2__Impl rule__Route__Group__3 )
-            // InternalPlatoon.g:688:2: rule__Route__Group__2__Impl rule__Route__Group__3
+            // InternalPlatoon.g:741:1: ( rule__Route__Group__2__Impl rule__Route__Group__3 )
+            // InternalPlatoon.g:742:2: rule__Route__Group__2__Impl rule__Route__Group__3
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_6);
             rule__Route__Group__2__Impl();
 
             state._fsp--;
@@ -2064,21 +2215,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Route__Group__2__Impl"
-    // InternalPlatoon.g:695:1: rule__Route__Group__2__Impl : ( ( rule__Route__IdAssignment_2 ) ) ;
+    // InternalPlatoon.g:749:1: rule__Route__Group__2__Impl : ( ( rule__Route__IdAssignment_2 ) ) ;
     public final void rule__Route__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:699:1: ( ( ( rule__Route__IdAssignment_2 ) ) )
-            // InternalPlatoon.g:700:1: ( ( rule__Route__IdAssignment_2 ) )
+            // InternalPlatoon.g:753:1: ( ( ( rule__Route__IdAssignment_2 ) ) )
+            // InternalPlatoon.g:754:1: ( ( rule__Route__IdAssignment_2 ) )
             {
-            // InternalPlatoon.g:700:1: ( ( rule__Route__IdAssignment_2 ) )
-            // InternalPlatoon.g:701:2: ( rule__Route__IdAssignment_2 )
+            // InternalPlatoon.g:754:1: ( ( rule__Route__IdAssignment_2 ) )
+            // InternalPlatoon.g:755:2: ( rule__Route__IdAssignment_2 )
             {
              before(grammarAccess.getRouteAccess().getIdAssignment_2()); 
-            // InternalPlatoon.g:702:2: ( rule__Route__IdAssignment_2 )
-            // InternalPlatoon.g:702:3: rule__Route__IdAssignment_2
+            // InternalPlatoon.g:756:2: ( rule__Route__IdAssignment_2 )
+            // InternalPlatoon.g:756:3: rule__Route__IdAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Route__IdAssignment_2();
@@ -2111,16 +2262,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Route__Group__3"
-    // InternalPlatoon.g:710:1: rule__Route__Group__3 : rule__Route__Group__3__Impl rule__Route__Group__4 ;
+    // InternalPlatoon.g:764:1: rule__Route__Group__3 : rule__Route__Group__3__Impl rule__Route__Group__4 ;
     public final void rule__Route__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:714:1: ( rule__Route__Group__3__Impl rule__Route__Group__4 )
-            // InternalPlatoon.g:715:2: rule__Route__Group__3__Impl rule__Route__Group__4
+            // InternalPlatoon.g:768:1: ( rule__Route__Group__3__Impl rule__Route__Group__4 )
+            // InternalPlatoon.g:769:2: rule__Route__Group__3__Impl rule__Route__Group__4
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             rule__Route__Group__3__Impl();
 
             state._fsp--;
@@ -2149,31 +2300,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Route__Group__3__Impl"
-    // InternalPlatoon.g:722:1: rule__Route__Group__3__Impl : ( ( rule__Route__CommandsAssignment_3 ) ) ;
+    // InternalPlatoon.g:776:1: rule__Route__Group__3__Impl : ( ':' ) ;
     public final void rule__Route__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:726:1: ( ( ( rule__Route__CommandsAssignment_3 ) ) )
-            // InternalPlatoon.g:727:1: ( ( rule__Route__CommandsAssignment_3 ) )
+            // InternalPlatoon.g:780:1: ( ( ':' ) )
+            // InternalPlatoon.g:781:1: ( ':' )
             {
-            // InternalPlatoon.g:727:1: ( ( rule__Route__CommandsAssignment_3 ) )
-            // InternalPlatoon.g:728:2: ( rule__Route__CommandsAssignment_3 )
+            // InternalPlatoon.g:781:1: ( ':' )
+            // InternalPlatoon.g:782:2: ':'
             {
-             before(grammarAccess.getRouteAccess().getCommandsAssignment_3()); 
-            // InternalPlatoon.g:729:2: ( rule__Route__CommandsAssignment_3 )
-            // InternalPlatoon.g:729:3: rule__Route__CommandsAssignment_3
-            {
-            pushFollow(FOLLOW_2);
-            rule__Route__CommandsAssignment_3();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getRouteAccess().getCommandsAssignment_3()); 
+             before(grammarAccess.getRouteAccess().getColonKeyword_3()); 
+            match(input,14,FOLLOW_2); 
+             after(grammarAccess.getRouteAccess().getColonKeyword_3()); 
 
             }
 
@@ -2196,17 +2337,22 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Route__Group__4"
-    // InternalPlatoon.g:737:1: rule__Route__Group__4 : rule__Route__Group__4__Impl ;
+    // InternalPlatoon.g:791:1: rule__Route__Group__4 : rule__Route__Group__4__Impl rule__Route__Group__5 ;
     public final void rule__Route__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:741:1: ( rule__Route__Group__4__Impl )
-            // InternalPlatoon.g:742:2: rule__Route__Group__4__Impl
+            // InternalPlatoon.g:795:1: ( rule__Route__Group__4__Impl rule__Route__Group__5 )
+            // InternalPlatoon.g:796:2: rule__Route__Group__4__Impl rule__Route__Group__5
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_10);
             rule__Route__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Route__Group__5();
 
             state._fsp--;
 
@@ -2229,47 +2375,29 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Route__Group__4__Impl"
-    // InternalPlatoon.g:748:1: rule__Route__Group__4__Impl : ( ( rule__Route__CommandsAssignment_4 )* ) ;
+    // InternalPlatoon.g:803:1: rule__Route__Group__4__Impl : ( ( rule__Route__CommandsAssignment_4 ) ) ;
     public final void rule__Route__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:752:1: ( ( ( rule__Route__CommandsAssignment_4 )* ) )
-            // InternalPlatoon.g:753:1: ( ( rule__Route__CommandsAssignment_4 )* )
+            // InternalPlatoon.g:807:1: ( ( ( rule__Route__CommandsAssignment_4 ) ) )
+            // InternalPlatoon.g:808:1: ( ( rule__Route__CommandsAssignment_4 ) )
             {
-            // InternalPlatoon.g:753:1: ( ( rule__Route__CommandsAssignment_4 )* )
-            // InternalPlatoon.g:754:2: ( rule__Route__CommandsAssignment_4 )*
+            // InternalPlatoon.g:808:1: ( ( rule__Route__CommandsAssignment_4 ) )
+            // InternalPlatoon.g:809:2: ( rule__Route__CommandsAssignment_4 )
             {
              before(grammarAccess.getRouteAccess().getCommandsAssignment_4()); 
-            // InternalPlatoon.g:755:2: ( rule__Route__CommandsAssignment_4 )*
-            loop5:
-            do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+            // InternalPlatoon.g:810:2: ( rule__Route__CommandsAssignment_4 )
+            // InternalPlatoon.g:810:3: rule__Route__CommandsAssignment_4
+            {
+            pushFollow(FOLLOW_2);
+            rule__Route__CommandsAssignment_4();
 
-                if ( (LA5_0==20||LA5_0==23) ) {
-                    alt5=1;
-                }
+            state._fsp--;
 
 
-                switch (alt5) {
-            	case 1 :
-            	    // InternalPlatoon.g:755:3: rule__Route__CommandsAssignment_4
-            	    {
-            	    pushFollow(FOLLOW_10);
-            	    rule__Route__CommandsAssignment_4();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop5;
-                }
-            } while (true);
+            }
 
              after(grammarAccess.getRouteAccess().getCommandsAssignment_4()); 
 
@@ -2293,17 +2421,115 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Route__Group__4__Impl"
 
 
+    // $ANTLR start "rule__Route__Group__5"
+    // InternalPlatoon.g:818:1: rule__Route__Group__5 : rule__Route__Group__5__Impl ;
+    public final void rule__Route__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPlatoon.g:822:1: ( rule__Route__Group__5__Impl )
+            // InternalPlatoon.g:823:2: rule__Route__Group__5__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Route__Group__5__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Route__Group__5"
+
+
+    // $ANTLR start "rule__Route__Group__5__Impl"
+    // InternalPlatoon.g:829:1: rule__Route__Group__5__Impl : ( ( rule__Route__CommandsAssignment_5 )* ) ;
+    public final void rule__Route__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPlatoon.g:833:1: ( ( ( rule__Route__CommandsAssignment_5 )* ) )
+            // InternalPlatoon.g:834:1: ( ( rule__Route__CommandsAssignment_5 )* )
+            {
+            // InternalPlatoon.g:834:1: ( ( rule__Route__CommandsAssignment_5 )* )
+            // InternalPlatoon.g:835:2: ( rule__Route__CommandsAssignment_5 )*
+            {
+             before(grammarAccess.getRouteAccess().getCommandsAssignment_5()); 
+            // InternalPlatoon.g:836:2: ( rule__Route__CommandsAssignment_5 )*
+            loop5:
+            do {
+                int alt5=2;
+                int LA5_0 = input.LA(1);
+
+                if ( (LA5_0==21||LA5_0==24) ) {
+                    alt5=1;
+                }
+
+
+                switch (alt5) {
+            	case 1 :
+            	    // InternalPlatoon.g:836:3: rule__Route__CommandsAssignment_5
+            	    {
+            	    pushFollow(FOLLOW_11);
+            	    rule__Route__CommandsAssignment_5();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop5;
+                }
+            } while (true);
+
+             after(grammarAccess.getRouteAccess().getCommandsAssignment_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Route__Group__5__Impl"
+
+
     // $ANTLR start "rule__Constraints__Group__0"
-    // InternalPlatoon.g:764:1: rule__Constraints__Group__0 : rule__Constraints__Group__0__Impl rule__Constraints__Group__1 ;
+    // InternalPlatoon.g:845:1: rule__Constraints__Group__0 : rule__Constraints__Group__0__Impl rule__Constraints__Group__1 ;
     public final void rule__Constraints__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:768:1: ( rule__Constraints__Group__0__Impl rule__Constraints__Group__1 )
-            // InternalPlatoon.g:769:2: rule__Constraints__Group__0__Impl rule__Constraints__Group__1
+            // InternalPlatoon.g:849:1: ( rule__Constraints__Group__0__Impl rule__Constraints__Group__1 )
+            // InternalPlatoon.g:850:2: rule__Constraints__Group__0__Impl rule__Constraints__Group__1
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_6);
             rule__Constraints__Group__0__Impl();
 
             state._fsp--;
@@ -2332,20 +2558,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constraints__Group__0__Impl"
-    // InternalPlatoon.g:776:1: rule__Constraints__Group__0__Impl : ( 'constraints' ) ;
+    // InternalPlatoon.g:857:1: rule__Constraints__Group__0__Impl : ( 'constraints' ) ;
     public final void rule__Constraints__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:780:1: ( ( 'constraints' ) )
-            // InternalPlatoon.g:781:1: ( 'constraints' )
+            // InternalPlatoon.g:861:1: ( ( 'constraints' ) )
+            // InternalPlatoon.g:862:1: ( 'constraints' )
             {
-            // InternalPlatoon.g:781:1: ( 'constraints' )
-            // InternalPlatoon.g:782:2: 'constraints'
+            // InternalPlatoon.g:862:1: ( 'constraints' )
+            // InternalPlatoon.g:863:2: 'constraints'
             {
              before(grammarAccess.getConstraintsAccess().getConstraintsKeyword_0()); 
-            match(input,15,FOLLOW_2); 
+            match(input,16,FOLLOW_2); 
              after(grammarAccess.getConstraintsAccess().getConstraintsKeyword_0()); 
 
             }
@@ -2369,16 +2595,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constraints__Group__1"
-    // InternalPlatoon.g:791:1: rule__Constraints__Group__1 : rule__Constraints__Group__1__Impl rule__Constraints__Group__2 ;
+    // InternalPlatoon.g:872:1: rule__Constraints__Group__1 : rule__Constraints__Group__1__Impl rule__Constraints__Group__2 ;
     public final void rule__Constraints__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:795:1: ( rule__Constraints__Group__1__Impl rule__Constraints__Group__2 )
-            // InternalPlatoon.g:796:2: rule__Constraints__Group__1__Impl rule__Constraints__Group__2
+            // InternalPlatoon.g:876:1: ( rule__Constraints__Group__1__Impl rule__Constraints__Group__2 )
+            // InternalPlatoon.g:877:2: rule__Constraints__Group__1__Impl rule__Constraints__Group__2
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             rule__Constraints__Group__1__Impl();
 
             state._fsp--;
@@ -2407,31 +2633,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constraints__Group__1__Impl"
-    // InternalPlatoon.g:803:1: rule__Constraints__Group__1__Impl : ( ( rule__Constraints__ConstraintsAssignment_1 ) ) ;
+    // InternalPlatoon.g:884:1: rule__Constraints__Group__1__Impl : ( ':' ) ;
     public final void rule__Constraints__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:807:1: ( ( ( rule__Constraints__ConstraintsAssignment_1 ) ) )
-            // InternalPlatoon.g:808:1: ( ( rule__Constraints__ConstraintsAssignment_1 ) )
+            // InternalPlatoon.g:888:1: ( ( ':' ) )
+            // InternalPlatoon.g:889:1: ( ':' )
             {
-            // InternalPlatoon.g:808:1: ( ( rule__Constraints__ConstraintsAssignment_1 ) )
-            // InternalPlatoon.g:809:2: ( rule__Constraints__ConstraintsAssignment_1 )
+            // InternalPlatoon.g:889:1: ( ':' )
+            // InternalPlatoon.g:890:2: ':'
             {
-             before(grammarAccess.getConstraintsAccess().getConstraintsAssignment_1()); 
-            // InternalPlatoon.g:810:2: ( rule__Constraints__ConstraintsAssignment_1 )
-            // InternalPlatoon.g:810:3: rule__Constraints__ConstraintsAssignment_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Constraints__ConstraintsAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getConstraintsAccess().getConstraintsAssignment_1()); 
+             before(grammarAccess.getConstraintsAccess().getColonKeyword_1()); 
+            match(input,14,FOLLOW_2); 
+             after(grammarAccess.getConstraintsAccess().getColonKeyword_1()); 
 
             }
 
@@ -2454,17 +2670,22 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constraints__Group__2"
-    // InternalPlatoon.g:818:1: rule__Constraints__Group__2 : rule__Constraints__Group__2__Impl ;
+    // InternalPlatoon.g:899:1: rule__Constraints__Group__2 : rule__Constraints__Group__2__Impl rule__Constraints__Group__3 ;
     public final void rule__Constraints__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:822:1: ( rule__Constraints__Group__2__Impl )
-            // InternalPlatoon.g:823:2: rule__Constraints__Group__2__Impl
+            // InternalPlatoon.g:903:1: ( rule__Constraints__Group__2__Impl rule__Constraints__Group__3 )
+            // InternalPlatoon.g:904:2: rule__Constraints__Group__2__Impl rule__Constraints__Group__3
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_12);
             rule__Constraints__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Constraints__Group__3();
 
             state._fsp--;
 
@@ -2487,47 +2708,29 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Constraints__Group__2__Impl"
-    // InternalPlatoon.g:829:1: rule__Constraints__Group__2__Impl : ( ( rule__Constraints__ConstraintsAssignment_2 )* ) ;
+    // InternalPlatoon.g:911:1: rule__Constraints__Group__2__Impl : ( ( rule__Constraints__ConstraintsAssignment_2 ) ) ;
     public final void rule__Constraints__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:833:1: ( ( ( rule__Constraints__ConstraintsAssignment_2 )* ) )
-            // InternalPlatoon.g:834:1: ( ( rule__Constraints__ConstraintsAssignment_2 )* )
+            // InternalPlatoon.g:915:1: ( ( ( rule__Constraints__ConstraintsAssignment_2 ) ) )
+            // InternalPlatoon.g:916:1: ( ( rule__Constraints__ConstraintsAssignment_2 ) )
             {
-            // InternalPlatoon.g:834:1: ( ( rule__Constraints__ConstraintsAssignment_2 )* )
-            // InternalPlatoon.g:835:2: ( rule__Constraints__ConstraintsAssignment_2 )*
+            // InternalPlatoon.g:916:1: ( ( rule__Constraints__ConstraintsAssignment_2 ) )
+            // InternalPlatoon.g:917:2: ( rule__Constraints__ConstraintsAssignment_2 )
             {
              before(grammarAccess.getConstraintsAccess().getConstraintsAssignment_2()); 
-            // InternalPlatoon.g:836:2: ( rule__Constraints__ConstraintsAssignment_2 )*
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+            // InternalPlatoon.g:918:2: ( rule__Constraints__ConstraintsAssignment_2 )
+            // InternalPlatoon.g:918:3: rule__Constraints__ConstraintsAssignment_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Constraints__ConstraintsAssignment_2();
 
-                if ( (LA6_0==RULE_INT) ) {
-                    alt6=1;
-                }
+            state._fsp--;
 
 
-                switch (alt6) {
-            	case 1 :
-            	    // InternalPlatoon.g:836:3: rule__Constraints__ConstraintsAssignment_2
-            	    {
-            	    pushFollow(FOLLOW_12);
-            	    rule__Constraints__ConstraintsAssignment_2();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop6;
-                }
-            } while (true);
+            }
 
              after(grammarAccess.getConstraintsAccess().getConstraintsAssignment_2()); 
 
@@ -2551,17 +2754,115 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Constraints__Group__2__Impl"
 
 
+    // $ANTLR start "rule__Constraints__Group__3"
+    // InternalPlatoon.g:926:1: rule__Constraints__Group__3 : rule__Constraints__Group__3__Impl ;
+    public final void rule__Constraints__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPlatoon.g:930:1: ( rule__Constraints__Group__3__Impl )
+            // InternalPlatoon.g:931:2: rule__Constraints__Group__3__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Constraints__Group__3__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Constraints__Group__3"
+
+
+    // $ANTLR start "rule__Constraints__Group__3__Impl"
+    // InternalPlatoon.g:937:1: rule__Constraints__Group__3__Impl : ( ( rule__Constraints__ConstraintsAssignment_3 )* ) ;
+    public final void rule__Constraints__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPlatoon.g:941:1: ( ( ( rule__Constraints__ConstraintsAssignment_3 )* ) )
+            // InternalPlatoon.g:942:1: ( ( rule__Constraints__ConstraintsAssignment_3 )* )
+            {
+            // InternalPlatoon.g:942:1: ( ( rule__Constraints__ConstraintsAssignment_3 )* )
+            // InternalPlatoon.g:943:2: ( rule__Constraints__ConstraintsAssignment_3 )*
+            {
+             before(grammarAccess.getConstraintsAccess().getConstraintsAssignment_3()); 
+            // InternalPlatoon.g:944:2: ( rule__Constraints__ConstraintsAssignment_3 )*
+            loop6:
+            do {
+                int alt6=2;
+                int LA6_0 = input.LA(1);
+
+                if ( (LA6_0==RULE_INT) ) {
+                    alt6=1;
+                }
+
+
+                switch (alt6) {
+            	case 1 :
+            	    // InternalPlatoon.g:944:3: rule__Constraints__ConstraintsAssignment_3
+            	    {
+            	    pushFollow(FOLLOW_13);
+            	    rule__Constraints__ConstraintsAssignment_3();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop6;
+                }
+            } while (true);
+
+             after(grammarAccess.getConstraintsAccess().getConstraintsAssignment_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Constraints__Group__3__Impl"
+
+
     // $ANTLR start "rule__LeadingVehicle__Group__0"
-    // InternalPlatoon.g:845:1: rule__LeadingVehicle__Group__0 : rule__LeadingVehicle__Group__0__Impl rule__LeadingVehicle__Group__1 ;
+    // InternalPlatoon.g:953:1: rule__LeadingVehicle__Group__0 : rule__LeadingVehicle__Group__0__Impl rule__LeadingVehicle__Group__1 ;
     public final void rule__LeadingVehicle__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:849:1: ( rule__LeadingVehicle__Group__0__Impl rule__LeadingVehicle__Group__1 )
-            // InternalPlatoon.g:850:2: rule__LeadingVehicle__Group__0__Impl rule__LeadingVehicle__Group__1
+            // InternalPlatoon.g:957:1: ( rule__LeadingVehicle__Group__0__Impl rule__LeadingVehicle__Group__1 )
+            // InternalPlatoon.g:958:2: rule__LeadingVehicle__Group__0__Impl rule__LeadingVehicle__Group__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_7);
             rule__LeadingVehicle__Group__0__Impl();
 
             state._fsp--;
@@ -2590,21 +2891,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__Group__0__Impl"
-    // InternalPlatoon.g:857:1: rule__LeadingVehicle__Group__0__Impl : ( () ) ;
+    // InternalPlatoon.g:965:1: rule__LeadingVehicle__Group__0__Impl : ( () ) ;
     public final void rule__LeadingVehicle__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:861:1: ( ( () ) )
-            // InternalPlatoon.g:862:1: ( () )
+            // InternalPlatoon.g:969:1: ( ( () ) )
+            // InternalPlatoon.g:970:1: ( () )
             {
-            // InternalPlatoon.g:862:1: ( () )
-            // InternalPlatoon.g:863:2: ()
+            // InternalPlatoon.g:970:1: ( () )
+            // InternalPlatoon.g:971:2: ()
             {
              before(grammarAccess.getLeadingVehicleAccess().getLeadingVehicleAction_0()); 
-            // InternalPlatoon.g:864:2: ()
-            // InternalPlatoon.g:864:3: 
+            // InternalPlatoon.g:972:2: ()
+            // InternalPlatoon.g:972:3: 
             {
             }
 
@@ -2627,16 +2928,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__Group__1"
-    // InternalPlatoon.g:872:1: rule__LeadingVehicle__Group__1 : rule__LeadingVehicle__Group__1__Impl rule__LeadingVehicle__Group__2 ;
+    // InternalPlatoon.g:980:1: rule__LeadingVehicle__Group__1 : rule__LeadingVehicle__Group__1__Impl rule__LeadingVehicle__Group__2 ;
     public final void rule__LeadingVehicle__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:876:1: ( rule__LeadingVehicle__Group__1__Impl rule__LeadingVehicle__Group__2 )
-            // InternalPlatoon.g:877:2: rule__LeadingVehicle__Group__1__Impl rule__LeadingVehicle__Group__2
+            // InternalPlatoon.g:984:1: ( rule__LeadingVehicle__Group__1__Impl rule__LeadingVehicle__Group__2 )
+            // InternalPlatoon.g:985:2: rule__LeadingVehicle__Group__1__Impl rule__LeadingVehicle__Group__2
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__LeadingVehicle__Group__1__Impl();
 
             state._fsp--;
@@ -2665,20 +2966,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__Group__1__Impl"
-    // InternalPlatoon.g:884:1: rule__LeadingVehicle__Group__1__Impl : ( 'LV' ) ;
+    // InternalPlatoon.g:992:1: rule__LeadingVehicle__Group__1__Impl : ( 'LV' ) ;
     public final void rule__LeadingVehicle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:888:1: ( ( 'LV' ) )
-            // InternalPlatoon.g:889:1: ( 'LV' )
+            // InternalPlatoon.g:996:1: ( ( 'LV' ) )
+            // InternalPlatoon.g:997:1: ( 'LV' )
             {
-            // InternalPlatoon.g:889:1: ( 'LV' )
-            // InternalPlatoon.g:890:2: 'LV'
+            // InternalPlatoon.g:997:1: ( 'LV' )
+            // InternalPlatoon.g:998:2: 'LV'
             {
              before(grammarAccess.getLeadingVehicleAccess().getLVKeyword_1()); 
-            match(input,16,FOLLOW_2); 
+            match(input,17,FOLLOW_2); 
              after(grammarAccess.getLeadingVehicleAccess().getLVKeyword_1()); 
 
             }
@@ -2702,16 +3003,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__Group__2"
-    // InternalPlatoon.g:899:1: rule__LeadingVehicle__Group__2 : rule__LeadingVehicle__Group__2__Impl rule__LeadingVehicle__Group__3 ;
+    // InternalPlatoon.g:1007:1: rule__LeadingVehicle__Group__2 : rule__LeadingVehicle__Group__2__Impl rule__LeadingVehicle__Group__3 ;
     public final void rule__LeadingVehicle__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:903:1: ( rule__LeadingVehicle__Group__2__Impl rule__LeadingVehicle__Group__3 )
-            // InternalPlatoon.g:904:2: rule__LeadingVehicle__Group__2__Impl rule__LeadingVehicle__Group__3
+            // InternalPlatoon.g:1011:1: ( rule__LeadingVehicle__Group__2__Impl rule__LeadingVehicle__Group__3 )
+            // InternalPlatoon.g:1012:2: rule__LeadingVehicle__Group__2__Impl rule__LeadingVehicle__Group__3
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_4);
             rule__LeadingVehicle__Group__2__Impl();
 
             state._fsp--;
@@ -2740,21 +3041,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__Group__2__Impl"
-    // InternalPlatoon.g:911:1: rule__LeadingVehicle__Group__2__Impl : ( ( rule__LeadingVehicle__IdAssignment_2 ) ) ;
+    // InternalPlatoon.g:1019:1: rule__LeadingVehicle__Group__2__Impl : ( ( rule__LeadingVehicle__IdAssignment_2 ) ) ;
     public final void rule__LeadingVehicle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:915:1: ( ( ( rule__LeadingVehicle__IdAssignment_2 ) ) )
-            // InternalPlatoon.g:916:1: ( ( rule__LeadingVehicle__IdAssignment_2 ) )
+            // InternalPlatoon.g:1023:1: ( ( ( rule__LeadingVehicle__IdAssignment_2 ) ) )
+            // InternalPlatoon.g:1024:1: ( ( rule__LeadingVehicle__IdAssignment_2 ) )
             {
-            // InternalPlatoon.g:916:1: ( ( rule__LeadingVehicle__IdAssignment_2 ) )
-            // InternalPlatoon.g:917:2: ( rule__LeadingVehicle__IdAssignment_2 )
+            // InternalPlatoon.g:1024:1: ( ( rule__LeadingVehicle__IdAssignment_2 ) )
+            // InternalPlatoon.g:1025:2: ( rule__LeadingVehicle__IdAssignment_2 )
             {
              before(grammarAccess.getLeadingVehicleAccess().getIdAssignment_2()); 
-            // InternalPlatoon.g:918:2: ( rule__LeadingVehicle__IdAssignment_2 )
-            // InternalPlatoon.g:918:3: rule__LeadingVehicle__IdAssignment_2
+            // InternalPlatoon.g:1026:2: ( rule__LeadingVehicle__IdAssignment_2 )
+            // InternalPlatoon.g:1026:3: rule__LeadingVehicle__IdAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__LeadingVehicle__IdAssignment_2();
@@ -2787,16 +3088,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__Group__3"
-    // InternalPlatoon.g:926:1: rule__LeadingVehicle__Group__3 : rule__LeadingVehicle__Group__3__Impl rule__LeadingVehicle__Group__4 ;
+    // InternalPlatoon.g:1034:1: rule__LeadingVehicle__Group__3 : rule__LeadingVehicle__Group__3__Impl rule__LeadingVehicle__Group__4 ;
     public final void rule__LeadingVehicle__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:930:1: ( rule__LeadingVehicle__Group__3__Impl rule__LeadingVehicle__Group__4 )
-            // InternalPlatoon.g:931:2: rule__LeadingVehicle__Group__3__Impl rule__LeadingVehicle__Group__4
+            // InternalPlatoon.g:1038:1: ( rule__LeadingVehicle__Group__3__Impl rule__LeadingVehicle__Group__4 )
+            // InternalPlatoon.g:1039:2: rule__LeadingVehicle__Group__3__Impl rule__LeadingVehicle__Group__4
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__LeadingVehicle__Group__3__Impl();
 
             state._fsp--;
@@ -2825,20 +3126,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__Group__3__Impl"
-    // InternalPlatoon.g:938:1: rule__LeadingVehicle__Group__3__Impl : ( 'route' ) ;
+    // InternalPlatoon.g:1046:1: rule__LeadingVehicle__Group__3__Impl : ( 'route' ) ;
     public final void rule__LeadingVehicle__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:942:1: ( ( 'route' ) )
-            // InternalPlatoon.g:943:1: ( 'route' )
+            // InternalPlatoon.g:1050:1: ( ( 'route' ) )
+            // InternalPlatoon.g:1051:1: ( 'route' )
             {
-            // InternalPlatoon.g:943:1: ( 'route' )
-            // InternalPlatoon.g:944:2: 'route'
+            // InternalPlatoon.g:1051:1: ( 'route' )
+            // InternalPlatoon.g:1052:2: 'route'
             {
              before(grammarAccess.getLeadingVehicleAccess().getRouteKeyword_3()); 
-            match(input,14,FOLLOW_2); 
+            match(input,15,FOLLOW_2); 
              after(grammarAccess.getLeadingVehicleAccess().getRouteKeyword_3()); 
 
             }
@@ -2862,14 +3163,14 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__Group__4"
-    // InternalPlatoon.g:953:1: rule__LeadingVehicle__Group__4 : rule__LeadingVehicle__Group__4__Impl ;
+    // InternalPlatoon.g:1061:1: rule__LeadingVehicle__Group__4 : rule__LeadingVehicle__Group__4__Impl ;
     public final void rule__LeadingVehicle__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:957:1: ( rule__LeadingVehicle__Group__4__Impl )
-            // InternalPlatoon.g:958:2: rule__LeadingVehicle__Group__4__Impl
+            // InternalPlatoon.g:1065:1: ( rule__LeadingVehicle__Group__4__Impl )
+            // InternalPlatoon.g:1066:2: rule__LeadingVehicle__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__LeadingVehicle__Group__4__Impl();
@@ -2895,21 +3196,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__Group__4__Impl"
-    // InternalPlatoon.g:964:1: rule__LeadingVehicle__Group__4__Impl : ( ( rule__LeadingVehicle__RouteAssignment_4 ) ) ;
+    // InternalPlatoon.g:1072:1: rule__LeadingVehicle__Group__4__Impl : ( ( rule__LeadingVehicle__RouteAssignment_4 ) ) ;
     public final void rule__LeadingVehicle__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:968:1: ( ( ( rule__LeadingVehicle__RouteAssignment_4 ) ) )
-            // InternalPlatoon.g:969:1: ( ( rule__LeadingVehicle__RouteAssignment_4 ) )
+            // InternalPlatoon.g:1076:1: ( ( ( rule__LeadingVehicle__RouteAssignment_4 ) ) )
+            // InternalPlatoon.g:1077:1: ( ( rule__LeadingVehicle__RouteAssignment_4 ) )
             {
-            // InternalPlatoon.g:969:1: ( ( rule__LeadingVehicle__RouteAssignment_4 ) )
-            // InternalPlatoon.g:970:2: ( rule__LeadingVehicle__RouteAssignment_4 )
+            // InternalPlatoon.g:1077:1: ( ( rule__LeadingVehicle__RouteAssignment_4 ) )
+            // InternalPlatoon.g:1078:2: ( rule__LeadingVehicle__RouteAssignment_4 )
             {
              before(grammarAccess.getLeadingVehicleAccess().getRouteAssignment_4()); 
-            // InternalPlatoon.g:971:2: ( rule__LeadingVehicle__RouteAssignment_4 )
-            // InternalPlatoon.g:971:3: rule__LeadingVehicle__RouteAssignment_4
+            // InternalPlatoon.g:1079:2: ( rule__LeadingVehicle__RouteAssignment_4 )
+            // InternalPlatoon.g:1079:3: rule__LeadingVehicle__RouteAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__LeadingVehicle__RouteAssignment_4();
@@ -2942,16 +3243,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__0"
-    // InternalPlatoon.g:980:1: rule__FollowVehicle__Group__0 : rule__FollowVehicle__Group__0__Impl rule__FollowVehicle__Group__1 ;
+    // InternalPlatoon.g:1088:1: rule__FollowVehicle__Group__0 : rule__FollowVehicle__Group__0__Impl rule__FollowVehicle__Group__1 ;
     public final void rule__FollowVehicle__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:984:1: ( rule__FollowVehicle__Group__0__Impl rule__FollowVehicle__Group__1 )
-            // InternalPlatoon.g:985:2: rule__FollowVehicle__Group__0__Impl rule__FollowVehicle__Group__1
+            // InternalPlatoon.g:1092:1: ( rule__FollowVehicle__Group__0__Impl rule__FollowVehicle__Group__1 )
+            // InternalPlatoon.g:1093:2: rule__FollowVehicle__Group__0__Impl rule__FollowVehicle__Group__1
             {
-            pushFollow(FOLLOW_7);
+            pushFollow(FOLLOW_8);
             rule__FollowVehicle__Group__0__Impl();
 
             state._fsp--;
@@ -2980,21 +3281,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__0__Impl"
-    // InternalPlatoon.g:992:1: rule__FollowVehicle__Group__0__Impl : ( () ) ;
+    // InternalPlatoon.g:1100:1: rule__FollowVehicle__Group__0__Impl : ( () ) ;
     public final void rule__FollowVehicle__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:996:1: ( ( () ) )
-            // InternalPlatoon.g:997:1: ( () )
+            // InternalPlatoon.g:1104:1: ( ( () ) )
+            // InternalPlatoon.g:1105:1: ( () )
             {
-            // InternalPlatoon.g:997:1: ( () )
-            // InternalPlatoon.g:998:2: ()
+            // InternalPlatoon.g:1105:1: ( () )
+            // InternalPlatoon.g:1106:2: ()
             {
              before(grammarAccess.getFollowVehicleAccess().getFollowVehicleAction_0()); 
-            // InternalPlatoon.g:999:2: ()
-            // InternalPlatoon.g:999:3: 
+            // InternalPlatoon.g:1107:2: ()
+            // InternalPlatoon.g:1107:3: 
             {
             }
 
@@ -3017,16 +3318,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__1"
-    // InternalPlatoon.g:1007:1: rule__FollowVehicle__Group__1 : rule__FollowVehicle__Group__1__Impl rule__FollowVehicle__Group__2 ;
+    // InternalPlatoon.g:1115:1: rule__FollowVehicle__Group__1 : rule__FollowVehicle__Group__1__Impl rule__FollowVehicle__Group__2 ;
     public final void rule__FollowVehicle__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1011:1: ( rule__FollowVehicle__Group__1__Impl rule__FollowVehicle__Group__2 )
-            // InternalPlatoon.g:1012:2: rule__FollowVehicle__Group__1__Impl rule__FollowVehicle__Group__2
+            // InternalPlatoon.g:1119:1: ( rule__FollowVehicle__Group__1__Impl rule__FollowVehicle__Group__2 )
+            // InternalPlatoon.g:1120:2: rule__FollowVehicle__Group__1__Impl rule__FollowVehicle__Group__2
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__FollowVehicle__Group__1__Impl();
 
             state._fsp--;
@@ -3055,20 +3356,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__1__Impl"
-    // InternalPlatoon.g:1019:1: rule__FollowVehicle__Group__1__Impl : ( 'FV' ) ;
+    // InternalPlatoon.g:1127:1: rule__FollowVehicle__Group__1__Impl : ( 'FV' ) ;
     public final void rule__FollowVehicle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1023:1: ( ( 'FV' ) )
-            // InternalPlatoon.g:1024:1: ( 'FV' )
+            // InternalPlatoon.g:1131:1: ( ( 'FV' ) )
+            // InternalPlatoon.g:1132:1: ( 'FV' )
             {
-            // InternalPlatoon.g:1024:1: ( 'FV' )
-            // InternalPlatoon.g:1025:2: 'FV'
+            // InternalPlatoon.g:1132:1: ( 'FV' )
+            // InternalPlatoon.g:1133:2: 'FV'
             {
              before(grammarAccess.getFollowVehicleAccess().getFVKeyword_1()); 
-            match(input,17,FOLLOW_2); 
+            match(input,18,FOLLOW_2); 
              after(grammarAccess.getFollowVehicleAccess().getFVKeyword_1()); 
 
             }
@@ -3092,16 +3393,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__2"
-    // InternalPlatoon.g:1034:1: rule__FollowVehicle__Group__2 : rule__FollowVehicle__Group__2__Impl rule__FollowVehicle__Group__3 ;
+    // InternalPlatoon.g:1142:1: rule__FollowVehicle__Group__2 : rule__FollowVehicle__Group__2__Impl rule__FollowVehicle__Group__3 ;
     public final void rule__FollowVehicle__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1038:1: ( rule__FollowVehicle__Group__2__Impl rule__FollowVehicle__Group__3 )
-            // InternalPlatoon.g:1039:2: rule__FollowVehicle__Group__2__Impl rule__FollowVehicle__Group__3
+            // InternalPlatoon.g:1146:1: ( rule__FollowVehicle__Group__2__Impl rule__FollowVehicle__Group__3 )
+            // InternalPlatoon.g:1147:2: rule__FollowVehicle__Group__2__Impl rule__FollowVehicle__Group__3
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_14);
             rule__FollowVehicle__Group__2__Impl();
 
             state._fsp--;
@@ -3130,21 +3431,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__2__Impl"
-    // InternalPlatoon.g:1046:1: rule__FollowVehicle__Group__2__Impl : ( ( rule__FollowVehicle__IdAssignment_2 ) ) ;
+    // InternalPlatoon.g:1154:1: rule__FollowVehicle__Group__2__Impl : ( ( rule__FollowVehicle__IdAssignment_2 ) ) ;
     public final void rule__FollowVehicle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1050:1: ( ( ( rule__FollowVehicle__IdAssignment_2 ) ) )
-            // InternalPlatoon.g:1051:1: ( ( rule__FollowVehicle__IdAssignment_2 ) )
+            // InternalPlatoon.g:1158:1: ( ( ( rule__FollowVehicle__IdAssignment_2 ) ) )
+            // InternalPlatoon.g:1159:1: ( ( rule__FollowVehicle__IdAssignment_2 ) )
             {
-            // InternalPlatoon.g:1051:1: ( ( rule__FollowVehicle__IdAssignment_2 ) )
-            // InternalPlatoon.g:1052:2: ( rule__FollowVehicle__IdAssignment_2 )
+            // InternalPlatoon.g:1159:1: ( ( rule__FollowVehicle__IdAssignment_2 ) )
+            // InternalPlatoon.g:1160:2: ( rule__FollowVehicle__IdAssignment_2 )
             {
              before(grammarAccess.getFollowVehicleAccess().getIdAssignment_2()); 
-            // InternalPlatoon.g:1053:2: ( rule__FollowVehicle__IdAssignment_2 )
-            // InternalPlatoon.g:1053:3: rule__FollowVehicle__IdAssignment_2
+            // InternalPlatoon.g:1161:2: ( rule__FollowVehicle__IdAssignment_2 )
+            // InternalPlatoon.g:1161:3: rule__FollowVehicle__IdAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__FollowVehicle__IdAssignment_2();
@@ -3177,16 +3478,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__3"
-    // InternalPlatoon.g:1061:1: rule__FollowVehicle__Group__3 : rule__FollowVehicle__Group__3__Impl rule__FollowVehicle__Group__4 ;
+    // InternalPlatoon.g:1169:1: rule__FollowVehicle__Group__3 : rule__FollowVehicle__Group__3__Impl rule__FollowVehicle__Group__4 ;
     public final void rule__FollowVehicle__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1065:1: ( rule__FollowVehicle__Group__3__Impl rule__FollowVehicle__Group__4 )
-            // InternalPlatoon.g:1066:2: rule__FollowVehicle__Group__3__Impl rule__FollowVehicle__Group__4
+            // InternalPlatoon.g:1173:1: ( rule__FollowVehicle__Group__3__Impl rule__FollowVehicle__Group__4 )
+            // InternalPlatoon.g:1174:2: rule__FollowVehicle__Group__3__Impl rule__FollowVehicle__Group__4
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_15);
             rule__FollowVehicle__Group__3__Impl();
 
             state._fsp--;
@@ -3215,20 +3516,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__3__Impl"
-    // InternalPlatoon.g:1073:1: rule__FollowVehicle__Group__3__Impl : ( 'front' ) ;
+    // InternalPlatoon.g:1181:1: rule__FollowVehicle__Group__3__Impl : ( 'front' ) ;
     public final void rule__FollowVehicle__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1077:1: ( ( 'front' ) )
-            // InternalPlatoon.g:1078:1: ( 'front' )
+            // InternalPlatoon.g:1185:1: ( ( 'front' ) )
+            // InternalPlatoon.g:1186:1: ( 'front' )
             {
-            // InternalPlatoon.g:1078:1: ( 'front' )
-            // InternalPlatoon.g:1079:2: 'front'
+            // InternalPlatoon.g:1186:1: ( 'front' )
+            // InternalPlatoon.g:1187:2: 'front'
             {
              before(grammarAccess.getFollowVehicleAccess().getFrontKeyword_3()); 
-            match(input,18,FOLLOW_2); 
+            match(input,19,FOLLOW_2); 
              after(grammarAccess.getFollowVehicleAccess().getFrontKeyword_3()); 
 
             }
@@ -3252,16 +3553,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__4"
-    // InternalPlatoon.g:1088:1: rule__FollowVehicle__Group__4 : rule__FollowVehicle__Group__4__Impl rule__FollowVehicle__Group__5 ;
+    // InternalPlatoon.g:1196:1: rule__FollowVehicle__Group__4 : rule__FollowVehicle__Group__4__Impl rule__FollowVehicle__Group__5 ;
     public final void rule__FollowVehicle__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1092:1: ( rule__FollowVehicle__Group__4__Impl rule__FollowVehicle__Group__5 )
-            // InternalPlatoon.g:1093:2: rule__FollowVehicle__Group__4__Impl rule__FollowVehicle__Group__5
+            // InternalPlatoon.g:1200:1: ( rule__FollowVehicle__Group__4__Impl rule__FollowVehicle__Group__5 )
+            // InternalPlatoon.g:1201:2: rule__FollowVehicle__Group__4__Impl rule__FollowVehicle__Group__5
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__FollowVehicle__Group__4__Impl();
 
             state._fsp--;
@@ -3290,20 +3591,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__4__Impl"
-    // InternalPlatoon.g:1100:1: rule__FollowVehicle__Group__4__Impl : ( 'runner' ) ;
+    // InternalPlatoon.g:1208:1: rule__FollowVehicle__Group__4__Impl : ( 'runner' ) ;
     public final void rule__FollowVehicle__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1104:1: ( ( 'runner' ) )
-            // InternalPlatoon.g:1105:1: ( 'runner' )
+            // InternalPlatoon.g:1212:1: ( ( 'runner' ) )
+            // InternalPlatoon.g:1213:1: ( 'runner' )
             {
-            // InternalPlatoon.g:1105:1: ( 'runner' )
-            // InternalPlatoon.g:1106:2: 'runner'
+            // InternalPlatoon.g:1213:1: ( 'runner' )
+            // InternalPlatoon.g:1214:2: 'runner'
             {
              before(grammarAccess.getFollowVehicleAccess().getRunnerKeyword_4()); 
-            match(input,19,FOLLOW_2); 
+            match(input,20,FOLLOW_2); 
              after(grammarAccess.getFollowVehicleAccess().getRunnerKeyword_4()); 
 
             }
@@ -3327,14 +3628,14 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__5"
-    // InternalPlatoon.g:1115:1: rule__FollowVehicle__Group__5 : rule__FollowVehicle__Group__5__Impl ;
+    // InternalPlatoon.g:1223:1: rule__FollowVehicle__Group__5 : rule__FollowVehicle__Group__5__Impl ;
     public final void rule__FollowVehicle__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1119:1: ( rule__FollowVehicle__Group__5__Impl )
-            // InternalPlatoon.g:1120:2: rule__FollowVehicle__Group__5__Impl
+            // InternalPlatoon.g:1227:1: ( rule__FollowVehicle__Group__5__Impl )
+            // InternalPlatoon.g:1228:2: rule__FollowVehicle__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FollowVehicle__Group__5__Impl();
@@ -3360,21 +3661,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__Group__5__Impl"
-    // InternalPlatoon.g:1126:1: rule__FollowVehicle__Group__5__Impl : ( ( rule__FollowVehicle__FollowsAssignment_5 ) ) ;
+    // InternalPlatoon.g:1234:1: rule__FollowVehicle__Group__5__Impl : ( ( rule__FollowVehicle__FollowsAssignment_5 ) ) ;
     public final void rule__FollowVehicle__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1130:1: ( ( ( rule__FollowVehicle__FollowsAssignment_5 ) ) )
-            // InternalPlatoon.g:1131:1: ( ( rule__FollowVehicle__FollowsAssignment_5 ) )
+            // InternalPlatoon.g:1238:1: ( ( ( rule__FollowVehicle__FollowsAssignment_5 ) ) )
+            // InternalPlatoon.g:1239:1: ( ( rule__FollowVehicle__FollowsAssignment_5 ) )
             {
-            // InternalPlatoon.g:1131:1: ( ( rule__FollowVehicle__FollowsAssignment_5 ) )
-            // InternalPlatoon.g:1132:2: ( rule__FollowVehicle__FollowsAssignment_5 )
+            // InternalPlatoon.g:1239:1: ( ( rule__FollowVehicle__FollowsAssignment_5 ) )
+            // InternalPlatoon.g:1240:2: ( rule__FollowVehicle__FollowsAssignment_5 )
             {
              before(grammarAccess.getFollowVehicleAccess().getFollowsAssignment_5()); 
-            // InternalPlatoon.g:1133:2: ( rule__FollowVehicle__FollowsAssignment_5 )
-            // InternalPlatoon.g:1133:3: rule__FollowVehicle__FollowsAssignment_5
+            // InternalPlatoon.g:1241:2: ( rule__FollowVehicle__FollowsAssignment_5 )
+            // InternalPlatoon.g:1241:3: rule__FollowVehicle__FollowsAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__FollowVehicle__FollowsAssignment_5();
@@ -3407,16 +3708,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__0"
-    // InternalPlatoon.g:1142:1: rule__ForwardCommand__Group__0 : rule__ForwardCommand__Group__0__Impl rule__ForwardCommand__Group__1 ;
+    // InternalPlatoon.g:1250:1: rule__ForwardCommand__Group__0 : rule__ForwardCommand__Group__0__Impl rule__ForwardCommand__Group__1 ;
     public final void rule__ForwardCommand__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1146:1: ( rule__ForwardCommand__Group__0__Impl rule__ForwardCommand__Group__1 )
-            // InternalPlatoon.g:1147:2: rule__ForwardCommand__Group__0__Impl rule__ForwardCommand__Group__1
+            // InternalPlatoon.g:1254:1: ( rule__ForwardCommand__Group__0__Impl rule__ForwardCommand__Group__1 )
+            // InternalPlatoon.g:1255:2: rule__ForwardCommand__Group__0__Impl rule__ForwardCommand__Group__1
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__ForwardCommand__Group__0__Impl();
 
             state._fsp--;
@@ -3445,21 +3746,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__0__Impl"
-    // InternalPlatoon.g:1154:1: rule__ForwardCommand__Group__0__Impl : ( () ) ;
+    // InternalPlatoon.g:1262:1: rule__ForwardCommand__Group__0__Impl : ( () ) ;
     public final void rule__ForwardCommand__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1158:1: ( ( () ) )
-            // InternalPlatoon.g:1159:1: ( () )
+            // InternalPlatoon.g:1266:1: ( ( () ) )
+            // InternalPlatoon.g:1267:1: ( () )
             {
-            // InternalPlatoon.g:1159:1: ( () )
-            // InternalPlatoon.g:1160:2: ()
+            // InternalPlatoon.g:1267:1: ( () )
+            // InternalPlatoon.g:1268:2: ()
             {
              before(grammarAccess.getForwardCommandAccess().getForwardCommandAction_0()); 
-            // InternalPlatoon.g:1161:2: ()
-            // InternalPlatoon.g:1161:3: 
+            // InternalPlatoon.g:1269:2: ()
+            // InternalPlatoon.g:1269:3: 
             {
             }
 
@@ -3482,16 +3783,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__1"
-    // InternalPlatoon.g:1169:1: rule__ForwardCommand__Group__1 : rule__ForwardCommand__Group__1__Impl rule__ForwardCommand__Group__2 ;
+    // InternalPlatoon.g:1277:1: rule__ForwardCommand__Group__1 : rule__ForwardCommand__Group__1__Impl rule__ForwardCommand__Group__2 ;
     public final void rule__ForwardCommand__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1173:1: ( rule__ForwardCommand__Group__1__Impl rule__ForwardCommand__Group__2 )
-            // InternalPlatoon.g:1174:2: rule__ForwardCommand__Group__1__Impl rule__ForwardCommand__Group__2
+            // InternalPlatoon.g:1281:1: ( rule__ForwardCommand__Group__1__Impl rule__ForwardCommand__Group__2 )
+            // InternalPlatoon.g:1282:2: rule__ForwardCommand__Group__1__Impl rule__ForwardCommand__Group__2
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__ForwardCommand__Group__1__Impl();
 
             state._fsp--;
@@ -3520,20 +3821,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__1__Impl"
-    // InternalPlatoon.g:1181:1: rule__ForwardCommand__Group__1__Impl : ( 'forward' ) ;
+    // InternalPlatoon.g:1289:1: rule__ForwardCommand__Group__1__Impl : ( 'forward' ) ;
     public final void rule__ForwardCommand__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1185:1: ( ( 'forward' ) )
-            // InternalPlatoon.g:1186:1: ( 'forward' )
+            // InternalPlatoon.g:1293:1: ( ( 'forward' ) )
+            // InternalPlatoon.g:1294:1: ( 'forward' )
             {
-            // InternalPlatoon.g:1186:1: ( 'forward' )
-            // InternalPlatoon.g:1187:2: 'forward'
+            // InternalPlatoon.g:1294:1: ( 'forward' )
+            // InternalPlatoon.g:1295:2: 'forward'
             {
              before(grammarAccess.getForwardCommandAccess().getForwardKeyword_1()); 
-            match(input,20,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getForwardCommandAccess().getForwardKeyword_1()); 
 
             }
@@ -3557,16 +3858,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__2"
-    // InternalPlatoon.g:1196:1: rule__ForwardCommand__Group__2 : rule__ForwardCommand__Group__2__Impl rule__ForwardCommand__Group__3 ;
+    // InternalPlatoon.g:1304:1: rule__ForwardCommand__Group__2 : rule__ForwardCommand__Group__2__Impl rule__ForwardCommand__Group__3 ;
     public final void rule__ForwardCommand__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1200:1: ( rule__ForwardCommand__Group__2__Impl rule__ForwardCommand__Group__3 )
-            // InternalPlatoon.g:1201:2: rule__ForwardCommand__Group__2__Impl rule__ForwardCommand__Group__3
+            // InternalPlatoon.g:1308:1: ( rule__ForwardCommand__Group__2__Impl rule__ForwardCommand__Group__3 )
+            // InternalPlatoon.g:1309:2: rule__ForwardCommand__Group__2__Impl rule__ForwardCommand__Group__3
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             rule__ForwardCommand__Group__2__Impl();
 
             state._fsp--;
@@ -3595,20 +3896,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__2__Impl"
-    // InternalPlatoon.g:1208:1: rule__ForwardCommand__Group__2__Impl : ( '(' ) ;
+    // InternalPlatoon.g:1316:1: rule__ForwardCommand__Group__2__Impl : ( '(' ) ;
     public final void rule__ForwardCommand__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1212:1: ( ( '(' ) )
-            // InternalPlatoon.g:1213:1: ( '(' )
+            // InternalPlatoon.g:1320:1: ( ( '(' ) )
+            // InternalPlatoon.g:1321:1: ( '(' )
             {
-            // InternalPlatoon.g:1213:1: ( '(' )
-            // InternalPlatoon.g:1214:2: '('
+            // InternalPlatoon.g:1321:1: ( '(' )
+            // InternalPlatoon.g:1322:2: '('
             {
              before(grammarAccess.getForwardCommandAccess().getLeftParenthesisKeyword_2()); 
-            match(input,21,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getForwardCommandAccess().getLeftParenthesisKeyword_2()); 
 
             }
@@ -3632,16 +3933,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__3"
-    // InternalPlatoon.g:1223:1: rule__ForwardCommand__Group__3 : rule__ForwardCommand__Group__3__Impl rule__ForwardCommand__Group__4 ;
+    // InternalPlatoon.g:1331:1: rule__ForwardCommand__Group__3 : rule__ForwardCommand__Group__3__Impl rule__ForwardCommand__Group__4 ;
     public final void rule__ForwardCommand__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1227:1: ( rule__ForwardCommand__Group__3__Impl rule__ForwardCommand__Group__4 )
-            // InternalPlatoon.g:1228:2: rule__ForwardCommand__Group__3__Impl rule__ForwardCommand__Group__4
+            // InternalPlatoon.g:1335:1: ( rule__ForwardCommand__Group__3__Impl rule__ForwardCommand__Group__4 )
+            // InternalPlatoon.g:1336:2: rule__ForwardCommand__Group__3__Impl rule__ForwardCommand__Group__4
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_18);
             rule__ForwardCommand__Group__3__Impl();
 
             state._fsp--;
@@ -3670,21 +3971,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__3__Impl"
-    // InternalPlatoon.g:1235:1: rule__ForwardCommand__Group__3__Impl : ( ( rule__ForwardCommand__DistanceAssignment_3 ) ) ;
+    // InternalPlatoon.g:1343:1: rule__ForwardCommand__Group__3__Impl : ( ( rule__ForwardCommand__DistanceAssignment_3 ) ) ;
     public final void rule__ForwardCommand__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1239:1: ( ( ( rule__ForwardCommand__DistanceAssignment_3 ) ) )
-            // InternalPlatoon.g:1240:1: ( ( rule__ForwardCommand__DistanceAssignment_3 ) )
+            // InternalPlatoon.g:1347:1: ( ( ( rule__ForwardCommand__DistanceAssignment_3 ) ) )
+            // InternalPlatoon.g:1348:1: ( ( rule__ForwardCommand__DistanceAssignment_3 ) )
             {
-            // InternalPlatoon.g:1240:1: ( ( rule__ForwardCommand__DistanceAssignment_3 ) )
-            // InternalPlatoon.g:1241:2: ( rule__ForwardCommand__DistanceAssignment_3 )
+            // InternalPlatoon.g:1348:1: ( ( rule__ForwardCommand__DistanceAssignment_3 ) )
+            // InternalPlatoon.g:1349:2: ( rule__ForwardCommand__DistanceAssignment_3 )
             {
              before(grammarAccess.getForwardCommandAccess().getDistanceAssignment_3()); 
-            // InternalPlatoon.g:1242:2: ( rule__ForwardCommand__DistanceAssignment_3 )
-            // InternalPlatoon.g:1242:3: rule__ForwardCommand__DistanceAssignment_3
+            // InternalPlatoon.g:1350:2: ( rule__ForwardCommand__DistanceAssignment_3 )
+            // InternalPlatoon.g:1350:3: rule__ForwardCommand__DistanceAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__ForwardCommand__DistanceAssignment_3();
@@ -3717,14 +4018,14 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__4"
-    // InternalPlatoon.g:1250:1: rule__ForwardCommand__Group__4 : rule__ForwardCommand__Group__4__Impl ;
+    // InternalPlatoon.g:1358:1: rule__ForwardCommand__Group__4 : rule__ForwardCommand__Group__4__Impl ;
     public final void rule__ForwardCommand__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1254:1: ( rule__ForwardCommand__Group__4__Impl )
-            // InternalPlatoon.g:1255:2: rule__ForwardCommand__Group__4__Impl
+            // InternalPlatoon.g:1362:1: ( rule__ForwardCommand__Group__4__Impl )
+            // InternalPlatoon.g:1363:2: rule__ForwardCommand__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ForwardCommand__Group__4__Impl();
@@ -3750,20 +4051,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__Group__4__Impl"
-    // InternalPlatoon.g:1261:1: rule__ForwardCommand__Group__4__Impl : ( ')' ) ;
+    // InternalPlatoon.g:1369:1: rule__ForwardCommand__Group__4__Impl : ( ')' ) ;
     public final void rule__ForwardCommand__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1265:1: ( ( ')' ) )
-            // InternalPlatoon.g:1266:1: ( ')' )
+            // InternalPlatoon.g:1373:1: ( ( ')' ) )
+            // InternalPlatoon.g:1374:1: ( ')' )
             {
-            // InternalPlatoon.g:1266:1: ( ')' )
-            // InternalPlatoon.g:1267:2: ')'
+            // InternalPlatoon.g:1374:1: ( ')' )
+            // InternalPlatoon.g:1375:2: ')'
             {
              before(grammarAccess.getForwardCommandAccess().getRightParenthesisKeyword_4()); 
-            match(input,22,FOLLOW_2); 
+            match(input,23,FOLLOW_2); 
              after(grammarAccess.getForwardCommandAccess().getRightParenthesisKeyword_4()); 
 
             }
@@ -3787,16 +4088,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TurnCommand__Group__0"
-    // InternalPlatoon.g:1277:1: rule__TurnCommand__Group__0 : rule__TurnCommand__Group__0__Impl rule__TurnCommand__Group__1 ;
+    // InternalPlatoon.g:1385:1: rule__TurnCommand__Group__0 : rule__TurnCommand__Group__0__Impl rule__TurnCommand__Group__1 ;
     public final void rule__TurnCommand__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1281:1: ( rule__TurnCommand__Group__0__Impl rule__TurnCommand__Group__1 )
-            // InternalPlatoon.g:1282:2: rule__TurnCommand__Group__0__Impl rule__TurnCommand__Group__1
+            // InternalPlatoon.g:1389:1: ( rule__TurnCommand__Group__0__Impl rule__TurnCommand__Group__1 )
+            // InternalPlatoon.g:1390:2: rule__TurnCommand__Group__0__Impl rule__TurnCommand__Group__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             rule__TurnCommand__Group__0__Impl();
 
             state._fsp--;
@@ -3825,21 +4126,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TurnCommand__Group__0__Impl"
-    // InternalPlatoon.g:1289:1: rule__TurnCommand__Group__0__Impl : ( () ) ;
+    // InternalPlatoon.g:1397:1: rule__TurnCommand__Group__0__Impl : ( () ) ;
     public final void rule__TurnCommand__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1293:1: ( ( () ) )
-            // InternalPlatoon.g:1294:1: ( () )
+            // InternalPlatoon.g:1401:1: ( ( () ) )
+            // InternalPlatoon.g:1402:1: ( () )
             {
-            // InternalPlatoon.g:1294:1: ( () )
-            // InternalPlatoon.g:1295:2: ()
+            // InternalPlatoon.g:1402:1: ( () )
+            // InternalPlatoon.g:1403:2: ()
             {
              before(grammarAccess.getTurnCommandAccess().getTurnCommandAction_0()); 
-            // InternalPlatoon.g:1296:2: ()
-            // InternalPlatoon.g:1296:3: 
+            // InternalPlatoon.g:1404:2: ()
+            // InternalPlatoon.g:1404:3: 
             {
             }
 
@@ -3862,16 +4163,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TurnCommand__Group__1"
-    // InternalPlatoon.g:1304:1: rule__TurnCommand__Group__1 : rule__TurnCommand__Group__1__Impl rule__TurnCommand__Group__2 ;
+    // InternalPlatoon.g:1412:1: rule__TurnCommand__Group__1 : rule__TurnCommand__Group__1__Impl rule__TurnCommand__Group__2 ;
     public final void rule__TurnCommand__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1308:1: ( rule__TurnCommand__Group__1__Impl rule__TurnCommand__Group__2 )
-            // InternalPlatoon.g:1309:2: rule__TurnCommand__Group__1__Impl rule__TurnCommand__Group__2
+            // InternalPlatoon.g:1416:1: ( rule__TurnCommand__Group__1__Impl rule__TurnCommand__Group__2 )
+            // InternalPlatoon.g:1417:2: rule__TurnCommand__Group__1__Impl rule__TurnCommand__Group__2
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_19);
             rule__TurnCommand__Group__1__Impl();
 
             state._fsp--;
@@ -3900,20 +4201,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TurnCommand__Group__1__Impl"
-    // InternalPlatoon.g:1316:1: rule__TurnCommand__Group__1__Impl : ( 'turn' ) ;
+    // InternalPlatoon.g:1424:1: rule__TurnCommand__Group__1__Impl : ( 'turn' ) ;
     public final void rule__TurnCommand__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1320:1: ( ( 'turn' ) )
-            // InternalPlatoon.g:1321:1: ( 'turn' )
+            // InternalPlatoon.g:1428:1: ( ( 'turn' ) )
+            // InternalPlatoon.g:1429:1: ( 'turn' )
             {
-            // InternalPlatoon.g:1321:1: ( 'turn' )
-            // InternalPlatoon.g:1322:2: 'turn'
+            // InternalPlatoon.g:1429:1: ( 'turn' )
+            // InternalPlatoon.g:1430:2: 'turn'
             {
              before(grammarAccess.getTurnCommandAccess().getTurnKeyword_1()); 
-            match(input,23,FOLLOW_2); 
+            match(input,24,FOLLOW_2); 
              after(grammarAccess.getTurnCommandAccess().getTurnKeyword_1()); 
 
             }
@@ -3937,14 +4238,14 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TurnCommand__Group__2"
-    // InternalPlatoon.g:1331:1: rule__TurnCommand__Group__2 : rule__TurnCommand__Group__2__Impl ;
+    // InternalPlatoon.g:1439:1: rule__TurnCommand__Group__2 : rule__TurnCommand__Group__2__Impl ;
     public final void rule__TurnCommand__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1335:1: ( rule__TurnCommand__Group__2__Impl )
-            // InternalPlatoon.g:1336:2: rule__TurnCommand__Group__2__Impl
+            // InternalPlatoon.g:1443:1: ( rule__TurnCommand__Group__2__Impl )
+            // InternalPlatoon.g:1444:2: rule__TurnCommand__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TurnCommand__Group__2__Impl();
@@ -3970,21 +4271,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TurnCommand__Group__2__Impl"
-    // InternalPlatoon.g:1342:1: rule__TurnCommand__Group__2__Impl : ( ( rule__TurnCommand__DirectionAssignment_2 ) ) ;
+    // InternalPlatoon.g:1450:1: rule__TurnCommand__Group__2__Impl : ( ( rule__TurnCommand__DirectionAssignment_2 ) ) ;
     public final void rule__TurnCommand__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1346:1: ( ( ( rule__TurnCommand__DirectionAssignment_2 ) ) )
-            // InternalPlatoon.g:1347:1: ( ( rule__TurnCommand__DirectionAssignment_2 ) )
+            // InternalPlatoon.g:1454:1: ( ( ( rule__TurnCommand__DirectionAssignment_2 ) ) )
+            // InternalPlatoon.g:1455:1: ( ( rule__TurnCommand__DirectionAssignment_2 ) )
             {
-            // InternalPlatoon.g:1347:1: ( ( rule__TurnCommand__DirectionAssignment_2 ) )
-            // InternalPlatoon.g:1348:2: ( rule__TurnCommand__DirectionAssignment_2 )
+            // InternalPlatoon.g:1455:1: ( ( rule__TurnCommand__DirectionAssignment_2 ) )
+            // InternalPlatoon.g:1456:2: ( rule__TurnCommand__DirectionAssignment_2 )
             {
              before(grammarAccess.getTurnCommandAccess().getDirectionAssignment_2()); 
-            // InternalPlatoon.g:1349:2: ( rule__TurnCommand__DirectionAssignment_2 )
-            // InternalPlatoon.g:1349:3: rule__TurnCommand__DirectionAssignment_2
+            // InternalPlatoon.g:1457:2: ( rule__TurnCommand__DirectionAssignment_2 )
+            // InternalPlatoon.g:1457:3: rule__TurnCommand__DirectionAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__TurnCommand__DirectionAssignment_2();
@@ -4017,16 +4318,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__0"
-    // InternalPlatoon.g:1358:1: rule__HeadwayConstraint__Group__0 : rule__HeadwayConstraint__Group__0__Impl rule__HeadwayConstraint__Group__1 ;
+    // InternalPlatoon.g:1466:1: rule__HeadwayConstraint__Group__0 : rule__HeadwayConstraint__Group__0__Impl rule__HeadwayConstraint__Group__1 ;
     public final void rule__HeadwayConstraint__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1362:1: ( rule__HeadwayConstraint__Group__0__Impl rule__HeadwayConstraint__Group__1 )
-            // InternalPlatoon.g:1363:2: rule__HeadwayConstraint__Group__0__Impl rule__HeadwayConstraint__Group__1
+            // InternalPlatoon.g:1470:1: ( rule__HeadwayConstraint__Group__0__Impl rule__HeadwayConstraint__Group__1 )
+            // InternalPlatoon.g:1471:2: rule__HeadwayConstraint__Group__0__Impl rule__HeadwayConstraint__Group__1
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             rule__HeadwayConstraint__Group__0__Impl();
 
             state._fsp--;
@@ -4055,21 +4356,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__0__Impl"
-    // InternalPlatoon.g:1370:1: rule__HeadwayConstraint__Group__0__Impl : ( () ) ;
+    // InternalPlatoon.g:1478:1: rule__HeadwayConstraint__Group__0__Impl : ( () ) ;
     public final void rule__HeadwayConstraint__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1374:1: ( ( () ) )
-            // InternalPlatoon.g:1375:1: ( () )
+            // InternalPlatoon.g:1482:1: ( ( () ) )
+            // InternalPlatoon.g:1483:1: ( () )
             {
-            // InternalPlatoon.g:1375:1: ( () )
-            // InternalPlatoon.g:1376:2: ()
+            // InternalPlatoon.g:1483:1: ( () )
+            // InternalPlatoon.g:1484:2: ()
             {
              before(grammarAccess.getHeadwayConstraintAccess().getHeadwayConstraintAction_0()); 
-            // InternalPlatoon.g:1377:2: ()
-            // InternalPlatoon.g:1377:3: 
+            // InternalPlatoon.g:1485:2: ()
+            // InternalPlatoon.g:1485:3: 
             {
             }
 
@@ -4092,16 +4393,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__1"
-    // InternalPlatoon.g:1385:1: rule__HeadwayConstraint__Group__1 : rule__HeadwayConstraint__Group__1__Impl rule__HeadwayConstraint__Group__2 ;
+    // InternalPlatoon.g:1493:1: rule__HeadwayConstraint__Group__1 : rule__HeadwayConstraint__Group__1__Impl rule__HeadwayConstraint__Group__2 ;
     public final void rule__HeadwayConstraint__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1389:1: ( rule__HeadwayConstraint__Group__1__Impl rule__HeadwayConstraint__Group__2 )
-            // InternalPlatoon.g:1390:2: rule__HeadwayConstraint__Group__1__Impl rule__HeadwayConstraint__Group__2
+            // InternalPlatoon.g:1497:1: ( rule__HeadwayConstraint__Group__1__Impl rule__HeadwayConstraint__Group__2 )
+            // InternalPlatoon.g:1498:2: rule__HeadwayConstraint__Group__1__Impl rule__HeadwayConstraint__Group__2
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__HeadwayConstraint__Group__1__Impl();
 
             state._fsp--;
@@ -4130,21 +4431,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__1__Impl"
-    // InternalPlatoon.g:1397:1: rule__HeadwayConstraint__Group__1__Impl : ( ( rule__HeadwayConstraint__MinAssignment_1 ) ) ;
+    // InternalPlatoon.g:1505:1: rule__HeadwayConstraint__Group__1__Impl : ( ( rule__HeadwayConstraint__MinAssignment_1 ) ) ;
     public final void rule__HeadwayConstraint__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1401:1: ( ( ( rule__HeadwayConstraint__MinAssignment_1 ) ) )
-            // InternalPlatoon.g:1402:1: ( ( rule__HeadwayConstraint__MinAssignment_1 ) )
+            // InternalPlatoon.g:1509:1: ( ( ( rule__HeadwayConstraint__MinAssignment_1 ) ) )
+            // InternalPlatoon.g:1510:1: ( ( rule__HeadwayConstraint__MinAssignment_1 ) )
             {
-            // InternalPlatoon.g:1402:1: ( ( rule__HeadwayConstraint__MinAssignment_1 ) )
-            // InternalPlatoon.g:1403:2: ( rule__HeadwayConstraint__MinAssignment_1 )
+            // InternalPlatoon.g:1510:1: ( ( rule__HeadwayConstraint__MinAssignment_1 ) )
+            // InternalPlatoon.g:1511:2: ( rule__HeadwayConstraint__MinAssignment_1 )
             {
              before(grammarAccess.getHeadwayConstraintAccess().getMinAssignment_1()); 
-            // InternalPlatoon.g:1404:2: ( rule__HeadwayConstraint__MinAssignment_1 )
-            // InternalPlatoon.g:1404:3: rule__HeadwayConstraint__MinAssignment_1
+            // InternalPlatoon.g:1512:2: ( rule__HeadwayConstraint__MinAssignment_1 )
+            // InternalPlatoon.g:1512:3: rule__HeadwayConstraint__MinAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__HeadwayConstraint__MinAssignment_1();
@@ -4177,16 +4478,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__2"
-    // InternalPlatoon.g:1412:1: rule__HeadwayConstraint__Group__2 : rule__HeadwayConstraint__Group__2__Impl rule__HeadwayConstraint__Group__3 ;
+    // InternalPlatoon.g:1520:1: rule__HeadwayConstraint__Group__2 : rule__HeadwayConstraint__Group__2__Impl rule__HeadwayConstraint__Group__3 ;
     public final void rule__HeadwayConstraint__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1416:1: ( rule__HeadwayConstraint__Group__2__Impl rule__HeadwayConstraint__Group__3 )
-            // InternalPlatoon.g:1417:2: rule__HeadwayConstraint__Group__2__Impl rule__HeadwayConstraint__Group__3
+            // InternalPlatoon.g:1524:1: ( rule__HeadwayConstraint__Group__2__Impl rule__HeadwayConstraint__Group__3 )
+            // InternalPlatoon.g:1525:2: rule__HeadwayConstraint__Group__2__Impl rule__HeadwayConstraint__Group__3
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_21);
             rule__HeadwayConstraint__Group__2__Impl();
 
             state._fsp--;
@@ -4215,20 +4516,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__2__Impl"
-    // InternalPlatoon.g:1424:1: rule__HeadwayConstraint__Group__2__Impl : ( '<=' ) ;
+    // InternalPlatoon.g:1532:1: rule__HeadwayConstraint__Group__2__Impl : ( '<=' ) ;
     public final void rule__HeadwayConstraint__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1428:1: ( ( '<=' ) )
-            // InternalPlatoon.g:1429:1: ( '<=' )
+            // InternalPlatoon.g:1536:1: ( ( '<=' ) )
+            // InternalPlatoon.g:1537:1: ( '<=' )
             {
-            // InternalPlatoon.g:1429:1: ( '<=' )
-            // InternalPlatoon.g:1430:2: '<='
+            // InternalPlatoon.g:1537:1: ( '<=' )
+            // InternalPlatoon.g:1538:2: '<='
             {
              before(grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_2()); 
-            match(input,24,FOLLOW_2); 
+            match(input,25,FOLLOW_2); 
              after(grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_2()); 
 
             }
@@ -4252,16 +4553,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__3"
-    // InternalPlatoon.g:1439:1: rule__HeadwayConstraint__Group__3 : rule__HeadwayConstraint__Group__3__Impl rule__HeadwayConstraint__Group__4 ;
+    // InternalPlatoon.g:1547:1: rule__HeadwayConstraint__Group__3 : rule__HeadwayConstraint__Group__3__Impl rule__HeadwayConstraint__Group__4 ;
     public final void rule__HeadwayConstraint__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1443:1: ( rule__HeadwayConstraint__Group__3__Impl rule__HeadwayConstraint__Group__4 )
-            // InternalPlatoon.g:1444:2: rule__HeadwayConstraint__Group__3__Impl rule__HeadwayConstraint__Group__4
+            // InternalPlatoon.g:1551:1: ( rule__HeadwayConstraint__Group__3__Impl rule__HeadwayConstraint__Group__4 )
+            // InternalPlatoon.g:1552:2: rule__HeadwayConstraint__Group__3__Impl rule__HeadwayConstraint__Group__4
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__HeadwayConstraint__Group__3__Impl();
 
             state._fsp--;
@@ -4290,20 +4591,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__3__Impl"
-    // InternalPlatoon.g:1451:1: rule__HeadwayConstraint__Group__3__Impl : ( 'headway' ) ;
+    // InternalPlatoon.g:1559:1: rule__HeadwayConstraint__Group__3__Impl : ( 'headway' ) ;
     public final void rule__HeadwayConstraint__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1455:1: ( ( 'headway' ) )
-            // InternalPlatoon.g:1456:1: ( 'headway' )
+            // InternalPlatoon.g:1563:1: ( ( 'headway' ) )
+            // InternalPlatoon.g:1564:1: ( 'headway' )
             {
-            // InternalPlatoon.g:1456:1: ( 'headway' )
-            // InternalPlatoon.g:1457:2: 'headway'
+            // InternalPlatoon.g:1564:1: ( 'headway' )
+            // InternalPlatoon.g:1565:2: 'headway'
             {
              before(grammarAccess.getHeadwayConstraintAccess().getHeadwayKeyword_3()); 
-            match(input,25,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getHeadwayConstraintAccess().getHeadwayKeyword_3()); 
 
             }
@@ -4327,16 +4628,16 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__4"
-    // InternalPlatoon.g:1466:1: rule__HeadwayConstraint__Group__4 : rule__HeadwayConstraint__Group__4__Impl rule__HeadwayConstraint__Group__5 ;
+    // InternalPlatoon.g:1574:1: rule__HeadwayConstraint__Group__4 : rule__HeadwayConstraint__Group__4__Impl rule__HeadwayConstraint__Group__5 ;
     public final void rule__HeadwayConstraint__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1470:1: ( rule__HeadwayConstraint__Group__4__Impl rule__HeadwayConstraint__Group__5 )
-            // InternalPlatoon.g:1471:2: rule__HeadwayConstraint__Group__4__Impl rule__HeadwayConstraint__Group__5
+            // InternalPlatoon.g:1578:1: ( rule__HeadwayConstraint__Group__4__Impl rule__HeadwayConstraint__Group__5 )
+            // InternalPlatoon.g:1579:2: rule__HeadwayConstraint__Group__4__Impl rule__HeadwayConstraint__Group__5
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             rule__HeadwayConstraint__Group__4__Impl();
 
             state._fsp--;
@@ -4365,20 +4666,20 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__4__Impl"
-    // InternalPlatoon.g:1478:1: rule__HeadwayConstraint__Group__4__Impl : ( '<=' ) ;
+    // InternalPlatoon.g:1586:1: rule__HeadwayConstraint__Group__4__Impl : ( '<=' ) ;
     public final void rule__HeadwayConstraint__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1482:1: ( ( '<=' ) )
-            // InternalPlatoon.g:1483:1: ( '<=' )
+            // InternalPlatoon.g:1590:1: ( ( '<=' ) )
+            // InternalPlatoon.g:1591:1: ( '<=' )
             {
-            // InternalPlatoon.g:1483:1: ( '<=' )
-            // InternalPlatoon.g:1484:2: '<='
+            // InternalPlatoon.g:1591:1: ( '<=' )
+            // InternalPlatoon.g:1592:2: '<='
             {
              before(grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_4()); 
-            match(input,24,FOLLOW_2); 
+            match(input,25,FOLLOW_2); 
              after(grammarAccess.getHeadwayConstraintAccess().getLessThanSignEqualsSignKeyword_4()); 
 
             }
@@ -4402,14 +4703,14 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__5"
-    // InternalPlatoon.g:1493:1: rule__HeadwayConstraint__Group__5 : rule__HeadwayConstraint__Group__5__Impl ;
+    // InternalPlatoon.g:1601:1: rule__HeadwayConstraint__Group__5 : rule__HeadwayConstraint__Group__5__Impl ;
     public final void rule__HeadwayConstraint__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1497:1: ( rule__HeadwayConstraint__Group__5__Impl )
-            // InternalPlatoon.g:1498:2: rule__HeadwayConstraint__Group__5__Impl
+            // InternalPlatoon.g:1605:1: ( rule__HeadwayConstraint__Group__5__Impl )
+            // InternalPlatoon.g:1606:2: rule__HeadwayConstraint__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__HeadwayConstraint__Group__5__Impl();
@@ -4435,21 +4736,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__Group__5__Impl"
-    // InternalPlatoon.g:1504:1: rule__HeadwayConstraint__Group__5__Impl : ( ( rule__HeadwayConstraint__MaxAssignment_5 ) ) ;
+    // InternalPlatoon.g:1612:1: rule__HeadwayConstraint__Group__5__Impl : ( ( rule__HeadwayConstraint__MaxAssignment_5 ) ) ;
     public final void rule__HeadwayConstraint__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1508:1: ( ( ( rule__HeadwayConstraint__MaxAssignment_5 ) ) )
-            // InternalPlatoon.g:1509:1: ( ( rule__HeadwayConstraint__MaxAssignment_5 ) )
+            // InternalPlatoon.g:1616:1: ( ( ( rule__HeadwayConstraint__MaxAssignment_5 ) ) )
+            // InternalPlatoon.g:1617:1: ( ( rule__HeadwayConstraint__MaxAssignment_5 ) )
             {
-            // InternalPlatoon.g:1509:1: ( ( rule__HeadwayConstraint__MaxAssignment_5 ) )
-            // InternalPlatoon.g:1510:2: ( rule__HeadwayConstraint__MaxAssignment_5 )
+            // InternalPlatoon.g:1617:1: ( ( rule__HeadwayConstraint__MaxAssignment_5 ) )
+            // InternalPlatoon.g:1618:2: ( rule__HeadwayConstraint__MaxAssignment_5 )
             {
              before(grammarAccess.getHeadwayConstraintAccess().getMaxAssignment_5()); 
-            // InternalPlatoon.g:1511:2: ( rule__HeadwayConstraint__MaxAssignment_5 )
-            // InternalPlatoon.g:1511:3: rule__HeadwayConstraint__MaxAssignment_5
+            // InternalPlatoon.g:1619:2: ( rule__HeadwayConstraint__MaxAssignment_5 )
+            // InternalPlatoon.g:1619:3: rule__HeadwayConstraint__MaxAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__HeadwayConstraint__MaxAssignment_5();
@@ -4481,26 +4782,26 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__HeadwayConstraint__Group__5__Impl"
 
 
-    // $ANTLR start "rule__World__PlatoonAssignment_0"
-    // InternalPlatoon.g:1520:1: rule__World__PlatoonAssignment_0 : ( rulePlatoon ) ;
-    public final void rule__World__PlatoonAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__World__PlatoonAssignment_1"
+    // InternalPlatoon.g:1628:1: rule__World__PlatoonAssignment_1 : ( rulePlatoon ) ;
+    public final void rule__World__PlatoonAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1524:1: ( ( rulePlatoon ) )
-            // InternalPlatoon.g:1525:2: ( rulePlatoon )
+            // InternalPlatoon.g:1632:1: ( ( rulePlatoon ) )
+            // InternalPlatoon.g:1633:2: ( rulePlatoon )
             {
-            // InternalPlatoon.g:1525:2: ( rulePlatoon )
-            // InternalPlatoon.g:1526:3: rulePlatoon
+            // InternalPlatoon.g:1633:2: ( rulePlatoon )
+            // InternalPlatoon.g:1634:3: rulePlatoon
             {
-             before(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_0_0()); 
+             before(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
             rulePlatoon();
 
             state._fsp--;
 
-             after(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_0_0()); 
+             after(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_1_0()); 
 
             }
 
@@ -4519,29 +4820,29 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__World__PlatoonAssignment_0"
+    // $ANTLR end "rule__World__PlatoonAssignment_1"
 
 
-    // $ANTLR start "rule__World__RouteAssignment_1"
-    // InternalPlatoon.g:1535:1: rule__World__RouteAssignment_1 : ( ruleRoute ) ;
-    public final void rule__World__RouteAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__World__RouteAssignment_2"
+    // InternalPlatoon.g:1643:1: rule__World__RouteAssignment_2 : ( ruleRoute ) ;
+    public final void rule__World__RouteAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1539:1: ( ( ruleRoute ) )
-            // InternalPlatoon.g:1540:2: ( ruleRoute )
+            // InternalPlatoon.g:1647:1: ( ( ruleRoute ) )
+            // InternalPlatoon.g:1648:2: ( ruleRoute )
             {
-            // InternalPlatoon.g:1540:2: ( ruleRoute )
-            // InternalPlatoon.g:1541:3: ruleRoute
+            // InternalPlatoon.g:1648:2: ( ruleRoute )
+            // InternalPlatoon.g:1649:3: ruleRoute
             {
-             before(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_1_0()); 
+             before(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleRoute();
 
             state._fsp--;
 
-             after(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_1_0()); 
+             after(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_2_0()); 
 
             }
 
@@ -4560,29 +4861,29 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__World__RouteAssignment_1"
+    // $ANTLR end "rule__World__RouteAssignment_2"
 
 
-    // $ANTLR start "rule__World__ConstraintsAssignment_2"
-    // InternalPlatoon.g:1550:1: rule__World__ConstraintsAssignment_2 : ( ruleConstraints ) ;
-    public final void rule__World__ConstraintsAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__World__ConstraintsAssignment_3"
+    // InternalPlatoon.g:1658:1: rule__World__ConstraintsAssignment_3 : ( ruleConstraints ) ;
+    public final void rule__World__ConstraintsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1554:1: ( ( ruleConstraints ) )
-            // InternalPlatoon.g:1555:2: ( ruleConstraints )
+            // InternalPlatoon.g:1662:1: ( ( ruleConstraints ) )
+            // InternalPlatoon.g:1663:2: ( ruleConstraints )
             {
-            // InternalPlatoon.g:1555:2: ( ruleConstraints )
-            // InternalPlatoon.g:1556:3: ruleConstraints
+            // InternalPlatoon.g:1663:2: ( ruleConstraints )
+            // InternalPlatoon.g:1664:3: ruleConstraints
             {
-             before(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_2_0()); 
+             before(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
             ruleConstraints();
 
             state._fsp--;
 
-             after(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_2_0()); 
+             after(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_3_0()); 
 
             }
 
@@ -4601,29 +4902,29 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__World__ConstraintsAssignment_2"
+    // $ANTLR end "rule__World__ConstraintsAssignment_3"
 
 
-    // $ANTLR start "rule__Platoon__LVAssignment_2"
-    // InternalPlatoon.g:1565:1: rule__Platoon__LVAssignment_2 : ( ruleLeadingVehicle ) ;
-    public final void rule__Platoon__LVAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Platoon__LVAssignment_3"
+    // InternalPlatoon.g:1673:1: rule__Platoon__LVAssignment_3 : ( ruleLeadingVehicle ) ;
+    public final void rule__Platoon__LVAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1569:1: ( ( ruleLeadingVehicle ) )
-            // InternalPlatoon.g:1570:2: ( ruleLeadingVehicle )
+            // InternalPlatoon.g:1677:1: ( ( ruleLeadingVehicle ) )
+            // InternalPlatoon.g:1678:2: ( ruleLeadingVehicle )
             {
-            // InternalPlatoon.g:1570:2: ( ruleLeadingVehicle )
-            // InternalPlatoon.g:1571:3: ruleLeadingVehicle
+            // InternalPlatoon.g:1678:2: ( ruleLeadingVehicle )
+            // InternalPlatoon.g:1679:3: ruleLeadingVehicle
             {
-             before(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_2_0()); 
+             before(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
             ruleLeadingVehicle();
 
             state._fsp--;
 
-             after(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_2_0()); 
+             after(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_3_0()); 
 
             }
 
@@ -4642,29 +4943,29 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Platoon__LVAssignment_2"
+    // $ANTLR end "rule__Platoon__LVAssignment_3"
 
 
-    // $ANTLR start "rule__Platoon__FVAssignment_3"
-    // InternalPlatoon.g:1580:1: rule__Platoon__FVAssignment_3 : ( ruleFollowVehicle ) ;
-    public final void rule__Platoon__FVAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Platoon__FVAssignment_4"
+    // InternalPlatoon.g:1688:1: rule__Platoon__FVAssignment_4 : ( ruleFollowVehicle ) ;
+    public final void rule__Platoon__FVAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1584:1: ( ( ruleFollowVehicle ) )
-            // InternalPlatoon.g:1585:2: ( ruleFollowVehicle )
+            // InternalPlatoon.g:1692:1: ( ( ruleFollowVehicle ) )
+            // InternalPlatoon.g:1693:2: ( ruleFollowVehicle )
             {
-            // InternalPlatoon.g:1585:2: ( ruleFollowVehicle )
-            // InternalPlatoon.g:1586:3: ruleFollowVehicle
+            // InternalPlatoon.g:1693:2: ( ruleFollowVehicle )
+            // InternalPlatoon.g:1694:3: ruleFollowVehicle
             {
-             before(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_3_0()); 
+             before(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleFollowVehicle();
 
             state._fsp--;
 
-             after(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_3_0()); 
+             after(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_4_0()); 
 
             }
 
@@ -4683,21 +4984,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Platoon__FVAssignment_3"
+    // $ANTLR end "rule__Platoon__FVAssignment_4"
 
 
     // $ANTLR start "rule__Route__IdAssignment_2"
-    // InternalPlatoon.g:1595:1: rule__Route__IdAssignment_2 : ( ruleEString ) ;
+    // InternalPlatoon.g:1703:1: rule__Route__IdAssignment_2 : ( ruleEString ) ;
     public final void rule__Route__IdAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1599:1: ( ( ruleEString ) )
-            // InternalPlatoon.g:1600:2: ( ruleEString )
+            // InternalPlatoon.g:1707:1: ( ( ruleEString ) )
+            // InternalPlatoon.g:1708:2: ( ruleEString )
             {
-            // InternalPlatoon.g:1600:2: ( ruleEString )
-            // InternalPlatoon.g:1601:3: ruleEString
+            // InternalPlatoon.g:1708:2: ( ruleEString )
+            // InternalPlatoon.g:1709:3: ruleEString
             {
              before(grammarAccess.getRouteAccess().getIdEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4727,59 +5028,18 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Route__IdAssignment_2"
 
 
-    // $ANTLR start "rule__Route__CommandsAssignment_3"
-    // InternalPlatoon.g:1610:1: rule__Route__CommandsAssignment_3 : ( ruleCommand ) ;
-    public final void rule__Route__CommandsAssignment_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalPlatoon.g:1614:1: ( ( ruleCommand ) )
-            // InternalPlatoon.g:1615:2: ( ruleCommand )
-            {
-            // InternalPlatoon.g:1615:2: ( ruleCommand )
-            // InternalPlatoon.g:1616:3: ruleCommand
-            {
-             before(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_2);
-            ruleCommand();
-
-            state._fsp--;
-
-             after(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Route__CommandsAssignment_3"
-
-
     // $ANTLR start "rule__Route__CommandsAssignment_4"
-    // InternalPlatoon.g:1625:1: rule__Route__CommandsAssignment_4 : ( ruleCommand ) ;
+    // InternalPlatoon.g:1718:1: rule__Route__CommandsAssignment_4 : ( ruleCommand ) ;
     public final void rule__Route__CommandsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1629:1: ( ( ruleCommand ) )
-            // InternalPlatoon.g:1630:2: ( ruleCommand )
+            // InternalPlatoon.g:1722:1: ( ( ruleCommand ) )
+            // InternalPlatoon.g:1723:2: ( ruleCommand )
             {
-            // InternalPlatoon.g:1630:2: ( ruleCommand )
-            // InternalPlatoon.g:1631:3: ruleCommand
+            // InternalPlatoon.g:1723:2: ( ruleCommand )
+            // InternalPlatoon.g:1724:3: ruleCommand
             {
              before(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -4809,26 +5069,26 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Route__CommandsAssignment_4"
 
 
-    // $ANTLR start "rule__Constraints__ConstraintsAssignment_1"
-    // InternalPlatoon.g:1640:1: rule__Constraints__ConstraintsAssignment_1 : ( ruleConstraint ) ;
-    public final void rule__Constraints__ConstraintsAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Route__CommandsAssignment_5"
+    // InternalPlatoon.g:1733:1: rule__Route__CommandsAssignment_5 : ( ruleCommand ) ;
+    public final void rule__Route__CommandsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1644:1: ( ( ruleConstraint ) )
-            // InternalPlatoon.g:1645:2: ( ruleConstraint )
+            // InternalPlatoon.g:1737:1: ( ( ruleCommand ) )
+            // InternalPlatoon.g:1738:2: ( ruleCommand )
             {
-            // InternalPlatoon.g:1645:2: ( ruleConstraint )
-            // InternalPlatoon.g:1646:3: ruleConstraint
+            // InternalPlatoon.g:1738:2: ( ruleCommand )
+            // InternalPlatoon.g:1739:3: ruleCommand
             {
-             before(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_1_0()); 
+             before(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
-            ruleConstraint();
+            ruleCommand();
 
             state._fsp--;
 
-             after(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_1_0()); 
+             after(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_5_0()); 
 
             }
 
@@ -4847,21 +5107,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Constraints__ConstraintsAssignment_1"
+    // $ANTLR end "rule__Route__CommandsAssignment_5"
 
 
     // $ANTLR start "rule__Constraints__ConstraintsAssignment_2"
-    // InternalPlatoon.g:1655:1: rule__Constraints__ConstraintsAssignment_2 : ( ruleConstraint ) ;
+    // InternalPlatoon.g:1748:1: rule__Constraints__ConstraintsAssignment_2 : ( ruleConstraint ) ;
     public final void rule__Constraints__ConstraintsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1659:1: ( ( ruleConstraint ) )
-            // InternalPlatoon.g:1660:2: ( ruleConstraint )
+            // InternalPlatoon.g:1752:1: ( ( ruleConstraint ) )
+            // InternalPlatoon.g:1753:2: ( ruleConstraint )
             {
-            // InternalPlatoon.g:1660:2: ( ruleConstraint )
-            // InternalPlatoon.g:1661:3: ruleConstraint
+            // InternalPlatoon.g:1753:2: ( ruleConstraint )
+            // InternalPlatoon.g:1754:3: ruleConstraint
             {
              before(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4891,18 +5151,59 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Constraints__ConstraintsAssignment_2"
 
 
+    // $ANTLR start "rule__Constraints__ConstraintsAssignment_3"
+    // InternalPlatoon.g:1763:1: rule__Constraints__ConstraintsAssignment_3 : ( ruleConstraint ) ;
+    public final void rule__Constraints__ConstraintsAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPlatoon.g:1767:1: ( ( ruleConstraint ) )
+            // InternalPlatoon.g:1768:2: ( ruleConstraint )
+            {
+            // InternalPlatoon.g:1768:2: ( ruleConstraint )
+            // InternalPlatoon.g:1769:3: ruleConstraint
+            {
+             before(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_2);
+            ruleConstraint();
+
+            state._fsp--;
+
+             after(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Constraints__ConstraintsAssignment_3"
+
+
     // $ANTLR start "rule__LeadingVehicle__IdAssignment_2"
-    // InternalPlatoon.g:1670:1: rule__LeadingVehicle__IdAssignment_2 : ( ruleEString ) ;
+    // InternalPlatoon.g:1778:1: rule__LeadingVehicle__IdAssignment_2 : ( ruleEString ) ;
     public final void rule__LeadingVehicle__IdAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1674:1: ( ( ruleEString ) )
-            // InternalPlatoon.g:1675:2: ( ruleEString )
+            // InternalPlatoon.g:1782:1: ( ( ruleEString ) )
+            // InternalPlatoon.g:1783:2: ( ruleEString )
             {
-            // InternalPlatoon.g:1675:2: ( ruleEString )
-            // InternalPlatoon.g:1676:3: ruleEString
+            // InternalPlatoon.g:1783:2: ( ruleEString )
+            // InternalPlatoon.g:1784:3: ruleEString
             {
              before(grammarAccess.getLeadingVehicleAccess().getIdEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4933,21 +5234,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeadingVehicle__RouteAssignment_4"
-    // InternalPlatoon.g:1685:1: rule__LeadingVehicle__RouteAssignment_4 : ( ( ruleEString ) ) ;
+    // InternalPlatoon.g:1793:1: rule__LeadingVehicle__RouteAssignment_4 : ( ( ruleEString ) ) ;
     public final void rule__LeadingVehicle__RouteAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1689:1: ( ( ( ruleEString ) ) )
-            // InternalPlatoon.g:1690:2: ( ( ruleEString ) )
+            // InternalPlatoon.g:1797:1: ( ( ( ruleEString ) ) )
+            // InternalPlatoon.g:1798:2: ( ( ruleEString ) )
             {
-            // InternalPlatoon.g:1690:2: ( ( ruleEString ) )
-            // InternalPlatoon.g:1691:3: ( ruleEString )
+            // InternalPlatoon.g:1798:2: ( ( ruleEString ) )
+            // InternalPlatoon.g:1799:3: ( ruleEString )
             {
              before(grammarAccess.getLeadingVehicleAccess().getRouteRouteCrossReference_4_0()); 
-            // InternalPlatoon.g:1692:3: ( ruleEString )
-            // InternalPlatoon.g:1693:4: ruleEString
+            // InternalPlatoon.g:1800:3: ( ruleEString )
+            // InternalPlatoon.g:1801:4: ruleEString
             {
              before(grammarAccess.getLeadingVehicleAccess().getRouteRouteEStringParserRuleCall_4_0_1()); 
             pushFollow(FOLLOW_2);
@@ -4982,17 +5283,17 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__IdAssignment_2"
-    // InternalPlatoon.g:1704:1: rule__FollowVehicle__IdAssignment_2 : ( ruleEString ) ;
+    // InternalPlatoon.g:1812:1: rule__FollowVehicle__IdAssignment_2 : ( ruleEString ) ;
     public final void rule__FollowVehicle__IdAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1708:1: ( ( ruleEString ) )
-            // InternalPlatoon.g:1709:2: ( ruleEString )
+            // InternalPlatoon.g:1816:1: ( ( ruleEString ) )
+            // InternalPlatoon.g:1817:2: ( ruleEString )
             {
-            // InternalPlatoon.g:1709:2: ( ruleEString )
-            // InternalPlatoon.g:1710:3: ruleEString
+            // InternalPlatoon.g:1817:2: ( ruleEString )
+            // InternalPlatoon.g:1818:3: ruleEString
             {
              before(grammarAccess.getFollowVehicleAccess().getIdEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -5023,21 +5324,21 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FollowVehicle__FollowsAssignment_5"
-    // InternalPlatoon.g:1719:1: rule__FollowVehicle__FollowsAssignment_5 : ( ( ruleEString ) ) ;
+    // InternalPlatoon.g:1827:1: rule__FollowVehicle__FollowsAssignment_5 : ( ( ruleEString ) ) ;
     public final void rule__FollowVehicle__FollowsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1723:1: ( ( ( ruleEString ) ) )
-            // InternalPlatoon.g:1724:2: ( ( ruleEString ) )
+            // InternalPlatoon.g:1831:1: ( ( ( ruleEString ) ) )
+            // InternalPlatoon.g:1832:2: ( ( ruleEString ) )
             {
-            // InternalPlatoon.g:1724:2: ( ( ruleEString ) )
-            // InternalPlatoon.g:1725:3: ( ruleEString )
+            // InternalPlatoon.g:1832:2: ( ( ruleEString ) )
+            // InternalPlatoon.g:1833:3: ( ruleEString )
             {
              before(grammarAccess.getFollowVehicleAccess().getFollowsVehicleCrossReference_5_0()); 
-            // InternalPlatoon.g:1726:3: ( ruleEString )
-            // InternalPlatoon.g:1727:4: ruleEString
+            // InternalPlatoon.g:1834:3: ( ruleEString )
+            // InternalPlatoon.g:1835:4: ruleEString
             {
              before(grammarAccess.getFollowVehicleAccess().getFollowsVehicleEStringParserRuleCall_5_0_1()); 
             pushFollow(FOLLOW_2);
@@ -5072,17 +5373,17 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ForwardCommand__DistanceAssignment_3"
-    // InternalPlatoon.g:1738:1: rule__ForwardCommand__DistanceAssignment_3 : ( RULE_INT ) ;
+    // InternalPlatoon.g:1846:1: rule__ForwardCommand__DistanceAssignment_3 : ( RULE_INT ) ;
     public final void rule__ForwardCommand__DistanceAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1742:1: ( ( RULE_INT ) )
-            // InternalPlatoon.g:1743:2: ( RULE_INT )
+            // InternalPlatoon.g:1850:1: ( ( RULE_INT ) )
+            // InternalPlatoon.g:1851:2: ( RULE_INT )
             {
-            // InternalPlatoon.g:1743:2: ( RULE_INT )
-            // InternalPlatoon.g:1744:3: RULE_INT
+            // InternalPlatoon.g:1851:2: ( RULE_INT )
+            // InternalPlatoon.g:1852:3: RULE_INT
             {
              before(grammarAccess.getForwardCommandAccess().getDistanceINTTerminalRuleCall_3_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -5109,17 +5410,17 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TurnCommand__DirectionAssignment_2"
-    // InternalPlatoon.g:1753:1: rule__TurnCommand__DirectionAssignment_2 : ( ruleDirection ) ;
+    // InternalPlatoon.g:1861:1: rule__TurnCommand__DirectionAssignment_2 : ( ruleDirection ) ;
     public final void rule__TurnCommand__DirectionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1757:1: ( ( ruleDirection ) )
-            // InternalPlatoon.g:1758:2: ( ruleDirection )
+            // InternalPlatoon.g:1865:1: ( ( ruleDirection ) )
+            // InternalPlatoon.g:1866:2: ( ruleDirection )
             {
-            // InternalPlatoon.g:1758:2: ( ruleDirection )
-            // InternalPlatoon.g:1759:3: ruleDirection
+            // InternalPlatoon.g:1866:2: ( ruleDirection )
+            // InternalPlatoon.g:1867:3: ruleDirection
             {
              before(grammarAccess.getTurnCommandAccess().getDirectionDirectionParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -5150,17 +5451,17 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__MinAssignment_1"
-    // InternalPlatoon.g:1768:1: rule__HeadwayConstraint__MinAssignment_1 : ( RULE_INT ) ;
+    // InternalPlatoon.g:1876:1: rule__HeadwayConstraint__MinAssignment_1 : ( RULE_INT ) ;
     public final void rule__HeadwayConstraint__MinAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1772:1: ( ( RULE_INT ) )
-            // InternalPlatoon.g:1773:2: ( RULE_INT )
+            // InternalPlatoon.g:1880:1: ( ( RULE_INT ) )
+            // InternalPlatoon.g:1881:2: ( RULE_INT )
             {
-            // InternalPlatoon.g:1773:2: ( RULE_INT )
-            // InternalPlatoon.g:1774:3: RULE_INT
+            // InternalPlatoon.g:1881:2: ( RULE_INT )
+            // InternalPlatoon.g:1882:3: RULE_INT
             {
              before(grammarAccess.getHeadwayConstraintAccess().getMinINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -5187,17 +5488,17 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HeadwayConstraint__MaxAssignment_5"
-    // InternalPlatoon.g:1783:1: rule__HeadwayConstraint__MaxAssignment_5 : ( RULE_INT ) ;
+    // InternalPlatoon.g:1891:1: rule__HeadwayConstraint__MaxAssignment_5 : ( RULE_INT ) ;
     public final void rule__HeadwayConstraint__MaxAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPlatoon.g:1787:1: ( ( RULE_INT ) )
-            // InternalPlatoon.g:1788:2: ( RULE_INT )
+            // InternalPlatoon.g:1895:1: ( ( RULE_INT ) )
+            // InternalPlatoon.g:1896:2: ( RULE_INT )
             {
-            // InternalPlatoon.g:1788:2: ( RULE_INT )
-            // InternalPlatoon.g:1789:3: RULE_INT
+            // InternalPlatoon.g:1896:2: ( RULE_INT )
+            // InternalPlatoon.g:1897:3: RULE_INT
             {
              before(grammarAccess.getHeadwayConstraintAccess().getMaxINTTerminalRuleCall_5_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -5229,23 +5530,24 @@ public class InternalPlatoonParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000900000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000900002L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000001200000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000001200002L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000042L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000001800L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000004000000L});
 
 }

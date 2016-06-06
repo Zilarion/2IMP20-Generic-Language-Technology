@@ -1,7 +1,6 @@
 INDEX VERSION 1.127+/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3/.metadata/.plugins/org.eclipse.jdt.core
 1947856333.index
 3321751019.index
-4101169589.index
 1308714322.index
 1384487945.index
 692354525.index
@@ -19,7 +18,6 @@ INDEX VERSION 1.127+/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-T
 3428106734.index
 3935542730.index
 2545238116.index
-1953370388.index
 354012151.index
 1833648217.index
 841265937.index
@@ -34,8 +32,8 @@ INDEX VERSION 1.127+/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-T
 3149334087.index
 3952002121.index
 952813988.index
-2035382507.index
 1271164027.index
+2035382507.index
 686114932.index
 2746508065.index
 474654593.index
@@ -83,7 +81,6 @@ INDEX VERSION 1.127+/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-T
 3146502135.index
 3657174721.index
 773941239.index
-1726278613.index
 3266567714.index
 4101736292.index
 298398363.index
@@ -102,7 +99,6 @@ INDEX VERSION 1.127+/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-T
 1472419554.index
 2623008699.index
 1819685514.index
-1461533207.index
 1126635051.index
 1350598835.index
 1271342938.index
@@ -117,4 +113,3 @@ INDEX VERSION 1.127+/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-T
 625038771.index
 1804488565.index
 108616791.index
-4105661409.index

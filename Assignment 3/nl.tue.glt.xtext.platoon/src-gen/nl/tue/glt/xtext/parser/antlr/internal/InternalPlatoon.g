@@ -77,11 +77,18 @@ ruleWorld returns [EObject current=null]
 }:
 	(
 		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getWorldAccess().getWorldAction_0(),
+					$current);
+			}
+		)
+		(
 			(
 				{
-					newCompositeNode(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getWorldAccess().getPlatoonPlatoonParserRuleCall_1_0());
 				}
-				lv_platoon_0_0=rulePlatoon
+				lv_platoon_1_0=rulePlatoon
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getWorldRule());
@@ -89,7 +96,7 @@ ruleWorld returns [EObject current=null]
 					set(
 						$current,
 						"platoon",
-						lv_platoon_0_0,
+						lv_platoon_1_0,
 						"nl.tue.glt.xtext.Platoon.Platoon");
 					afterParserOrEnumRuleCall();
 				}
@@ -98,9 +105,9 @@ ruleWorld returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getWorldAccess().getRouteRouteParserRuleCall_2_0());
 				}
-				lv_route_1_0=ruleRoute
+				lv_route_2_0=ruleRoute
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getWorldRule());
@@ -108,7 +115,7 @@ ruleWorld returns [EObject current=null]
 					set(
 						$current,
 						"route",
-						lv_route_1_0,
+						lv_route_2_0,
 						"nl.tue.glt.xtext.Platoon.Route");
 					afterParserOrEnumRuleCall();
 				}
@@ -117,9 +124,9 @@ ruleWorld returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getWorldAccess().getConstraintsConstraintsParserRuleCall_3_0());
 				}
-				lv_constraints_2_0=ruleConstraints
+				lv_constraints_3_0=ruleConstraints
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getWorldRule());
@@ -127,7 +134,7 @@ ruleWorld returns [EObject current=null]
 					set(
 						$current,
 						"constraints",
-						lv_constraints_2_0,
+						lv_constraints_3_0,
 						"nl.tue.glt.xtext.Platoon.Constraints");
 					afterParserOrEnumRuleCall();
 				}
@@ -224,12 +231,16 @@ rulePlatoon returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getPlatoonAccess().getPlatoonKeyword_1());
 		}
+		otherlv_2=':'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getPlatoonAccess().getColonKeyword_2());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getPlatoonAccess().getLVLeadingVehicleParserRuleCall_3_0());
 				}
-				lv_LV_2_0=ruleLeadingVehicle
+				lv_LV_3_0=ruleLeadingVehicle
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPlatoonRule());
@@ -237,7 +248,7 @@ rulePlatoon returns [EObject current=null]
 					set(
 						$current,
 						"LV",
-						lv_LV_2_0,
+						lv_LV_3_0,
 						"nl.tue.glt.xtext.Platoon.LeadingVehicle");
 					afterParserOrEnumRuleCall();
 				}
@@ -246,9 +257,9 @@ rulePlatoon returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getPlatoonAccess().getFVFollowVehicleParserRuleCall_4_0());
 				}
-				lv_FV_3_0=ruleFollowVehicle
+				lv_FV_4_0=ruleFollowVehicle
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPlatoonRule());
@@ -256,7 +267,7 @@ rulePlatoon returns [EObject current=null]
 					add(
 						$current,
 						"FV",
-						lv_FV_3_0,
+						lv_FV_4_0,
 						"nl.tue.glt.xtext.Platoon.FollowVehicle");
 					afterParserOrEnumRuleCall();
 				}
@@ -311,25 +322,10 @@ ruleRoute returns [EObject current=null]
 				}
 			)
 		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_3_0());
-				}
-				lv_commands_3_0=ruleCommand
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRouteRule());
-					}
-					add(
-						$current,
-						"commands",
-						lv_commands_3_0,
-						"nl.tue.glt.xtext.Platoon.Command");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		otherlv_3=':'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getRouteAccess().getColonKeyword_3());
+		}
 		(
 			(
 				{
@@ -344,6 +340,25 @@ ruleRoute returns [EObject current=null]
 						$current,
 						"commands",
 						lv_commands_4_0,
+						"nl.tue.glt.xtext.Platoon.Command");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getRouteAccess().getCommandsCommandParserRuleCall_5_0());
+				}
+				lv_commands_5_0=ruleCommand
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getRouteRule());
+					}
+					add(
+						$current,
+						"commands",
+						lv_commands_5_0,
 						"nl.tue.glt.xtext.Platoon.Command");
 					afterParserOrEnumRuleCall();
 				}
@@ -372,25 +387,10 @@ ruleConstraints returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getConstraintsAccess().getConstraintsKeyword_0());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_1_0());
-				}
-				lv_constraints_1_0=ruleConstraint
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getConstraintsRule());
-					}
-					add(
-						$current,
-						"constraints",
-						lv_constraints_1_0,
-						"nl.tue.glt.xtext.Platoon.Constraint");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getConstraintsAccess().getColonKeyword_1());
+		}
 		(
 			(
 				{
@@ -405,6 +405,25 @@ ruleConstraints returns [EObject current=null]
 						$current,
 						"constraints",
 						lv_constraints_2_0,
+						"nl.tue.glt.xtext.Platoon.Constraint");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getConstraintsAccess().getConstraintsConstraintParserRuleCall_3_0());
+				}
+				lv_constraints_3_0=ruleConstraint
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getConstraintsRule());
+					}
+					add(
+						$current,
+						"constraints",
+						lv_constraints_3_0,
 						"nl.tue.glt.xtext.Platoon.Constraint");
 					afterParserOrEnumRuleCall();
 				}
