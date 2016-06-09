@@ -1,0 +1,35 @@
+[% for (vehicle in platoon) {
+	if (vehicle.isKindOf(LeadingVehicle)) {
+		route = getRoute();
+	}
+	else { %]
+		vehicle.ConnectNXT(vehicle.follows, channel);
+	[%}
+}%]
+
+[% for (constraint in constraints) {
+	if (constraint.isKindOf(HeadwayConstraint)) {
+	}
+}%]
+
+[% operation String getRoute() : String {
+	for (action in route) {
+		if (action.isKindOf(ForwardCommand)) { %]
+			OnFwd(OUT_AC, 100);
+			Wait([%=action.distance%]);
+			Off(OUT_AC);
+		[%}
+		else if (action.isKindOf(TurnCommand)) {
+			if (action.direction.isKindOf(Left)) { %]
+				OnRev(OUT_A, 100);
+				Wait(1000);
+				Off(OUT_A);
+			[%}
+			else { %]
+				OnRev(OUT_C, 100);
+				Wait(1000);
+				Off(OUT_C);
+			[%}
+		}
+	}
+}%]

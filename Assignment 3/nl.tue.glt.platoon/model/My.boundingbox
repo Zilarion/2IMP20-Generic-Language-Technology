@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<boundingbox:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:boundingbox="boundingbox">
+  <moveCommands xsi:type="boundingbox:MoveUp" distance="80"/>
+  <moveCommands xsi:type="boundingbox:MoveDown" distance="5"/>
+  <moveCommands xsi:type="boundingbox:MoveLeft" distance="32"/>
+</boundingbox:World>
