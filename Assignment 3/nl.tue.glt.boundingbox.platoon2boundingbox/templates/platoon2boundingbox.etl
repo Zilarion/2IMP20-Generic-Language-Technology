@@ -1,0 +1,28 @@
+pre {
+	"Running ETL".println();
+}
+
+rule platoon2boundingbox 
+	transform route : platoon!route
+	to bb : BoundingBox!World {
+	
+	for (command in route.moveCommands) {	
+		switch (command.name/type) {
+			case turnLeft:
+				//dir = dir - 1 % 4;
+				break;
+			case turnRight:
+				//dir = dir + 1 % 4;
+				break;
+			case forward:
+				var m;
+				switch(dir) {
+					case 1:			
+						m = new BoundingBox!MoveLeft;
+						m.distance = command.distance;
+						break;					
+				}
+				break;		
+		}
+	}
+}
