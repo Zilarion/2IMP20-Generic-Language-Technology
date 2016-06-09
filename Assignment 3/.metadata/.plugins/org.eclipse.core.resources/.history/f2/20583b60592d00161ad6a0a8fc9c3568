@@ -1,0 +1,8 @@
+[% var moves = BoundingBox.world.moveCommands; %]
+
+<h2>Nodes</h2>
+<ul>
+[% for (move in moves) { %]
+	<li>[%=move.distance%]</li>
+[% } %]
+</ul>

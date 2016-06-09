@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EGLBB
+Bundle-SymbolicName: nl.tue.glt.boundingbox
+Bundle-Version: 0.1
+Export-Package: org.epsilon.egl.doc,
+ org.epsilon.egl.doc.egl,
+ org.epsilon.egl.doc.egl.common.css,
+ org.epsilon.egl.doc.egl.common.img,
+ org.epsilon.egl.doc.egl.common.scripts,
+ org.epsilon.egl.doc.egl.dot,
+ org.epsilon.egl.doc.egl.html,
+ org.epsilon.egl.doc.util
+Require-Bundle: org.eclipse.epsilon.egl.engine,
+ org.eclipse.epsilon.eol.engine,
+ org.eclipse.epsilon.emc.emf
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -1,0 +1,6 @@
+<h2>Moves</h2>
+<ul>
+[%for (move in World.moveCommands) { %]
+  <li>[%=move.distance%]</li>
+[%}%]
+</ul>

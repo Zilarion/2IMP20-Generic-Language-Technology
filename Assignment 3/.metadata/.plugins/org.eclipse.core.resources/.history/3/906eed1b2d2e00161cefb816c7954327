@@ -1,0 +1,5 @@
+rule boundingbox2java
+	transform platoon : Platoon {
+		template: 'boundingbox2java.egl'
+		target: '../output/calculateBox.java'
+	}
