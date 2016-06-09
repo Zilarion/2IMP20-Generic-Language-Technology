@@ -19,9 +19,9 @@ class calculateBox {
 	private static ArrayList<Move> moves;
 	public static void main(String[] args) {
 		moves = new ArrayList<>();
-		[%for (move in world.moveCommands) { %]
-		moves.add(new [%= move.eClass.name %]([%= move.distance %]));
-		[%}%]
+		moves.add(new MoveUp(80));
+		moves.add(new MoveDown(5));
+		moves.add(new MoveLeft(32));
 		calculatePoints(moves);
 	}
 	
