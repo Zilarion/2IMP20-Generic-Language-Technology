@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 5 elements from project &apos;org.eclipse.epsilon.examples.egldoc&apos;&#x0A;- Original project: &apos;org.eclipse.epsilon.examples.egldoc&apos;&#x0A;- Original elements:&#x0A;     EglDoc.doc&#x0A;     EglDoc.jar&#x0A;     EglDoc.pdf&#x0A;     EglDoc.zip&#x0A;     epl-v10.html" description="Delete elements" element1="EglDoc.jar" element2="EglDoc.doc" element3="EglDoc.pdf" element4="EglDoc.zip" element5="epl-v10.html" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="5" stamp="1465379841466" subPackages="false" version="1.0"/>
+</session>

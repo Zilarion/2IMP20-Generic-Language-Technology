@@ -1,4 +1,4 @@
-# List of external plug-in models previously loaded. Timestamp: 1465221325330
+# List of external plug-in models previously loaded. Timestamp: 1465468030048
 file:/Users/ruudandriessen/.p2/pool/plugins/com.google.gdata_1.47.1_1.47.1.jar
 file:/Users/ruudandriessen/.p2/pool/plugins/com.google.gson_2.2.4.v201311231704.jar
 file:/Users/ruudandriessen/.p2/pool/plugins/com.google.guava_15.0.0.v201403281430.jar
@@ -15,6 +15,9 @@ file:/Users/ruudandriessen/.p2/pool/plugins/javax.servlet_3.1.0.v201410161800.ja
 file:/Users/ruudandriessen/.p2/pool/plugins/javax.servlet.jsp_2.2.0.v201112011158.jar
 file:/Users/ruudandriessen/.p2/pool/plugins/javax.xml_1.3.4.v201005080400.jar
 file:/Users/ruudandriessen/.p2/pool/plugins/lpg.runtime.java_2.0.17.v201004271640.jar
+file:/Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse/dropins/plugins/nl.tue.glt.boundingbox_0.1.0.201606091226.jar
+file:/Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse/dropins/plugins/nl.tue.glt.boundingbox.edit_1.0.0.201606091226.jar
+file:/Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse/dropins/plugins/nl.tue.glt.boundingbox.editor_1.0.0.201606091226.jar
 file:/Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse/dropins/plugins/nl.tue.glt.platoon_0.1.0.201606061554.jar
 file:/Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse/dropins/plugins/nl.tue.glt.platoon.edit_1.0.0.201606061554.jar
 file:/Users/ruudandriessen/eclipse/modeling-mars/Eclipse.app/Contents/Eclipse/dropins/plugins/nl.tue.glt.platoon.editor_1.0.0.201606061554.jar

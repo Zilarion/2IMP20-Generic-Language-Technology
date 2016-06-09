@@ -1,0 +1,4 @@
+rule boundingbox2java
+	transform platoon : Platoon {
+		template: 
+	}

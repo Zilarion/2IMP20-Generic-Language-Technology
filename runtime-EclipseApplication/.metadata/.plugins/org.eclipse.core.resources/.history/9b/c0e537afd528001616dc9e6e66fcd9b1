@@ -1,5 +1,0 @@
-platoon 
-	LV "v1" route "r0"
-	
-route "r0"
-	forward(20)

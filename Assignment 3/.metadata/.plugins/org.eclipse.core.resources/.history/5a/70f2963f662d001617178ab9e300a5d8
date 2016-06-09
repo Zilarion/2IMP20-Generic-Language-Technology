@@ -1,0 +1,30 @@
+package nl.tue.glt.egl;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+
+public abstract class Egl {
+
+	private Egl() {}
+	
+	private static URI BASE    = null;
+	private static URI TO_JAVA  = null;
+	
+	
+	public static URI getBase() throws URISyntaxException {
+		if (BASE == null) {
+			final String clazz = Egl.class.getResource("Egl.class").toURI().toString();
+			BASE = new URI(clazz.substring(0, clazz.lastIndexOf('/')+1));
+		}
+			
+		return BASE;
+	}
+	
+	public static URI getToJava() throws URISyntaxException {
+		if (TO_JAVA == null) {
+			TO_JAVA = Egl.class.getResource("templates/boundingbox2java.egl").toURI();
+		}
+			
+		return TO_JAVA;
+	}
+}

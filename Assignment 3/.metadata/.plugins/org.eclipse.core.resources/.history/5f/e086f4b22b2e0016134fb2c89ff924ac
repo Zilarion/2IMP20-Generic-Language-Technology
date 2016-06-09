@@ -1,0 +1,12 @@
+class CalculateBoundingBox {
+	
+[%	
+for (class in EClass.allInstances()){
+	for (super in class.eSuperTypes){ %]
+	[%=class.name%] -> [%=super.name%] 
+[%	}
+}
+	
+%]
+
+}

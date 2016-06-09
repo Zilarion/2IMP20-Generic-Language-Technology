@@ -1,0 +1,34 @@
+package nl.tue.glt.egl;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+
+public abstract class Egl {
+
+	private Egl() {}
+	
+	private static URI BASE    = null;
+	private static URI TO_DOT  = null;
+	
+	private static URI SCREEN_CSS   = null;
+	private static URI UP_ARROW_IMG = null;
+	private static URI CONTROLS_JS  = null;
+	
+	
+	public static URI getBase() throws URISyntaxException {
+		if (BASE == null) {
+			final String clazz = Egl.class.getResource("Egl.class").toURI().toString();
+			BASE = new URI(clazz.substring(0, clazz.lastIndexOf('/')+1));
+		}
+			
+		return BASE;
+	}
+	
+	public static URI getToDotProgram() throws URISyntaxException {
+		if (TO_DOT == null) {
+			TO_DOT = Egl.class.getResource("Emf2Dot.egl").toURI();
+		}
+			
+		return TO_DOT;
+	}
+}
