@@ -1,0 +1,5 @@
+rule platoon2nxc
+	transform world : World {
+		template: 'platoon2nxc.egl'
+		target: '../src/output/platoon.nxc'
+	}

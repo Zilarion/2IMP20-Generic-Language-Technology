@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<platoon:World xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:platoon="platoon">
+  <platoon>
+    <LV name="leader" route="route1"/>
+    <FV name="follower1" follows="leader"/>
+    <FV name="follower2" follows="follower1"/>
+  </platoon>
+  <route name="route1">
+	<commands xsi:type="platoon:ForwardCommand" distance="50"/>
+	<commands xsi:type="platoon:TurnCommand" direction="Left"/>
+	<commands xsi:type="platoon:ForwardCommand" distance="30"/>
+	<commands xsi:type="platoon:TurnCommand" direction="Right"/>
+  </route>
+  <constraints>
+    <constraints xsi:type="platoon:HeadwayConstraint" min="20" max="30"/>
+  </constraints>
+</platoon:World>
