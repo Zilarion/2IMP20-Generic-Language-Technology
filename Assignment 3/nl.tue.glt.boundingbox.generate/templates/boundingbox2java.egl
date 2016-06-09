@@ -1,4 +1,5 @@
 class CalculateBoundingBox {
-	
-
+	[%for (move in world.moveCommands) { %]
+	 	int [%= move.distance %]
+	[%}%]
 }
