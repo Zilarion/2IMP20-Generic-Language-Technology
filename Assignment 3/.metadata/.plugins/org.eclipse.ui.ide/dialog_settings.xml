@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item value="484" key="DIALOG_WIDTH"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="354" key="DIALOG_HEIGHT"/>
+		<item value="498" key="DIALOG_X_ORIGIN"/>
+		<item value="225" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="ExternalProjectImportWizard">
 		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3"/>
 			<item value="/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3/nl.tue.glt.boundingbox.boundingbox2java"/>
 			<item value="/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3/nl.tue.glt.platoon2boundingbox"/>
 			<item value="/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3/nl.tue.glt.boundingbox2java"/>
-			<item value="/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3"/>
 			<item value="/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3/nl.tue.glt.xtext.boundingbox.ui.tests"/>
 			<item value="/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3/nl.tue.glt.xtext.boundingbox.ide"/>
 			<item value="/Users/ruudandriessen/study/2imp20/2IMP20-Generic-Language-Technology/Assignment 3/nl.tue.glt.xtext.boundingbox"/>
@@ -20,10 +27,8 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.epsilon.examples.egl.flowchart" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.ui.Examples"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.epsilon.common.dt.examples"/>
 		</list>
 	</section>
 	<section name="BasicNewProjectResourceWizard">

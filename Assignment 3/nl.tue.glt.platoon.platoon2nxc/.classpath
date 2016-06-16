@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="/Users/ruudandriessen/.p2/pool/plugins/org.eclipse.epsilon.emc.emf_1.3.0.201602270002.jar" sourcepath="/Users/ruudandriessen/.p2/pool/plugins/org.eclipse.epsilon.emc.emf_1.3.0.201602270002.jar">
+		<accessrules>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/emc/emf/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/emc/emf/m0/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/emc/emf/tools/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/emc/emf/transactions/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/emc/emf/util/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/emc/emf/xml/*"/>
+			<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ruudandriessen/.p2/pool/plugins/org.eclipse.epsilon.egl.engine_1.3.0.201602270002.jar" sourcepath="/Users/ruudandriessen/.p2/pool/plugins/org.eclipse.epsilon.egl.engine_1.3.0.201602270002.jar">
+		<accessrules>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/config/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/dom/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/exceptions/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/execute/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/execute/context/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/execute/control/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/execute/operations/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/formatter/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/formatter/language/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/formatter/linebyline/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/formatter/simple/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/incremental/*"/>
+			<accessrule kind="discouraged" pattern="org/eclipse/epsilon/egl/internal/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/merge/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/merge/output/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/merge/partition/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/model/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/output/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/parse/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/parse/problem/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/preprocessor/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/spec/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/status/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/traceability/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/types/*"/>
+			<accessrule kind="accessible" pattern="org/eclipse/epsilon/egl/util/*"/>
+			<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
