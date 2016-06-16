@@ -1,0 +1,372 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__signed_stack_001sendMessage	6	1	0	4	8
+1	__signed_stack_002sendMessage	6	1	4	4	4
+2	__signed_stack_001ConnectNXT	6	1	8	4	2
+3	__D0sendMessage	6	1	12	4	20
+4	__RRNTmpVal	6	1	16	4	4
+5	__Wait_7qG2_ms_7qG2_000_inline_main	5	1	20	4	8
+6	__SRSTmpLongVal	6	1	24	4	2
+7	__Wait_7qG2_ms_7qG2_000_inline_ConnectNXT	5	1	28	4	2
+8	__D0main	6	1	32	4	8
+9	__D0ConnectNXT	6	1	36	4	4
+10	__sendMessage_7qG2_data_7qG2_000	4	1	40	2	6
+11	__sendMessage_7qG2_ack_7qG2_000	4	1	42	2	3
+12	__constVal96	2	0	44	1	8
+13	__sendMessage_return	1	1	45	1	6
+14	__WFRRTmpByte	1	1	46	1	2
+15	____initialize_global_data_return	1	1	47	1	3
+16	__ConnectNXT_7qG2_channel_7qG2_000	1	1	48	1	3
+17	__ConnectNXT_return	1	1	49	1	3
+18	__constVal63	2	0	50	1	8
+19	__constVal3	2	0	51	1	9
+20	__constVal0	2	1	52	1	30
+21	__constVal5	2	0	53	1	2
+22	__constVal4	2	0	54	1	2
+23	__OnRev_Tmp	2	1	55	1	4
+24	__constValNeg2	2	0	56	1	1
+25	__constVal1	2	0	57	1	5
+26	__constVal32	2	0	58	1	24
+27	__RRNErr	1	1	59	1	1
+28	__constValNeg1	2	0	60	1	1
+29	__constVal2	2	0	61	1	3
+30	__CBTCSArgs	8	0	2	4	4
+31	__CBTCSArgs.Result	2	1	64	1	4
+32	__CBTCSArgs.Connection	1	1	65	1	4
+33	__ConnectNXT_7qG2_args_7qG2_000	8	0	4	12	5
+34	__ConnectNXT_7qG2_args_7qG2_000.Result	3	1	68	2	5
+35	__ConnectNXT_7qG2_args_7qG2_000.Action	1	1	70	1	5
+36	__ConnectNXT_7qG2_args_7qG2_000.Name	7	0	72	4	5
+37	__ConnectNXT_7qG2_args_7qG2_000.Name.Name_type	1	0	0	1	0
+38	__ConnectNXT_7qG2_args_7qG2_000.ConnectionSlot	1	1	74	1	5
+39	__CBTWArgs	8	0	3	8	4
+40	__CBTWArgs.Result	2	1	76	1	4
+41	__CBTWArgs.Connection	1	1	77	1	4
+42	__CBTWArgs.Buffer	7	0	78	4	4
+43	__CBTWArgs.Buffer.Buffer_type	1	0	0	1	0
+44	__MRArgs	8	0	4	8	5
+45	__MRArgs.Result	2	1	80	1	5
+46	__MRArgs.QueueID	1	1	81	1	5
+47	__MRArgs.Remove	1	1	82	1	5
+48	__MRArgs.Message	7	0	84	4	5
+49	__MRArgs.Message.Message_type	1	0	0	1	0
+50	__TextOutArgs	8	0	4	16	10
+51	__TextOutArgs.Result	2	1	88	1	10
+52	__TextOutArgs.Location	8	0	2	4	10
+53	__TextOutArgs.Location.X	4	1	92	2	10
+54	__TextOutArgs.Location.Y	4	1	94	2	10
+55	__TextOutArgs.Text	7	0	96	4	10
+56	__TextOutArgs.Text.Text_type	1	0	0	1	0
+57	__TextOutArgs.Options	5	1	100	4	10
+58	__CHSWArgs	8	0	3	12	3
+59	__CHSWArgs.Status	2	1	104	1	3
+60	__CHSWArgs.Buffer	7	0	106	4	3
+61	__CHSWArgs.Buffer.Buffer_type	1	0	0	1	0
+62	__CHSWArgs.BufferLen	1	1	108	1	3
+63	__constStr0009	7	0	110	4	1
+64	__constStr0009.__constStr0009_type	1	1	0	1	0
+65	__constStr0010	7	0	112	4	1
+66	__constStr0010.__constStr0010_type	1	1	0	1	0
+67	__SRSSendBuf	7	0	114	4	3
+68	__SRSSendBuf.__SRSSendBuf_type	1	0	0	1	0
+69	__SRSFlattenBuf	7	0	116	4	2
+70	__SRSFlattenBuf.__SRSFlattenBuf_type	1	0	0	1	0
+71	__OUT_AC	7	0	118	4	4
+72	__OUT_AC.__OUT_AC_type	1	0	0	1	0
+73	__SRSTmpBuf	7	0	120	4	6
+74	__SRSTmpBuf.__SRSTmpBuf_type	1	0	0	1	0
+75	__DCMessageWritePacket	7	0	122	4	1
+76	__DCMessageWritePacket.__DCMessageWritePacket_type	1	0	0	1	0
+77	__strbufsendMessage	7	0	124	4	2
+78	__strbufsendMessage.__strbufsendMessage_type	1	0	0	1	0
+79	__ConnectNXT_7qG2_name_7qG2_000	7	0	126	4	2
+80	__ConnectNXT_7qG2_name_7qG2_000.__ConnectNXT_7qG2_name_7qG2_000_type	1	0	0	1	0
+81	__strbufConnectNXT	7	0	128	4	2
+82	__strbufConnectNXT.__strbufConnectNXT_type	1	0	0	1	0
+83	__strbufmain	7	0	130	4	2
+84	__strbufmain.__strbufmain_type	1	0	0	1	0
+#SOURCES
+Clump	Line	PC	Source
+0	19	0	#line 19 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	20	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	19	2	#line 19 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	19	2	#line 19 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	20	2		strcat __strbufmain, __constStr0010
+0	19	6	#line 19 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	20	6		mov __ConnectNXT_7qG2_name_7qG2_000, __strbufmain
+0	19	8	#line 19 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	20	8		set __ConnectNXT_7qG2_channel_7qG2_000, 0
+0	19	11	#line 19 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	19	11	#line 19 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	20	11		subcall ConnectNXT, __ConnectNXT_return
+0	19	13	#line 19 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	20	13	#line 20 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	21	13		set __D0main, 100
+0	20	16	#line 20 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	21	16	#pragma macro 7
+0	21	16		setout __OUT_AC, 2, __D0main, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6513	39	#line 6513 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	20	39	#line 20 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	21	39	#line 21 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	22	39		set __Wait_7qG2_ms_7qG2_000_inline_main, 50
+0	21	42	#line 21 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	8869	42	#line 8869 "NXCDefs.h"
+0	8870	42		waitv __Wait_7qG2_ms_7qG2_000_inline_main
+0	8869	44	#line 8869 "NXCDefs.h"
+0	21	44	#line 21 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	22	44	#line 22 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	23	44	#pragma macro 7
+0	23	44		setout __OUT_AC, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6528	67	#line 6528 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	22	67	#line 22 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	23	67	#line 23 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	24	67		set __sendMessage_7qG2_data_7qG2_000, 50
+0	23	70	#line 23 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	23	70	#line 23 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	24	70		subcall sendMessage, __sendMessage_return
+0	23	72	#line 23 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	24	72	#line 24 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	25	72		set __D0main, 100
+0	24	75	#line 24 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	25	75	#pragma macro 10
+0	25	75		neg __OnRev_Tmp, __D0main
+0	25	78		setout __constVal0, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6540	101	#line 6540 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	24	101	#line 24 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	25	101	#line 25 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	26	101		set __Wait_7qG2_ms_7qG2_000_inline_main, 1000
+0	25	104	#line 25 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	8869	104	#line 8869 "NXCDefs.h"
+0	8870	104		waitv __Wait_7qG2_ms_7qG2_000_inline_main
+0	8869	106	#line 8869 "NXCDefs.h"
+0	25	106	#line 25 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	26	106	#line 26 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	27	106	#pragma macro 7
+0	27	106		setout __constVal0, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6551	129	#line 6551 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	26	129	#line 26 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	27	129	#line 27 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	28	129		mov __sendMessage_7qG2_data_7qG2_000, __constValNeg1
+0	27	131	#line 27 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	27	131	#line 27 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	28	131		subcall sendMessage, __sendMessage_return
+0	27	133	#line 27 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	28	133	#line 28 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	29	133		set __D0main, 100
+0	28	136	#line 28 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	29	136	#pragma macro 7
+0	29	136		setout __OUT_AC, 2, __D0main, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6563	159	#line 6563 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	28	159	#line 28 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	29	159	#line 29 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	30	159		set __Wait_7qG2_ms_7qG2_000_inline_main, 30
+0	29	162	#line 29 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	8869	162	#line 8869 "NXCDefs.h"
+0	8870	162		waitv __Wait_7qG2_ms_7qG2_000_inline_main
+0	8869	164	#line 8869 "NXCDefs.h"
+0	29	164	#line 29 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	30	164	#line 30 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	31	164	#pragma macro 7
+0	31	164		setout __OUT_AC, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6574	187	#line 6574 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	30	187	#line 30 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	31	187	#line 31 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	32	187		set __sendMessage_7qG2_data_7qG2_000, 30
+0	31	190	#line 31 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	31	190	#line 31 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	32	190		subcall sendMessage, __sendMessage_return
+0	31	192	#line 31 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	32	192	#line 32 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	33	192		set __D0main, 100
+0	32	195	#line 32 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	33	195	#pragma macro 10
+0	33	195		neg __OnRev_Tmp, __D0main
+0	33	198		setout __constVal2, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6586	221	#line 6586 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	32	221	#line 32 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	33	221	#line 33 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	34	221		set __Wait_7qG2_ms_7qG2_000_inline_main, 1000
+0	33	224	#line 33 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	8869	224	#line 8869 "NXCDefs.h"
+0	8870	224		waitv __Wait_7qG2_ms_7qG2_000_inline_main
+0	8869	226	#line 8869 "NXCDefs.h"
+0	33	226	#line 33 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	34	226	#line 34 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	35	226	#pragma macro 7
+0	35	226		setout __constVal2, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6597	249	#line 6597 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	34	249	#line 34 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	35	249	#line 35 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	36	249		mov __sendMessage_7qG2_data_7qG2_000, __constValNeg2
+0	35	251	#line 35 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	35	251	#line 35 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	36	251		subcall sendMessage, __sendMessage_return
+0	35	253	#line 35 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+0	36	253		exit -1, -1
+1	7	0	#line 7 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	8	0		strcat __strbufConnectNXT, __ConnectNXT_7qG2_name_7qG2_000
+1	7	4	#line 7 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	8	4		mov __ConnectNXT_7qG2_args_7qG2_000.Name, __strbufConnectNXT
+1	7	6	#line 7 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	8	6	#line 8 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	9	6		mov __ConnectNXT_7qG2_args_7qG2_000.ConnectionSlot, __ConnectNXT_7qG2_channel_7qG2_000
+1	8	8	#line 8 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	8	8	#line 8 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	9	8	#line 9 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	10	8		set __ConnectNXT_7qG2_args_7qG2_000.Action, 1
+1	9	11	#line 9 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	9	11	#line 9 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	11	11	#line 11 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	12	11	#pragma macro 5
+1	12	11		mov __CBTCSArgs.Connection, __ConnectNXT_7qG2_channel_7qG2_000
+1	12	13		syscall 28, __CBTCSArgs
+1	6311	16	#line 6311 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	11	16	#line 11 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	12	16		not __signed_stack_001ConnectNXT, __CBTCSArgs.Result
+1	11	19	#line 11 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	12	19	#line 12 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	13	19		set __D0ConnectNXT, 0
+1	12	22	#line 12 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	13	22		cmp 4, __D0ConnectNXT, __signed_stack_001ConnectNXT, __D0ConnectNXT
+1	13	26	#line 13 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	14	26		brtst 4, __ASM_Label_620, __D0ConnectNXT
+1	14	29	#line 14 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	15	29	#pragma macro 4
+1	15	29	#line 15 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	15	29		syscall 36, __ConnectNXT_7qG2_args_7qG2_000
+1	13	32	#line 13 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	13	32	#line 13 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	13	32	#line 13 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	13	32	#line 13 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	14	32	#line 14 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	14	32	#line 14 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	14	32	#line 14 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	15	32		set __Wait_7qG2_ms_7qG2_000_inline_ConnectNXT, 5000
+1	14	35	#line 14 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	8869	35	#line 8869 "NXCDefs.h"
+1	8870	35		waitv __Wait_7qG2_ms_7qG2_000_inline_ConnectNXT
+1	8869	37	#line 8869 "NXCDefs.h"
+1	14	37	#line 14 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	19	37	#line 19 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	19	37	#line 19 "C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc"
+1	20	37		subret __ConnectNXT_return
+2	8	0	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	0		set __signed_stack_001sendMessage, 0
+2	8	3	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	8	3	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	3		set __signed_stack_002sendMessage, 40
+2	8	6	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	8	6	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	6		strcat __strbufsendMessage, __constStr0009
+2	8	10	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	8	10	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	10		mov __TextOutArgs.Location.X, __signed_stack_001sendMessage
+2	8	12	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	12		mov __TextOutArgs.Location.Y, __signed_stack_002sendMessage
+2	8	14	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	14		set __TextOutArgs.Options, 0
+2	8	17	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	17		mov __TextOutArgs.Text, __strbufsendMessage
+2	8	19	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	19		syscall 13, __TextOutArgs
+2	8	22	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	8	22	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	8	22	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	8	22	#line 8 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	22	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	10	22		set __signed_stack_001sendMessage, 5
+2	9	25	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	25	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	10	25		set __signed_stack_002sendMessage, 40
+2	9	28	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	28	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	10	28		mov __D0sendMessage, __sendMessage_7qG2_data_7qG2_000
+2	9	30	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	30	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	10	30		mov __TextOutArgs.Location.X, __signed_stack_001sendMessage
+2	9	32	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	10	32		mov __TextOutArgs.Location.Y, __signed_stack_002sendMessage
+2	9	34	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	10	34		set __TextOutArgs.Options, 0
+2	9	37	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	10	37		numtostr __TextOutArgs.Text, __D0sendMessage
+2	9	40	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	10	40		syscall 13, __TextOutArgs
+2	9	43	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	43	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	9	43	#line 9 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	10	43	#line 10 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	11	43		set __sendMessage_7qG2_ack_7qG2_000, 0
+2	10	46	#line 10 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	11	46	#line 11 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	12	46	#pragma macro 25
+2	12	46		mov __SRSTmpBuf, __DCMessageWritePacket
+2	12	48		replace __SRSTmpBuf, __SRSTmpBuf, __constVal2, __constVal5
+2	12	53		replace __SRSTmpBuf, __SRSTmpBuf, __constVal3, __constVal5
+2	12	58		mov __SRSTmpLongVal, __sendMessage_7qG2_data_7qG2_000
+2	12	60		flatten __SRSFlattenBuf, __SRSTmpLongVal
+2	12	63		arrbuild __SRSSendBuf, __SRSTmpBuf, __SRSFlattenBuf
+2	12	68		brcmp 0, __ConnWrite_Else0, __constVal1, __constVal4
+2	12	72		sub __WFRRTmpByte, __constVal1, __constVal4
+2	12	76		arrbuild __CHSWArgs.Buffer, __WFRRTmpByte, __SRSSendBuf
+2	12	81		syscall 37, __CHSWArgs
+2	12	84		mov __D0sendMessage, __CHSWArgs.Status
+2	12	86		jmp __ConnWrite_EndIf0
+2	12	88		mov __CBTWArgs.Connection, __constVal1
+2	12	90		mov __CBTWArgs.Buffer, __SRSSendBuf
+2	12	92		syscall 29, __CBTWArgs
+2	12	95		mov __D0sendMessage, __CBTWArgs.Result
+2	6436	97	#line 6436 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	11	97	#line 11 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	11	97	#line 11 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	12	97	#line 12 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	13	97		mov __signed_stack_001sendMessage, __sendMessage_7qG2_ack_7qG2_000
+2	12	99	#line 12 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	12	99	#line 12 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	13	99		set __D0sendMessage, 255
+2	12	102	#line 12 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	13	102		cmp 4, __D0sendMessage, __signed_stack_001sendMessage, __D0sendMessage
+2	12	106	#line 12 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	13	106		not __D0sendMessage, __D0sendMessage
+2	13	109	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	14	109		tst 5, __D0sendMessage, __D0sendMessage
+2	13	112	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	14	112		brtst 4, __ASM_Label_636, __D0sendMessage
+2	13	115	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	14	115	#pragma macro 9
+2	14	115		mov __MRArgs.QueueID, __constVal1
+2	14	117		mov __MRArgs.Remove, __constVal1
+2	14	119		set __RRNTmpVal, 0
+2	14	122		syscall 27, __MRArgs
+2	14	125		unflatten __RRNTmpVal, __RRNErr, __MRArgs.Message, __RRNTmpVal
+2	14	130		mov __sendMessage_7qG2_ack_7qG2_000, __RRNTmpVal
+2	14	132		mov __signed_stack_001sendMessage, __MRArgs.Result
+2	6462	134	#line 6462 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	13	134	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	13	134	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	14	134		set __D0sendMessage, 0
+2	13	137	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	14	137		cmp 4, __D0sendMessage, __signed_stack_001sendMessage, __D0sendMessage
+2	13	141	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	14	141		not __D0sendMessage, __D0sendMessage
+2	13	144	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	14	144		tst 5, __D0sendMessage, __D0sendMessage
+2	13	147	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	14	147		brtst 4, __ASM_Label_642, __D0sendMessage
+2	13	150	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	13	150	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	14	150		jmp __ASM_Label_641
+2	13	152	#line 13 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	17	152	#line 17 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	18	152		jmp __ASM_Label_635
+2	17	154	#line 17 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	17	154	#line 17 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+2	18	154		subret __sendMessage_return
+3	40	0	#line 40 "C:\Users\Hein\AppData\Local\Temp\temp.nxc"
+3	41	0		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\Hein\AppData\Local\Temp\temp.nxc
+1	ConnectNXT	256	C:\Users\Hein\Documents\GitHub\2IMP20-Generic-Language-Technology\Assignment 3\nl.tue.glt.platoon.platoon2nxc\src\output\AutoConnect.nxc
+2	sendMessage	295	C:\Users\Hein\AppData\Local\Temp\temp.nxc
+3	__initialize_global_data	451	C:\Users\Hein\AppData\Local\Temp\temp.nxc

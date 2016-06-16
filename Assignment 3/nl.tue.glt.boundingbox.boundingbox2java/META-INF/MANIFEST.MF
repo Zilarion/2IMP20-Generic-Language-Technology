@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EGLBB
-Bundle-SymbolicName: nl.tue.glt.boundingbox.generate
+Bundle-SymbolicName: nl.tue.glt.boundingbox.boundingbox2java
 Bundle-Version: 0.1
 Require-Bundle: org.eclipse.epsilon.egl.engine,
  org.eclipse.epsilon.eol.engine,

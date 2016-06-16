@@ -1,0 +1,38 @@
+#include "AutoConnect.nxc";
+#define BT_CONN 1
+#define OUTBOX 5
+#define INBOX 1
+#define CLEARLINE(L) \
+ TextOut(0,L," ");
+
+sub sendMessage(int data) {
+	CLEARLINE(LCD_LINE3);
+	NumOut(5,LCD_LINE3,data);
+	int ack = 0;
+	SendRemoteNumber(BT_CONN,OUTBOX,data);
+	until(ack==0xFF) {
+		until(ReceiveRemoteNumber(INBOX,true,ack) == NO_ERR);
+ 	}
+}
+
+task main() {
+
+		ConnectNXT("follower1", 0);
+			OnFwd(OUT_AC, 100);
+			Wait(50);
+			Off(OUT_AC);
+			sendMessage(50);
+				OnRev(OUT_A, 100);
+				Wait(1000);
+				Off(OUT_A);
+				sendMessage(-1);
+			OnFwd(OUT_AC, 100);
+			Wait(30);
+			Off(OUT_AC);
+			sendMessage(30);
+				OnRev(OUT_C, 100);
+				Wait(1000);
+				Off(OUT_C);
+				sendMessage(-2);
+
+}

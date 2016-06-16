@@ -1,5 +1,11 @@
-rule platoon2nxc
+rule platoon2nxcLeading
 	transform world : World {
-		template: 'platoon2nxc.egl'
-		target: '../src/output/platoon.nxc'
+		template: 'platoon2nxc-leading.egl'
+		target: '../src/output/platoon-leading.nxc'
+	}
+
+rule platoon2nxcFollow
+	transform world : World {
+		template: 'platoon2nxc-follow.egl'
+		target: '../src/output/platoon-follow.nxc'
 	}
