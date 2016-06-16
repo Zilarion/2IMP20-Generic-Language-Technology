@@ -1,5 +1,0 @@
-rule boundingbox2java
-	transform world : World {
-		template: 'boundingbox2java.egl'
-		target: '../src/output/calculateBox.java'
-	}

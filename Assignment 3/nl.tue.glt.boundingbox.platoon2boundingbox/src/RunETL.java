@@ -1,9 +1,14 @@
 import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.eclipse.emf.common.util.URI;
+import org.eclipse.epsilon.common.util.StringProperties;
 import org.eclipse.epsilon.emc.emf.EmfModel;
 import org.eclipse.epsilon.eol.exceptions.models.EolModelLoadingException;
-import org.eclipse.epsilon.eol.models.ModelRepository;
+import org.eclipse.epsilon.eol.models.IModel;
+import org.eclipse.epsilon.eol.models.IRelativePathResolver;
 import org.eclipse.epsilon.etl.EtlModule;
 
 public class RunETL {		
@@ -17,27 +22,52 @@ public class RunETL {
 			return;
 		}
 
-		// Load the model document
-		EmfModel bbox = loadModel("models/Empty.boundingbox", "models/BoundingBox.ecore");
-		EmfModel platoon = loadModel("models/My.platoon", "models/platoon.ecore");
-		
-		// Publish the models visible to the model repository
-		final ModelRepository etlModelRepo = module.getContext().getModelRepository();
-		etlModelRepo.addModel(platoon);
-		etlModelRepo.addModel(bbox);
+		// Load the models
+		for (IModel model : getModels()) {
+			module.getContext().getModelRepository().addModel(model);
+		}
 		
 		// ... and execute
 		module.execute();
+		module.getContext().getModelRepository().dispose();
+		System.out.println("Done!");
+	}
+
+	public static List<IModel> getModels() throws Exception {
+		List<IModel> models = new ArrayList<IModel>();
+		models.add(createEmfModel("Platoon", "My.platoon", "platoon.ecore", true, false));
+		models.add(createEmfModel("BoundingBox", "Empty.boundingbox", "BoundingBox.ecore", false, true));
+		return models;
 	}
 	
-	private static EmfModel loadModel(String name, String metamodelPath) throws EolModelLoadingException {
-	    EmfModel model = new EmfModel();
-	    model.setName(name);
-	    model.setMetamodelFile(metamodelPath);
-	    model.setModelFile(name);
-//	    model.setReadOnLoad(false);
-//	    model.setStoredOnDisposal(false);
-	    model.load();
-	    return model;
+	protected static EmfModel createEmfModel(String name, String model, 
+			String metamodel, boolean readOnLoad, boolean storeOnDisposal) 
+					throws EolModelLoadingException, URISyntaxException {
+		EmfModel emfModel = new EmfModel();
+		StringProperties properties = new StringProperties();
+		properties.put(EmfModel.PROPERTY_NAME, name);
+		properties.put(EmfModel.PROPERTY_FILE_BASED_METAMODEL_URI,
+				getFileURI(metamodel).toString());
+		properties.put(EmfModel.PROPERTY_MODEL_URI, 
+				getFileURI(model).toString());
+		properties.put(EmfModel.PROPERTY_READONLOAD, readOnLoad + "");
+		properties.put(EmfModel.PROPERTY_STOREONDISPOSAL, 
+				storeOnDisposal + "");
+		emfModel.load(properties, (IRelativePathResolver) null);
+		return emfModel;
+	}
+	
+	protected static URI getFileURI(String fileName) throws URISyntaxException {
+		URI binUri = RunETL.class.getResource(fileName).toURI();
+		URI uri = null;
+		
+		if (binUri.toString().indexOf("bin") > -1) {
+			uri = new URI(binUri.toString().replaceAll("bin", "resources"));
+		}
+		else {
+			uri = binUri;
+		}
+		
+		return uri;
 	}
 }
