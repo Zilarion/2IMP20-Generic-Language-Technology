@@ -30,7 +30,7 @@ public class RunETL {
 		// ... and execute
 		module.execute();
 		module.getContext().getModelRepository().dispose();
-		System.out.println("Done!");
+		System.out.println("Done! Output written to resources/Empty.boundingbox");
 	}
 
 	public static List<IModel> getModels() throws Exception {
